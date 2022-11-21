@@ -8,7 +8,6 @@ import Navbar from "./components/Navbar";
 // pages
 import ShoppingRegions from "./components/ShoppingRegions";
 import Cities from "./components/Cities";
-import ShoppingCenters from "./pages/ShoppingCenters";
 import Products from "./pages/Products";
 import Product from "./components/Product";
 
