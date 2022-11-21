@@ -5,7 +5,7 @@ const ShoppingRegions = () => {
     return (
         <div>
             <div>this is shoppingregions</div>
-            <Link to = {'cities'}>Cities</Link>
+            <Link to = {'/shoppingregions/cities'}>Cities</Link>
         </div>
     );
 };

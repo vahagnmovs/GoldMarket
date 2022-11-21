@@ -1,9 +1,12 @@
 import React from 'react';
+import {useParams} from "react-router-dom";
 
 const Products = () => {
+    const {id} = useParams();
+
     return (
         <div>
-            <img src="https://img.freepik.com/free-vector/white-product-podium-with-green-tropical-palm-leaves-golden-round-arch-green-wall_87521-3023.jpg?size=626&ext=jpg" alt=""/>
+            this is products page
         </div>
     );
 };

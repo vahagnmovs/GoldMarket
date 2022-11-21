@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ShoppingRegions from "./components/ShoppingRegions";
 import NotFoundPage from "./pages/NotFound";
+import Cities from "./components/Cities";
+import Products from "./pages/Products";
 
 
 const router = createBrowserRouter([{
@@ -19,6 +21,12 @@ const router = createBrowserRouter([{
 }, {
     path: '/shoppingregions',
     element: <ShoppingRegions/>
+}, {
+    path: '/shoppingregions/cities',
+    element: <Cities/>
+}, {
+    path: '/shoppingregions/cities/:id',
+    element: <Products/>
 }, {
     path: '*',
     element: <NotFoundPage/>
