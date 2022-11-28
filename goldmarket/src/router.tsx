@@ -8,7 +8,6 @@ import NotFoundPage from "./pages/NotFound";
 import Cities from "./components/Cities";
 import Products from "./pages/Products";
 
-
 const router = createBrowserRouter([{
     path: '/',
     element: <Home/>

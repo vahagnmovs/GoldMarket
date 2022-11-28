@@ -1,14 +1,41 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import SearchCategory from "./searchCategory";
+import "./Nam_style.scss"
+import open from "../../Icons/open.png";
+import "./NightMod.scss"
+import search from "../../Icons/search.png"
 
-const Navbar = () => {
+function Navbar() {
     return (
-        <nav id={'side-bar'}>
-            <ul>
-                <li><Link to={'/home'}>Home</Link></li>
-                <li><Link to={'/about'}>About</Link></li>
-                <li><Link to={'/shoppingregions'}>ShoppingCenters</Link></li>
-            </ul>
+        <nav>
+            <div className={"nav"}>
+                <div className={"search"}>
+                    <div>
+                        <div className={"nav_category"}>
+                            <SearchCategory title={"GOLD JEWELRY"}/>
+                            <img className={"GOLD"}
+                                 src={open}
+                                 alt=""/>
+                            <SearchCategory title={"SILVER JEWELRY"}/>
+                            <img className={"SILVER"}
+                                 src={open}
+                                 alt=""/>
+                            <SearchCategory title={"WATCHES"}/>
+                            <div>STORES</div>
+                            <img className={"Watches"}
+                                 src={open}
+                                 alt=""/>
+                        </div>
+                    </div>
+                    <p className={"text"}> SEARCH</p>
+                    <img className={"png"} src={search} alt=""/>
+                </div>
+                <label className="switch">
+                    <input type="checkbox"
+                    />
+                    <span className="slider"></span>
+                </label>
+            </div>
         </nav>
     );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+
 
 const cities = [
     {
@@ -13,14 +14,13 @@ const cities = [
 ]
 
 const Cities = () => {
+    const navigate = useNavigate();
     return (
         <div>
             this is shoppingRegions/cities
             {
                 cities.map(city => <Link to={`/shoppingregions/cities/${city.cityID}`}>{city.name}</Link>)
             }
-
-
         </div>
     );
 };

@@ -1,0 +1,60 @@
+
+.block_recommender {
+    margin-top: 10px;
+    width: 1458px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.block_recommender_child {
+    width: 386px;
+    height: 364px;
+    border: 1px solid black;
+    gap: 5px;
+}
+
+.block_recommender_child img{
+ margin: 3px 3px;
+}
+
+.block_recommender_child_jewelry{
+    width: 110px;
+    height: 110px;
+    border: 1px solid black;
+}
+
+.block_recommender_child_footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.star {
+    width: 18px;
+    height: 18px;
+}
+
+.block_recommender_child_footer_star_block{
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bolt{
+    font-weight: bold;
+}
+
+.recommended_sellers h2{
+    text-align: center;
+}
+
+.recommended_sellers .text {
+    color: gray;
+    margin: 0   auto;
+    display: flex;
+    width: 350px;
+    text-align: center;
+    font-size: 14px;
+}

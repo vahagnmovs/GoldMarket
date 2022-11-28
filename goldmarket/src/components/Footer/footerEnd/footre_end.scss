@@ -1,0 +1,25 @@
+.footer_text{
+  margin: 2% 20% 6.03% 26.53%;
+  display: flex;
+  gap: 100px;
+  .icon{
+    span{
+      color: gray;
+      justify-content: center;
+      text-align: center;
+
+    }
+    img{
+      width: 10px;
+      height: 10px;
+    }
+
+    }
+    p{
+      color: gray;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      gap: 100px;
+  }
+}
