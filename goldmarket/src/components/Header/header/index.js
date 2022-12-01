@@ -109,8 +109,8 @@ const  Header = () =>{
                                 {
                                     currencyState.map(currency => {
                                         return (
-                                            <div className={"flags"} onClick={() => handleChangeCurrency(currency.id)}>
-                                                <p >{currency.currency}</p>
+                                            <div key={currency.id} className={"flags"} onClick={() => handleChangeCurrency(currency.id)}>
+                                                <p>{currency.currency}</p>
                                                 <img className={"png"}
                                                      src={close}
                                                      alt=""/>
