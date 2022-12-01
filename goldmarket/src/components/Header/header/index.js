@@ -111,13 +111,16 @@ const  Header = () =>{
                                         return (
                                             <div key={currency.id} className={"flags"} onClick={() => handleChangeCurrency(currency.id)}>
                                                 <p>{currency.currency}</p>
-                                                <img className={"png"}
-                                                     src={close}
-                                                     alt=""/>
                                             </div>
                                         )
                                     })
-                                }</div>
+
+
+                                }
+                                <img className={"dropDown"}
+                                     src={close}
+                                     alt=""/>
+                            </div>
                     }
 
                 </div>
