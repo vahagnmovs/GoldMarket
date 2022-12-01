@@ -15,7 +15,7 @@ const PriceList = () => {
                     <PhoneNumber/>
                 </div>
                 <div  className={"e"}>
-                    <GoldPriceList/>
+                    <GoldPriceList isShowMoreBtn={isShowMoreBtn}/>
                 </div>
             </div>
             <div className={"Shou-more"}>

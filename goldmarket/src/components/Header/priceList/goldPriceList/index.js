@@ -11,7 +11,7 @@ function GoldPriceList({isShowMoreBtn}) {
                     ?
                     <table>
                         <thead>
-                        <tr className={"top_tr"}>
+                        <tr>
                             <th>GOLD</th>
                             <th>BUY</th>
                             <th>SELL</th>
