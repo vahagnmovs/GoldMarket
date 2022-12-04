@@ -8,7 +8,7 @@ import ls from "local-storage";
 
 export interface LayoutProps {
     children: ReactElement,
-    NavBarComponent: ReactElement,
+    NavBarComponent: ReactElement
     HeaderComponent: ReactElement,
     FooterComponent: ReactElement
 }
