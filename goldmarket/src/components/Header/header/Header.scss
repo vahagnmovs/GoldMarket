@@ -78,7 +78,10 @@ $display:flex;
         }
       }
     }
-
+    .dropDown{
+      margin-bottom: 25px;
+      @include icon_open
+    }
   }
   .logo {
     width: 208px;

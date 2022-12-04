@@ -23,20 +23,45 @@ const flags = [
         value: "RUS",
         url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Flag_of_Russia_%28bordered%29.svg/2560px-Flag_of_Russia_%28bordered%29.svg.png"
     }
-]
+];
 
+const currency = [
+    {
+        id: 0,
+        currency: "USD",
+        src: "https://cdn.iconscout.com/icon/free/png-256/usd-486883-2364952.png"
+    },
+    {
+        id: 1,
+        currency: "RUR",
+        src: ""
+    },
+    {
+        id: 2,
+        currency: "AMD",
+        src: ""
+    }
+];
 
-function Header() {
+const  Header = () =>{
 
     const [flagState, setFlagState] = useState(flags);
     const [flagChoose, setFlagChoose] = useState(true);
     const [id, setId] = useState(0)
+    const [currencyState, setCurrencyState] = useState(currency)
+    const [isChoseCurrency, setIsChoseCurrency] = useState(true);
+    const [currencyId, setCurrencyId] = useState(0)
+
 
     const handleChangeLanguage = (id) => {
         setId(id);
         setFlagChoose(true)
     }
 
+    const handleChangeCurrency = (id) => {
+        setCurrencyId(id)
+        setIsChoseCurrency(true)
+    }
     return (
         <div className={"container"}>
             <div className={"container_top"}>
@@ -70,11 +95,10 @@ function Header() {
                 </div>
                 <div className={"value_container"}>
                     {
-                        flagChoose
+                        isChoseCurrency
                             ?
-                            <div className={"flags"} onClick={() => setFlagChoose(false)}>
-                                <p className={"language"}>{flagState[id].value} </p>
-                                <p>($)</p>
+                            <div className={"flags"} onClick={() => setIsChoseCurrency(false)}>
+                                <p className={"language"}>{currencyState[currencyId].currency} </p>
 
                                 <img className={"png"}
                                      src={open}
@@ -83,17 +107,20 @@ function Header() {
                             :
                             <div>
                                 {
-                                    flagState.map(flag => {
+                                    currencyState.map(currency => {
                                         return (
-                                            <div className={"flags"} onClick={() => handleChangeLanguage(flag.id)}>
-                                                <p className={"language"}>{flag.value}</p>
-                                                <img className={"png"}
-                                                     src={close}
-                                                     alt=""/>
+                                            <div key={currency.id} className={"flags"} onClick={() => handleChangeCurrency(currency.id)}>
+                                                <p>{currency.currency}</p>
                                             </div>
                                         )
                                     })
-                                }</div>
+
+
+                                }
+                                <img className={"dropDown"}
+                                     src={close}
+                                     alt=""/>
+                            </div>
                     }
 
                 </div>
