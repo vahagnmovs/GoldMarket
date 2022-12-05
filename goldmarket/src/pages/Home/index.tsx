@@ -7,6 +7,7 @@ import ReactVideoPlayer from "../../components/Header/reactVideoPlayer";
 import Information from "../../components/Information";
 import Footer from "../../components/Footer";
 import RecommendedSellers from "../../components/recommendedSeleres/recommendedSellers";
+import SwitchComponent from '../../components/Centers/switchComponents';
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <>
                 <PriceList />
                 {/*<ReactVideoPlayer />*/}
+                <SwitchComponent />
                 <Information />
                 <RecommendedSellers />
             </>
