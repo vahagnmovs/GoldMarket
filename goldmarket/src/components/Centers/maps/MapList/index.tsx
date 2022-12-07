@@ -2,7 +2,6 @@ import { setNewLengthData } from '../../switchComponents/setNewLengthData';
 import { useNavigate } from 'react-router-dom';
 import SwitchButton from '../../switchButton';
 import { MAP } from '../../feikData/Maps';
-import { useState } from 'react';
 import Map from '../Map';
 
 interface mapListProp {
@@ -12,7 +11,7 @@ interface mapListProp {
 
 const MapList = ({ handleCeckid, checked }: mapListProp) => {
     const navigate = useNavigate()
-    const [maps, setMaps] = useState({ maps: setNewLengthData(MAP) })
+    const maps = setNewLengthData(MAP)
     const handleShouMore = () => {
         navigate("/shoppingcenter")
     }
@@ -26,7 +25,7 @@ const MapList = ({ handleCeckid, checked }: mapListProp) => {
             <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             <div className="products">
                 {
-                    maps.maps.map(item => <Map key={
+                    maps.map(item => <Map key={
                         item.id
                     }
                         {...item} handleShoppingCentr={handleShoppingCentr} />)

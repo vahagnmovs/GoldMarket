@@ -2,7 +2,6 @@ import { setNewLengthData } from "../../switchComponents/setNewLengthData";
 import SwitchButton from "../../switchButton";
 import { PRODUCT } from "../../feikData";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import Product from "../Product";
 interface productsListProp {
     checked: boolean;
@@ -10,8 +9,7 @@ interface productsListProp {
 }
 
 const ProductsList = ({ handleCeckid, checked }: productsListProp) => {
-    const [products, setProducts] = useState({ products: setNewLengthData(PRODUCT) })
-    
+    const products = setNewLengthData(PRODUCT)
     const navigate = useNavigate()
     const handleShouMore = () => {
         navigate("/collections")
@@ -22,12 +20,12 @@ const ProductsList = ({ handleCeckid, checked }: productsListProp) => {
             <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             <div className="products">
                 {
-                    products.products.map(item => <Product{...item} key={
+                    products.map(item => <Product{...item} key={
                         item.id
                     } />)
                 }
                 {
-                <button className="buttonSowMor"
+                    <button className="buttonSowMor"
                         onClick={
                             () => handleShouMore()
                         }>
