@@ -3,6 +3,7 @@ import SwitchButton from "../../switchButton";
 import { PRODUCT } from "../../feikData";
 import { useNavigate } from "react-router-dom";
 import Product from "../Product";
+import svg from "../../../../Icons/next-16.svg"
 interface productsListProp {
     checked: boolean;
     handleCeckid: () => void;
@@ -30,7 +31,7 @@ const ProductsList = ({ handleCeckid, checked }: productsListProp) => {
                             () => handleShouMore()
                         }>
                         <p>SHOW MORE</p>
-                        <img src={"icons/next-16.svg"}
+                        <img src={svg}
                             alt="Shou More" /></button>
                 } </div>
         </div>

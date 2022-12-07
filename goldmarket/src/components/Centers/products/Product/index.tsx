@@ -1,4 +1,5 @@
 import { Type } from "../../types";
+import svg from "../../../../Icons/next-16.svg"
 
 const Product = ({ id, title, img }: Type) => {
     return (
@@ -9,7 +10,7 @@ const Product = ({ id, title, img }: Type) => {
                 <div className="explore">
                     <p>EXPLORE</p>
                 </div>
-                <img src={"icons/next-16.svg"} alt="next" />
+                <img src={svg} alt="next" />
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import MapList from '../maps/MapList'
 import ProductsList from '../products/ProductsList'
+import "../styles/style.css"
 
 
 const SwitchComponent = () => {
