@@ -1,15 +1,9 @@
 import { setNewLengthData } from '../../switchComponents/setNewLengthData';
 import { useNavigate } from 'react-router-dom';
-import SwitchButton from '../../switchButton';
 import { MAP } from '../../feikData/Maps';
 import Map from '../Map';
 
-interface mapListProp {
-    checked: boolean;
-    handleCeckid: () => void;
-}
-
-const MapList = ({ handleCeckid, checked }: mapListProp) => {
+const MapList = () => {
     const navigate = useNavigate()
     const maps = setNewLengthData(MAP)
     const handleShouMore = () => {
@@ -21,8 +15,6 @@ const MapList = ({ handleCeckid, checked }: mapListProp) => {
         }
     }
     return (
-        <div className="contener">
-            <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             <div className="products">
                 {
                     maps.map(item => <Map key={
@@ -38,7 +30,6 @@ const MapList = ({ handleCeckid, checked }: mapListProp) => {
                     <img src={"icons/next-16.svg"}
                         alt="Shou More" /></button>
             </div>
-        </div>
     );
 }
 export default MapList;

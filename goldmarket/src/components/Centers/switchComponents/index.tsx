@@ -2,6 +2,7 @@ import { useState } from 'react'
 import MapList from '../maps/MapList'
 import ProductsList from '../products/ProductsList'
 import "../styles/style.css"
+import SwitchButton from '../switchButton'
 
 
 const SwitchComponent = () => {
@@ -10,10 +11,11 @@ const SwitchComponent = () => {
         setChecked(!checked)
     }
     return (
-        <div>
+        <div className="contener">
+            <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             {checked 
-            ? <ProductsList checked={checked} handleCeckid={handleCeckid}/>
-             : <MapList checked={checked} handleCeckid={handleCeckid} />}
+            ? <ProductsList />
+             : <MapList />}
         </div>
     )
 }
