@@ -1,4 +1,4 @@
-import { Type } from "../types"
+import { Type } from "../types";
 
 export const setNewLengthData = (data: Type[], length = 6) => {
     const newLengthArray = [];

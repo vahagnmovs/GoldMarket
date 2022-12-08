@@ -1,16 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { Type } from "../../types";
 
-
-interface mapProps{
-    id:string;
-    title: string;
-    img:string;
-}
-
-const Map = ({id, title, img}: mapProps) => {
-    const navigate = useNavigate()
+const Map = ({id, title, img}: Type) => {
+    const navigate = useNavigate();
     return (
-        <div id={id} className="map" onClick={()=> navigate(`/shoppingcenter/${title}/${id}`)}>
+        <div id={id} className="map" onClick={()=> navigate(`/shoppingcenters/${title}/${id}`)}>
             <img src={img} alt="Map" />
             <h4>{title}</h4>
         </div>

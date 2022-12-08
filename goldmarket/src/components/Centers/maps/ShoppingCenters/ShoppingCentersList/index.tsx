@@ -1,8 +1,7 @@
-import { MAP } from '../../feikData/Maps'
-import ShoppingCenter from '../ShoppingCentersRegions/ShoppingCenterRegion'
+import ShoppingCenter from "../../ShoppingCentersRegions/ShoppingCenterRegion";
+import { MAP } from "../../../feikData/Maps";
 
-const ShoppingCenters = () => {
-  
+const ShoppingCentersList = () => {
   return (
     <div className="contener">
       <div className="shopping_collections"><h2>Shopping centers</h2></div>
@@ -10,10 +9,9 @@ const ShoppingCenters = () => {
         {
           MAP.map(item => <ShoppingCenter key={item.id}{...item} />)
         }
-
       </div>
     </div>
   )
 }
 
-export default ShoppingCenters
+export default ShoppingCentersList;
