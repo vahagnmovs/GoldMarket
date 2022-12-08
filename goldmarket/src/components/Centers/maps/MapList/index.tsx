@@ -2,6 +2,7 @@ import { setNewLengthData } from '../../switchComponents/setNewLengthData';
 import { useNavigate } from 'react-router-dom';
 import { MAP } from '../../feikData/Maps';
 import Map from '../Map';
+import svg from "../../../../Icons/next-16.svg"
 
 const MapList = () => {
     const navigate = useNavigate()
@@ -9,25 +10,21 @@ const MapList = () => {
     const handleShouMore = () => {
         navigate("/shoppingcenter")
     }
-    const handleShoppingCentr = (title: string) => {
-        if (title === "Yerevan") {
-            navigate("/shoppingcenter/yerevan")
-        }
-    }
+
     return (
             <div className="products">
                 {
                     maps.map(item => <Map key={
                         item.id
                     }
-                        {...item} handleShoppingCentr={handleShoppingCentr} />)
+                        {...item}/>)
                 }
                 <button className="buttonSowMor"
                     onClick={
                         () => handleShouMore()
                     }>
                     <p>SHOW MORE</p>
-                    <img src={"icons/next-16.svg"}
+                    <img src={svg}
                         alt="Shou More" /></button>
             </div>
     );

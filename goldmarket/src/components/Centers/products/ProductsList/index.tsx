@@ -1,5 +1,4 @@
 import { setNewLengthData } from "../../switchComponents/setNewLengthData";
-import SwitchButton from "../../switchButton";
 import { PRODUCT } from "../../feikData";
 import { useNavigate } from "react-router-dom";
 import Product from "../Product";
