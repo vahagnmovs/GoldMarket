@@ -1,0 +1,132 @@
+@media (max-width: $screen-lg) {
+	
+	.contact-form-section {
+
+		.get-a-quote-img {
+			width: 77%;
+			right: calc(-36% + 3px);
+		}
+	}
+
+	.projects-section {
+		
+		.portfolio-list {
+
+			> li {
+				height: 360px;
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: $screen-md) {
+	
+	.contact-form-section {
+		padding-bottom: 60px;
+
+		.get-a-quote-img {
+			display: none;
+		}
+
+		.contact-form {
+			max-width: 100%;
+		}
+
+		form {
+
+			&.hidden {
+				height: 0;
+				overflow: hidden;
+			}
+		}
+	}
+
+	.success-message {
+		position: static;
+
+		&.light {
+			position: absolute;
+		}
+	}
+
+	.projects-section {
+		
+		.portfolio-list {
+
+			> li {
+				width: calc((100% - 20px) / 2);
+				height: 300px;
+			}
+		}
+
+		&-sm {
+
+			.portfolio-list {
+
+				> li {
+								
+					&:last-child {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: $screen-sm) {
+	
+	.contact-form-section {
+		padding-bottom: 40px;
+		margin-top: -40px;
+
+		.contact-form {
+			padding: 25px;
+		}
+	}
+
+	.success-message {
+		padding: 30px 10px 20px;
+
+		img {
+			width: 130px;
+		}
+
+		h3 {
+			margin: 35px 0 20px;
+		}
+
+		&.light {
+			padding: 40px 0 20px;
+			position: static;
+		}
+	}
+
+	.projects-section {
+		
+		.portfolio-list {
+
+			> li {
+				width: 100%;
+				height: 360px;
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: $screen-xs) {
+	
+	.contact-form-section {
+
+		.contact-form {
+			padding: 20px 15px;
+		}
+	}
+
+}
