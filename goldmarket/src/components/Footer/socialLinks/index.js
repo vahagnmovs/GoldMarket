@@ -1,11 +1,11 @@
 import React from 'react';
 import "./socialLink_Style.scss"
 import { Link } from "react-router-dom";
-import facebookIcon from "../../../Icons/facebook.svg"
-import instagramIcon from "../../../Icons/instagram.svg"
-import okIcon from "../../../Icons/ok.svg"
-import telegramIcon from "../../../Icons/telegram.svg"
-import vkIcon from "../../../Icons/vk.svg"
+import facebookIcon from "../../../style/Icons/facebook.svg"
+import instagramIcon from "../../../style/Icons/instagram.svg"
+import okIcon from "../../../style/Icons/ok.svg"
+import telegramIcon from "../../../style/Icons/telegram.svg"
+import vkIcon from "../../../style/Icons/vk.svg"
 
 const SocialLinks = () => {
     return (

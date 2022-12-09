@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import logo from "../../../Icons/logo.png"
-import open from "../../../Icons/open.png"
-import close from "../../../Icons/close.png"
-import heart from "../../../Icons/heart.png"
-import user from "../../../Icons/user.png"
-import basket from "../../../Icons/basket.png"
+import logo from "../../../style/Icons/logo.png"
+import open from "../../../style/Icons/open.png"
+import close from "../../../style/Icons/close.png"
+import heart from "../../../style/Icons/heart.png"
+import user from "../../../style/Icons/user.png"
+import basket from "../../../style/Icons/basket.png"
 import "./Header.scss"
 
 const flags = [
@@ -62,70 +62,91 @@ const  Header = () =>{
         setCurrencyId(id)
         setIsChoseCurrency(true)
     }
+
     return (
+        // containrt
         <div className={"container"}>
+            {/*container_top*/}
             <div className={"container_top"}>
-                <div className={"flag_container"}>
-                    {
-                        flagChoose
-                            ?
-                            <div className={"flags"} onClick={() => setFlagChoose(false)}>
-                                <img className={"flagImg"} src={flagState[id].url} alt=""/>
-                                <p className={"language"}>{flagState[id].value}</p>
-                                <img className={"png"}
-                                     src={open}
-                                     alt=""/>
-                            </div>
-                            :
-                            <div>
-                                {
-                                    flagState.map(flag => {
-                                        return (
-                                            <div className={"flags"} onClick={() => handleChangeLanguage(flag.id)}>
-                                                <img className={"flagImg"} src={flag.url} alt=""/>
-                                                <p className={"language"}>{flag.value}</p>
-                                                <img className={"png"}
-                                                     src={close}
-                                                     alt=""/>
-                                            </div>
-                                        )
-                                    })
-                                }</div>
-                    }
-                </div>
-                <div className={"value_container"}>
-                    {
-                        isChoseCurrency
-                            ?
-                            <div className={"flags"} onClick={() => setIsChoseCurrency(false)}>
-                                <p className={"language"}>{currencyState[currencyId].currency} </p>
+                {/*top_left_content*/}
+                <div className={"top_left_content"}>
+                    {/*flag_content*/}
+                    <div className={"flag_content"}>
 
-                                <img className={"png"}
-                                     src={open}
-                                     alt=""/>
-                            </div>
-                            :
-                            <div>
-                                {
-                                    currencyState.map(currency => {
-                                        return (
-                                            <div key={currency.id} className={"flags"} onClick={() => handleChangeCurrency(currency.id)}>
-                                                <p>{currency.currency}</p>
-                                            </div>
-                                        )
-                                    })
+                        {
+                            flagChoose
+                                ?
+                                // flags
+                                <ul className={"flags"} onClick={() => setFlagChoose(false)}>
+                                    {/*flag_img*/}
+                                   <li> <img className={"flag_img"} src={flagState[id].url} alt="flag_img"/></li>
+                                    {/*language*/}
+                                   <li><span className={"language"}>{flagState[id].value}</span></li>
+                                    {/*drop_down*/}
+                                    <li><img className={"drop_down"} src={open} alt="drop_down"/></li>
 
+                                </ul>
+                                :
+                                <div>
+                                    {
+                                        flagState.map(flag => {
+                                            return (
+                                                <ul className={"flags"} onClick={() => handleChangeLanguage(flag.id)}>
+                                                 <li>  <img className={"flag_img"} src={flag.url} alt="flag_img"/></li>
+                                                    <li><span className={"language"}>{flag.value}</span>  </li>
+                                                    <li>  <img className={"drop_up"}src={close}
+                                                               alt="drop_up"/>  </li>
 
-                                }
-                                <img className={"dropDown"}
-                                     src={close}
-                                     alt=""/>
-                            </div>
-                    }
-
+                                                </ul>
+                                            )
+                                        })
+                                    }</div>
+                        }
+                    </div>
+                    {/*valuta_content*/}
+                    <div className={"valuta_content"}>
+                        {
+                            isChoseCurrency
+                                ?
+                                // flags
+                                <div className={"flags"} onClick={() => setIsChoseCurrency(false)}>
+                                    {/*language*/}
+                                    <span className={"language"}>{currencyState[currencyId].currency} </span>
+                                    {/*drop_down*/}
+                                    <img className={"drop_down"}
+                                         src={open}
+                                         alt=""/>
+                                </div>
+                                :
+                                <div>
+                                    {
+                                        currencyState.map(currency => {
+                                            return (
+                                                // flags
+                                                <div key={currency.id} className={"flags"}
+                                                     onClick={() => handleChangeCurrency(currency.id)}>
+                                                    <span>{currency.currency}</span>
+                                                    {/*drop_up*/}
+                                                    <img className={"drop_up"}
+                                                         src={close}
+                                                         alt=""/>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                        }
+                    </div>
                 </div>
             </div>
-            <img src={logo} alt={""} className={"logo"}/>
+            {/*page_logo*/}
+           <div className={"page_logo"}>
+               <img src={logo} alt={""} className={"logo"}/>
+           </div>
+
+            //
+
+
             <div className={"container1"}>
                 <div className={"icon-login-wishlist"}>
                     <div className={"text_and_heart"}>
