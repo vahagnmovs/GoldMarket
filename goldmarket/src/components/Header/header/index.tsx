@@ -6,8 +6,21 @@ import heart from "../../../style/Icons/heart.png"
 import user from "../../../style/Icons/user.png"
 import basket from "../../../style/Icons/basket.png"
 import "./Header.scss"
+import LoginModal from "./loginModal";
 
-const flags = [
+type Flag =  {
+    id: number,
+    value: string,
+    url: string,
+}
+
+type Currency = {
+    id: number,
+    currency: string,
+    src: string,
+}
+
+const flags: Flag[] = [
     {
         id: 0,
         value: "ENG",
@@ -25,7 +38,7 @@ const flags = [
     }
 ];
 
-const currency = [
+const currency: Currency[] = [
     {
         id: 0,
         currency: "USD",
@@ -51,17 +64,19 @@ const  Header = () =>{
     const [currencyState, setCurrencyState] = useState(currency)
     const [isChoseCurrency, setIsChoseCurrency] = useState(true);
     const [currencyId, setCurrencyId] = useState(0)
+    const [isLoginOpen, setIsLoginOpen] = useState(false)
 
 
-    const handleChangeLanguage = (id) => {
+    const handleChangeLanguage = (id:number) => {
         setId(id);
         setFlagChoose(true)
     }
 
-    const handleChangeCurrency = (id) => {
+    const handleChangeCurrency = (id:number) => {
         setCurrencyId(id)
         setIsChoseCurrency(true)
     }
+
 
     return (
         // containrt
@@ -154,7 +169,7 @@ const  Header = () =>{
                 </div>
                 {/*user_login*/}
                 <div className={"user_login"}>
-                    <spam>LOGIN</spam>
+                    <span>LOGIN</span>
                     <img className={"user_icon"} src={user} alt="user_icon"/>
                 </div>
 
