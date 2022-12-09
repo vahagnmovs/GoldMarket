@@ -1,6 +1,6 @@
-import '.././../index.css'
+import '../index.css'
 
-export default function MenuItem({ imgSrc, title }) {
+ const MenuItem = ({ imgSrc, title }) => {
 
 
 
@@ -14,3 +14,5 @@ export default function MenuItem({ imgSrc, title }) {
         </div>
     )
 }
+
+export default MenuItem

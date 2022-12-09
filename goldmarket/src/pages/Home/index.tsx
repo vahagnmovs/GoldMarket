@@ -11,6 +11,9 @@ import SwitchComponent from '../../components/Centers/switchComponents';
 import Collections from "../../components/newCollections/Collections";
 import BestSales from "../../components/bestSales/BestSales";
 import MostViewed from "../../components/mostViewed/mostViewed";
+import WhyGoldCenter from '../../components/Information/WhyGoldCenter';
+import AboutUs from '../../components/Information/AboutUs';
+import SellWithUs from '../../components/Information/SellWithUs';
 
 const Home = () => {
     return (
@@ -24,13 +27,12 @@ const Home = () => {
                 {/*<ReactVideoPlayer />*/}
                 <SwitchComponent />
                 <Collections />
-                {/*Narek 1*/}
+                <SellWithUs />
                 <BestSales />
-                {/*<Information />*/}
                 <RecommendedSellers />
                 <MostViewed />
-                {/*Narek 2*/}
-                {/*Narek 3*/}
+                <WhyGoldCenter />
+                <AboutUs />
             </>
         </Layout>
     );

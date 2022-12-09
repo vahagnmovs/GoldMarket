@@ -1,13 +1,13 @@
-import { textFromGirl } from "../constants";
-
-export default function AboutUs() {
+const Text = ({ text }) => {
     
     return(
         <div className='aboutUs'>
              <h3>About Us</h3>
-             <p className='aboutText'> {textFromGirl} </p>
+             <p className='aboutText'> {text} </p>
 
              <button className='aboutBtn'>ABOUT US</button>
         </div>
     )
 }
+
+export default Text;
