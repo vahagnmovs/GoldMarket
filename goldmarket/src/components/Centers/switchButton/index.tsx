@@ -1,8 +1,8 @@
 import "./stayle.css";
 
 interface switchButtonProps {
-  checked: boolean,
-  handleCeckid: () => void,
+  checked: boolean;
+  handleCeckid: () => void;
 }
 
 const SwitchButton = ({ checked, handleCeckid }: switchButtonProps) => {

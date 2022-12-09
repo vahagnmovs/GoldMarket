@@ -1,4 +1,4 @@
-import { Type } from "../../../types"
+import { Type } from "../../../types";
 
 const Collection = ({id, img, title}:Type) => {
   return (
@@ -9,4 +9,4 @@ const Collection = ({id, img, title}:Type) => {
   )
 }
 
-export default Collection
+export default Collection;

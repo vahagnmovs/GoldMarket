@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import MapList from '../maps/MapList'
-import ProductsList from '../products/ProductsList'
+import ProductsList from "../products/ProductsList";
+import SwitchButton from "../switchButton";
+import MapList from "../maps/MapList";
+import { useState } from "react";
 import "../styles/style.css"
-import SwitchButton from '../switchButton'
-
 
 const SwitchComponent = () => {
-    const [checked, setChecked] = useState(true)
+    const [checked, setChecked] = useState(true);
     const handleCeckid = () => {
-        setChecked(!checked)
+        setChecked(!checked);
     }
     return (
         <div className="contener">
             <SwitchButton checked={checked} handleCeckid={handleCeckid} />
-            {checked 
-            ? <ProductsList />
-             : <MapList />}
+            {checked
+                ? <ProductsList />
+                : <MapList />}
         </div>
     )
 }

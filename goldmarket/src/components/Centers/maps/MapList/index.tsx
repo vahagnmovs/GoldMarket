@@ -1,35 +1,28 @@
-import { setNewLengthData } from '../../switchComponents/setNewLengthData';
-import { useNavigate } from 'react-router-dom';
-import { MAP } from '../../feikData/Maps';
-import Map from '../Map';
+import { setNewLengthData } from "../../switchComponents/setNewLengthData";
+import svg from "../../../../Icons/next-16.svg";
+import { useNavigate } from "react-router-dom";
+import { MAP } from "../../feikData/Maps";
+import Map from "../Map";
 
 const MapList = () => {
-    const navigate = useNavigate()
-    const maps = setNewLengthData(MAP)
-    const handleShouMore = () => {
-        navigate("/shoppingcenter")
-    }
-    const handleShoppingCentr = (title: string) => {
-        if (title === "Yerevan") {
-            navigate("/shoppingcenter/yerevan")
-        }
-    }
+    const navigate = useNavigate();
+    const maps = setNewLengthData(MAP);
     return (
-            <div className="products">
-                {
-                    maps.map(item => <Map key={
-                        item.id
-                    }
-                        {...item} handleShoppingCentr={handleShoppingCentr} />)
+        <div className="products">
+            {
+                maps.map(item => <Map key={
+                    item.id
                 }
-                <button className="buttonSowMor"
-                    onClick={
-                        () => handleShouMore()
-                    }>
-                    <p>SHOW MORE</p>
-                    <img src={"icons/next-16.svg"}
-                        alt="Shou More" /></button>
-            </div>
+                    {...item} />)
+            }
+            <button className="buttonSowMor"
+                onClick={
+                    () => navigate("/shoppingcenters")
+                }>
+                <p>SHOW MORE</p>
+                <img src={svg}
+                    alt="Shou More" /></button>
+        </div>
     );
 }
 export default MapList;

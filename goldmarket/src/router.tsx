@@ -1,47 +1,33 @@
-import React from 'react';
-import {createBrowserRouter} from "react-router-dom";
-// pages
-import Home from "./pages/Home";
-import About from "./pages/About";
-import ShoppingRegions from "./components/ShoppingRegions";
+import ShoppingCentersRegionsList from './components/Centers/maps/ShoppingCentersRegions/ShoppingCentersRegionsList';
+import ShoppingCentersList from "./components/Centers/maps/ShoppingCenters/ShoppingCentersList";
+import CollectionsList from './components/Centers/products/Collections/CollectionsList';
+import { createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "./pages/NotFound";
-import Cities from "./components/Cities";
-import Products from "./pages/Products";
-import ShoppingCenters from "../src/components/Centers/maps/ShoppingCenters";
-import Collections from './components/Centers/products/Collections';
-import ShoppingCentersList from './components/Centers/shoppingCenters/ShoppingCentersList';
+import About from "./pages/About";
+import Home from "./pages/Home";
 
 
 const router = createBrowserRouter([{
-    path: '/',
-    element: <Home/>
+    path: "/",
+    element: <Home />
 }, {
-    path: '/home',
-    element: <Home/>
+    path: "/home",
+    element: <Home />
 }, {
-    path: '/about',
-    element: <About/>
-}, {
-    path: '/shoppingregions',
-    element: <ShoppingRegions/>
-}, {
-    path: '/shoppingregions/cities',
-    element: <Cities/>
-}, {
-    path: '/shoppingregions/cities/:id',
-    element: <Products/>
-}, {
-    path: "/shoppingcenter",
-    element: <ShoppingCenters/>
+    path: "/about",
+    element: <About />
 }, {
     path: "/collections",
-    element: <Collections/>
+    element: <CollectionsList />
 }, {
-    path: "/shoppingcenter/yerevan",
-    element: <ShoppingCentersList/>
+    path: "/shoppingcenters",
+    element: <ShoppingCentersList />
+}, {
+    path: "/shoppingcenters/:title:id",
+    element: <ShoppingCentersRegionsList />
 }, {
     path: '*',
-    element: <NotFoundPage/>
+    element: <NotFoundPage />
 }
 ]);
 
