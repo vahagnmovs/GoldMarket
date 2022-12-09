@@ -1,5 +1,5 @@
 import React from "react";
-import copyrightIcon from "../../../Icons/copyright.svg";
+import copyrightIcon from "../../../style/Icons/copyright.svg";
 import "./footre_end.scss";
 
 const FooterEnd = () => {

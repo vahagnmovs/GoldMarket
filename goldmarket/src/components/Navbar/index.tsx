@@ -1,9 +1,9 @@
 import React from 'react';
 import SearchCategory from "./searchCategory";
 import "./Nam_style.scss"
-import open from "../../Icons/open.png";
+import open from "../../style/Icons/open.png";
 import "./NightMod.scss"
-import search from "../../Icons/search.png"
+import search from "../../style/Icons/search.png"
 
 function Navbar() {
     return (

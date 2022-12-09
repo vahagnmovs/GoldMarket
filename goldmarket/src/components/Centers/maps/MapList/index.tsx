@@ -1,5 +1,5 @@
 import { setNewLengthData } from "../../switchComponents/setNewLengthData";
-import svg from "../../../../Icons/next-16.svg";
+import svg from "../../../../style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
 import { MAP } from "../../feikData/Maps";
 import Map from "../Map";

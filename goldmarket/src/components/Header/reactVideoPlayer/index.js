@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import photo from "../../../Icons/Rectangle 5.png"
+import photo from "../../../style/Icons/Rectangle 5.png"
 import "../reactVideoPlayer/Style/Video.scss"
 
 

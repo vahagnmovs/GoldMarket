@@ -1,6 +1,6 @@
 import React from 'react';
-import png1 from "../../../Icons/gallery.png";
-import star from "../../../Icons/star-regular.svg";
+import png1 from "../../../style/Icons/gallery.png";
+import star from "../../../style/Icons/star-regular.svg";
 
 
 const Sellers = (props) => {
