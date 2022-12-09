@@ -3,10 +3,16 @@
 /*    margin-top: 30px;*/
 /*    width: 700px;*/
 /*    height: 250px;*/
-/*    background-color: rgb(27, 27, 69);*/
+/*    !*background-color: rgb(27, 27, 69);*!*/
 /*    overflow: hidden;*/
 /*    display: flex;*/
 /*}*/
+
+.imgGold {
+    width: 310px;
+    height: 200px;
+    padding: 23px;
+}
 .imgGirl {
     width: 340px;
     height: 250px;
@@ -19,6 +25,7 @@
     color: white;
     padding: 23px;
 }
+
 .aboutText {
     font-size: 13px;
 }
