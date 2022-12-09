@@ -92,11 +92,9 @@ const  Header = () =>{
                                         flagState.map(flag => {
                                             return (
                                                 <ul className={"flags"} onClick={() => handleChangeLanguage(flag.id)}>
-                                                 <li>  <img className={"flag_img"} src={flag.url} alt="flag_img"/></li>
-                                                    <li><span className={"language"}>{flag.value}</span>  </li>
-                                                    <li>  <img className={"drop_up"}src={close}
-                                                               alt="drop_up"/>  </li>
-
+                                                 <li> <img className={"flag_img"} src={flag.url} alt="flag_img"/></li>
+                                                 <li><span className={"language"}>{flag.value}</span>  </li>
+                                                 <li>  <img className={"drop_up"}src={close} alt="drop_up"/>  </li>
                                                 </ul>
                                             )
                                         })
@@ -109,28 +107,24 @@ const  Header = () =>{
                             isChoseCurrency
                                 ?
                                 // flags
-                                <div className={"flags"} onClick={() => setIsChoseCurrency(false)}>
+                                <ul className={"flags"} onClick={() => setIsChoseCurrency(false)}>
                                     {/*language*/}
-                                    <span className={"language"}>{currencyState[currencyId].currency} </span>
+                                <li>  <span className={"language"}>{currencyState[currencyId].currency} </span></li>
                                     {/*drop_down*/}
-                                    <img className={"drop_down"}
-                                         src={open}
-                                         alt=""/>
-                                </div>
+                                <li><img className={"drop_down"} src={open} alt="drop_down"/> </li>
+                                </ul>
                                 :
                                 <div>
                                     {
                                         currencyState.map(currency => {
                                             return (
                                                 // flags
-                                                <div key={currency.id} className={"flags"}
+                                                <ul key={currency.id} className={"flags"}
                                                      onClick={() => handleChangeCurrency(currency.id)}>
-                                                    <span>{currency.currency}</span>
+                                                 <li><span>{currency.currency}</span></li>
                                                     {/*drop_up*/}
-                                                    <img className={"drop_up"}
-                                                         src={close}
-                                                         alt=""/>
-                                                </div>
+                                                    <li><img className={"drop_up"} src={close} alt=""/></li>
+                                                </ul>
                                             )
                                         })
                                     }
@@ -139,34 +133,36 @@ const  Header = () =>{
                     </div>
                 </div>
             </div>
-            {/*page_logo*/}
-           <div className={"page_logo"}>
-               <img src={logo} alt={""} className={"logo"}/>
+
+            {/*site_logo*/}
+           <div className={"site_logo"}>
+               <img src={logo} alt={"site_logo"} className={"logo"}/>
            </div>
 
-            //
 
-
-            <div className={"container1"}>
-                <div className={"icon-login-wishlist"}>
+            {/*top_right_content*/}
+            <div className={"top_right_content"}>
+                {/*wishlist*/}
+                <div className={"wishlist"}>
+                    {/*text_and_heart*/}
                     <div className={"text_and_heart"}>
-                        <p>WISHLIST</p>
-                        <img className={"icon"}
-                             src={heart}
-                             alt=""/>
+                        <span>WISHLIST</span>
+                        <img className={"icon_favorite"} src={heart} alt="icon_favorite"/>
+                        <span>(0)</span>
                     </div>
-                    <p>(0)</p>
+
                 </div>
-                <div className={"icon-login-wishlist"}>
-                    <p>LOGIN</p>
-                    <img className={"icon"}
-                         src={user}
-                         alt=""/>
+                {/*user_login*/}
+                <div className={"user_login"}>
+                    <spam>LOGIN</spam>
+                    <img className={"user_icon"} src={user} alt="user_icon"/>
                 </div>
-                <div className={"icon-login-wishlist"}>
-                    <p>CART</p>
-                    <img className={"icon"} src={basket} alt=""/>
-                    <p>(0)</p>
+
+                {/*card*/}
+                <div className={"card"}>
+                    <span>CART</span>
+                    <img className={"icon_card"} src={basket} alt="icon_card"/>
+                    <span>(0)</span>
                 </div>
             </div>
         </div>
