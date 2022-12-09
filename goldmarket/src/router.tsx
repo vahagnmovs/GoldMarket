@@ -23,7 +23,7 @@ const router = createBrowserRouter([{
     path: "/shoppingcenters",
     element: <ShoppingCentersList />
 }, {
-    path: "/shoppingcenters/:title/:id",
+    path: "/shoppingcenters/:title:id",
     element: <ShoppingCentersRegionsList />
 }, {
     path: '*',
