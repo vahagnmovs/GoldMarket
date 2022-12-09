@@ -21,11 +21,11 @@ function GoldPriceList({isShowMoreBtn}) {
                         </thead>
                         <tbody>
                         <tr>
-                            <th className={"tr2"}>999 - 24k</th>
-                            <th>56.3</th>
-                            <th>56.9</th>
-                            <th>-0.20</th>
-                            <th>15:29:23</th>
+                            <td className={"tr2"}>999 - 24k</td>
+                            <td>56.3</td>
+                            <td>56.9</td>
+                            <td>-0.20</td>
+                            <td>15:29:23</td>
 
                         </tr>
                         </tbody>

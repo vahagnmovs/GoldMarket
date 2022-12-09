@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SearchCategory from "./searchCategory";
 import "./Nam_style.scss"
 import open from "../../Icons/open.png";
@@ -6,6 +6,10 @@ import "./NightMod.scss"
 import search from "../../Icons/search.png"
 
 function Navbar() {
+
+    const [searchBtn, setSearchBtn] = useState(true)
+
+
     return (
         <nav>
             <div className={"nav"}>
@@ -27,8 +31,21 @@ function Navbar() {
                                  alt=""/>
                         </div>
                     </div>
-                    <p className={"text"}> SEARCH</p>
-                    <img className={"png"} src={search} alt=""/>
+                    {
+                        searchBtn
+                            ?
+                            <div onClick={() => setSearchBtn(!searchBtn)}>
+                                <span className={"text"}> SEARCH</span>
+                                <img className={"png"} src={search} alt=""/>
+                            </div>
+                            :
+                            <div>
+                                <button onClick={() => setSearchBtn(!searchBtn)}>X</button>
+                                <input type="text" defaultValue={"ENTER YOUR KEYWORD"}/>
+                                <img src="" alt=""/>
+                                <p>ENTER YOUR KEYWORD</p>
+                            </div>
+                    }
                 </div>
                 <label className="switch">
                     <input type="checkbox"
