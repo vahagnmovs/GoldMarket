@@ -1,0 +1,217 @@
+@media (max-width: $screen-lg) {
+	
+	.footer {
+
+		.footer-content {
+			padding: 60px 0 30px;
+		}
+
+		.footer-about {
+
+			p {
+				max-width: 220px;
+			}
+		}
+
+		.services-menu {
+			max-width: 300px;
+
+			ul {
+				column-gap: 30px;
+			}
+		}
+
+		.contact-menu {
+			max-width: 200px;
+		}
+
+		.footer-bottom {
+			padding: 25px 0 30px;
+		}
+	}
+
+}
+
+
+@media (max-width: $screen-md) {
+	
+	.footer {
+
+		.footer-content {
+			flex-wrap: wrap;
+			padding: 30px 0;
+		}
+
+		.footer-about {
+			width: 100% !important;
+			margin-bottom: 25px;
+
+			.img-wrap {
+				height: auto;
+				margin-bottom: 15px;
+			}
+
+			img {
+				width: 100px;
+				margin: 0 auto;
+			}
+
+			p {
+				max-width: 530px;
+				text-align: center;
+				margin: 0 auto;
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+
+		.services-menu {
+			max-width: 350px;
+		}
+	
+		.social {
+
+			h5 {
+				display: none;
+			}
+
+			ul {
+				margin-left: 0;
+
+				li {
+					margin-right: 25px;
+				}
+			}
+		}
+	}
+
+}
+
+@media (max-width: $screen-sm) {
+	
+	.footer {
+
+		.footer-content {
+
+			> div {
+				width: 50%;
+			}
+		}
+
+		.footer-about {
+
+			img {
+				width: 100px;
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+
+		.services-menu {
+			width: 100% !important;
+			max-width: 100%;
+			margin-bottom: 25px;
+
+			ul {
+				column-gap: 0;
+
+				li {
+					padding-right: 30px;
+				}
+			}
+		}
+
+		.footer-bottom {
+			padding: 20px 0 25px;
+		}
+
+		.social  {
+			
+			ul {
+				margin-left: 0;
+			}
+
+			li {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: $screen-xs) {
+	
+	.footer {
+
+		.footer-content {
+
+			h5 {
+				padding: 0 30px 15px;
+				display: inline-block;
+
+				&:after {
+					width: 30px;
+					left: 50%;
+					margin-left: -15px;
+				}
+			}
+
+			> div {
+				width: 100%;
+				margin-bottom: 40px;
+				text-align: center;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.footer-about {
+			text-align: left !important;
+			margin-bottom: 40px;
+		}
+
+		.menu {
+
+			.with-icon {
+				justify-content: center;
+			}
+		}
+
+		.services-menu {
+			margin-bottom: 40px;
+
+			ul {
+				column-count: 1;
+
+				li {
+					padding-right: 0;
+				}
+			}
+		}
+
+		.contact-menu {
+			max-width: 100%;
+		}
+
+		.footer-bottom {
+			flex-direction: column;
+		}
+
+		.social  {
+			display: block;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.copyright {
+			text-align: center;
+			font-size: $font-size-sm;
+		}
+	}
+}

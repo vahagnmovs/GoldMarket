@@ -1,0 +1,40 @@
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+[class*="col-"] {
+	padding: 0 15px;
+	width: 100%;
+}
+
+$cols: 12;
+$step: 1;
+
+@while $step <= $cols {
+    .col-#{$step} {
+    	width: calc(100% / (#{$cols} / #{$step}));
+    }
+    $step: $step + 1;
+}
+
+
+@each $key-breakpoints, $val-breakpoints in $breakpoints {
+
+	@media (max-width: #{$val-breakpoints}) {
+
+		$cols: 12;
+		$step: 1;
+
+		@while $step <= $cols {
+		    .col-#{$key-breakpoints}-#{$step} {
+		    	width: calc(100% / (#{$cols} / #{$step}));
+		    }
+		    $step: $step + 1;
+		}
+
+	}
+
+}
