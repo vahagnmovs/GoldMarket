@@ -1,21 +1,21 @@
 import randomID from "./UUID";
 import {products} from './products';
-import type {ProductsTypes} from './products'
+// import type {ProductsTypes} from './products'
 
 const product = products[0];
 
-type BuyersType = {
-    buyerID: string,
-    firstName: string,
-    lastName: string,
-    email: string,
-    phone: number,
-    password: string,
-    whishList: ProductsTypes[],
-    cart: ProductsTypes[],
-}
+// type BuyersType = {
+//     buyerID: string,
+//     firstName: string,
+//     lastName: string,
+//     email: string,
+//     phone: number,
+//     password: string,
+//     whishList: ProductsTypes[],
+//     cart: ProductsTypes[],
+// }
 
-const buyers: BuyersType[] = [
+const buyers = [
     {
         buyerID: randomID(),
         firstName: "Vahagn",

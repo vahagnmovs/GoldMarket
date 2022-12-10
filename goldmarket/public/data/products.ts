@@ -1,41 +1,41 @@
 import randomID from "./UUID";
 
-type PriceTypes = {
-    currentPrice: number,
-    oldPrice: number
-}
+// type PriceTypes = {
+//     currentPrice: number,
+//     oldPrice: number
+// }
+//
+// type DiamondTypes = {
+//     CARAT: number,
+//     PCS: number,
+//     COLOR: string,
+//     CLARITY: string,
+//     CUT: string,
+// }
 
-type DiamondTypes = {
-    CARAT: number,
-    PCS: number,
-    COLOR: string,
-    CLARITY: string,
-    CUT: string,
-}
+// type ProductsTypes = {
+//     productID: string,
+//     NAME: string,
+//     SELLER_ID: string,
+//     COLOR: string,
+//     DISCOUNT: number,
+//     CODE: string,
+//     SIZE: number[],
+//     prices: PriceTypes,
+//     DESCRIPTION: string
+//     MATERIAL: string,
+//     "FOR WHOM": string,
+//     COUNT: number,
+//     PUBLISH: boolean,
+//     FINENESS: number,
+//     WEIGHT: number[],
+//     STONE: boolean,
+//     DIAMOND: DiamondTypes,
+//     IMAGES: string[],
+//     TYPE: string,
+// }
 
-type ProductsTypes = {
-    productID: string,
-    NAME: string,
-    SELLER_ID: string,
-    COLOR: string,
-    DISCOUNT: number,
-    CODE: string,
-    SIZE: number[],
-    prices: PriceTypes,
-    DESCRIPTION: string
-    MATERIAL: string,
-    "FOR WHOM": string,
-    COUNT: number,
-    PUBLISH: boolean,
-    FINENESS: number,
-    WEIGHT: number[],
-    STONE: boolean,
-    DIAMOND: DiamondTypes,
-    IMAGES: string[],
-    TYPE: string,
-}
-
-const products: ProductsTypes[] = [
+const products = [
     {
         productID: randomID(),
         NAME: "Graziella ring",
@@ -389,4 +389,4 @@ const products: ProductsTypes[] = [
 ]
 
 export {products};
-export type {ProductsTypes};
+// export type {ProductsTypes};
