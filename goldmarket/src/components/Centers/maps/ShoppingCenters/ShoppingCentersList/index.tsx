@@ -1,5 +1,5 @@
 import ShoppingCenter from "../../ShoppingCentersRegions/ShoppingCenterRegion";
-import { MAP } from "../../../feikData/Maps";
+import { MAP } from "../../../../../data/mapData";
 
 const ShoppingCentersList = () => {
   return (
