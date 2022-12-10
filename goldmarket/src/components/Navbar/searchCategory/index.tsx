@@ -1,4 +1,8 @@
 import React, {useState} from 'react';
+import "../../../style/elements/_navbar.scss"
+import "../../../style/base/_globals.scss"
+import "../../../style/base/_reset.scss"
+import "../../../style/utilities/_variables.scss"
 
 type SearchCategoryProps = {
     title: string,
@@ -18,9 +22,9 @@ function SearchCategory({title}: SearchCategoryProps) {
             {
                 mouse
                     ?
-                    <>
+                    <div className={"navbar2 flex"}>
                         {/*gold_jewelry*/}
-                        <ul className={"gold_jewelry"}>
+                        <ul className={"gold_jewelry flex"}>
                             <li><a href="#"></a>GOLD</li>
                             <li><a href="#"></a>BUY</li>
                             <li><a href="#"></a>SELL</li>
@@ -61,7 +65,7 @@ function SearchCategory({title}: SearchCategoryProps) {
                                 <li><a href="#"></a>Other</li>
                             </div>
                         </div>
-                    </>
+                    </div>
                     :
                     <span>{title}</span>
 
