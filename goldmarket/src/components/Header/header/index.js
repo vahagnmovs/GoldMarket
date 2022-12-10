@@ -138,7 +138,7 @@ const Header = () => {
                     </div>
                 </div>
                 {/*site_logo*/}
-                <div className={"site_logo "}>
+                <div className={"site_logo"}>
                     <h2>
                         <img src={logo} alt={"site_logo"} className={"logo"}/>
                     </h2>
