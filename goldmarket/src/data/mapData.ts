@@ -6,90 +6,90 @@ export const MAP = [
             {
                 "id": "1",
                 "title": "Gold center",
-                "img": "/data/mapImages/shopImages/yerevan/Khorenatsi.jpg"
+                "img": "/dataImages/mapImages/shopImages/yerevan/Khorenatsi.jpg"
             },
             {
                 "id": "2",
                 "title": "Rossia mall gold galleria",
-                "img": "/data/mapImages/shopImages/yerevan/Russia.jpg"
+                "img": "/dataImages/mapImages/shopImages/yerevan/Russia.jpg"
             },
             {
                 "id": "3",
                 "title": "Tashir Gold center",
-                "img": "/data/mapImages/shopImages/yerevan/Tashir.jpg"
+                "img": "/dataImages/mapImages/shopImages/yerevan/Tashir.jpg"
             },
             {
                 "id": "4",
                 "title": "Malatia Gold center",
-                "img": "/data/mapImages/shopImages/yerevan/Malatia.jpg"
+                "img": "/dataImages/mapImages/shopImages/yerevan/Malatia.jpg"
             },
             {
                 "id": "5",
                 "title": "Dalma Gold center",
-                "img": "/data/mapImages/shopImages/yerevan/Dalma.jpg"
+                "img": "/dataImages/mapImages/shopImages/yerevan/Dalma.jpg"
             },
         ],
-        "img": "/data/mapImages/yerevan.png",
+        "img": "/dataImages/mapImages/yerevan.png",
     },
     {
         "id": "2",
         "title": "Aragatsotn",
         "shops": [],
-        "img": "/data/mapImages/Aragatsotn.png"
+        "img": "/dataImages/mapImages/Aragatsotn.png"
     },
     {
         "id": "3",
         "title": "Ararat",
         "shops": [],
-        "img": "/data/mapImages/Ararat.png"
+        "img": "/dataImages/mapImages/Ararat.png"
     },
     {
         "id": "4",
         "title": "Armavir",
         "shops": [],
-        "img": "/data/mapImages/Armavir.png"
+        "img": "/dataImages/mapImages/Armavir.png"
     },
     {
         "id": "5",
         "title": "Gagharkunik",
         "shops": [],
-        "img": "/data/mapImages/Gegharquniq.png"
+        "img": "/dataImages/mapImages/Gegharquniq.png"
     },
     {
         "id": "6",
         "title": "Kotayk",
         "shops": [],
-        "img": "/data/mapImages/Kotayq.png"
+        "img": "/dataImages/mapImages/Kotayq.png"
     },
     {
         "id": "7",
         "title": "Lori",
         "shops": [],
-        "img": "/data/mapImages/Lori.png"
+        "img": "/dataImages/mapImages/Lori.png"
     },
     {
         "id": "8",
         "title": "Shirak",
         "shops": [],
-        "img": "/data/mapImages/Shirak.png"
+        "img": "/dataImages/mapImages/Shirak.png"
     },
     {
         "id": "9",
         "title": "Syunik",
         "shops": [],
-        "img": "/data/mapImages/Syunik.png"
+        "img": "/dataImages/mapImages/Syunik.png"
     },
     {
         "id": "10",
         "title": "Tavush",
         "shops": [],
-        "img": "/data/mapImages/Tavush.png"
+        "img": "/dataImages/mapImages/Tavush.png"
     },
     {
         "id": "11",
         "title": "Vayotc Dzor",
         "shops": [],
-        "img": "/data/mapImages/Vayoc-dzor.png"
+        "img": "/dataImages/mapImages/Vayoc-dzor.png"
     },
 ]
 

@@ -1,4 +1,4 @@
-import gelewery from "../../src/style/Icons/gallery.png"
+import gelewery from "../style/Icons/gallery.png"
 
 export const data = [
     {

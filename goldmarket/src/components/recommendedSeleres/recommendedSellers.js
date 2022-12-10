@@ -1,6 +1,6 @@
 import "./style.css";
 import Sellers from "./sellers";
-import { data } from "../../../public/data/recommendedSellers";
+import { data } from "../../data/recommendedSellers";
 import { Link } from "react-router-dom";
 
 const  RecommendedSellers = () => {
