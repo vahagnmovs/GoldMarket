@@ -5,25 +5,12 @@ import close from "../../../style/Icons/close.png"
 import heart from "../../../style/Icons/heart.png"
 import user from "../../../style/Icons/user.png"
 import basket from "../../../style/Icons/basket.png"
-import "./Header.scss"
-import LoginModal from "./loginModal";
-import Buyer from "./login/buyer";
-import Login from "./login";
+import "../../../style/elements/_header.scss"
+import "../../../style/base/_globals.scss"
+import "../../../style/base/_reset.scss"
+import "../../../style/utilities/_variables.scss"
 
-
-type Flag =  {
-    id: number,
-    value: string,
-    url: string,
-}
-
-type Currency = {
-    id: number,
-    currency: string,
-    src: string,
-}
-
-const flags: Flag[] = [
+const flags = [
     {
         id: 0,
         value: "ENG",
@@ -41,7 +28,7 @@ const flags: Flag[] = [
     }
 ];
 
-const currency: Currency[] = [
+const currency = [
     {
         id: 0,
         currency: "USD",
@@ -59,7 +46,7 @@ const currency: Currency[] = [
     }
 ];
 
-const  Header = () =>{
+const Header = () => {
 
     const [flagState, setFlagState] = useState(flags);
     const [flagChoose, setFlagChoose] = useState(true);
@@ -67,39 +54,37 @@ const  Header = () =>{
     const [currencyState, setCurrencyState] = useState(currency)
     const [isChoseCurrency, setIsChoseCurrency] = useState(true);
     const [currencyId, setCurrencyId] = useState(0)
-    const [isLoginOpen, setIsLoginOpen] = useState(false)
 
 
-    const handleChangeLanguage = (id:number) => {
+    const handleChangeLanguage = (id: number) => {
         setId(id);
         setFlagChoose(true)
     }
 
-    const handleChangeCurrency = (id:number) => {
+    const handleChangeCurrency = (id: number) => {
         setCurrencyId(id)
         setIsChoseCurrency(true)
     }
 
-
     return (
-        // container
-        <div className={"container"}>
-            {/*container_top*/}
-            <div className={"container_top"}>
+        // containrt
+        <div className={"container flex"}>
+            {/*header*/}
+            <header className={"header flex justify-between align-center"}>
                 {/*top_left_content*/}
-                <div className={"top_left_content"}>
+                <div className={"top_left_content flex justify-between align-center"}>
                     {/*flag_content*/}
-                    <div className={"flag_content"}>
+                    <div className={"flag_content flex"}>
 
                         {
                             flagChoose
                                 ?
                                 // flags
-                                <ul className={"flags"} onClick={() => setFlagChoose(false)}>
+                                <ul className={"flags flex align-center"} onClick={() => setFlagChoose(false)}>
                                     {/*flag_img*/}
-                                   <li> <img className={"flag_img"} src={flagState[id].url} alt="flag_img"/></li>
+                                    <li><img className={"flag_icon"} src={flagState[id].url} alt="flag_img"/></li>
                                     {/*language*/}
-                                   <li><span className={"language"}>{flagState[id].value}</span></li>
+                                    <li><span className={"language"}>{flagState[id].value}</span></li>
                                     {/*drop_down*/}
                                     <li><img className={"drop_down"} src={open} alt="drop_down"/></li>
 
@@ -109,10 +94,12 @@ const  Header = () =>{
                                     {
                                         flagState.map(flag => {
                                             return (
-                                                <ul className={"flags"} onClick={() => handleChangeLanguage(flag.id)}>
-                                                 <li> <img className={"flag_img"} src={flag.url} alt="flag_img"/></li>
-                                                 <li><span className={"language"}>{flag.value}</span>  </li>
-                                                 <li>  <img className={"drop_up"}src={close} alt="drop_up"/>  </li>
+                                                <ul className={"flags flex  align-center"}
+                                                    onClick={() => handleChangeLanguage(flag.id)}>
+                                                    <li><img className={"flag_icon"} src={flag.url} alt="flag_img"/>
+                                                    </li>
+                                                    <li><span className={"language"}>{flag.value}</span></li>
+                                                    <li><img className={"drop_up"} src={close} alt="drop_up"/></li>
                                                 </ul>
                                             )
                                         })
@@ -120,16 +107,16 @@ const  Header = () =>{
                         }
                     </div>
                     {/*valuta_content*/}
-                    <div className={"valuta_content"}>
+                    <div className={"valuta_content flex align-center"}>
                         {
                             isChoseCurrency
                                 ?
-                                // flags
-                                <ul className={"flags"} onClick={() => setIsChoseCurrency(false)}>
+                                // value
+                                <ul className={"valuta flex align-center"} onClick={() => setIsChoseCurrency(false)}>
                                     {/*language*/}
-                                <li>  <span className={"language"}>{currencyState[currencyId].currency} </span></li>
+                                    <li><span className={"language"}>{currencyState[currencyId].currency} </span></li>
                                     {/*drop_down*/}
-                                <li><img className={"drop_down"} src={open} alt="drop_down"/> </li>
+                                    <li><img className={"drop_down "} src={open} alt="drop_down"/></li>
                                 </ul>
                                 :
                                 <div>
@@ -137,9 +124,9 @@ const  Header = () =>{
                                         currencyState.map(currency => {
                                             return (
                                                 // flags
-                                                <ul key={currency.id} className={"flags"}
-                                                     onClick={() => handleChangeCurrency(currency.id)}>
-                                                 <li><span>{currency.currency}</span></li>
+                                                <ul key={currency.id} className={"valuta flex align-center"}
+                                                    onClick={() => handleChangeCurrency(currency.id)}>
+                                                    <li><span>{currency.currency}</span></li>
                                                     {/*drop_up*/}
                                                     <li><img className={"drop_up"} src={close} alt=""/></li>
                                                 </ul>
@@ -150,41 +137,35 @@ const  Header = () =>{
                         }
                     </div>
                 </div>
-            </div>
+                {/*site_logo*/}
+                <div className={"site_logo"}>
+                    <h2>
+                        <img src={logo} alt={"site_logo"} className={"logo"}/>
+                    </h2>
+                </div>
 
-            {/*site_logo*/}
-           <div className={"site_logo"}>
-               <img src={logo} alt={"site_logo"} className={"logo"}/>
-           </div>
 
-
-            {/*top_right_content*/}
-            <div className={"top_right_content"}>
                 {/*wishlist*/}
-                <div className={"wishlist"}>
-                    {/*text_and_heart*/}
-                    <div className={"text_and_heart"}>
-                        <span>WISHLIST</span>
-                        <img className={"icon_favorite"} src={heart} alt="icon_favorite"/>
-                        <span>(0)</span>
-                    </div>
+                <div className={"top_right_content flex align-center"}>
+                    <ul  className={"flex align-center"}>
+                        <li className={"wishlist_content flex align-center"}>
+                            <span>WISHLIST</span>
+                            <img className={"icon_favorite"} src={heart} alt="icon_favorite"/>
+                            <span>(0)</span>
+                        </li>
+                        <li className={"login_content flex align-center"}>
+                            <span>LOGIN</span>
+                            <img className={"user_icon"} src={user} alt="user_icon"/>
+                        </li>
+                        <li className={"cart_content flex align-center"}>
+                            <span>CART</span>
+                            <img className={"icon_card"} src={basket} alt="icon_card"/>
+                            <span>(0)</span>
+                        </li>
+                    </ul>
+                </div>
 
-                </div>
-                {/*user_login*/}
-                <div className={"user_login"}  onClick={()  => setIsLoginOpen(!isLoginOpen)}>
-                    <span>LOGIN</span>
-                    <img className={"user_icon"} src={user} alt="user_icon"/>
-                </div>
-                {
-                    isLoginOpen  &&  <Login/>
-                }
-                {/*card*/}
-                <div className={"card"}>
-                    <span>CART</span>
-                    <img className={"icon_card"} src={basket} alt="icon_card"/>
-                    <span>(0)</span>
-                </div>
-            </div>
+            </header>
         </div>
     );
 };
