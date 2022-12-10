@@ -7,6 +7,9 @@ import user from "../../../style/Icons/user.png"
 import basket from "../../../style/Icons/basket.png"
 import "./Header.scss"
 import LoginModal from "./loginModal";
+import Buyer from "./login/buyer";
+import Login from "./login";
+
 
 type Flag =  {
     id: number,
@@ -168,11 +171,13 @@ const  Header = () =>{
 
                 </div>
                 {/*user_login*/}
-                <div className={"user_login"}>
+                <div className={"user_login"}  onClick={()  => setIsLoginOpen(!isLoginOpen)}>
                     <span>LOGIN</span>
                     <img className={"user_icon"} src={user} alt="user_icon"/>
                 </div>
-
+                {
+                    isLoginOpen  &&  <Login/>
+                }
                 {/*card*/}
                 <div className={"card"}>
                     <span>CART</span>
