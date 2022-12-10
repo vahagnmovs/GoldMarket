@@ -82,7 +82,7 @@ const  Header = () =>{
 
 
     return (
-        // containrt
+        // container
         <div className={"container"}>
             {/*container_top*/}
             <div className={"container_top"}>

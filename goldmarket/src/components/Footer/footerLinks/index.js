@@ -113,7 +113,7 @@ const FooterLinks = () => {
         //         <span>CONTACT</span>
         //         <ul>
         //             <li><p>Main office,</p></li>
-        //             <li><p>Baghramyan 26, Yerevan</p></li>
+        //             <li><p>Baghramyan 26, yerevan</p></li>
         //             <li><p>(+374 00 00 00)</p></li>
         //             <li><p>info@yerevan.am</p></li>
         //         </ul>
