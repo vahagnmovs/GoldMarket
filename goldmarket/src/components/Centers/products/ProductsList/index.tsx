@@ -1,11 +1,11 @@
 import { setNewLengthData } from "../../switchComponents/setNewLengthData";
 import svg from "../../../../style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
-import { PRODUCT } from "../../feikData";
+import { Collections } from "../../../../data/categoryData";
 import Product from "../Product";
 
 const ProductsList = () => {
-    const products = setNewLengthData(PRODUCT);
+    const products = setNewLengthData(Collections);
     const navigate = useNavigate();
     return (
         <div className="products">

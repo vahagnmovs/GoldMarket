@@ -1,4 +1,4 @@
-import { PRODUCT } from "../../../feikData";
+import { Collections } from "../../../../../data/categoryData";
 import Collection from "../Collection";
 
 const CollectionsList = () => {
@@ -8,7 +8,7 @@ const CollectionsList = () => {
         <h2>Collections</h2></div>
       <div className="products">
         {
-          PRODUCT.map(item => <Collection key={item.id}{...item} />)
+          Collections.map(item => <Collection key={item.id}{...item} />)
         }
       </div>
     </div>

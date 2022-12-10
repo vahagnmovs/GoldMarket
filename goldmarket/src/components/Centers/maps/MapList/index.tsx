@@ -1,7 +1,7 @@
 import { setNewLengthData } from "../../switchComponents/setNewLengthData";
 import svg from "../../../../style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
-import { MAP } from "../../feikData/Maps";
+import { MAP } from "../../../../data/mapData";
 import Map from "../Map";
 
 const MapList = () => {
