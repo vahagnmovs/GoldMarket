@@ -2,6 +2,7 @@ import ShoppingCenter from "../../ShoppingCentersRegions/ShoppingCenterRegion";
 import { MAP } from "../../../../../data/mapData";
 import Header from "../../../../Header/header";
 import Footer from "../../../../Footer";
+import Navbar from "../../../../Navbar";
 
 const ShoppingCentersList = () => {
   return (
@@ -16,6 +17,7 @@ const ShoppingCentersList = () => {
               </div>
           </div>
           <Footer/>
+          <Navbar/>
       </>
 
   )

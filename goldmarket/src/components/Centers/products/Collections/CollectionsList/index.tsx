@@ -2,6 +2,7 @@ import { Collections } from "../../../../../data/categoryData";
 import Collection from "../Collection";
 import Header from "../../../../Header/header";
 import Footer from "../../../../Footer";
+import Navbar from "../../../../Navbar";
 
 const CollectionsList = () => {
   return (
@@ -17,6 +18,7 @@ const CollectionsList = () => {
               </div>
           </div>
           <Footer/>
+          <Navbar/>
 
   </>
 
