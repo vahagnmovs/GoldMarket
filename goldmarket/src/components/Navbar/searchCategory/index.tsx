@@ -16,16 +16,17 @@ function SearchCategory({title}: SearchCategoryProps) {
 
 
     return (
-        <div onMouseEnter={() => setMouse(true)}
+        <div
+            onMouseEnter={() => setMouse(true)}
              onMouseLeave={() => setMouse(false)}
         >
             {
                 mouse
                     ?
-                    <div className={"navbar2 flex"}>
+                    <div className={"navbar2 "}>
                         {/*gold_jewelry*/}
                         <ul className={"gold_jewelry flex"}>
-                            <li><a href="#"></a>GOLD</li>
+                            <li ><a href="#"></a>GOLD</li>
                             <li><a href="#"></a>BUY</li>
                             <li><a href="#"></a>SELL</li>
                             <li><a href="#"></a>OR</li>
@@ -45,6 +46,7 @@ function SearchCategory({title}: SearchCategoryProps) {
                                 <li><a href="#"></a>Bracelets</li>
                                 <li><a href="#"></a>Other</li>
                             </ul>
+
                             {/*watches-jewelry*/}
                             <div className={"watches-jewelry"}>
                                 <li><a href="#"></a>MAN</li>

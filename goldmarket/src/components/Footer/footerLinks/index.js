@@ -52,7 +52,7 @@ const FooterLinks = () => {
                         <div className="input_list">
                             <input type="email" placeholder={"Enter E-MAIL"}/>
                             <button><i className="fa-light fa-arrow-right-long"></i></button>
-                            <p>With a long history of fine craftsmanship, Italic gold jewelry from brings</p>
+                            {/*<p>With a long history of fine craftsmanship, Italic gold jewelry from brings</p>*/}
 
                         </div>
 

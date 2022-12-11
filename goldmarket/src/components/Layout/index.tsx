@@ -26,12 +26,12 @@ const Layout = (props: LayoutProps) => {
             <div id={'nav-bar'}>
                 {NavBarComponent}
             </div>
-            {/*<div id={'page-container'}>*/}
-            {/*    {children}*/}
-            {/*</div>*/}
-            {/*<div id={'footer'}>*/}
-            {/*    {FooterComponent}*/}
-            {/*</div>*/}
+            <div id={'page-container'}>
+                {children}
+            </div>
+            <div id={'footer'}>
+                {FooterComponent}
+            </div>
         </main>
     )
 }
