@@ -1,6 +1,6 @@
-import ProductsList from "../products/ProductsList";
-import SwitchButton from "../switchButton";
-import MapList from "../maps/MapList";
+import ProductsList from "components/Centers/products/ProductsList";
+import SwitchButton from "components/Centers/switchButton";
+import MapList from "components/Centers/maps/MapList";
 import { useState } from "react";
 import "../styles/style.css"
 

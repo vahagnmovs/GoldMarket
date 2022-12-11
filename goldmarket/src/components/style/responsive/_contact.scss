@@ -1,0 +1,46 @@
+@media (max-width: $screen-md) {
+
+	.contact {
+
+		.container {
+
+			h2 {
+				font-size: 30px;
+			}
+
+			p {
+				font-size: 18px;
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: $screen-sm) {
+	
+	.contact {
+		text-align: center;
+
+		.container {
+			flex-direction: column;
+
+			div {
+
+				&:first-child {
+					margin-right: 0;
+					margin-bottom: 40px;
+				}
+			}
+			
+			h2 {
+				font-size: 28px;
+			}
+
+			p {
+				font-size: $font-size-base;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,127 @@
+//@mixin font-face($font-name, $font-face-name, $font-style, $font-weight) {
+//  $file-path: $fonts-folder + "/" + $font-name;
+//
+//  @font-face {
+//    font-family: $font-face-name;
+//    font-style: $font-style;
+//    font-weight: $font-weight;
+//    src: url($file-path + ".eot");
+//    src: url($file-path + ".eot?#iefix") format("embedded-opentype"),
+//      url($file-path + ".woff") format("woff"),
+//      url($file-path + ".ttf") format("truetype"),
+//      url($file-path + ".svg") format("svg");
+//  }
+//}
+//
+//@mixin bg-img(
+//  $image: null,
+//  $repeat: null,
+//  $size: null,
+//  $color: null,
+//  $position: null
+//) {
+//  @if ($image) {
+//    background-image: url($images-folder + $image);
+//  }
+//
+//  background-color: $color;
+//  background-size: $size;
+//  background-repeat: $repeat;
+//  background-position: $position;
+//}
+//
+//@mixin position(
+//  $position: absolute,
+//  $top: null,
+//  $right: null,
+//  $bottom: null,
+//  $left: null
+//) {
+//  position: $position;
+//  top: $top;
+//  right: $right;
+//  bottom: $bottom;
+//  left: $left;
+//}
+//
+//@mixin center($position) {
+//  position: absolute;
+//
+//  @if $position== "vertical" {
+//    top: 50%;
+//    transform: translateY(-50%);
+//  } @else if $position== "horizontal" {
+//    left: 50%;
+//    transform: translateX(-50%);
+//  } @else if $position== "both" {
+//    top: 50%;
+//    left: 50%;
+//    transform: translate(-50%, -50%);
+//  }
+//}
+//
+//@mixin clearfix {
+//  &:before,
+//  &:after {
+//    content: " ";
+//    display: table;
+//  }
+//
+//  &:after {
+//    clear: both;
+//  }
+//}
+//
+//@mixin placeholder {
+//  &::-webkit-input-placeholder {
+//    @content;
+//  }
+//
+//  &:-moz-placeholder {
+//    @content;
+//  }
+//
+//  &::-moz-placeholder {
+//    @content;
+//  }
+//
+//  &:-ms-input-placeholder {
+//    @content;
+//  }
+//}
+//
+//@mixin ellipsis($width) {
+//  max-width: $width;
+//  white-space: nowrap;
+//  overflow: hidden;
+//  text-overflow: ellipsis;
+//}
+//
+//@mixin no-flicker {
+//  transform-style: preserve-3d;
+//  backface-visibility: hidden;
+//  transform: translate3d(0, 0, 0);
+//}
+//
+//@mixin text-wrap {
+//  overflow: visible !important;
+//  white-space: normal !important;
+//  word-break: break-word !important;
+//}
+//
+//@mixin material-icon {
+//  font-family: $font-material;
+//  font-weight: normal;
+//  font-style: normal;
+//  line-height: 1;
+//  font-size: 24px;
+//  letter-spacing: normal;
+//  text-transform: none;
+//  display: inline-block;
+//  white-space: nowrap;
+//  word-wrap: normal;
+//  direction: ltr;
+//  -webkit-font-feature-settings: "liga";
+//  font-feature-settings: "liga";
+//  -webkit-font-smoothing: antialiased;
+//}

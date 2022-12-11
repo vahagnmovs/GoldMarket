@@ -1,6 +1,6 @@
-import ShoppingCenter from "../ShoppingCenterRegion";
+import ShoppingCenter from "components/Centers/maps/ShoppingCentersRegions/ShoppingCenterRegion";
 import "../ShoppingCentersRegionsStyle/style.css";
-import { MAP } from "../../../../../data/mapData";
+import { MAP } from "components/data/mapData";
 import { useParams } from "react-router-dom";
 
 const ShoppingCentersRegionsList = () => {

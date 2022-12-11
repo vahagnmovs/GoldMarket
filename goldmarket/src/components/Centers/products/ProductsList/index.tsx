@@ -1,8 +1,8 @@
-import { setNewLengthData } from "../../switchComponents/setNewLengthData";
-import svg from "../../../../style/Icons/next-16.svg";
+import { setNewLengthData } from "components/Centers/switchComponents/setNewLengthData";
+import svg from "components/style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
-import { Collections } from "../../../../data/categoryData";
-import Product from "../Product";
+import { Collections } from "components/data/categoryData";
+import Product from "components/Centers/products/Product";
 
 const ProductsList = () => {
     const products = setNewLengthData(Collections);

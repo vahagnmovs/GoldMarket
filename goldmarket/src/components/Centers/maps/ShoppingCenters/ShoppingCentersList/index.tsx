@@ -1,5 +1,5 @@
-import ShoppingCenter from "../../ShoppingCentersRegions/ShoppingCenterRegion";
-import { MAP } from "../../../../../data/mapData";
+import ShoppingCenter from "components/Centers/maps/ShoppingCentersRegions/ShoppingCenterRegion";
+import { MAP } from "components/data/mapData";
 
 const ShoppingCentersList = () => {
   return (

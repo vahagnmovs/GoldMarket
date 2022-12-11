@@ -1,4 +1,4 @@
-import { Collections } from "../../../../../data/categoryData";
+import { Collections } from "components/data/categoryData";
 import Collection from "../Collection";
 
 const CollectionsList = () => {

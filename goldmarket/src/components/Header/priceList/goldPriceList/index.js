@@ -1,5 +1,4 @@
-import React from 'react';
-import "../../priceList/goldPriceList/Style/GoldPriceList.scss"
+import "components/Header/priceList/goldPriceList/Style/GoldPriceList.scss"
 
 function GoldPriceList({isShowMoreBtn}) {
 

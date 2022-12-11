@@ -1,4 +1,4 @@
-import { Type } from "../../../types";
+import { Type } from "components/Centers/types";
 
 const Collection = ({id, img, title}:Type) => {
   return (

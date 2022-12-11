@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
-import logo from "../../../style/Icons/logo.png"
-import open from "../../../style/Icons/open.png"
-import close from "../../../style/Icons/close.png"
-import heart from "../../../style/Icons/heart.png"
-import user from "../../../style/Icons/user.png"
-import basket from "../../../style/Icons/basket.png"
-import "../../../style/elements/_header.scss"
-import "../../../style/base/_globals.scss"
-import "../../../style/base/_reset.scss"
-import "../../../style/utilities/_variables.scss"
+import logo from "components/style/Icons/logo.png"
+import open from "components/style/Icons/open.png"
+import close from "components/style/Icons/close.png"
+import heart from "components/style/Icons/heart.png"
+import user from "components/style/Icons/user.png"
+import basket from "components/style/Icons/basket.png"
+import "components/style/elements/_header.scss"
+import "components/style/base/_globals.scss"
+import "components/style/base/_reset.scss"
+import "components/style/utilities/_variables.scss"
 
 const flags = [
     {

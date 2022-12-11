@@ -1,0 +1,193 @@
+@media (max-width: $screen-xl) {
+	
+	.banner {
+
+		&-home {
+			padding: 270px 0;
+			background-size: 70%;
+		}
+	}
+
+}
+
+@media (max-width: $screen-lg) {
+	
+	.banner {
+
+		&-home {
+			padding: 180px 0;
+		}
+
+		&-get-a-quote {
+
+			.container {
+	
+				&:after {
+					width: 77%;
+					right: -36%;
+				}
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: $screen-md) {
+
+	.banner {
+
+		p {
+			font-size: $font-size-md;
+			line-height: 30px;
+		}
+
+		&-content {
+			width: 80%;
+			min-width: 290px;
+		}
+
+		&-home {
+			padding: 140px 0 120px;
+			background-size: 68%;
+
+			h1 {
+				line-height: 90px;
+				margin-bottom: 80px;
+
+				p {
+					font-size: 30px;
+					line-height: 46px;
+				}
+			}
+		}
+
+		&-get-a-quote {
+			text-align: center;
+
+			.container {
+	
+				&:after {
+					content: none;
+				}
+			}
+
+			.banner-content {
+				margin-left: auto;
+			}
+		}
+
+		&-about {
+			padding: 70px 0 170px !important;
+		}
+
+		&-portfolio {
+			padding: 70px 0 170px !important;
+
+			.img-wrap {
+				height: calc(100% - 175px);
+			}
+		}
+
+		.scroll-down-btn {
+			bottom: 55px;
+		}
+	}
+
+}
+
+
+@media (max-width: $screen-sm) {
+
+	.banner {
+		padding: 130px 0 100px;
+
+		p {
+		    font-size: $font-size-sm;
+		    line-height: 20px;
+		}
+
+		.btn {
+			margin-top: 35px;
+		}
+
+		.btn-group {
+			margin-top: 50px;
+			flex-direction: column;
+
+			.btn {
+				margin: 12px 0;
+			}
+		}
+
+		&-home {
+			padding: 130px 0 45px;
+			text-align: center;
+			background-image: none !important;
+
+			&:before {
+				background-size: 150%;
+				background-position: 15vw 25vw;
+			}
+
+			h1 {
+				line-height: 70px;
+				margin-bottom: 25px;
+
+				p {
+					font-size: $font-size-md;
+					line-height: 30px;
+				}
+			}
+
+			.banner-content {
+				margin: 0 auto;
+			}
+		}
+
+		&-get-a-quote {
+			text-align: center;
+
+			.container {
+				padding-top: 0;
+				padding-bottom: 0;
+	
+				&:after {
+					content: none;
+				}
+			}
+
+			.banner-content {
+				margin-left: auto;
+			}
+		}
+
+		&-portfolio {
+
+			.img-wrap {
+				height: calc(100% - 125px);
+			}
+		}
+	}
+
+}
+
+
+@media (max-width: $screen-xs) {
+	
+	.banner {
+
+		&-about {
+			padding-bottom: 200px !important;
+		}
+
+		&-portfolio {
+			padding-bottom: 200px !important;
+		}
+
+		.scroll-down-btn {
+			bottom: 85px;
+		}
+	}
+
+}

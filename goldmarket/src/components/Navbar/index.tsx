@@ -1,9 +1,9 @@
 import React from 'react';
 import SearchCategory from "./searchCategory";
 
-import open from "../../style/Icons/open.png";
+import open from "components/style/Icons/open.png";
 
-import search from "../../style/Icons/search.png"
+import search from "components/style/Icons/search.png"
 
 function Navbar() {
     return (

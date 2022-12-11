@@ -1,0 +1,15 @@
+.placeholder-box {
+	padding: 85px;
+	border: 1px solid $border-gray-light;
+	max-width: 400px;
+	margin: 0 auto;
+
+	img {
+		margin: 0 auto 40px;
+	}
+
+	p {
+		text-align: center;
+		color: $color-text-70; 
+	}
+}

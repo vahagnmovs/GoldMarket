@@ -1,5 +1,5 @@
-import svg from "../../../../style/Icons/next-16.svg";
-import { Type } from "../../types";
+import svg from "components/style/Icons/next-16.svg";
+import { Type } from "components/Centers/types";
 
 const Product = ({ id, title, img }: Type) => {
     return (

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import { useState } from 'react';
 import GoldPriceList from "./goldPriceList";
 import PhoneNumber from "./phoneNumber";
 import "../priceList/Style/Price.scss"

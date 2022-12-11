@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Type } from "../../../types";
+import { Type } from "components/Centers/types";
 
 const ShoppingCenterRegion = ({ id, img, title }: Type) => {
     const navigate = useNavigate();

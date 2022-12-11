@@ -1,0 +1,147 @@
+.technologies {
+  margin-bottom: 90px;
+
+  .technologies-list {
+  }
+
+  .technology {
+    display: flex;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-title {
+      background: $color-text;
+      padding: 25px 45px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: 110px;
+    }
+
+    h3 {
+      color: $color-white-60;
+    }
+  }
+
+  .img {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 305px;
+    min-height: 260px;
+    display: flex;
+    align-items: flex-end;
+    border-radius: $br-sm 0 0 $br-sm;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .text-wrap {
+    border: 1px solid $border-gray-light;
+    border-left: none;
+    border-radius: 0 $br-sm $br-sm 0;
+    padding: 45px 245px 45px 90px;
+    flex-grow: 1;
+
+    p {
+      color: $color-text-70;
+      margin-bottom: 20px;
+    }
+
+    li {
+      font-family: $font-secondary;
+    }
+  }
+}
+
+.service-tools {
+  margin-top: 90px;
+}
+
+.service-single-banner-container {
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+
+  .banner-text {
+    width: 70%;
+  }
+
+  .list-slider {
+    span {
+      display: block;
+      white-space: nowrap;
+      font-weight: $fw-700;
+      font-size: 54px;
+    }
+  }
+
+  .description {
+    color: $color-text-70;
+    max-width: 440px;
+    margin-top: 35px;
+  }
+
+  .banner-service-single {
+    padding: 210px 0 150px;
+
+    &.dark {
+      background: $color-text;
+
+      h1 {
+        color: $color-white-60;
+      }
+
+      .list-slider {
+        span {
+          color: $color-white !important;
+        }
+      }
+
+      .description {
+        color: $color-white-60;
+      }
+    }
+
+    &.light {
+      background: $bg-gray;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 0;
+      height: 100%;
+      overflow: hidden;
+      // animation: slideOutLeft 1.5s ease-in-out 2s forwards;
+
+      .animation-wrap {
+        display: none;
+      }
+
+      > div {
+        width: 100vw;
+      }
+
+      h1 {
+        color: $color-text;
+      }
+    }
+  }
+
+  .animation-wrap {
+    @include center(vertical);
+    position: absolute;
+    // margin-top: 30px;
+    right: 0;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    z-index: 3;
+  }
+}
