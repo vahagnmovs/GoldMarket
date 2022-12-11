@@ -1,10 +1,10 @@
-import CategoryOrMapList from "components/Centers/categoryOrMapList";
+import "components/Centers/shoppingCentersRegionsStyle/styles/style.css";
+import CategoryAndMapList from "components/Centers/categoryAndMapList";
 import { Collections } from "components/data/categoryData";
 import SwitchButton from "components/Centers/switchButton";
 import { setNewLengthData } from "./setNewLengthData";
 import { MAP } from "components/data/mapData";
 import { useState } from "react";
-import "../styles/style.css";
 
 const SwitchComponent = () => {
     const [checked, setChecked] = useState(true);
@@ -17,8 +17,8 @@ const SwitchComponent = () => {
         <div className="contener">
             <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             {checked
-                ? <CategoryOrMapList data={products} flag={true}/>
-                : <CategoryOrMapList data={maps}/> }
+                ? <CategoryAndMapList data={products} flag={true}/>
+                : <CategoryAndMapList data={maps}/> }
         </div>
     )
 }

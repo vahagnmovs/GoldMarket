@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import DrawCategoryAndMap from "components/Centers/drawCategoryAndMap";
 import { IdataProp } from "components/Centers/types";
 
-interface IcategoryOrMapListProp{
+interface IcategoryAndMapListProp{
     data: IdataProp[];
     flag?: boolean;
 }
-const CategoryOrMapList = ({ data, flag }: IcategoryOrMapListProp) => {
+const CategoryAndMapList = ({ data, flag }: IcategoryAndMapListProp) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
         if (flag) {
@@ -33,4 +33,4 @@ const CategoryOrMapList = ({ data, flag }: IcategoryOrMapListProp) => {
         </div>
     );
 }
-export default CategoryOrMapList;
+export default CategoryAndMapList;

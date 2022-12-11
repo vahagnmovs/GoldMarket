@@ -1,4 +1,4 @@
-import ShoppingCentersRegionsList from 'components/Centers/ShoppingCentersRegionsList';
+import ShoppingCentersRegionsList from 'components/Centers/shoppingCentersRegionsList';
 import ShoppingCentersList from "components/Centers/shoppingCentersList";
 import CollectionsList from 'components/Centers/collectionsList';
 import { createBrowserRouter } from "react-router-dom";
