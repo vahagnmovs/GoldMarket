@@ -8,6 +8,7 @@ const ShoppingCentersList = () => {
   return (
       <>
           <Header/>
+          <Navbar/>
           <div className="contener">
               <div className="shopping_collections"><h2>Shopping centers</h2></div>
               <div className="products">
@@ -17,7 +18,6 @@ const ShoppingCentersList = () => {
               </div>
           </div>
           <Footer/>
-          <Navbar/>
       </>
 
   )

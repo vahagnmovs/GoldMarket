@@ -167,7 +167,7 @@ const Header = () => {
                 </div>
 
             </header>
-            {/*<Navbar/>*/}
+
         </div>
     );
 };
