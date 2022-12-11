@@ -1,6 +1,6 @@
-import ShoppingCentersRegionsList from './components/Centers/maps/ShoppingCentersRegions/ShoppingCentersRegionsList';
-import ShoppingCentersList from "./components/Centers/maps/ShoppingCenters/ShoppingCentersList";
-import CollectionsList from './components/Centers/products/Collections/CollectionsList';
+import ShoppingCentersRegionsList from 'components/Centers/ShoppingCentersRegionsList';
+import ShoppingCentersList from "components/Centers/shoppingCentersList";
+import CollectionsList from 'components/Centers/collectionsList';
 import { createBrowserRouter } from "react-router-dom";
 import NotFoundPage from "./pages/NotFound";
 import About from "./pages/About";

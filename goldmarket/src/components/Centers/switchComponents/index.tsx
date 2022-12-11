@@ -1,11 +1,15 @@
-import ProductsList from "components/Centers/products/ProductsList";
+import CategoryOrMapList from "components/Centers/categoryOrMapList";
+import { Collections } from "components/data/categoryData";
 import SwitchButton from "components/Centers/switchButton";
-import MapList from "components/Centers/maps/MapList";
+import { setNewLengthData } from "./setNewLengthData";
+import { MAP } from "components/data/mapData";
 import { useState } from "react";
-import "../styles/style.css"
+import "../styles/style.css";
 
 const SwitchComponent = () => {
     const [checked, setChecked] = useState(true);
+    const products = setNewLengthData(Collections);
+    const maps = setNewLengthData(MAP);
     const handleCeckid = () => {
         setChecked(!checked);
     }
@@ -13,8 +17,8 @@ const SwitchComponent = () => {
         <div className="contener">
             <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             {checked
-                ? <ProductsList />
-                : <MapList />}
+                ? <CategoryOrMapList data={products} flag={true}/>
+                : <CategoryOrMapList data={maps}/> }
         </div>
     )
 }

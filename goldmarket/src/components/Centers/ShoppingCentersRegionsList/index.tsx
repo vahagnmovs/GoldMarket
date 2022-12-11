@@ -1,7 +1,8 @@
-import ShoppingCenter from "components/Centers/maps/ShoppingCentersRegions/ShoppingCenterRegion";
+import DrawCollactionAndSoppingCenter from "components/Centers/drawCollactionAndSoppingCenter";
 import "../ShoppingCentersRegionsStyle/style.css";
 import { MAP } from "components/data/mapData";
 import { useParams } from "react-router-dom";
+
 
 const ShoppingCentersRegionsList = () => {
     const { id } = useParams();
@@ -13,7 +14,7 @@ const ShoppingCentersRegionsList = () => {
                     <h2>{`Shopping centers ${currentCity?.title}`}</h2>
                 </div>
                 {
-                    currentCity?.shops.map(item => <ShoppingCenter key={item.id} {...item} />)
+                    currentCity?.shops.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item} />)
                 }
             </div>
         </div>
