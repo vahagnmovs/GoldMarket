@@ -9,6 +9,7 @@ import "../../../style/elements/_header.scss"
 import "../../../style/base/_globals.scss"
 import "../../../style/base/_reset.scss"
 import "../../../style/utilities/_variables.scss"
+import Navbar from "../../Navbar";
 
 const flags = [
     {
@@ -166,6 +167,7 @@ const Header = () => {
                 </div>
 
             </header>
+
         </div>
     );
 };
