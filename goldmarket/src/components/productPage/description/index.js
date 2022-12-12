@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Description = ({info}) => {
     const {CARAT, PCS, COLOR, CLARITY, CUT} = info.DIAMOND
     const {NAME, MATERIAL, FINENESS} = info

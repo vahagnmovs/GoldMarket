@@ -1,9 +1,9 @@
 import React, {InputHTMLAttributes, ReactElement, useState} from "react";
-import PriceList from "../Header/priceList";
+import PriceList from "src/components/Header/priceList";
 import PhoneNumber from "../Header/priceList/phoneNumber";
 import {Simulate} from "react-dom/test-utils";
 import input = Simulate.input;
-import ls from "local-storage";
+
 
 
 export interface LayoutProps {
