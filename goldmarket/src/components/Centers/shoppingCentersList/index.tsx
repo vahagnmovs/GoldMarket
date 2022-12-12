@@ -1,5 +1,5 @@
-import DrawCollactionAndSoppingCenter from "components/Centers/drawCollactionAndSoppingCenter";
-import { MAP } from "components/data/mapData";
+import DrawCollactionAndSoppingCenter from "src/components/Centers/drawCollactionAndSoppingCenter";
+import { MAP } from "src/data/mapData";
 
 const ShoppingCentersList = () => {
   return (

@@ -1,4 +1,4 @@
-import "components/Header/priceList/goldPriceList/Style/GoldPriceList.scss"
+import "src/components/Header/priceList/goldPriceList/Style/GoldPriceList.scss"
 
 function GoldPriceList({isShowMoreBtn}) {
 

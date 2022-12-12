@@ -1,7 +1,7 @@
-import svg from "components/style/Icons/next-16.svg";
+import svg from "src/style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
-import DrawCategoryAndMap from "components/Centers/drawCategoryAndMap";
-import { IdataProp } from "components/Centers/types";
+import DrawCategoryAndMap from "src/components/Centers/drawCategoryAndMap";
+import { IdataProp } from "src/components/Centers/types";
 
 interface IcategoryAndMapListProp{
     data: IdataProp[];

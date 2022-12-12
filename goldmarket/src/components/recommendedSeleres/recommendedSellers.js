@@ -1,6 +1,6 @@
 import "./style.css";
 import Sellers from "./sellers";
-import {data} from "components/data/recommendedSellers";
+import {data} from "src/data/recommendedSellers";
 import {Link} from "react-router-dom";
 
 const RecommendedSellers = () => {
@@ -15,8 +15,8 @@ const RecommendedSellers = () => {
                 <h2>Recommended sellers</h2>
                 <p className={"text"}>
                     With a long history of fine craftsmanship,
-                                        Italian gold jewelry from brings sophistication
-                                        and style to any outfit.
+                                                            Italian gold jewelry from brings sophistication
+                                                            and style to any outfit.
                 </p>
             </div>
             <div className={"block_recommender"}>

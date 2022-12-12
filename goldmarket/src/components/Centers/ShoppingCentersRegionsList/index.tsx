@@ -1,6 +1,6 @@
-import DrawCollactionAndSoppingCenter from "components/Centers/drawCollactionAndSoppingCenter";
+import DrawCollactionAndSoppingCenter from "src/components/Centers/drawCollactionAndSoppingCenter";
 import "../shoppingCentersRegionsStyle/style.css";
-import { MAP } from "components/data/mapData";
+import { MAP } from "src/data/mapData";
 import { useParams } from "react-router-dom";
 
 

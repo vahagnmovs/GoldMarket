@@ -1,5 +1,5 @@
-import svg from "components/style/Icons/next-16.svg";
-import { IdataProp } from "components/Centers/types";
+import svg from "src/style/Icons/next-16.svg";
+import { IdataProp } from "src/components/Centers/types";
 import { useNavigate } from "react-router-dom";
 
 interface IdrawCategoryAndMapProp extends IdataProp {

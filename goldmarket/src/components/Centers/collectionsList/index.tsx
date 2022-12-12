@@ -1,5 +1,5 @@
-import DrawCollactionAndSoppingCenter from "components/Centers/drawCollactionAndSoppingCenter";
-import { Collections } from "components/data/categoryData";
+import DrawCollactionAndSoppingCenter from "src/components/Centers/drawCollactionAndSoppingCenter";
+import { Collections } from "src/data/categoryData";
 
 
 const CollectionsList = () => {
@@ -9,7 +9,7 @@ const CollectionsList = () => {
         <h2>Collections</h2></div>
       <div className="products">
         {
-          Collections.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item}/>)
+          Collections.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item} />)
         }
       </div>
     </div>

@@ -1,5 +1,5 @@
-import viber from "components/style/Icons/viber.png"
-import whatsApp from "components/style/Icons/whatsapp.png"
+import viber from "src/style/Icons/viber.png"
+import whatsApp from "src/style/Icons/whatsapp.png"
 import "./phone.scss"
 
 function PhoneNumber() {
