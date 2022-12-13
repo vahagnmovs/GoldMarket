@@ -25,14 +25,9 @@ function SearchCategory({title}: SearchCategoryProps) {
                     ?
                     <div className={"navbar2 "}>
                         {/*gold_jewelry*/}
-                        <ul className={"gold_jewelry flex"}>
-                            <li ><a href="#"></a>GOLD</li>
-                            <li><a href="#"></a>BUY</li>
-                            <li><a href="#"></a>SELL</li>
-                            <li><a href="#"></a>OR</li>
-                        </ul>
+
                         {/*silver-jewelry*/}
-                        <div className={"silver-jewelry"}>
+                        <div className={"gold-jewelry"}>
                             <ul>
                                 <li><a href="#"></a>WOMAN</li>
                                 <li><a href="#"></a>Rings</li>
