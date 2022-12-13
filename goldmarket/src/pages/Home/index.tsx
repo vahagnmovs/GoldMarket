@@ -15,6 +15,8 @@ import WhyGoldCenter from '../../components/Information/WhyGoldCenter';
 import AboutUs from '../../components/Information/AboutUs';
 import SellWithUs from '../../components/Information/SellWithUs';
 import ProductPage from "../../components/productPage";
+import SignIn from "../../components/Header/header/login/seller/signin";
+import Login from "../../components/Header/header/login/seller/login";
 
 const Home = () => {
     return (
@@ -24,6 +26,7 @@ const Home = () => {
             FooterComponent={<Footer/>}
         >
             <>
+                {/*<Login />*/}
                 <PriceList />
                 {/*<ReactVideoPlayer />*/}
                 <SwitchComponent />
@@ -35,7 +38,7 @@ const Home = () => {
                 <WhyGoldCenter />
                 <AboutUs />
 
-                <ProductPage/>
+                {/*<ProductPage/>*/}
             </>
         </Layout>
     );
