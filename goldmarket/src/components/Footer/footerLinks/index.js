@@ -4,10 +4,10 @@ import {Link, Outlet} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 import "./Global_Center.scss"
 
-import visa from "../../../style/Icons/visa.png"
-import master from "../../../style/Icons/master.png"
-import google_pay from "../../../style/Icons/google-pay.png"
-import apple_pay from "../../../style/Icons/apple-pay.png"
+import visa from "src/style/Icons/visa.png"
+import master from "src/style/Icons/master.png"
+import google_pay from "src/style/Icons/google-pay.png"
+import apple_pay from "src/style/Icons/apple-pay.png"
 
 const FooterLinks = () => {
     const navigate = useNavigate()

@@ -5,7 +5,7 @@ import Slider from "react-slick";
 // import BasicCard from "./cardSliceCarousel/childComponent/card";
 import "./style.css"
 import Card from "./card";
-import image from "../../Information/Image";
+import images from "src/components/Information/Image/";
 
 
 const SladeCarousel = ({images}) => {
@@ -13,6 +13,7 @@ const SladeCarousel = ({images}) => {
     let imagesArr = [];
 
     (function () {
+        // eslint-disable-next-line array-callback-return
         images.map(image => {
            imagesArr.push(image.IMAGES[0])
         })

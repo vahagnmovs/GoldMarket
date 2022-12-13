@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import "../../../style/elements/_navbar.scss"
-import "../../../style/base/_globals.scss"
-import "../../../style/base/_reset.scss"
-import "../../../style/utilities/_variables.scss"
+import "src/style/elements/_navbar.scss"
+import "src/style/base/_globals.scss"
+import "src/style/base/_reset.scss"
+import "src/style/utilities/_variables.scss"
 
 type SearchCategoryProps = {
     title: string,

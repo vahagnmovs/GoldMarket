@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Contacts = () => {
     return (
         <div style={{display:"flex", justifyContent:"space-around"}}>

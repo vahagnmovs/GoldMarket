@@ -1,6 +1,4 @@
-import React, {useState} from 'react';
-
-import {products} from "../../data/products";
+import { products } from "src/data/products";
 import AboutPage from "./aboutProduct";
 import Description from "./description";
 import SlideCarousel from "./slideCarousel";
