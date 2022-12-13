@@ -1,12 +1,12 @@
 import React from 'react';
 import SearchCategory from "./searchCategory";
-import open from "../../style/Icons/open.png";
-import search from "../../style/Icons/search.png"
+import open from "src/style/Icons/open.png";
+import search from "src/style/Icons/search.png"
 
-import "../../../src/style/elements/_navbar.scss"
-import "../../../src/style/base/_globals.scss"
-import "../../../src/style/base/_reset.scss"
-import "../../../src/style/utilities/_variables.scss"
+import "src/style/elements/_navbar.scss"
+import "src/style/base/_globals.scss"
+import "src/style/base/_reset.scss"
+import "src/style/utilities/_variables.scss"
 
 function Navbar() {
     return (

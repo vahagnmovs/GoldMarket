@@ -65,10 +65,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
         ]
     },
     {
@@ -100,10 +100,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
         ]
     },
     {
@@ -135,10 +135,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
         ]
     },
     {
@@ -170,10 +170,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
         ]
     },
     {
@@ -205,10 +205,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
         ]
     },
     {
@@ -240,10 +240,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
         ]
     },
     {
@@ -275,10 +275,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
         ]
     },
     {
@@ -310,10 +310,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
         ]
     },
     {
@@ -345,10 +345,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
         ]
     },
     {
@@ -380,10 +380,10 @@ const products = [
         },
         DESCRIPTION: "lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
         IMAGES: [
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
-            "/src/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/1.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring2/2.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring3/3.jpg",
+            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring4/4.jpg",
         ]
     },
 ]

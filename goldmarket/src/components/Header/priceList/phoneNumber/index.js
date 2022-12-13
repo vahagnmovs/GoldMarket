@@ -1,6 +1,6 @@
 import React from 'react';
-import viber from "../../../../style/Icons/viber.png"
-import whatsApp from "../../../../style/Icons/whatsapp.png"
+import viber from "src/style/Icons/viber.png"
+import whatsApp from "src/style/Icons/whatsapp.png"
 import "./phone.scss"
 
 function PhoneNumber() {
