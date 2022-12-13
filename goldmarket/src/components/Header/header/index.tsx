@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
-import logo from "src/style/Icons/logo.png"
-import open from "src/style/Icons/open.png"
-import close from "src/style/Icons/close.png"
-import heart from "src/style/Icons/heart.png"
-import user from "src/style/Icons/user.png"
-import basket from "src/style/Icons/basket.png"
-import "src/style/elements/_header.scss"
-import "src/style/base/_globals.scss"
-import "src/style/base/_reset.scss"
-import "src/style/utilities/_variables.scss"
+import React, { useCallback, useState } from 'react';
+import logo from "../../../style/Icons/logo.png"
+import open from "../../../style/Icons/open.png"
+import close from "../../../style/Icons/close.png"
+import heart from "../../../style/Icons/heart.png"
+import user from "../../../style/Icons/user.png"
+import basket from "../../../style/Icons/basket.png"
+// import "../../../style/elements/_header.scss"
+// import "../../../style/base/_globals.scss"
+// import "../../../style/base/_reset.scss"
+// import "../../../style/utilities/_variables.scss"
 import Navbar from "../../Navbar";
 
 const flags = [
@@ -50,16 +50,15 @@ const currency = [
 const Header = () => {
 
     const [flagState, setFlagState] = useState(flags);
-    const [flagChoose, setFlagChoose] = useState(true);
-    const [id, setId] = useState(0)
+    const [chosenflag, setChosenFlag] = useState(flags[0]);
+    const [flagMenuOpen, setFlagMenuOpen] = useState(false);
     const [currencyState, setCurrencyState] = useState(currency)
     const [isChoseCurrency, setIsChoseCurrency] = useState(true);
     const [currencyId, setCurrencyId] = useState(0)
 
-
-    const handleChangeLanguage = (id: number) => {
-        setId(id);
-        setFlagChoose(true)
+    const handleChangeLanguage = (flag: any) => {
+        setChosenFlag(flag);
+        setFlagMenuOpen(false);
     }
 
     const handleChangeCurrency = (id: number) => {
@@ -67,44 +66,50 @@ const Header = () => {
         setIsChoseCurrency(true)
     }
 
+    const toggleFlagMenu = useCallback(() => {
+        setFlagMenuOpen(!flagMenuOpen);
+    }, [flagMenuOpen])
+
     return (
         // containrt
-        <div className={"container flex"}>
+        <div className={"container-top"}>
             {/*header*/}
-            <header className={"header flex justify-between align-center"}>
+            <header className={" header flex justify-between align-center"}>
                 {/*top_left_content*/}
                 <div className={"top_left_content flex justify-between align-center"}>
                     {/*flag_content*/}
-                    <div className={"flag_content flex"}>
+                    <div className={"flag_content"}>
+                        <div className='flag' onClick={toggleFlagMenu}>
+                            <img className={"flag_icon"} src={chosenflag.url} alt="flag_img" />
+                            <span>{chosenflag.value}</span>
+                            <img className={"drop_down"} src={flagMenuOpen ? close : open} alt="drop_down" />
+                        </div>
+                        {flagMenuOpen && <ul className={"flags"}>
+                            {flagState.map(flag => {
+                                return (
+                                    <li className='flag' onClick={() => handleChangeLanguage(flag)} key={flag.id}>
+                                        <img className={"flag_icon"} src={flag.url} alt="flag_img" />
+                                        <span>{flag.value}</span>
+                                    </li>
+                                )
+                            })}
+                        </ul>}
 
                         {
-                            flagChoose
-                                ?
-                                // flags
-                                <ul className={"flags flex align-center"} onClick={() => setFlagChoose(false)}>
-                                    {/*flag_img*/}
-                                    <li><img className={"flag_icon"} src={flagState[id].url} alt="flag_img"/></li>
-                                    {/*language*/}
-                                    <li><span className={"language"}>{flagState[id].value}</span></li>
-                                    {/*drop_down*/}
-                                    <li><img className={"drop_down"} src={open} alt="drop_down"/></li>
 
-                                </ul>
-                                :
-                                <div>
-                                    {
-                                        flagState.map(flag => {
-                                            return (
-                                                <ul className={"flags flex  align-center"}
-                                                    onClick={() => handleChangeLanguage(flag.id)}>
-                                                    <li><img className={"flag_icon"} src={flag.url} alt="flag_img"/>
-                                                    </li>
-                                                    <li><span className={"language"}>{flag.value}</span></li>
-                                                    <li><img className={"drop_up"} src={close} alt="drop_up"/></li>
-                                                </ul>
-                                            )
-                                        })
-                                    }</div>
+                            // <ul className={"flags flex align-center"} onClick={() => setFlagChoose(false)}>
+                            //     {/*flag_img*/}
+                            //     <li><img className={"flag_icon"} src={flagState[id].url} alt="flag_img" /></li>
+                            //     {/*language*/}
+                            //     <li><span className={"language"}>{flagState[id].value}</span></li>
+                            //     {/*drop_down*/}
+                            //     <li><img className={"drop_down"} src={open} alt="drop_down" /></li>
+                            // </ul>
+                            // :
+                            // <div>
+                            //     {
+
+                            //     }</div>
                         }
                     </div>
                     {/*valuta_content*/}
@@ -117,7 +122,7 @@ const Header = () => {
                                     {/*language*/}
                                     <li><span className={"language"}>{currencyState[currencyId].currency} </span></li>
                                     {/*drop_down*/}
-                                    <li><img className={"drop_down "} src={open} alt="drop_down"/></li>
+                                    <li><img className={"drop_down "} src={open} alt="drop_down" /></li>
                                 </ul>
                                 :
                                 <div>
@@ -129,7 +134,7 @@ const Header = () => {
                                                     onClick={() => handleChangeCurrency(currency.id)}>
                                                     <li><span>{currency.currency}</span></li>
                                                     {/*drop_up*/}
-                                                    <li><img className={"drop_up"} src={close} alt=""/></li>
+                                                    <li><img className={"drop_up"} src={close} alt="" /></li>
                                                 </ul>
                                             )
                                         })
@@ -138,29 +143,27 @@ const Header = () => {
                         }
                     </div>
                 </div>
-                {/*site_logo*/}
-                <div className={"site_logo"}>
-                    <h2>
-                        <img src={logo} alt={"site_logo"} className={"logo"}/>
-                    </h2>
-                </div>
 
+                {/*site_logo*/}
+                <div>
+                    <img className={"site_logo"} src={logo} alt={"site_logo"} />
+                </div>
 
                 {/*wishlist*/}
                 <div className={"top_right_content flex align-center"}>
-                    <ul  className={"flex align-center"}>
+                    <ul className={"flex align-center"}>
                         <li className={"wishlist_content flex align-center"}>
                             <span>WISHLIST</span>
-                            <img className={"icon_favorite"} src={heart} alt="icon_favorite"/>
+                            <img className={"icon_favorite"} src={heart} alt="icon_favorite" />
                             <span>(0)</span>
                         </li>
                         <li className={"login_content flex align-center"}>
                             <span>LOGIN</span>
-                            <img className={"user_icon"} src={user} alt="user_icon"/>
+                            <img className={"user_icon"} src={user} alt="user_icon" />
                         </li>
                         <li className={"cart_content flex align-center"}>
                             <span>CART</span>
-                            <img className={"icon_card"} src={basket} alt="icon_card"/>
+                            <img className={"icon_card"} src={basket} alt="icon_card" />
                             <span>(0)</span>
                         </li>
                     </ul>

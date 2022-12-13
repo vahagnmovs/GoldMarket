@@ -1,67 +1,68 @@
-import React, {useState} from 'react';
-import "src/style/elements/_navbar.scss"
-import "src/style/base/_globals.scss"
-import "src/style/base/_reset.scss"
-import "src/style/utilities/_variables.scss"
+import React, { useState } from 'react';
+import presentImg from "../../../style/img/present-product.png"
+// import "../../../style/elements/_navbar.scss"
+// import "../../../style/base/_globals.scss"
+// import "../../../style/base/_reset.scss"
+// import "../../../style/utilities/_variables.scss"
 
 type SearchCategoryProps = {
     title: string,
-
 }
 
-
-function SearchCategory({title}: SearchCategoryProps) {
-
+function SearchCategory({ title }: SearchCategoryProps) {
     const [mouse, setMouse] = useState(false);
-
 
     return (
         <div
             onMouseEnter={() => setMouse(true)}
-             onMouseLeave={() => setMouse(false)}
+            onMouseLeave={() => setMouse(false)}
         >
             {
                 mouse
                     ?
-                    <div className={"navbar2 "}>
-                        {/*gold_jewelry*/}
+                    <div className='openning-navbar'>
 
                         {/*silver-jewelry*/}
-                        <div className={"gold-jewelry"}>
+                        <div className={"gold-jewelry flex justify-between"}>
                             <ul>
-                                <li><a href="#"></a>WOMAN</li>
-                                <li><a href="#"></a>Rings</li>
-                                <li><a href="#"></a>Sets</li>
-                                <li><a href="#"></a>Engagement rings</li>
-                                <li><a href="#"></a>Wedding rings</li>
-                                <li><a href="#"></a>Pendants</li>
-                                <li><a href="#"></a>Crosses</li>
-                                <li><a href="#"></a>Necklaces</li>
-                                <li><a href="#"></a>Chain</li>
-                                <li><a href="#"></a>Bracelets</li>
-                                <li><a href="#"></a>Other</li>
+                                <li><a href="#">WOMAN</a></li>
+                                <li><a href="#">Rings</a></li>
+                                <li><a href="#">Sets</a></li>
+                                <li><a href="#">Engagement rings</a></li>
+                                <li><a href="#">Wedding rings</a></li>
+                                <li><a href="#">Pendants</a></li>
+                                <li><a href="#">Crosses</a></li>
+                                <li><a href="#">Necklaces</a></li>
+                                <li><a href="#">Chain</a></li>
+                                <li><a href="#">Bracelets</a></li>
+                                <li><a href="#">Other</a></li>
                             </ul>
 
                             {/*watches-jewelry*/}
-                            <div className={"watches-jewelry"}>
-                                <li><a href="#"></a>MAN</li>
-                                <li><a href="#"></a>Rings</li>
-                                <li><a href="#"></a>Wedding rings</li>
-                                <li><a href="#"></a>Pendants</li>
-                                <li><a href="#"></a>Crosses</li>
-                                <li><a href="#"></a>Chain</li>
-                            </div>
+                            <ul className={"watches-jewelry"}>
+                                <li><a href="#">MAN</a></li>
+                                <li><a href="#">Rings</a></li>
+                                <li><a href="#">Wedding rings</a></li>
+                                <li><a href="#">Pendants</a></li>
+                                <li><a href="#">Crosses</a></li>
+                                <li><a href="#">Chain</a></li>
+                            </ul>
 
-                            <div className={"watches-jewelry"} >
-                                <li><a href="#"></a>CHILDREN</li>
-                                <li><a href="#"></a>Rings</li>
-                                <li><a href="#"></a>Earrings</li>
-                                <li><a href="#"></a>Pendants</li>
-                                <li><a href="#"></a>Crosses</li>
-                                <li><a href="#"></a>Bracelets</li>
-                                <li><a href="#"></a>Other</li>
-                            </div>
+                            <ul className={"watches-jewelry"} >
+                                <li><a href="#">CHILDREN</a></li>
+                                <li><a href="#">Rings</a></li>
+                                <li><a href="#">Earrings</a></li>
+                                <li><a href="#">Pendants</a></li>
+                                <li><a href="#">Crosses</a></li>
+                                <li><a href="#">Bracelets</a></li>
+                                <li><a href="#">Other</a></li>
+                            </ul>
+
+                            <img className='presentImg' src={presentImg} alt='' />
+
                         </div>
+
+
                     </div>
                     :
                     <span>{title}</span>

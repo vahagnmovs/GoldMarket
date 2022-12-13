@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 import GoldPriceList from "./goldPriceList";
 import PhoneNumber from "./phoneNumber";
-import "../priceList/Style/Price.scss"
-
 
 const PriceList = () => {
-
     const [isShowMoreBtn, getIsShowMoreBtn] = useState(true)
 
     return (
@@ -14,11 +11,11 @@ const PriceList = () => {
                 <div className={"Phone"}>
                     <PhoneNumber/>
                 </div>
-                <div  className={"e"}>
+                <div className={"e"}>
                     <GoldPriceList isShowMoreBtn={isShowMoreBtn}/>
                 </div>
             </div>
-            <div className={"Shou-more"}>
+            <div className={"Show-more"}>
                 <button onClick={() => getIsShowMoreBtn(!isShowMoreBtn)}>SHOW MORE</button>
             </div>
 

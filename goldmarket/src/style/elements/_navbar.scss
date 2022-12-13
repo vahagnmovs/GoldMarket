@@ -1,39 +1,157 @@
-.navbar {
-  width: 100%;
-  height: 70px;
-  padding: 28px 40px 28px 40px;
+.products_manu-content {
+  position: relative;
+}
+
+.products_manu {
   font-size: 14px;
+  height: 60px;
+}
+
+.navbar {
+  // margin-bottom: 30px;
 
   .navbar_ul {
     gap: 24px;
 
-    li {
       img {
         width: 20px;
         height: 20px;
       }
-    }
   }
 
-  .searching {
-
-    ul {
-      gap: 8px;
-
-      li {
-        img {
-          width: 18px;
-          height: 18px;
-        }
-      }
-    }
+  li:hover {
+    background-color: rgb(138, 133, 108);
   }
+
 }
 
+.searching {
+  gap: 8px
+}
+
+  .searching-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.switch {
+  width: 70px;
+//   .button-contener {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     position: relative;
+//  }
+
+// .switch {
+//     margin-top: 20px;
+//     position: relative;
+//     display: inline-block;
+//     width: 60px;
+//     height: 32px;
+// }
+
+// .switch input {
+//     opacity: 0;
+//     width: 0;
+//     height: 0;
+// }
+
+// .slider {
+//     position: absolute;
+//     cursor: pointer;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: #ccc;
+//     border-radius: 16px;
+//     transition: 0.4s;
+// }
+
+// .slider::before {
+//     position: absolute;
+//     content: "";
+//     width: 26px;
+//     height: 26px;
+//     left: 4px;
+//     bottom: 3px;
+//     background-color: rgb(250, 215, 215);
+//     transition: 0.4s;
+//     border-radius: 50%;
+// }
+
+// .activ::before {
+//     position: absolute;
+//     content: "";
+//     width: 26px;
+//     height: 26px;
+//     left: 4px;
+//     bottom: 3px;
+//     background-color: rgb(250, 215, 215);
+//     transition: 0.4s;
+//     border-radius: 50%;
+// }
+
+// input:checked + .slider {
+//     background-color: rgb(255, 218, 53);
+// }
+
+// .red {
+//     color: rgb(255, 218, 53);
+// }
+}
 
 //navbar 2
 .navbar2 {
   height: 420px;
   width: 100%;
   background: #FFFFFF;
+}
+
+.gold-jewelry {
+  margin-right: 183px;
+
+    a:link, a:visited {
+      text-decoration: none;
+      display: block;
+      padding: 5px 15px;
+      color: black;
+
+      &:hover {
+        background-color: gold;
+        border-radius: 5px;
+        color: #FFFFFF;
+      }
+
+    }
+    
+// margin-top: 15px;
+    li:first-child {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+
+.openning-navbar {
+
+  padding-top: 30px;
+
+  border-top: 1px solid #1D3865;
+  position: absolute;
+  top: 50px;
+  // width: 100%;
+  background-color: #FFFFFF;
+
+  ul {
+    width: 184px;
+    margin-right: 54px;
+  }
+
+  // width: 100%;
+
+  .presentImg {
+    width: 488px!important;
+    height: 300px!important;
+  }
 }

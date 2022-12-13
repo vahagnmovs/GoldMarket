@@ -1,4 +1,3 @@
-import "./stayle.css";
 
 interface switchButtonProps {
   checked: boolean;

@@ -5,10 +5,10 @@ const Product = () => {
         <div>
             <div>
                 <div className={"image container"}>
-                    <img src="" alt="main image"/>
-                    <img src="" alt="new"/>
-                    <img src="" alt="discount"/>
-                    <img src="" alt="heart"/>
+                    <img src="" alt="main image" />
+                    <img src="" alt="new" />
+                    <img src="" alt="discount" />
+                    <img src="" alt="heart" />
                 </div>
                 <div>
                     <div>

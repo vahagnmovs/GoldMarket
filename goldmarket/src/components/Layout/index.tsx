@@ -1,9 +1,9 @@
-import React, {InputHTMLAttributes, ReactElement, useState} from "react";
-import PriceList from "src/components/Header/priceList";
+import React, { InputHTMLAttributes, ReactElement, useState } from "react";
+import PriceList from "../Header/priceList";
 import PhoneNumber from "../Header/priceList/phoneNumber";
-// import {Simulate} from "react-dom/test-utils";
-// import input = Simulate.input;
-
+import { Simulate } from "react-dom/test-utils";
+import input = Simulate.input;
+import ls from "local-storage";
 
 
 export interface LayoutProps {
@@ -16,7 +16,7 @@ export interface LayoutProps {
 const Layout = (props: LayoutProps) => {
 
 
-    const {children, NavBarComponent, HeaderComponent, FooterComponent} = props;
+    const { children, NavBarComponent, HeaderComponent, FooterComponent } = props;
 
     return (
         <main>
@@ -29,9 +29,9 @@ const Layout = (props: LayoutProps) => {
             <div id={'page-container'}>
                 {children}
             </div>
-            <div id={'footer'}>
+            {/* <div id={'footer'}>
                 {FooterComponent}
-            </div>
+            </div> */}
         </main>
     )
 }

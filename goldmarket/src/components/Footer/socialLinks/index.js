@@ -1,18 +1,12 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import facebookIcon from "../../../style/Icons/facebook.svg"
-import instagramIcon from "../../../style/Icons/instagram.svg"
-import okIcon from "../../../style/Icons/ok.svg"
-import telegramIcon from "../../../style/Icons/telegram.svg"
-import vkIcon from "../../../style/Icons/vk.svg"
 import "../../../style/elements/_footer.scss"
 import  "../../../style/base/_globals.scss"
 import "../../../style/base/_reset.scss"
 import "../../../style/utilities/_variables.scss"
 
 
-import "./socialLink_Style.scss"
-import { Link } from "react-router-dom";
+// import "./socialLink_Style.scss"
 import facebookIcon from "src/style/Icons/facebook.svg"
 import instagramIcon from "src/style/Icons/instagram.svg"
 import okIcon from "src/style/Icons/ok.svg"
