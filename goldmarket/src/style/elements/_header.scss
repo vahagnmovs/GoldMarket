@@ -1,14 +1,8 @@
-.container {
-
-}
 
 .header {
-  width: 100%;
   height: 70px;
-  padding: 28px 40px 28px 40px;
-  border-bottom: 1px solid #1D3865;
-
-
+  padding: 28px 0;
+  box-shadow: 10px 10px 10px #F6F6F6;
 }
 
 .top_left_content {
@@ -17,19 +11,20 @@
 }
 
 .flag_content {
+  position: relative;
 }
 
-.flags {
-  font-size: 14px;
 
-  li {
-    align-items: center;
-    margin: 0 7px 0 0;
-  }
+.flag {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
 
   .flag_icon {
     width: 20px;
     height: 10px;
+    margin-right: 8px;
   }
 
   .drop_down {
@@ -44,9 +39,30 @@
 }
 
 
+.flags {
+  z-index: 1;
+  font-size: 14px;
+  width: 190px;
+  position: absolute;
+  top: 30px;
+  box-shadow: 0 -10px 20px -5px rgba(115,115,115,0.75);
+  background-color: white;
+
+  li {
+    padding: 15px;
+
+    &:hover {
+      background-color: gold;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #F6F6F6;
+    }
+  }
+}
+
+
 //valuta content
-
-
 .valuta_content {
   font-size: 14px;
 
@@ -65,15 +81,11 @@
     height: 20px;
   }
 
-
 }
 
 //site_logo
 .site_logo {
-
-  img {
     width: 152px;
-  }
 }
 
 
@@ -84,7 +96,6 @@
     gap: 34px;
   }
 }
-
 
 .top_right_content {
   width: 342px;

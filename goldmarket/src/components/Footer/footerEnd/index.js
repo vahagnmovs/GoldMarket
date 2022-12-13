@@ -1,12 +1,9 @@
-import React from "react";
-import copyrightIcon from "../../../style/Icons/copyright.svg";
 import "../../../style/elements/_footer.scss"
 import "../../../style/base/_globals.scss"
 import "../../../style/base/_reset.scss"
 import "../../../style/utilities/_variables.scss"
-
 import copyrightIcon from "src/style/Icons/copyright.svg";
-import "./footre_end.scss";
+// import "./footre_end.scss";
 
 const FooterEnd = () => {
     return (

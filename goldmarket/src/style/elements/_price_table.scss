@@ -1,0 +1,54 @@
+.container_price {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #F6F6F6;
+  padding-top: 30px;
+}
+
+.container_phone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+
+  .viber {
+    width: 22px;
+    height: 22px;
+}
+
+.phone_info {
+  display: flex;
+  align-items: center;
+}
+
+.phone_icons {
+
+  img {
+    margin-right: 15px;
+
+  }
+}
+
+.whatsApp {
+  width: 24px;
+  height: 24px;
+}
+
+}
+
+.table-price {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    background-color: white;
+  }
+
+  th,td {
+    padding: 12px 30px;
+  }
+}
+
+.large-width {
+  width: 300px;
+}

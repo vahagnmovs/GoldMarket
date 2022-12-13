@@ -1,10 +1,10 @@
 import React from 'react';
-import {createRoot} from 'react-dom/client';
-import {Provider} from 'react-redux';
-import {store} from "src/store/users/users";
-import {RouterProvider} from "react-router-dom";
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { store } from "src/store/users/users";
+import { RouterProvider } from "react-router-dom";
 import router from './router'
-import 'src/style/style.scss';
+import './style/style.scss';
 import './firebase';
 
 // import "slick-carousel/slick/slick.css";
@@ -15,8 +15,8 @@ const root = createRoot(container);
 
 root.render(
     <React.StrictMode>
-            <Provider store={store}>
-                <RouterProvider router={router} />
-            </Provider>
+        <Provider store={store}>
+            <RouterProvider router={router} />
+        </Provider>
     </React.StrictMode>
 );
