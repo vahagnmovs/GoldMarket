@@ -1,26 +1,22 @@
-import React from 'react';
-// import SampleNextArrow from "./cardSliceCarousel/childComponent/sampleNextArrow";
-// import SamplePrevArrow from "./cardSliceCarousel/childComponent/samplePrevArrow";
+import React, { useMemo, useRef } from 'react';
+
 import Slider from "react-slick";
-// import BasicCard from "./cardSliceCarousel/childComponent/card";
+
 import "./style.css"
 import Card from "./card";
-import images from "src/components/Information/Image/";
+import { ProductsTypes } from "../../../data/products";
+
+interface  SlideCarouselProps {
+    images: ProductsTypes[];
+}
 
 
-const SladeCarousel = ({images}) => {
+const SlideCarousel = ({ images }: SlideCarouselProps) => {
+    const slider = useRef<any>(null);
+    const imagesArr = useMemo<string[]>(() => {
+        return images.map(image => image.IMAGES[0])
+    }, [images]);
 
-    let imagesArr = [];
-
-    (function () {
-        // eslint-disable-next-line array-callback-return
-        images.map(image => {
-           imagesArr.push(image.IMAGES[0])
-        })
-    })()
-
-
-    const slider = React.useRef(null);
     const settings = {
         dots: true,
         infinite: true,
@@ -39,7 +35,6 @@ const SladeCarousel = ({images}) => {
                     dots: true,
                 },
             },
-
             {
                 breakpoint: 1124,
                 settings: {
@@ -58,17 +53,13 @@ const SladeCarousel = ({images}) => {
                 },
             },
         ],
-
-        // nextArrow: <SampleNextArrow/>,
-        // prevArrow: <SamplePrevArrow/>,
     };
-
     return (
         <div>
-            <div style={{margin: 20}}>
+            <div style={{ margin: 20 }}>
                 <button onClick={() => slider?.current?.slickPrev()}>Prev</button>
                 <button
-                    style={{marginLeft: 20}}
+                    style={{ marginLeft: 20 }}
                     onClick={() => slider?.current?.slickNext()}
                 >
                     Next
@@ -76,7 +67,7 @@ const SladeCarousel = ({images}) => {
             </div>
 
             <Slider ref={slider} {...settings}>
-                {imagesArr.map((item) =>
+                {!!imagesArr.length && imagesArr.map((item) =>
                     // <BasicCard key={item} {...item}/>
                     <Card key={item} image={item}/>
                 )}
@@ -85,4 +76,4 @@ const SladeCarousel = ({images}) => {
     );
 }
 
-export default SladeCarousel;
+export default SlideCarousel;

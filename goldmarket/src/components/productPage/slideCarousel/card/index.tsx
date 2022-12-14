@@ -1,4 +1,6 @@
-const Card = ({image}) => {
+import React from 'react';
+
+const Card = ({image}: any) => {
 
     return (
         <div>
@@ -9,9 +11,7 @@ const Card = ({image}) => {
                 color: "rgba(255, 255, 255, 0.5)",
             }}>
                 <img src={image} height={198} alt="no Photo"/>
-
             </div>
-
         </div>
     )
 };

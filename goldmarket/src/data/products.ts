@@ -1,43 +1,44 @@
 import randomID from "./UUID";
 
-// type PriceTypes = {
-//     currentPrice: number,
-//     oldPrice: number
-// }
-//
-// type DiamondTypes = {
-//     CARAT: number,
-//     PCS: number,
-//     COLOR: string,
-//     CLARITY: string,
-//     CUT: string,
-// }
+export type PriceTypes = {
+    currentPrice: number,
+    oldPrice: number
+}
 
-// type ProductsTypes = {
-//     productID: string,
-//     NAME: string,
-//     SELLER_ID: string,
-//     COLOR: string,
-//     DISCOUNT: number,
-//     CODE: string,
-//     SIZE: number[],
-//     prices: PriceTypes,
-//     DESCRIPTION: string
-//     MATERIAL: string,
-//     "FOR WHOM": string,
-//     COUNT: number,
-//     PUBLISH: boolean,
-//     FINENESS: number,
-//     WEIGHT: number[],
-//     STONE: boolean,
-//     DIAMOND: DiamondTypes,
-//     IMAGES: string[],
-//     TYPE: string,
-// }
+export type DiamondTypes = {
+    CARAT: number,
+    PCS: number,
+    COLOR: string,
+    CLARITY: string,
+    CUT: string,
+}
 
-const products = [
+export type ProductsTypes = {
+    productID: string,
+    NAME: string,
+    SELLER_ID: string,
+    COLOR: string,
+    DISCOUNT: number,
+    CODE: string,
+    SIZE: number[],
+    prices: PriceTypes,
+    DESCRIPTION: string
+    MATERIAL: string,
+    "FOR WHOM": string,
+    COUNT: number,
+    PUBLISH: boolean,
+    FINENESS: number,
+    WEIGHT: number[],
+    STONE: boolean,
+    DIAMOND: DiamondTypes,
+    IMAGES: string[],
+    TYPE: string,
+}
+
+const products: ProductsTypes[] = [
     {
-        productID: randomID(),
+        // productID: randomID(),
+        productID: "55",
         NAME: "Graziella ring",
         SELLER_ID: randomID(),
         COLOR: "YELLOW",
@@ -68,7 +69,7 @@ const products = [
             "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/1.jpg",
             "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/2.jpg",
             "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/3.jpg",
-            "/dataImages/productImages/PRODUCTS-DIAMOND/Ring1/4.jpg",
+
         ]
     },
     {
@@ -388,5 +389,5 @@ const products = [
     },
 ]
 
-export {products};
+export { products };
 // export type {ProductsTypes};
