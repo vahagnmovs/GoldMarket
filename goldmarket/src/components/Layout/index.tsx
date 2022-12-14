@@ -29,9 +29,12 @@ const Layout = (props: LayoutProps) => {
             <div id={'page-container'}>
                 {children}
             </div>
-            {/* <div id={'footer'}>*/}
-            {/*    {FooterComponent}*/}
-            {/*</div>*/}
+            <div id={'footer'}>*/}
+                {FooterComponent}*/}
+            </div>
+             <div id={'footer'}>
+                {FooterComponent}
+            </div>
         </main>
     )
 }

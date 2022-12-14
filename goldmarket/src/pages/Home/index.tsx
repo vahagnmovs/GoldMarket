@@ -25,16 +25,25 @@ const Home = () => {
         >
             <>
                 <PriceList />
-                {/* <ReactVideoPlayer /> */}
-                {/* <SwitchComponent />*/}
-                {/* <Collections />*/}
-                {/* <SellWithUs />*/}
-                {/*<BestSales />*/}
-                {/*<RecommendedSellers />*/}
-                {/*<MostViewed />*/}
-                {/*<WhyGoldCenter />*/}
-                {/*<AboutUs />*/}
+                <ReactVideoPlayer />
+                <SwitchComponent />
+                <Collections />
+                <SellWithUs />
+                <BestSales />
+                <RecommendedSellers />
+                <MostViewed />
+                <WhyGoldCenter />
+                <AboutUs />
                 <ProductPage/>
+                <ReactVideoPlayer />
+                 <SwitchComponent />
+                 <Collections />
+                 <SellWithUs />
+                <BestSales />
+                <RecommendedSellers />
+                <MostViewed />
+                <WhyGoldCenter />
+                <AboutUs />
             </>
         </Layout>
     );
