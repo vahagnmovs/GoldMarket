@@ -74,7 +74,7 @@ const Header = () => {
         // containrt
         <div className={"container-top"}>
             {/*header*/}
-            <header className={" header flex justify-between align-center"}>
+            <header className={"header flex justify-between align-center"}>
                 {/*top_left_content*/}
                 <div className={"top_left_content flex justify-between align-center"}>
                     {/*flag_content*/}

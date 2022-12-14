@@ -27,7 +27,7 @@ const Home = () => {
         >
             <>
                 <PriceList />
-                {/*<ReactVideoPlayer />*/}
+                <ReactVideoPlayer />
                 <SwitchComponent />
                 <Collections />
                 <SellWithUs />

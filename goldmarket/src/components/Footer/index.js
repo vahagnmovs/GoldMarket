@@ -11,12 +11,13 @@ import "src/style/utilities/_variables.scss"
 
 
 // import "./socialLink_Style.scss"
-import facebookIcon from "src/style/Icons/facebook.svg"
-import instagramIcon from "src/style/Icons/instagram.svg"
-import okIcon from "src/style/Icons/ok.svg"
-import telegramIcon from "src/style/Icons/telegram.svg"
-import vkIcon from "src/style/Icons/vk.svg"
+import facebookIcon from "src/style/Icons/fb.png"
+import instagramIcon from "src/style/Icons/insta.png"
+import okIcon from "src/style/Icons/ok.png"
+import telegramIcon from "src/style/Icons/tg.png"
+import vkIcon from "src/style/Icons/vk.png"
 import right from "src/style/Icons/right.png"
+import arca from "src/style/Icons/arca.png"
 
 
 // import "./Global_Center.scss"
@@ -24,8 +25,7 @@ import right from "src/style/Icons/right.png"
 import visa from "src/style/Icons/visa.png"
 import master from "src/style/Icons/master.png"
 import google_pay from "src/style/Icons/google-pay.png"
-import apple_pay from "src/style/Icons/apple-pay.png"
-import copyrightIcon from "../../style/Icons/copyright.svg";
+import apple_pay from "src/style/Icons/apple-pay.png";
 
 
 const FooterLinks = () => {
@@ -56,6 +56,7 @@ const FooterLinks = () => {
                         <div className={"icon-pay"}>
                             <li><img src={visa} alt=""/></li>
                             <li><img src={master} alt=""/></li>
+                            <li><img src={arca}/></li>
                             <li><img src={google_pay} alt=""/></li>
                             <li><img src={apple_pay} alt=""/></li>
                         </div>
