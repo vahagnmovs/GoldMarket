@@ -77,13 +77,13 @@ const FooterLinks = () => {
                 <div className={"footer_soc_links"}>
                     <h5 className={"text-center"}>SOCIAL LINKS</h5>
                     <ul className={"social_links_icons  flex  justify-center "}>
-                        <li><Link target={"_blank"} to={"https://vk.com/"}> <img src={vkIcon} alt=""/> </Link></li>
-                        <li><Link target={"_blank"} to={"https://ok.ru/"}> <img src={okIcon} alt=""/> </Link></li>
-                        <li><Link target={"_blank"} to={"https://www.instagram.com/"}> <img src={instagramIcon} alt=""/>
+                        <li><Link target={"_blank"} to={"/vk"}> <img src={vkIcon} alt=""/> </Link></li>
+                        <li><Link target={"_blank"} to={"/ok"}> <img src={okIcon} alt=""/> </Link></li>
+                        <li><Link target={"_blank"} to={"/instagram"}> <img src={instagramIcon} alt=""/>
                         </Link></li>
-                        <li><Link target={"_blank"} to={"https://www.facebook.com/"}> <img src={facebookIcon} alt=""/>
+                        <li><Link target={"_blank"} to={"/facebook"}> <img src={facebookIcon} alt=""/>
                         </Link></li>
-                        <li><Link target={"_blank"} to={"https://telegram.org/"}> <img src={telegramIcon} alt=""/> </Link>
+                        <li><Link target={"_blank"} to={"/telegram"}> <img src={telegramIcon} alt=""/> </Link>
                         </li>
                     </ul>
                 </div>
