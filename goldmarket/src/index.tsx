@@ -7,8 +7,8 @@ import router from './router'
 import './style/style.scss';
 import './firebase';
 
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
