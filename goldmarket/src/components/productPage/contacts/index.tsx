@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Contacts = () => {
     return (
         <div style={{display:"flex", justifyContent:"space-around"}}>
@@ -13,13 +15,14 @@ const Contacts = () => {
                         <li>E-MAIL _______________________ @ALDORO</li>
                         <li>FACEBOOK _______________________ FB.COM/ALDORO</li>
                     </ul>
+                    <div>
+                        <button>GO TO COMPANY PAGE</button>
+                    </div>
                 </div>
             </div>
             <div>
                 <h2 >map</h2>
             </div>
-
-
         </div>
     );
 };

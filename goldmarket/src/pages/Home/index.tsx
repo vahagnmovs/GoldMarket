@@ -14,6 +14,7 @@ import MostViewed from "../../components/mostViewed/mostViewed";
 import WhyGoldCenter from '../../components/Information/WhyGoldCenter';
 import AboutUs from '../../components/Information/AboutUs';
 import SellWithUs from '../../components/Information/SellWithUs';
+import ProductPage from "../../components/productPage";
 
 const Home = () => {
     return (
@@ -24,7 +25,17 @@ const Home = () => {
         >
             <>
                 <PriceList />
-                {/*<ReactVideoPlayer />*/}
+                <ReactVideoPlayer />
+                <SwitchComponent />
+                <Collections />
+                <SellWithUs />
+                <BestSales />
+                <RecommendedSellers />
+                <MostViewed />
+                <WhyGoldCenter />
+                <AboutUs />
+                <ProductPage/>
+                <ReactVideoPlayer />
                  <SwitchComponent />
                  <Collections />
                  <SellWithUs />
