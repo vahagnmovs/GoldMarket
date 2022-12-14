@@ -4,6 +4,9 @@ const initialState = {
     email: '',
     token: '',
     id: '',
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
 }
 
 const userSlice = createSlice({
@@ -11,9 +14,13 @@ const userSlice = createSlice({
     initialState,
     reducers: {
         setUser(state, action) {
+            console.log(action.payload)
             state.email = action.payload.email;
             state.token = action.payload.token;
             state.id = action.payload.id;
+            state.firstName = action.payload.firstName;
+            state.lastName = action.payload.lastName;
+            state.phoneNumber = action.payload.phoneNumber;
         },
         removeUser(state) {
             state.email = '';
