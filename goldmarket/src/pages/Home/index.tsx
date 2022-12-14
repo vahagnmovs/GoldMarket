@@ -14,6 +14,8 @@ import MostViewed from "../../components/mostViewed/mostViewed";
 import WhyGoldCenter from '../../components/Information/WhyGoldCenter';
 import AboutUs from '../../components/Information/AboutUs';
 import SellWithUs from '../../components/Information/SellWithUs';
+import SingIn from "../../components/singIn";
+import SignIn from "../../components/Header/header/login/seller/signin";
 
 const Home = () => {
     return (

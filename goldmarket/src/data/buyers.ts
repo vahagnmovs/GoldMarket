@@ -10,7 +10,6 @@ const product = products[0];
 //     lastName: string,
 //     email: string,
 //     phone: number,
-//     password: string,
 //     whishList: ProductsTypes[],
 //     cart: ProductsTypes[],
 // }
@@ -22,7 +21,6 @@ const buyers = [
         lastName: "Movsesyan",
         email: "vahagnmovs@gmail.com",
         phone: 37443999988,
-        password: "123456",
         whishList: [
             product,
         ],

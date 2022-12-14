@@ -17,6 +17,7 @@ const SignIn = () => {
                     email: user.email,
                     id: user.uid,
                     token: user.refreshToken,
+                    phoneNumber: '+37443999988',
                 }))
             })
             .catch((error) => {
