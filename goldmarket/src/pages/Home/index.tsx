@@ -24,15 +24,15 @@ const Home = () => {
         >
             <>
                 <PriceList />
-                {/* <ReactVideoPlayer /> */}
-                {/* <SwitchComponent /> */}
-                {/* <Collections /> */}
-                {/* <SellWithUs />
+                {/*<ReactVideoPlayer />*/}
+                 <SwitchComponent />
+                 <Collections />
+                 <SellWithUs />
                 <BestSales />
                 <RecommendedSellers />
                 <MostViewed />
                 <WhyGoldCenter />
-                <AboutUs /> */}
+                <AboutUs />
             </>
         </Layout>
     );
