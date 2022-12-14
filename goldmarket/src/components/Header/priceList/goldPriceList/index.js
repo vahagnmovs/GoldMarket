@@ -1,11 +1,12 @@
 import React from 'react';
-
+import "src/style/base/_globals.scss"
 function GoldPriceList({isShowMoreBtn}) {
     return (
-        <div>
+        <div className={"bg_color"}>
             {
                 isShowMoreBtn
                     ?
+
                     <table className={"table-price"}>
                         <colgroup>
                             {/* <col style={width: 300px;} /> */}

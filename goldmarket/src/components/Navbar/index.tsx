@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchCategory from "./searchCategory";
+import SearchCategory from "./openingNavbar";
 import open from "../../style/Icons/open.png";
 import search from "../../style/Icons/search.png"
 import "../../../src/style/elements/_navbar.scss"

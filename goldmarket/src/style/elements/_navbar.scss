@@ -1,5 +1,6 @@
 .products_manu-content {
   position: relative;
+  padding: 0 40px;
 }
 
 .products_manu {
@@ -10,9 +11,9 @@
 .navbar {
   // margin-bottom: 30px;
 
+
   .navbar_ul {
     gap: 24px;
-
       img {
         width: 20px;
         height: 20px;
@@ -140,7 +141,7 @@
   border-top: 1px solid #1D3865;
   position: absolute;
   top: 50px;
-  // width: 100%;
+   width: 100%;
   background-color: #FFFFFF;
 
   ul {
