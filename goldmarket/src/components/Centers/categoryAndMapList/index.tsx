@@ -1,21 +1,19 @@
 import svg from "src/style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
 import DrawCategoryAndMap from "src/components/Centers/drawCategoryAndMap";
-import { IdataProp } from "src/components/Centers/types";
+import { IDataProp } from "src/components/Centers/types";
 import "src/style/components/_centr_style.scss"
 
 interface IcategoryAndMapListProp{
-    data: IdataProp[];
-    flag?: boolean;
+    data: IDataProp[];
+    navigateShoppOrMapFlag?: boolean;
 }
 
-//TODO: Adjust namings: All with uppercase or with index.js
-//TODO: Do not create functions instantly when passing to clicks
 
-const CategoryAndMapList = ({ data, flag }: IcategoryAndMapListProp) => {
+const CategoryAndMapList = ({ data, navigateShoppOrMapFlag }: IcategoryAndMapListProp) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
-        if (flag) {
+        if (navigateShoppOrMapFlag) {
             navigate("/collections") 
         } else { 
             navigate("/shoppingcenters")
@@ -28,7 +26,7 @@ const CategoryAndMapList = ({ data, flag }: IcategoryAndMapListProp) => {
                 data.map(item => <DrawCategoryAndMap key={
                     item.id
                 }
-                    {...item} flag={flag} />)
+                    {...item} navigateShoppOrMapFlag={navigateShoppOrMapFlag} />)
             }
             <button className="buttonSowMor align-center"
                 onClick={handleNavigate}>

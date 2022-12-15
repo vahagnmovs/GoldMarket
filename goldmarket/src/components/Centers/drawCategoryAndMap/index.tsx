@@ -1,21 +1,21 @@
 import svg from "src/style/Icons/next-16.svg";
-import { IdataProp } from "src/components/Centers/types";
+import { IDataProp } from "src/components/Centers/types";
 import { useNavigate } from "react-router-dom";
 
-interface IdrawCategoryAndMapProp extends IdataProp {
-    flag?: boolean;
+interface IdrawCategoryAndMapProp extends IDataProp {
+    navigateShoppOrMapFlag?: boolean;
     
 }
 
-const DrawCategoryAndMap = ({ id, title, img, flag}:IdrawCategoryAndMapProp ) => {
+const DrawCategoryAndMap = ({ id, title, img, navigateShoppOrMapFlag}:IdrawCategoryAndMapProp ) => {
     const navigate = useNavigate()
     const handleCgitem = () => {
-        if(!flag){
+        if(!navigateShoppOrMapFlag){
             navigate(`/shoppingcenters/${title}&${id}`)
         }
     } 
     return (
-        <div id={id} className="product" onClick={()=> handleCgitem()}>
+        <div id={id} className="product" onClick={handleCgitem}>
             <img src={img} alt="Nkar" />
             <div className={"img-title flex"}>
                 <h4>{title}</h4>
@@ -23,7 +23,7 @@ const DrawCategoryAndMap = ({ id, title, img, flag}:IdrawCategoryAndMapProp ) =>
                 <img src={svg} alt="next" />
             </div>
 
-            {flag && <div className="icon_next flex">
+            {navigateShoppOrMapFlag && <div className="icon_next flex">
 
             </div>}
         </div>

@@ -7,7 +7,6 @@ import {useMemo} from "react";
 
 const ShoppingCentersRegionsList = () => {
     const { id } = useParams();
-    //TODO: look
     const currentCity = useMemo(() => MAP.find(city => city.id === id), [id]);
     return (
         <div className="shopping_center_contener">

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import presentImg from "../../../style/img/present-product.png"
+import { useState } from 'react';
+import presentImg from "src/style/img/present-product.png"
 // import "../../../style/elements/_navbar.scss"
 // import "../../../style/base/_globals.scss"
 // import "../../../style/base/_reset.scss"
