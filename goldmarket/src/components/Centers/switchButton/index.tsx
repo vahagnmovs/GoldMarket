@@ -6,14 +6,16 @@ interface switchButtonProps {
 
 const SwitchButton = ({ checked, handleCeckid }: switchButtonProps) => {
   return (
-    <div className="button-contener">
+    <div className="switch_content   align-center">
       <span>Collections</span>
       <label className="switch">
         <input
           type="checkbox"
+            //TODO: look
           onChange={() => handleCeckid()}
         />
-        <span className={checked ? "slider" : "slider activ"}></span>
+          //TODO: change
+          <span className={checked ? "slider" : "slider activ"}></span>
       </label>
       <span className={checked ? "" : "red"}>Shopping centers</span>
     </div>

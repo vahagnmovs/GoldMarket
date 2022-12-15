@@ -127,17 +127,14 @@ const Header = () => {
                                 :
                                 <div>
                                     {
-                                        currencyState.map(currency => {
-                                            return (
-                                                // flags
-                                                <ul key={currency.id} className={"valuta flex align-center"}
-                                                    onClick={() => handleChangeCurrency(currency.id)}>
-                                                    <li><span>{currency.currency}</span></li>
-                                                    {/*drop_up*/}
-                                                    <li><img className={"drop_up"} src={close} alt="" /></li>
-                                                </ul>
-                                            )
-                                        })
+                                        currencyState.map(currency =>
+                                            <ul key={currency.id} className={"valuta flex align-center"}
+                                                onClick={() => handleChangeCurrency(currency.id)}>
+                                                <li><span>{currency.currency}</span></li>
+                                                {/*drop_up*/}
+                                                <li><img className={"drop_up"} src={close} alt="" /></li>
+                                            </ul>
+                                        )
                                     }
                                 </div>
                         }

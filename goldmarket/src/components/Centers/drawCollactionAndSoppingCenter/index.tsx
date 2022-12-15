@@ -14,6 +14,7 @@ const DrawCollactionAndSoppingCenter = ({ id, title, img, flag}:IdrawCategoryAnd
         }
     } 
     return (
+        //TODO
         <div id={id} className="product" onClick={()=> handleCgitem()}>
             <img src={img} alt="Nkar" />
             <h4>{title}</h4>
