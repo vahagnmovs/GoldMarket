@@ -1,11 +1,11 @@
 import svg from "src/style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
 import DrawCategoryAndMap from "src/components/Centers/drawCategoryAndMap";
-import { IdataProp } from "src/components/Centers/types";
+import { IDataProp } from "src/components/Centers/types";
 import "src/style/components/_centr_style.scss"
 
 interface IcategoryAndMapListProp{
-    data: IdataProp[];
+    data: IDataProp[];
     navigateShoppOrMapFlag?: boolean;
 }
 

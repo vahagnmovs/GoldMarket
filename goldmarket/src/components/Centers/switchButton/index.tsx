@@ -1,10 +1,9 @@
-
-interface switchButtonProps {
+interface ISwitchButtonProps {
   checked: boolean;
   handleCeckid: () => void;
 }
 
-const SwitchButton = ({ checked, handleCeckid }: switchButtonProps) => {
+const SwitchButton = ({ checked, handleCeckid }: ISwitchButtonProps) => {
   return (
     <div className="switch_content   align-center">
       <span>Collections</span>
