@@ -10,7 +10,7 @@ const Redirect = ({url}: RedirectProps) => {
     const [isRedirect, setIsRedirect] = useState(false)
 
     const handleRedirect = () => {
-        setIsRedirect(prev => !isRedirect)
+        setIsRedirect(!isRedirect)
     }
 
     if (isRedirect) {

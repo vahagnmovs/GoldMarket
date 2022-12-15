@@ -39,7 +39,6 @@ function Navbar() {
                         <img className={"searching-icon"} src={search}
                             alt="search" />
                     </div>
-
                     <div className={"flex justify-between align-center"}>
                         <label className="switch"> <input
                             type="checkbox" />

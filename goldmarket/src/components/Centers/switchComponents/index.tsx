@@ -1,4 +1,4 @@
-import "src/components/Centers/shoppingCentersRegionsStyle/styles/style.css";
+import "src/style/components/_centr_style.scss";
 import CategoryAndMapList from "src/components/Centers/categoryAndMapList";
 import { Collections } from "src/data/categoryData";
 import SwitchButton from "src/components/Centers/switchButton";
@@ -14,7 +14,7 @@ const SwitchComponent = () => {
         setChecked(!checked);
     }
     return (
-        <div className="contener">
+        <div className="switch_container flex justify-between dir-col">
             <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             {checked
                 ? <CategoryAndMapList data={products} flag={true} />
