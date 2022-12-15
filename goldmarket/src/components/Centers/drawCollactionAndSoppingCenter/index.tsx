@@ -3,19 +3,19 @@ import { useNavigate } from "react-router-dom";
 
 
 interface IdrawCategoryAndMapProp extends IdataProp {
-    flag?: boolean;
+    navigateCollOrSoppFlag?: boolean;
     
 }
-const DrawCollactionAndSoppingCenter = ({ id, title, img, flag}:IdrawCategoryAndMapProp ) => {
+const DrawCollactionAndSoppingCenter = ({ id, title, img, navigateCollOrSoppFlag}:IdrawCategoryAndMapProp ) => {
     const navigate = useNavigate()
     const handleCgitem = () => {
-        if(flag){
+        if(navigateCollOrSoppFlag){
             navigate(`/shoppingcenters/${title}&${id}`)
         }
     } 
     return (
         //TODO
-        <div id={id} className="product" onClick={()=> handleCgitem()}>
+        <div id={id} className="product" onClick={handleCgitem}>
             <img src={img} alt="Nkar" />
             <h4>{title}</h4>
         </div>

@@ -12,9 +12,8 @@ const SwitchButton = ({ checked, handleCeckid }: switchButtonProps) => {
         <input
           type="checkbox"
             //TODO: look
-          onChange={() => handleCeckid()}
+          onChange={handleCeckid}
         />
-          //TODO: change
           <span className={checked ? "slider" : "slider activ"}></span>
       </label>
       <span className={checked ? "" : "red"}>Shopping centers</span>

@@ -6,16 +6,14 @@ import "src/style/components/_centr_style.scss"
 
 interface IcategoryAndMapListProp{
     data: IdataProp[];
-    flag?: boolean;
+    navigateShoppOrMapFlag?: boolean;
 }
 
-//TODO: Adjust namings: All with uppercase or with index.js
-//TODO: Do not create functions instantly when passing to clicks
 
-const CategoryAndMapList = ({ data, flag }: IcategoryAndMapListProp) => {
+const CategoryAndMapList = ({ data, navigateShoppOrMapFlag }: IcategoryAndMapListProp) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
-        if (flag) {
+        if (navigateShoppOrMapFlag) {
             navigate("/collections") 
         } else { 
             navigate("/shoppingcenters")
@@ -28,7 +26,7 @@ const CategoryAndMapList = ({ data, flag }: IcategoryAndMapListProp) => {
                 data.map(item => <DrawCategoryAndMap key={
                     item.id
                 }
-                    {...item} flag={flag} />)
+                    {...item} navigateShoppOrMapFlag={navigateShoppOrMapFlag} />)
             }
             <button className="buttonSowMor align-center"
                 onClick={handleNavigate}>

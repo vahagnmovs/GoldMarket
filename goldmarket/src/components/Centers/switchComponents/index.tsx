@@ -17,7 +17,7 @@ const SwitchComponent = () => {
         <div className="switch_container flex justify-between dir-col">
             <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             {checked
-                ? <CategoryAndMapList data={products} flag={true} />
+                ? <CategoryAndMapList data={products} navigateShoppOrMapFlag={true} />
                 : <CategoryAndMapList data={maps} />}
         </div>
     )

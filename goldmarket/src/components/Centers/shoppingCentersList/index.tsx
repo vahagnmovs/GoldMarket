@@ -8,7 +8,7 @@ const ShoppingCentersList = () => {
         <h2>Shopping centers</h2></div>
       <div className="products">
         {
-          MAP.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item} flag={true} />)
+          MAP.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item} navigateCollOrSoppFlag={true} />)
         }
       </div>
     </div>
