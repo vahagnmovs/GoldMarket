@@ -16,15 +16,12 @@ function Navbar() {
                     <ul className={"navbar_ul flex justify-between align-center"}>
                         <li className={"flex justify-between align-center"}>
                             <SearchCategory title={"GOLD JEWELRY"} />
-                            <img className={"GOLD "} src={open} alt="" />
                         </li>
                         <li className={"flex justify-between align-center"}>
                             <SearchCategory title={"SILVER JEWELRY"} />
-                            <img className={"SILVER"} src={open} alt="" />
                         </li>
                         <li className={"flex justify-between align-center"}>
                             <SearchCategory title={"WATCHES"} />
-                            <img className={"Watches"} src={open} alt="" />
                         </li>
                         <li className={"flex"}>
                             <div>STORES</div>

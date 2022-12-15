@@ -10,8 +10,10 @@ import basket from "../../../style/Icons/basket.png"
 // import "../../../style/base/_reset.scss"
 // import "../../../style/utilities/_variables.scss"
 import Navbar from "../../Navbar";
+import DropDown from "src/components/Header/header/dropDown";
+import { IData } from "./type";
 
-const flags = [
+const flags: IData[] = [
     {
         id: 0,
         value: "ENG",
@@ -29,46 +31,51 @@ const flags = [
     }
 ];
 
-const currency = [
+const currency: IData[] = [
     {
         id: 0,
-        currency: "USD",
-        src: "https://cdn.iconscout.com/icon/free/png-256/usd-486883-2364952.png"
+        value: "USD",
+        url: "https://static.thenounproject.com/png/990771-200.png",
     },
     {
         id: 1,
-        currency: "RUR",
-        src: ""
+        value: "RUR",
+        url: "https://cdn-icons-png.flaticon.com/512/143/143169.png",
     },
     {
         id: 2,
-        currency: "AMD",
-        src: ""
+        value: "AMD",
+        url: "https://cdn-icons-png.flaticon.com/512/143/143174.png",
     }
 ];
 
 const Header = () => {
 
     const [flagState, setFlagState] = useState(flags);
-    const [chosenflag, setChosenFlag] = useState(flags[0]);
+    const [chosenFlag, setChosenFlag] = useState(flags[0]);
     const [flagMenuOpen, setFlagMenuOpen] = useState(false);
-    const [currencyState, setCurrencyState] = useState(currency)
-    const [isChoseCurrency, setIsChoseCurrency] = useState(true);
-    const [currencyId, setCurrencyId] = useState(0)
 
-    const handleChangeLanguage = (flag: any) => {
+    const [currencyState, setCurrencyState] = useState(currency)
+    const [chosenCurrency, setChosenCurrency] =useState(currency[0])
+    const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
+
+    const handleChangeLanguage = (flag: IData) => {
         setChosenFlag(flag);
         setFlagMenuOpen(false);
-    }
-
-    const handleChangeCurrency = (id: number) => {
-        setCurrencyId(id)
-        setIsChoseCurrency(true)
     }
 
     const toggleFlagMenu = useCallback(() => {
         setFlagMenuOpen(!flagMenuOpen);
     }, [flagMenuOpen])
+
+    const handleChangeCurrency = (currency:any) => {
+        setChosenCurrency(currency);
+        setCurrencyMenuOpen(false)
+    }
+
+    const toggleCurrencyMenu = useCallback(() => {
+        setCurrencyMenuOpen(!currencyMenuOpen);
+    },[currencyMenuOpen])
 
     return (
         // containrt
@@ -79,68 +86,21 @@ const Header = () => {
                 <div className={"top_left_content flex justify-between align-center"}>
                     {/*flag_content*/}
                     <div className={"flag_content"}>
-                        <div className='flag' onClick={toggleFlagMenu}>
-                            <img className={"flag_icon"} src={chosenflag.url} alt="flag_img" />
-                            <span>{chosenflag.value}</span>
-                            <img className={"drop_down"} src={flagMenuOpen ? close : open} alt="drop_down" />
-                        </div>
-                        {flagMenuOpen && <ul className={"flags"}>
-                            {flagState.map(flag => {
-                                return (
-                                    <li className='flag' onClick={() => handleChangeLanguage(flag)} key={flag.id}>
-                                        <img className={"flag_icon"} src={flag.url} alt="flag_img" />
-                                        <span>{flag.value}</span>
-                                    </li>
-                                )
-                            })}
-                        </ul>}
-
-                        {
-
-                            // <ul className={"flags flex align-center"} onClick={() => setFlagChoose(false)}>
-                            //     {/*flag_img*/}
-                            //     <li><img className={"flag_icon"} src={flagState[id].url} alt="flag_img" /></li>
-                            //     {/*language*/}
-                            //     <li><span className={"language"}>{flagState[id].value}</span></li>
-                            //     {/*drop_down*/}
-                            //     <li><img className={"drop_down"} src={open} alt="drop_down" /></li>
-                            // </ul>
-                            // :
-                            // <div>
-                            //     {
-
-                            //     }</div>
-                        }
+                        <DropDown menuOpen={flagMenuOpen}
+                                  toggleMenu={toggleFlagMenu}
+                                  chosen={chosenFlag}
+                                  state={flagState}
+                                  handleChange={handleChangeLanguage}
+                        />
                     </div>
                     {/*valuta_content*/}
-                    <div className={"valuta_content flex align-center"}>
-                        {
-                            isChoseCurrency
-                                ?
-                                // value
-                                <ul className={"valuta flex align-center"} onClick={() => setIsChoseCurrency(false)}>
-                                    {/*language*/}
-                                    <li><span className={"language"}>{currencyState[currencyId].currency} </span></li>
-                                    {/*drop_down*/}
-                                    <li><img className={"drop_down "} src={open} alt="drop_down" /></li>
-                                </ul>
-                                :
-                                <div>
-                                    {
-                                        currencyState.map(currency => {
-                                            return (
-                                                // flags
-                                                <ul key={currency.id} className={"valuta flex align-center"}
-                                                    onClick={() => handleChangeCurrency(currency.id)}>
-                                                    <li><span>{currency.currency}</span></li>
-                                                    {/*drop_up*/}
-                                                    <li><img className={"drop_up"} src={close} alt="" /></li>
-                                                </ul>
-                                            )
-                                        })
-                                    }
-                                </div>
-                        }
+                    <div /*className={"valuta_content flex align-center"}*/ className={"flag_content"}>
+                        <DropDown menuOpen={currencyMenuOpen}
+                                  toggleMenu={toggleCurrencyMenu}
+                                  chosen={chosenCurrency}
+                                  state={currencyState}
+                                  handleChange={handleChangeCurrency}
+                        />
                     </div>
                 </div>
 
