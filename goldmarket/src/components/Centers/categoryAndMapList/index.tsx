@@ -1,23 +1,21 @@
 import svg from "src/style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
 import DrawCategoryAndMap from "src/components/Centers/drawCategoryAndMap";
-import { IDataProp } from "src/components/Centers/types";
-import "src/style/components/_centr_style.scss"
+import { TDataProps } from "src/components/Centers/types";
+import "src/style/components/_centr_style.scss";
 
-interface IcategoryAndMapListProp{
-    data: IDataProp[];
-    navigateShoppOrMapFlag?: boolean;
+type TCategoryAndMapListProps = {
+    data: TDataProps[];
+    shoppingOrMap?: boolean;
 }
 
-
-const CategoryAndMapList = ({ data, navigateShoppOrMapFlag }: IcategoryAndMapListProp) => {
+const CategoryAndMapList = ({ data, shoppingOrMap }: TCategoryAndMapListProps) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
-        if (navigateShoppOrMapFlag) {
-            navigate("/collections") 
-        } else { 
-            navigate("/shoppingcenters")
-            
+        if (shoppingOrMap) {
+            navigate("/collections");
+        } else {
+            navigate("/shoppingcenters");
         }
     }
     return (
@@ -26,7 +24,7 @@ const CategoryAndMapList = ({ data, navigateShoppOrMapFlag }: IcategoryAndMapLis
                 {
                     data.map(item => <DrawCategoryAndMap key={
                         item.id
-                    }{...item} navigateShoppOrMapFlag={navigateShoppOrMapFlag} />)
+                    }{...item} shoppingOrMap={shoppingOrMap} />)
                 }
             </div>
             <div className="buttonSowMor flex justify-center">
@@ -34,12 +32,11 @@ const CategoryAndMapList = ({ data, navigateShoppOrMapFlag }: IcategoryAndMapLis
                     onClick={handleNavigate}>
                     <div className={"flex align-center justify-center"}>
                         <p>SHOW MORE</p>
-                        <img src={svg} alt="Shou More"/>
+                        <img src={svg} alt="Shou More" />
                     </div>
                 </button>
             </div>
         </div>
-
     );
-}
+};
 export default CategoryAndMapList;

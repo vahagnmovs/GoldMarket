@@ -1,7 +1,7 @@
 export const MAP = [
     {
         "id": "1",
-        "title": "yerevan",
+        "title": "Yerevan",
         "shops": [
             {
                 "id": "1",
