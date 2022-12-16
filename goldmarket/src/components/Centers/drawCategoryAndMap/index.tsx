@@ -17,13 +17,13 @@ const DrawCategoryAndMap = ({ id, title, img, flag}:IdrawCategoryAndMapProp ) =>
     return (
         <div id={id} className="product" onClick={()=> handleCgitem()}>
             <img src={img} alt="Nkar" />
-            <div className={"img-title flex"}>
+            <div className={"img-title  text-center"}>
                 <h4>{title}</h4>
-                <p>EXPLORE</p>
-                <img src={svg} alt="next" />
+                    <span>EXPLORE</span>
+                    <img src={svg} alt="next" />
             </div>
 
-            {flag && <div className="icon_next flex">
+            {flag && <div className="icon_next ">
 
             </div>}
         </div>
