@@ -1,18 +1,29 @@
 import DrawCollactionAndSoppingCenter from "src/components/Centers/drawCollactionAndSoppingCenter";
 import { Collections } from "src/data/categoryData";
+import Navbar from "../../Navbar";
+import Footer from "../../Footer";
+import Header from "../../Header/header";
 
 
 const CollectionsList = () => {
   return (
-    <div className="contener">
-      <div className="shopping_collections">
-        <h2>Collections</h2></div>
-      <div className="products">
-        {
-          Collections.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item} />)
-        }
+      <div className={"shou_Collections"}>
+          <Header/>
+         <Navbar/>
+
+          <div className={"product_show_more"}>
+              <div className={"Collections"}>
+                  <h3>Collections</h3>
+              </div>
+              <div className=" flex flex-wrap justify-between">
+                  {
+                      Collections.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item} />)
+                  }
+
+              </div>
+          </div>
+          <Footer/>
       </div>
-    </div>
   )
 }
 

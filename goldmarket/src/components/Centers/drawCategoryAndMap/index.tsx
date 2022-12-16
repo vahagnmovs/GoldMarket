@@ -15,16 +15,15 @@ const DrawCategoryAndMap = ({ id, title, img, navigateShoppOrMapFlag}:IdrawCateg
         }
     } 
     return (
-        <div id={id} className="product" onClick={handleCgitem}>
+        <div id={id} className="product" onClick={()=> handleCgitem()}>
             <img src={img} alt="Nkar" />
-            <div className={"img-title flex"}>
+            <div className={"img-title  text-center"}>
                 <h4>{title}</h4>
-                <p>EXPLORE</p>
+                <span>EXPLORE</span>
                 <img src={svg} alt="next" />
             </div>
 
             {navigateShoppOrMapFlag && <div className="icon_next flex">
-
             </div>}
         </div>
     );
