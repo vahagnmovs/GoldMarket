@@ -3,7 +3,10 @@ import Sellers from "./sellers";
 import { data } from "src/data/recommendedSellers";
 import { Link } from "react-router-dom";
 
+data.length = 4;
+
 const  RecommendedSellers = () => {
+
     // const handleAllBrands = () => {
     //
     // }
@@ -19,8 +22,7 @@ const  RecommendedSellers = () => {
             </div>
             <div className={"block_recommender"}>
                 {
-                    data.filter((elem, index) => index <= 5)
-                        .map(elem => <Sellers key={elem.id}  {...elem}/>)
+                    data.map(product => <Sellers {...product} />)
                 }
             </div>
             <button className={"button_show_all_brands"}
