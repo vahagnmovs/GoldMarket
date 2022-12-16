@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import search  from "src/style/Icons/search.png"
+import search from "src/style/Icons/search.png"
+import  frame from "src/style/Icons/Frame.png"
 
 const Search = () => {
 
@@ -11,28 +12,30 @@ const Search = () => {
 
     return (
         <div>
+
+            <div className={"search_close  flex justify-between align-center"}
+                 onClick={toggleOpenModal}>
+                <span className={"text"}>SEARCH</span>
+                <img className={"searching-icon"} src={search}
+                     alt="search"/>
+            </div>
             {
                 isOpenSearchModal
-                    ?
-                    <div>
-                        <div>
-                            <input type="text"/>
-                            <img src={search} alt="search" className={"searching-icon"}/>
+                &&
+                    <div className={"search_modal_open"}>
+                        <div className={"flex align-center "}>
+                            <input type="text" placeholder={"ENTER KEYWORD TO SEARCH"}/>
+                            <img className={"searching-icon"} src={search} alt="search" />
                         </div>
-                        <div>
-                            <img src="" alt=""/>
-                            <span className={"text"}>ENTER KEYWORD TO SEARCH</span>
+                        <div className={"searching_block_text flex dir-col  align-centnt"}>
+                            <img src={frame} alt=""/>
+                            <span> ENTER KEYWORD TO SEARCH </span>
                         </div>
-                        <button  onClick={toggleOpenModal}>x</button>
+                        <div className={"relative"}>
+                            <button className={"absolute"} onClick={toggleOpenModal}>x</button>
+                        </div>
                     </div>
-                    :
-                    <div className={"searching flex justify-between align-center"}
-                         onClick={toggleOpenModal}
-                    >
-                        <div className={"text"}>SEARCH</div>
-                        <img className={"searching-icon"} src={search}
-                             alt="search" />
-                    </div>
+
             }
         </div>
     );

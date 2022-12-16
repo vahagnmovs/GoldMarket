@@ -116,6 +116,7 @@
 //  display: inline;
 //}
 //
+
 .flex {
   display: flex !important;
 }
@@ -126,6 +127,10 @@
 //
 .align-center {
   align-items: center !important;
+}
+
+.align-centnt{
+  align-content: center;
 }
 //
 //.align-end {
@@ -154,11 +159,20 @@
 //.justify-end {
 //  justify-content: flex-end !important;
 //}
-//
+
+// position
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
-//
+
 .dir-col {
   flex-direction: column;
 }

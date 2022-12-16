@@ -27,7 +27,7 @@
 }
 
 .searching {
-  gap: 8px
+  position: relative;
 }
 
   .searching-icon {
@@ -156,3 +156,59 @@
     height: 300px!important;
   }
 }
+
+
+  .search_modal_open{
+    padding: 30px;
+    background-color: #F7F7F7;
+    position: absolute;
+    top: 40px;
+    left: -820px;
+    width: 700px;
+    height: 300px;
+    input{
+      width: 100%;
+      background-color: #F7F7F7;
+      height: 40px;
+      padding: 22px 30px;
+      border: 0.5px solid;
+    }
+    .a{
+
+    }
+    button{
+      left: -100px;
+    }
+    span{
+
+    }
+    .searching-icon{
+      margin-left: -60px;
+    }
+    .searching_block_text{
+      img{
+        width: 24px;
+        height: 24px;
+
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

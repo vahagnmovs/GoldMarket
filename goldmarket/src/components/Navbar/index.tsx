@@ -16,13 +16,13 @@ function Navbar() {
                 <nav className={"navbar flex justify-between align-center"}>
                     <ul className={"navbar_ul flex justify-between align-center"}>
                         <li className={"flex justify-between align-center"}>
-                            <SearchCategory title={"GOLD JEWELRY"} />
+                            <SearchCategory title={"GOLD JEWELRY"}/>
                         </li>
                         <li className={"flex justify-between align-center"}>
-                            <SearchCategory title={"SILVER JEWELRY"} />
+                            <SearchCategory title={"SILVER JEWELRY"}/>
                         </li>
                         <li className={"flex justify-between align-center"}>
-                            <SearchCategory title={"WATCHES"} />
+                            <SearchCategory title={"WATCHES"}/>
                         </li>
                         <li className={"flex"}>
                             <div>STORES</div>
@@ -31,15 +31,10 @@ function Navbar() {
                 </nav>
 
                 {/*searching*/}
-                <div className={"searching flex justify-between align-center"}>
-                    <Search/>
+                <div className={"flex justify-between align-center"}>
+                    <div className={"relative"}>
 
-                    <div className={"flex justify-between align-center"}>
-                        <label className="switch"> <input
-                            type="checkbox" />
-
-                            <span className="slider"></span>
-                        </label>
+                        <Search/>
                     </div>
                 </div>
             </div>
