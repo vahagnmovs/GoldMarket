@@ -7,7 +7,7 @@ import {useParams} from "react-router-dom";
 
 const ProductPage = () => {
     //TODO: unused staff - remove or comment
-    const { id }  = useParams();
+    // const { id }  = useParams();
     let testId: string = "55";
     const productInfo:any  = products.find(product => product.productID === testId);
 
