@@ -1,7 +1,5 @@
 import React from 'react';
-import png1 from "src/style/Icons/gallery.png";
 import star from "src/style/Icons/star-regular.svg";
-
 
 const Sellers = (props) => {
     const {id, images, name, title, like, starCount} = props;
@@ -10,8 +8,13 @@ const Sellers = (props) => {
 
         <div className={"block_recommender_child"}>
             <div className={"block_recommender_child"}>
-                {images.map(image => <img key={image.id}  className={"block_recommender_child_jewelry"} src={image.img}
-                                          alt=""/>)}
+                {images.map(image => <img
+                    key={image.id}
+                    className={"block_recommender_child_jewelry"}
+                    src={image.img}
+                    alt=""
+                />
+                )}
                 <div>
                     <h4>{name}</h4>
                     <span>{title}</span>
@@ -26,9 +29,6 @@ const Sellers = (props) => {
                 </div>
             </div>
         </div>
-
-
-
     );
 };
 

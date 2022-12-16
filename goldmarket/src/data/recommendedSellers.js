@@ -1,4 +1,4 @@
-import gelewery from "../style/Icons/gallery.png"
+import jewellery from "../style/Icons/jewellery.png"
 
 export const data = [
     {
@@ -8,12 +8,12 @@ export const data = [
         like: 5,
         starCount: 235,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
 
@@ -24,12 +24,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
     {
@@ -39,12 +39,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
     {
@@ -54,12 +54,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
     {
@@ -69,12 +69,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
     {
@@ -84,12 +84,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
     {
@@ -99,12 +99,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
     {
@@ -114,12 +114,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
     {
@@ -129,12 +129,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
     {
@@ -144,12 +144,12 @@ export const data = [
         like: 0,
         starCount: 0,
         images: [
-            { id: 0,img: gelewery },
-            { id: 1, img: gelewery },
-            { id: 2, img: gelewery },
-            { id: 3, img: gelewery },
-            { id: 4, img: gelewery },
-            { id: 5, img: gelewery },
+            { id: 0,img: jewellery },
+            { id: 1, img: jewellery },
+            { id: 2, img: jewellery },
+            { id: 3, img: jewellery },
+            { id: 4, img: jewellery },
+            { id: 5, img: jewellery },
         ]
     },
 
