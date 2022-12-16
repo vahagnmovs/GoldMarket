@@ -1,59 +1,188 @@
 
-.products{
-  //gap: 20px;
-  .buttonSowMor{
-    width: 183px;
-    height: 40px;
-    img{
+.product_button {
+  .buttonSowMor {
+    button {
+      width: 183px;
+      height: 40px;
+      background: none;
+      border: 0.5px solid;
+    }
+
+    img {
       width: 20px;
       height: 20px;
     }
   }
-  img{
-    display: block;
-
-
-  }
 }
-.product{
-  .img-title{
-    img{
-      width: 10px;
-      height: 10px;
+
+.product {
+  padding-bottom: 50px;
+
+  .img-title {
+    h4 {
+      padding: 20px 0;
+      font-size: 22px;
+    }
+
+    span {
+      color: #1D3865
+    }
+
+    img {
+      width: 23px;
+      height: 13px;
     }
   }
 }
 
-.switch_container{
+
+.switch_container {
   width: 1200px;
   margin: 0 auto;
 
-
-  img{
+  img {
     width: 387px;
     height: 400px;
   }
 }
 
-.switch_product{
-
-}
 
 //button svitch change  centry
 
-.switch_content{
-
+.switch_content {
+  gap: 30px;
   text-align: center;
   padding-bottom: 30px;
   font-size: 32px;
 
+  .red {
+    color: #CCA653;
+  }
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .label {
+    width: 50px;
+    height: 26px;
+    background-color: #1D3865;
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+  }
+
+  .ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+
+  /*  target the elemenent after the label*/
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+
+  input:checked + label + .background {
+    background: #242424;
+  }
+
+  .fa-moon {
+    color: yellow;
+  }
+
+  .fa-sun {
+    color: yellow;
+  }
 }
 
 
+//product_shou
+.product_shou {
 
+  img {
+    width: 387px;
+    height: 455px;
+  }
 
-
-///switch_product
-.switch_product{
-
+  .img-title {
+    padding: 50px 0;
+  }
 }
+
+//shou_Collections
+.shou_Collections {
+
+  .product_show_more {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 250px 0;
+
+    .Collections {
+      font-size: 32px;
+      color: #1D3865;
+
+
+      span {
+        color: #1D3865;
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.map_show_more {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0 250px 0;
+
+  .Shopping_centers {
+    font-size: 32px;
+    color: #1D3865;
+
+    .map {
+      background-color: #F6F6F6;
+      margin-top: 50px;
+    }
+  }
+}
+
+  //ciyt map
+
+  .product_centers {
+    margin-top: 50px;
+
+    img {
+      width: 387px;
+      height: 455px;
+    }
+
+    .city-title {
+      margin-top: 20px;
+    }
+  }
+
+
+  //shopping_center_contener
+.shopping_center_contener{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0 250px 0;
+
+  .shopping_center_region{
+    color: #1D3865;
+    font-size: 32px;
+  }
+}
+
+
