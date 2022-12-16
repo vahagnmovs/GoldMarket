@@ -1,5 +1,4 @@
 import React from "react";
-import Product from "../product/product";
 
 const MostViewed = () => {
     return (
@@ -9,10 +8,7 @@ const MostViewed = () => {
                 <button>Dzax</button>
                 <button>Aj</button>
             </div>
-            <Product/>
-            <Product/>
-            <Product/>
-            <Product/>
+
         </div>
     );
 };

@@ -26,13 +26,13 @@ const buyers = [
         ],
         // whishList: [
         //     {
-        //         productID: product.productID,
-        //         name: product.name,
-        //         sellerID: product.sellerID,
-        //         discount: product.discount,
+        //         productID: productBadge.productID,
+        //         name: productBadge.name,
+        //         sellerID: productBadge.sellerID,
+        //         discount: productBadge.discount,
         //         prices: {
-        //             oldPrice: product.prices.oldPrice,
-        //             currentPrice: product.prices.currentPrice,
+        //             oldPrice: productBadge.prices.oldPrice,
+        //             currentPrice: productBadge.prices.currentPrice,
         //         },
         //     },
         // ],
@@ -40,15 +40,15 @@ const buyers = [
             product
         ],
         // cart: {
-        //     productID: product.productID,
-        //     name: product.name,
-        //     sellerID: product.sellerID,
-        //     discount: product.discount,
-        //     code: product.code,
-        //     size: product.size,
+        //     productID: productBadge.productID,
+        //     name: productBadge.name,
+        //     sellerID: productBadge.sellerID,
+        //     discount: productBadge.discount,
+        //     code: productBadge.code,
+        //     size: productBadge.size,
         //     prices: {
-        //         oldPrice: product.prices.oldPrice,
-        //         currentPrice: product.prices.currentPrice,
+        //         oldPrice: productBadge.prices.oldPrice,
+        //         currentPrice: productBadge.prices.currentPrice,
         //     },
         // },
     },

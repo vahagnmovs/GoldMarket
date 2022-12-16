@@ -10,21 +10,21 @@ interface AboutPageProps {
 }
 
 const AboutPage = ({productInformation}: AboutPageProps) => {
-    const {NAME, IMAGES, SIZE, WEIGHT} = productInformation;
+    const {name, images, size, weight} = productInformation;
     return (
         <div>
             <div>
-                <span>Product code: {NAME}</span>
+                <span>Product code: {name}</span>
             </div>
             <div>
-                <ProductImageSlice images={IMAGES}/>
+                <ProductImageSlice images={images}/>
             </div>
             <div>
                 <div>
-                    <ProductSizeWeight sizeOrWeight={SIZE} title={"SIZE"}/>
+                    <ProductSizeWeight sizeOrWeight={size} title={"SIZE"}/>
                 </div>
                 <div>
-                    <ProductSizeWeight sizeOrWeight={WEIGHT} title={"WEIGHT"}/>
+                    <ProductSizeWeight sizeOrWeight={weight} title={"WEIGHT"}/>
                 </div>
                 <div>
                     <Description infoProduct={productInformation}/>

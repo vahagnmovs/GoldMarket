@@ -14,7 +14,7 @@ interface  SlideCarouselProps {
 const SlideCarousel = ({ images }: SlideCarouselProps) => {
     const slider = useRef<any>(null);
     const imagesArr = useMemo<string[]>(() => {
-        return images.map(image => image.IMAGES[0])
+        return images.map(image => image.images[0])
     }, [images]);
 
     const settings = {
