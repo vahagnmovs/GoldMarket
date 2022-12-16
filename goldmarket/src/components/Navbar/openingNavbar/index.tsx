@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import presentImg from "../../../style/img/present-product.png"
-import open from "../../../style/Icons/open.png";
-import close from "../../../style/Icons/close.png"
+import presentImg from "src/style/img/present-product.png"
+import open from "src/style/Icons/open.png";
+import close from "src/style/Icons/close.png"
 // import "../../../style/elements/_navbar.scss"
 // import "../../../style/base/_globals.scss"
 // import "../../../style/base/_reset.scss"

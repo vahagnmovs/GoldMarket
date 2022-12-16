@@ -17,10 +17,9 @@ const SwitchComponent = () => {
         <div className="switch_container flex justify-between dir-col">
             <SwitchButton checked={checked} handleCeckid={handleCeckid} />
             {checked
-                ? <CategoryAndMapList data={products} />
-                : <CategoryAndMapList data={maps} navigateShoppOrMapFlag={true} />}
+                ? <CategoryAndMapList data={products} shoppingOrMap={true} />
+                : <CategoryAndMapList data={maps} />}
         </div>
     )
 }
-
 export default SwitchComponent;
