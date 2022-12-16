@@ -15,9 +15,12 @@ const DrawCollactionAndSoppingCenter = ({ id, title, img, navigateCollOrSoppFlag
     } 
     return (
         //TODO
-        <div id={id} className="product" onClick={handleCgitem}>
+        <div id={id} className="product_centers " onClick={()=> handleCgitem()}>
             <img src={img} alt="Nkar" />
-            <h4>{title}</h4>
+            <div className={"city-title align-center text-center"} >
+                <h4>{title}</h4>
+            </div>
+
         </div>
     );
 }

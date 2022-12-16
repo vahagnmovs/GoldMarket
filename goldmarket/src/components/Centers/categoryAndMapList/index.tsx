@@ -21,19 +21,25 @@ const CategoryAndMapList = ({ data, navigateShoppOrMapFlag }: IcategoryAndMapLis
         }
     }
     return (
-        <div className="products flex  flex-wrap justify-between">
-            {
-                data.map(item => <DrawCategoryAndMap key={
-                    item.id
+        <div className={"product_button   justify-center"}>
+            <div className="products flex  flex-wrap justify-between ">
+                {
+                    data.map(item => <DrawCategoryAndMap key={
+                        item.id
+                    }{...item} navigateShoppOrMapFlag={navigateShoppOrMapFlag} />)
                 }
-                    {...item} navigateShoppOrMapFlag={navigateShoppOrMapFlag} />)
-            }
-            <button className="buttonSowMor align-center"
-                onClick={handleNavigate}>
-                <p>SHOW MORE</p>
-                <img src={svg}
-                    alt="Shou More" /></button>
+            </div>
+            <div className="buttonSowMor flex justify-center">
+                <button
+                    onClick={handleNavigate}>
+                    <div className={"flex align-center justify-center"}>
+                        <p>SHOW MORE</p>
+                        <img src={svg} alt="Shou More"/>
+                    </div>
+                </button>
+            </div>
         </div>
+
     );
 }
 export default CategoryAndMapList;
