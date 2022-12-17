@@ -4,7 +4,7 @@ import Navbar from "../../components/navbar";
 import Header from "../../components/header/header";
 import PriceList from "../../components/header/priceList";
 import ReactVideoPlayer from "../../components/header/reactVideoPlayer";
-// import Information from "../../components/Information";
+// import information from "../../components/information";
 import Footer from "../../components/footer";
 import RecommendedSellers from "../../components/recommendedSeleres/recommendedSellers";
 import SwitchComponent from '../../components/centers/switchComponents';
