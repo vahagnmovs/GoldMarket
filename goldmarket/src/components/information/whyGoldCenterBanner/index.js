@@ -10,8 +10,8 @@ const WhyGoldCenter = () => {
             <div className="WhyGoldCenter text-center">
                 <h1> Why Goldventer </h1>
                   <p>
-                    WHIT A LONG HISTORY OF FINE CRAFTSMAANSHIP,
-                    ITALIAN GOLD JEWELRY BRINGS SHOPSISTICATION
+                    WHIT A LONG HISTORY OF FINE CRAFTSMAANSHIP,<br/>
+                    ITALIAN GOLD JEWELRY BRINGS SHOPSISTICATION<br/>
                     AND STYLE TO ANY OUTFIT
                 </p>
             </div>
