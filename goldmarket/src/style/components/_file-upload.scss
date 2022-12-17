@@ -1,130 +1,130 @@
-.file-upload-wrap {
+// .file-upload-wrap {
 
-	.file-upload-container {
-		position: relative;
-	}
+// 	.file-upload-container {
+// 		position: relative;
+// 	}
 
-	.file-upload {
-		display: flex;
-		border: 1px dashed $color-text-20;
-		border-radius: $br-sm;
-		overflow: hidden;
-		height: 52px;
-		cursor: pointer;
-		transition: $trns-duration;
+// 	.file-upload {
+// 		display: flex;
+// 		border: 1px dashed $color-text-20;
+// 		border-radius: $br-sm;
+// 		overflow: hidden;
+// 		height: 52px;
+// 		cursor: pointer;
+// 		transition: $trns-duration;
 
-		@media (hover: hover) {
-			&:hover {
-				border-color: $color-text-70;
-			}
-		}
+// 		@media (hover: hover) {
+// 			&:hover {
+// 				border-color: $color-text-70;
+// 			}
+// 		}
 
-		input {
-			display: none;
-		}
+// 		input {
+// 			display: none;
+// 		}
 
-		.upload-text {
-			display: flex;
-			width: 100%;
-			align-items: center;
-			justify-content: space-between;
-			padding: 0 25px;
+// 		.upload-text {
+// 			display: flex;
+// 			width: 100%;
+// 			align-items: center;
+// 			justify-content: space-between;
+// 			padding: 0 25px;
 
-			i {
-				font-size: $font-size-lg;
-			}
-		}
-	}
+// 			i {
+// 				font-size: $font-size-lg;
+// 			}
+// 		}
+// 	}
 
-	.uploaded-file {
-		display: flex;
-		@include position($top: 0, $left: 0);
-		width: 100%;
-		height: 100%;
+// 	.uploaded-file {
+// 		display: flex;
+// 		@include position($top: 0, $left: 0);
+// 		width: 100%;
+// 		height: 100%;
 
-		div {
-			display: flex;
-			align-items: center;
-			position: relative;
-			padding: 0 25px;
-			width: calc(100% - 52px);
-		}
+// 		div {
+// 			display: flex;
+// 			align-items: center;
+// 			position: relative;
+// 			padding: 0 25px;
+// 			width: calc(100% - 52px);
+// 		}
 		
-		.file-name {
-			@include ellipsis(100%);
-		}
+// 		.file-name {
+// 			@include ellipsis(100%);
+// 		}
 
-		button {
-			flex-shrink: 0;
-			width: 52px;
-			height: 100%;
-			border-left: 1px dashed $color-text-20;
-			color: $color-text;
+// 		button {
+// 			flex-shrink: 0;
+// 			width: 52px;
+// 			height: 100%;
+// 			border-left: 1px dashed $color-text-20;
+// 			color: $color-text;
 
-			i {
-				font-size: $font-size-lg;
-				vertical-align: middle;
-			}
+// 			i {
+// 				font-size: $font-size-lg;
+// 				vertical-align: middle;
+// 			}
 
-			@media (hover: hover) {
-				&:hover {
-					background: $color-text-10;
-				}
-			}
+// 			@media (hover: hover) {
+// 				&:hover {
+// 					background: $color-text-10;
+// 				}
+// 			}
 
-		}
+// 		}
 
-		.upload-progress {
-			@include position($bottom: 0, $left: 0);
-			transition: $trns-duration;
-			border-radius: 2px;
-			height: 4px;
-			background: $color-text;
-		}
-	}
+// 		.upload-progress {
+// 			@include position($bottom: 0, $left: 0);
+// 			transition: $trns-duration;
+// 			border-radius: 2px;
+// 			height: 4px;
+// 			background: $color-text;
+// 		}
+// 	}
 
-	&.light {
+// 	&.light {
 
-		.file-upload {
-			border-color: $color-white-40;
+// 		.file-upload {
+// 			border-color: $color-white-40;
 
-			@media (hover: hover) {
-				&:hover {
-					border-color: $color-white-70;
-				}
-			}
+// 			@media (hover: hover) {
+// 				&:hover {
+// 					border-color: $color-white-70;
+// 				}
+// 			}
 
 
-			.upload-text {
-				justify-content: center;
+// 			.upload-text {
+// 				justify-content: center;
 
-				i {
-					margin-right: 10px;
-				}
-			}
-		}
+// 				i {
+// 					margin-right: 10px;
+// 				}
+// 			}
+// 		}
 
-		.uploaded-file {
+// 		.uploaded-file {
 
-			div {
-				justify-content: center;
-			}
+// 			div {
+// 				justify-content: center;
+// 			}
 			
-			button {
-				border-left-color: $color-white-40;
-				color: $color-white;
+// 			button {
+// 				border-left-color: $color-white-40;
+// 				color: $color-white;
 
-				@media (hover: hover) {
-					&:hover {
-						background: $color-white-20;
-					}
-				}
+// 				@media (hover: hover) {
+// 					&:hover {
+// 						background: $color-white-20;
+// 					}
+// 				}
 
-			}
+// 			}
 
-			.upload-progress {
-				background: $color-white;
-			}
-		}
-	}
-}
+// 			.upload-progress {
+// 				background: $color-white;
+// 			}
+// 		}
+// 	}
+// }
