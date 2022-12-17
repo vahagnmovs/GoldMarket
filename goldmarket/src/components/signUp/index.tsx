@@ -1,18 +1,18 @@
-import React, {Component, useState} from 'react';
-import { IUser } from "./type";
+import React, {Component, useEffect, useMemo, useState} from 'react';
+import { TUser } from "./type";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useAppDispatch } from "../../hooks/redux-hooks";
 import { setUser } from 'src/store/users/usersSlice'
-import {log} from "util";
 
 const SignUp = () => {
 
     const dispatch = useAppDispatch()
 
     const [isBuyer, setIsBuyer]  = useState(true)
-    const [error, setError] =useState("")
+    const [passwordError, setPasswordError] =useState("")
+    const [confirmPasswordError, setConfirmPasswordError] = useState("")
 
-    const [userSettings, setUserSettings] = useState<IUser>({
+    const [userSettings, setUserSettings] = useState<TUser >({
         firstName: "",
         lastName: "",
         email: "",
@@ -37,19 +37,35 @@ const SignUp = () => {
 
     const validatePassword = () => {
         let isValid = true
-        if (userSettings.password !== '' && userSettings.confirmPassword !== ''){
-            if (userSettings.password !== userSettings.confirmPassword) {
+        setPasswordError("")
+        if (userSettings.password !== '' && userSettings.confirmPassword !== '') {
+            isValid = false
+            setPasswordError("Please set password")
+        } else if(userSettings.password[0] !== userSettings.password[0].toUpperCase() || !isNaN(+userSettings.password[0])) {
+            isValid = false
+            setPasswordError("First letter mast be uppercase")
+        } else if(!userSettings.password.split("").filter(val => !isNaN(+val)).length) {
+            isValid = false
+            setPasswordError("Password mast includes number")
+        } else if(userSettings.password.length < 8){
+            isValid = false
+            setPasswordError("Password minimum characters mast be 8")
+        } else if(userSettings.password !== userSettings.confirmPassword) {
                 isValid = false
-                setError('Passwords does not match')
-            }
         }
         return isValid
     }
 
+    const validateConfirmPassword =(e: React.ChangeEvent<HTMLInputElement>) => {
+        addUserParams(e,"confirmPassword")
+        setConfirmPasswordError("")
+        if(userSettings.password !== e.target.value) {
+            setConfirmPasswordError('Passwords does not match')
+        }
+    }
+
     const register = (e: React.FormEvent) => {
         e.preventDefault()
-        setError('')
-        if(validatePassword()) {
             // Create a new user with email and password using firebase
             const auth = getAuth()
             createUserWithEmailAndPassword(auth, userSettings.email, userSettings.password)
@@ -67,7 +83,6 @@ const SignUp = () => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
                 });
-        }
     }
 
     return (
@@ -79,7 +94,6 @@ const SignUp = () => {
             <h3>Registration</h3>
             <span>With Goldcenter.am account, you can save time during checkout, access your shopping bag from any device and view your order history.</span>
             <form action="" onSubmit={register} name={"registration_form"}>
-                <span>{error}</span>
                 <input type="text"
                        placeholder={"FIRST NAME"}
                        defaultValue={userSettings.firstName}
@@ -109,15 +123,18 @@ const SignUp = () => {
                        defaultValue={userSettings.password}
                        required
                        minLength={6}
+                       onBlur={validatePassword}
                        onChange={(e) => addUserParams(e,"password")}
                 />
+                <span>{ passwordError }</span>
                 <input type="password"
                        placeholder={"CONFIRM PASSWORD"}
                        defaultValue={userSettings.confirmPassword}
                        required
                        minLength={6}
-                       onChange={(e) => addUserParams(e,"confirmPassword")}
+                       onChange={ validateConfirmPassword }
                 />
+                <span>{ confirmPasswordError }</span>
 
                 {
                     isBuyer &&
@@ -128,7 +145,7 @@ const SignUp = () => {
                            onChange={(e) => addUserParams(e,"companyName")}
                     />
                 }
-                <button>SING IN</button>
+                <button>SIGN UP</button>
             </form>
             <span>HAVE AN ACCOUNT? LOGIN</span>
         </div>
