@@ -11,9 +11,9 @@ import SwitchComponent from '../../components/centers/switchComponents';
 import Collections from "../../components/newCollections";
 import BestSales from "../../components/bestSales";
 import MostViewed from "../../components/mostViewed";
-import WhyGoldCenter from '../../components/information/WhyGoldCenter';
-import AboutUs from '../../components/information/AboutUs';
-import SellWithUs from '../../components/information/SellWithUs';
+import WhyGoldCenter from '../../components/information/whyGoldCenter';
+import AboutUs from '../../components/information/aboutUs';
+import SellWithUs from '../../components/information/sellWithUs';
 import SingIn from "../../components/signUp";
 import ProductPage from "../../components/productPage";
 import SignUp from "../../components/signUp";
@@ -32,12 +32,12 @@ const Home = () => {
                 {/*<ReactVideoPlayer />*/}
                 {/*<SwitchComponent />*/}
                 {/*<Collections />*/}
-                {/*<SellWithUs />*/}
+                {/*<sellWithUs />*/}
                 {/*<BestSales />*/}
                 {/*<RecommendedSellers />*/}
                 {/*<MostViewed />*/}
-                {/*<WhyGoldCenter />*/}
-                {/*<AboutUs />*/}
+                {/*<whyGoldCenter />*/}
+                {/*<aboutUs />*/}
             </>
         </Layout>
     );

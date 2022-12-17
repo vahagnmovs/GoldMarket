@@ -1,4 +1,4 @@
-import { IData } from "../types";
+import { IData } from "src/components/header/header/types";
 
 export interface IDropDownProps {
     menuOpen: boolean,

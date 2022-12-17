@@ -1,5 +1,5 @@
-import Image from '../Image';
-import Text from '../Text';
+import Image from '../image';
+import Text from '../text';
 import { srcGold, textFromGold } from './constants';
 import './index.css';
 

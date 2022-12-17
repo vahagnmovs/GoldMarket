@@ -1,4 +1,4 @@
-import DrawCollactionAndSoppingCenter from "src/components/Centers/drawCollactionAndSoppingCenter";
+import DrawCollactionAndSoppingCenter from "src/components/centers/drawCollactionAndSoppingCenter";
 import { MAP } from "src/data/mapData";
 
 const ShoppingCentersList = () => {

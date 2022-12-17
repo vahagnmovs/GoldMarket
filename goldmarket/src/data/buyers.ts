@@ -1,4 +1,4 @@
-import randomID from "./UUID";
+import randomID from "src/hooks/uuid";
 import {products} from './products';
 // import type {ProductsTypes} from './products'
 

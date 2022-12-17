@@ -7,8 +7,8 @@ import basket from "src/style/Icons/basket.png"
 // import "../../../style/base/_globals.scss"
 // import "../../../style/base/_reset.scss"
 // import "../../../style/utilities/_variables.scss"
-import DropDown from "src/components/Header/header/dropDown";
-import { IData } from "./types";
+import DropDown from "src/components/header/header/dropDown";
+import {IData} from "src/components/header/header/types";
 
 const flags: IData[] = [
     {

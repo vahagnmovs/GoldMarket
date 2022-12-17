@@ -1,8 +1,8 @@
-import DrawCollactionAndSoppingCenter from "src/components/Centers/drawCollactionAndSoppingCenter";
+import DrawCollactionAndSoppingCenter from "src/components/centers/drawCollactionAndSoppingCenter";
 import { Collections } from "src/data/categoryData";
-import Navbar from "src/components/Navbar";
+import Navbar from "src/components/navbar";
 import Footer from "src/components/footer";
-import Header from "src/components/Header/header";
+import Header from "src/components/header/header";
 
 const CollectionsList = () => {
     return (
