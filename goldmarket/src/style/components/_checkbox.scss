@@ -1,46 +1,46 @@
-.checkbox-list {
+// .checkbox-list {
 	
-	.title {
-		font-size: $font-size-sm;
-		color: $color-text-70;
-		display: block;
-		margin-bottom: 10px;
-	}
+// 	.title {
+// 		font-size: $font-size-sm;
+// 		color: $color-text-70;
+// 		display: block;
+// 		margin-bottom: 10px;
+// 	}
 
-	ul {
-		margin: -5px;
-		display: flex;
-		flex-wrap: wrap;
+// 	ul {
+// 		margin: -5px;
+// 		display: flex;
+// 		flex-wrap: wrap;
 
-		li {
-			margin: 5px;
-		}
-	}
+// 		li {
+// 			margin: 5px;
+// 		}
+// 	}
 	
-	label {
-		cursor: pointer;
-		display: inline-block;
-		user-select: none;
+// 	label {
+// 		cursor: pointer;
+// 		display: inline-block;
+// 		user-select: none;
 		
-		span {
-			display: block;
-			padding: 0 25px;
-			height: 42px;
-			line-height: 40px;
-			color: $color-text-80;
-			border: 1px solid $color-text-20;
-			border-radius: $br-lg;
-			transition: $trns-duration;
-		}
+// 		span {
+// 			display: block;
+// 			padding: 0 25px;
+// 			height: 42px;
+// 			line-height: 40px;
+// 			color: $color-text-80;
+// 			border: 1px solid $color-text-20;
+// 			border-radius: $br-lg;
+// 			transition: $trns-duration;
+// 		}
 
-		input {
-			display: none;
+// 		input {
+// 			display: none;
 
-			&:checked + span {
-				background: $color-primary;
-				border-color: $color-primary;
-				color: $color-white;
-			}
-		}
-	}
-}
+// 			&:checked + span {
+// 				background: $color-primary;
+// 				border-color: $color-primary;
+// 				color: $color-white;
+// 			}
+// 		}
+// 	}
+// }

@@ -26,7 +26,7 @@ const Home = () => {
             FooterComponent={<Footer />}
         >
             <>
-                <SignUp/>
+                {/* <SignUp/> */}
                 <PriceList />
                 <ReactVideoPlayer />
                 <SwitchComponent />

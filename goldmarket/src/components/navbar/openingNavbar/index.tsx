@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import presentImg from "src/style/img/present-product.png"
 import open from "src/style/Icons/open.png";
 import close from "src/style/Icons/close.png"
-// import "../../../style/elements/_navbar.scss"
-// import "../../../style/base/_globals.scss"
-// import "../../../style/base/_reset.scss"
-// import "../../../style/utilities/_variables.scss"
 
 type SearchCategoryProps = {
     title: string,
@@ -20,7 +16,7 @@ function SearchCategory({ title }: SearchCategoryProps) {
                 mouse
                     ?
                     <div>
-                        <div  className={"flex justify-between align-center"} onMouseLeave={() => setMouse(false)}>
+                        <div className={"flex justify-between align-center"} onMouseLeave={() => setMouse(false)}>
                             <span>{title}</span>
                             <img className={"GOLD"} src={close} alt="" />
                         </div>
@@ -70,8 +66,8 @@ function SearchCategory({ title }: SearchCategoryProps) {
                         </div>
                     </div>
                     :
-                    <div  className={"flex justify-between align-center"}
-                          onMouseEnter={() => setMouse(true)}
+                    <div className={"flex justify-between align-center"}
+                        onMouseEnter={() => setMouse(true)}
                     >
                         <span >{title}</span>
                         <img className={"GOLD "} src={open} alt="" />

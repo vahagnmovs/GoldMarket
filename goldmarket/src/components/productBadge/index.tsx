@@ -1,12 +1,14 @@
-import React, {useState} from "react";
-import {ProductsTypes} from "src/data/products";
+import React, { useState } from "react";
+import { ProductsTypes } from "src/data/products";
+import lovedFlag from "../../style/Icons/heart.png"
+
 // FIXME:
 // import {useAppSelector} from "src/hooks/redux-hooks";
 
 const Product = (props: ProductsTypes) => {
     // FIXME:
     // const users = useAppSelector(state => state.seller)
-    const {name, productID, discount, newProduct, images, prices, sellerID} = props
+    const { name, productID, discount, newProduct, images, prices, sellerID } = props
     const [lovedFlag, setLovedFlag] = useState(false);
     // FIXME:
     // const user = users.find(user => user.id === sellerID)
@@ -18,12 +20,12 @@ const Product = (props: ProductsTypes) => {
     }
 
     return (
-        <div>
-            <div>
-                <img src={images[0]} alt="product main image"/>
-                <div>
-                    {newProduct ? <span>NEW</span> : <span></span>}
-                    {discount ? <span>-{discount}%</span>: <span></span>}
+        <div className="badge_item">
+            <div className="relative">
+                <img src={images[0]} alt="list_item" />
+                <div className="badge_item_top flex  absolute">
+                    {newProduct ? <span className="new">NEW</span> : <span></span>}
+                    {discount ? <span className="discount">-{discount}%</span> : <span></span>}
                     {/*FIXME: ADD TOGGLE AND SRC*/}
                     <img
                         src={lovedFlag ? "" : ""}
@@ -33,17 +35,17 @@ const Product = (props: ProductsTypes) => {
                 </div>
             </div>
 
-            <div>
-                <div>
+            <div className="list_content">
+                <div className="flex justify-between">
                     <div>
-                        <span>{prices.currentPrice}$</span>
-                        <span>{prices.oldPrice}$</span>
+                        <span className="currentPrice">{prices.currentPrice}$</span>
+                        <span className="oldPrice">{prices.oldPrice}$</span>
                     </div>
-                    <span>
+                    <div>
                         {/*FIXME: after having norm seller data will change this to normal seller name*/}
                         {/*user.name*/}
                         {sellerID.split("-")[0]}
-                    </span>
+                    </div>
                 </div>
                 <p>{name}</p>
             </div>
