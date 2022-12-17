@@ -1,11 +1,36 @@
-import React from 'react';
+import {createSlice} from '@reduxjs/toolkit'
+import {ProductsTypes} from "src/data/products";
 
-const ProductSlice = () => {
-    return (
-        <div>
+type TInitialState = {
+    products: ProductsTypes[];
+}
 
-        </div>
-    );
+const initialState: TInitialState  = {
+    products: []
 };
 
-export default ProductSlice;
+const productSlice = createSlice({
+    name: 'sellers',
+    initialState,
+    reducers: {
+        addProduct(state, action) {
+            state.products.push(action.payload)
+        },
+        removeProduct(state, action) {
+            state.products = state.products.filter(product => product.productID !== action.payload)
+        },
+        editProduct(state, action) {
+            state.products = state.products.map(product => {
+                if (product.productID === action.payload.id) {
+                    return {
+                        ...action.payload
+                    }
+                }
+                return product;
+            })
+        },
+    }
+})
+
+export const {addProduct, removeProduct, editProduct} = productSlice.actions;
+export default productSlice.reducer;

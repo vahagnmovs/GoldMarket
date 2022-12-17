@@ -9,7 +9,7 @@ if (newProducts.length > 8) {
     newProducts.length = 8
 }
 
-const Collections = () => {
+const NewCollection = () => {
     // const products = useAppSelector(state => state.products)
 
 
@@ -17,7 +17,7 @@ const Collections = () => {
         <div>
             <h3>New Collection</h3>
             {
-                newProducts.map(product => <ProductBadge {...product} />)
+                newProducts.map(product => <ProductBadge key={product.productID} {...product} />)
             }
             <button
                 // onClick={}
@@ -26,4 +26,4 @@ const Collections = () => {
     );
 };
 
-export default Collections;
+export default NewCollection;

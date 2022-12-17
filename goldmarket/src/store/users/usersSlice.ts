@@ -7,6 +7,8 @@ const initialState = {
     firstName: "",
     lastName: "",
     phoneNumber: "",
+    wishList: [],
+    cart: []
 }
 
 const userSlice = createSlice({

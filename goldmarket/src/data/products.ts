@@ -37,8 +37,7 @@ export type ProductsTypes = {
 
 const products: ProductsTypes[] = [
     {
-        // productID: randomID(),
-        productID: "55",
+        productID: randomID(),
         name: "Graziella ring",
         sellerID: randomID(),
         color: "YELLOW",

@@ -8,7 +8,6 @@ import ReactVideoPlayer from "src/components/header/reactVideoPlayer";
 import Footer from "src/components/footer";
 import RecommendedSellers from "src/components/recommendedSeleres/recommendedSellers";
 import SwitchComponent from 'src/components/centers/switchComponents';
-import Collections from "src/components/newCollections";
 import BestSales from "src/components/bestSales";
 import MostViewed from "src/components/mostViewed";
 import SingIn from "src/components/signUp";
@@ -17,6 +16,7 @@ import SignUp from "src/components/signUp";
 import AboutUs from "../../components/information/aboutUs";
 import WhyGoldCenter from "../../components/information/whyGoldCenter";
 import SellWithUs from "../../components/information/sellWithUs";
+import NewCollection from "src/components/newCollections";
 
 const Home = () => {
     return (
@@ -30,7 +30,7 @@ const Home = () => {
                 <PriceList />
                 <ReactVideoPlayer />
                 <SwitchComponent />
-                <Collections />
+                <NewCollection />
                 <SellWithUs />
                 <BestSales />
                 <RecommendedSellers />
