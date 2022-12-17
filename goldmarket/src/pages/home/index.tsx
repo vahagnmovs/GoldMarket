@@ -11,12 +11,12 @@ import SwitchComponent from 'src/components/centers/switchComponents';
 import Collections from "src/components/newCollections";
 import BestSales from "src/components/bestSales";
 import MostViewed from "src/components/mostViewed";
-import AboutUs from 'src/components/information/aboutUs';
-import SellWithUs from 'src/components/information/sellWithUs';
 import SingIn from "src/components/signUp";
 import ProductPage from "src/components/productPage";
 import SignUp from "src/components/signUp";
-import WhyGoldCenter from "src/components/information/whyGoldCenter";
+import AboutUs from "../../components/Information/AboutUs";
+import WhyGoldCenter from "../../components/Information/WhyGoldCenter";
+import SellWithUs from "../../components/Information/SellWithUs";
 
 const Home = () => {
     return (
@@ -27,16 +27,16 @@ const Home = () => {
         >
             <>
                 <SignUp/>
-                {/*<PriceList />*/}
-                {/*<ReactVideoPlayer />*/}
-                {/*<SwitchComponent />*/}
-                {/*<Collections />*/}
-                {/*<sellWithUs />*/}
-                {/*<BestSales />*/}
-                {/*<RecommendedSellers />*/}
-                {/*<MostViewed />*/}
-                {/*<WhyGoldCenter />*/}
-                {/*<aboutUs />*/}
+                <PriceList />
+                <ReactVideoPlayer />
+                <SwitchComponent />
+                <Collections />
+                <SellWithUs />
+                <BestSales />
+                <RecommendedSellers />
+                <MostViewed />
+                <WhyGoldCenter />
+                <AboutUs />
             </>
         </Layout>
     );
