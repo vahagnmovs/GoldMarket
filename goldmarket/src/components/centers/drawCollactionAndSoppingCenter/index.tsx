@@ -7,13 +7,13 @@ type TDrawCategoryAndMapProp = TDataProps & {
 
 const DrawCollactionAndSoppingCenter = ({ id, title, img, navigateCollOrSoppFlag }: TDrawCategoryAndMapProp) => {
     const navigate = useNavigate();
-    const handleCgitem = () => {
+    const handleNavigateColleAndShopp = () => {
         if (navigateCollOrSoppFlag) {
             navigate(`/shoppingcenters/${title}&${id}`);
         }
     }
     return (
-        <div id={id} className="product_centers " onClick={handleCgitem}>
+        <div id={id} className="product_centers " onClick={handleNavigateColleAndShopp}>
             <img src={img} alt="Nkar" />
             <div className={"city-title align-center text-center"} >
                 <h4>{title}</h4>

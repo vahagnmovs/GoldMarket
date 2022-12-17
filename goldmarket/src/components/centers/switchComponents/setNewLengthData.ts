@@ -1,9 +1,12 @@
 import { TDataProps } from "src/components/centers/types";
 
-export const setNewLengthData = (data: TDataProps[], length = 6) => {
-    const newLengthArray = [];
-    for (let i = 0; i < length; i++) {
-        newLengthArray.push(data[i]);
+
+const setNewLengthData = (data: TDataProps[], length = 6) => {
+    const newLengthArray = [...data];
+    if (newLengthArray.length > 6) {
+        newLengthArray.length = length
     }
     return newLengthArray;
 };
+
+export default setNewLengthData;

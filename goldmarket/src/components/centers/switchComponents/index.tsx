@@ -2,7 +2,7 @@ import "src/style/components/_centr_style.scss";
 import CategoryAndMapList from "src/components/centers/categoryAndMapList";
 import { Collections } from "src/data/categoryData";
 import SwitchButton from "src/components/centers/switchButton";
-import { setNewLengthData } from "./setNewLengthData";
+import  setNewLengthData  from "./setNewLengthData";
 import { MAP } from "src/data/mapData";
 import { useState } from "react";
 
