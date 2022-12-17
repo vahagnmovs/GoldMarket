@@ -2,10 +2,6 @@ import svg from "src/style/Icons/next-16.svg";
 import { TDataProps } from "src/components/centers/types";
 import { useNavigate } from "react-router-dom";
 
-// interface TDrawCategoryAndMapProps extends TDataProps{
-//     shoppingOrMap?: boolean;
-// }
-
 type TDrawCategoryAndMapProps = TDataProps & {
     shoppingOrMap?: boolean;
 
