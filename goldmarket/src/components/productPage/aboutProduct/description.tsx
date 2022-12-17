@@ -1,11 +1,9 @@
 import React from 'react';
 import { ProductsTypes, DiamondTypes } from "src/data/products";
 
-
 interface  DescriptionProps {
     infoProduct: ProductsTypes
 }
-
 const Description = ({infoProduct}: DescriptionProps ) => {
     const {carat, color, clarity, cut, pcs,}:DiamondTypes = infoProduct.diamond
     const {name, material, fineness, weight} = infoProduct
@@ -27,6 +25,7 @@ const Description = ({infoProduct}: DescriptionProps ) => {
                     <td>ARMENIA</td>
                     <td>{material}</td>
                     <td>{fineness}</td>
+                    //FIXME:
                     {/*<th>{weight[indexweight]}</th>*/}
                 </tr>
                 <tr style={{color:"#A0A0A0"}}>

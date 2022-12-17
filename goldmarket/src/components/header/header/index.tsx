@@ -8,9 +8,9 @@ import basket from "src/style/Icons/basket.png"
 // import "../../../style/base/_reset.scss"
 // import "../../../style/utilities/_variables.scss"
 import DropDown from "src/components/header/header/dropDown";
-import {IData} from "src/components/header/header/types";
+import { TData } from "src/components/header/header/types";
 
-const flags: IData[] = [
+const flags: TData[] = [
     {
         id: 0,
         value: "ENG",
@@ -28,7 +28,7 @@ const flags: IData[] = [
     }
 ];
 
-const currency: IData[] = [
+const currency: TData[] = [
     {
         id: 0,
         value: "USD",
@@ -56,7 +56,7 @@ const Header = () => {
     const [chosenCurrency, setChosenCurrency] =useState(currency[0])
     const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
-    const handleChangeLanguage = (flag: IData) => {
+    const handleChangeLanguage = (flag: TData) => {
         setChosenFlag(flag);
         setFlagMenuOpen(false);
     }

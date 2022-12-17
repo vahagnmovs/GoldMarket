@@ -6,6 +6,10 @@ import "src/style/base/_globals.scss"
 const PriceList = () => {
     const [isShowMoreBtn, getIsShowMoreBtn] = useState(true)
 
+    const toggleShowMoreBtn = () => {
+        getIsShowMoreBtn(!isShowMoreBtn)
+    }
+
     return (
         <div className={"bg_color"}>
             <div className={"container_price"}>
@@ -18,7 +22,7 @@ const PriceList = () => {
                     </div>
                 </div>
                 <div className={"Show-more"}>
-                    <button onClick={() => getIsShowMoreBtn(!isShowMoreBtn)}>SHOW MORE</button>
+                    <button onClick={toggleShowMoreBtn}>SHOW MORE</button>
                 </div>
 
             </div>
