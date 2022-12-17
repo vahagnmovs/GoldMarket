@@ -1,22 +1,22 @@
 import React from 'react';
-import Layout from "../../components/layout";
-import Navbar from "../../components/navbar";
-import Header from "../../components/header/header";
-import PriceList from "../../components/header/priceList";
-import ReactVideoPlayer from "../../components/header/reactVideoPlayer";
-// import information from "../../components/information";
-import Footer from "../../components/footer";
-import RecommendedSellers from "../../components/recommendedSeleres/recommendedSellers";
-import SwitchComponent from '../../components/centers/switchComponents';
-import Collections from "../../components/newCollections";
-import BestSales from "../../components/bestSales";
-import MostViewed from "../../components/mostViewed";
-import WhyGoldCenter from '../../components/information/whyGoldCenter';
-import AboutUs from '../../components/information/aboutUs';
-import SellWithUs from '../../components/information/sellWithUs';
-import SingIn from "../../components/signUp";
-import ProductPage from "../../components/productPage";
-import SignUp from "../../components/signUp";
+import Layout from "src/components/layout";
+import Navbar from "src/components/navbar";
+import Header from "src/components/header/header";
+import PriceList from "src/components/header/priceList";
+import ReactVideoPlayer from "src/components/header/reactVideoPlayer";
+// import information from "src/components/information";
+import Footer from "src/components/footer";
+import RecommendedSellers from "src/components/recommendedSeleres/recommendedSellers";
+import SwitchComponent from 'src/components/centers/switchComponents';
+import Collections from "src/components/newCollections";
+import BestSales from "src/components/bestSales";
+import MostViewed from "src/components/mostViewed";
+import WhyGoldCenter from 'src/components/information/whyGoldCenter';
+import AboutUs from 'src/components/information/aboutUs';
+import SellWithUs from 'src/components/information/sellWithUs';
+import SingIn from "src/components/signUp";
+import ProductPage from "src/components/productPage";
+import SignUp from "src/components/signUp";
 
 
 const Home = () => {
