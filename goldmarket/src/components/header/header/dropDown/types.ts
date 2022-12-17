@@ -1,9 +1,9 @@
-import { IData } from "src/components/header/header/types";
+import { TData } from "src/components/header/header/types";
 
-export interface IDropDownProps {
+export type TDropDownProps = {
     menuOpen: boolean,
     toggleMenu: () => void,
-    chosen: IData,
-    state: IData[],
-    handleChange: (flag: IData) => void,
+    chosen: TData,
+    state: TData[],
+    handleChange: (flag: TData) => void,
 }
