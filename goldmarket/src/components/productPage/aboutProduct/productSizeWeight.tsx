@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-
 import "../styleProductPage.css"
 
 interface ProductWeightProps {
@@ -28,7 +27,6 @@ const ProductSizeWeight = ({sizeOrWeight, title}:ProductWeightProps, ) => {
                     </ul>
                 ))}
             </div>
-
         </>
     );
 };

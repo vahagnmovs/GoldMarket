@@ -1,17 +1,14 @@
-import React, { useMemo, useRef } from 'react';
-
+import React, {useMemo, useRef} from 'react';
 import Slider from "react-slick";
-
 import "./style.css"
 import Card from "./card";
-import { ProductsTypes } from "../../../data/products";
+import {ProductsTypes} from "src/data/products";
 
-interface  SlideCarouselProps {
+interface SlideCarouselProps {
     images: ProductsTypes[];
 }
 
-
-const SlideCarousel = ({ images }: SlideCarouselProps) => {
+const SlideCarousel = ({images}: SlideCarouselProps) => {
     const slider = useRef<any>(null);
     const imagesArr = useMemo<string[]>(() => {
         return images.map(image => image.images[0])
@@ -54,14 +51,23 @@ const SlideCarousel = ({ images }: SlideCarouselProps) => {
             },
         ],
     };
+    // FIXME: checked code
+    const handleNext = () => {
+        slider.current.slickNext()
+    }
+    // FIXME: checked code
+    const handlePrev = () => {
+        slider.current.slickPrev()
+    }
     return (
         <div>
-            <div style={{ margin: 20 }}>
-                <button onClick={slider?.current?.slickPrev}>Prev</button>
+            <div style={{margin: 20}}>
+                //TODO: added event listening fix
+                <button onClick={handlePrev}>Prev</button>
                 <button
-                    style={{ marginLeft: 20 }}
+                    style={{marginLeft: 20}}
                     //TODO: look
-                    onClick={() => slider?.current?.slickNext()}
+                    onClick={handleNext}
                 >
                     Next
                 </button>

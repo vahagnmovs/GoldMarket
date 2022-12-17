@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 import {ProductImageSlice} from "./productImageSlice";
-import {ProductsTypes} from "../../../data/products"
+import {ProductsTypes} from "src/data/products"
 import {ProductSizeWeight} from "./productSizeWeight";
 import {Description} from "./description";
 
