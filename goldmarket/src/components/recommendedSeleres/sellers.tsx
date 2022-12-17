@@ -11,7 +11,6 @@ const Sellers = (product: DataSeller) => {
         <div className={"block_recommender_child"}>
             <div className={"block_recommender_child"}>
                 {images.map((image) => <img
-
                     className={"block_recommender_child_jewelry"}
                     src={image}
                     alt=""

@@ -6,7 +6,7 @@ import PriceList from "src/components/header/priceList";
 import ReactVideoPlayer from "src/components/header/reactVideoPlayer";
 // import information from "src/components/information";
 import Footer from "src/components/footer";
-import RecommendedSellers from "src/components/recommendedSeleres/recommendedSellers";
+import Index from "src/components/recommendedSeleres";
 import SwitchComponent from 'src/components/centers/switchComponents';
 import Collections from "src/components/newCollections";
 import BestSales from "src/components/bestSales";
@@ -33,7 +33,7 @@ const Home = () => {
                 <Collections />
                 <SellWithUs />
                 <BestSales />
-                <RecommendedSellers />
+                <Index />
                 <MostViewed />
                 <WhyGoldCenter />
                 <AboutUs />
