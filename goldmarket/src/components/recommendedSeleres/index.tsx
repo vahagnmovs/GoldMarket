@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 data.length = 4;
 
-const  RecommendedSellers = () => {
+const  Index = () => {
 
     // const handleAllBrands = () => {
     //
@@ -34,4 +34,4 @@ const  RecommendedSellers = () => {
     );
 };
 
-export default RecommendedSellers;
+export default Index;

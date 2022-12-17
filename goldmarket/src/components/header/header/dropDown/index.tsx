@@ -1,9 +1,9 @@
 import React from 'react';
 import close from "src/style/Icons/close.png";
 import open from "src/style/Icons/open.png";
-import { IDropDownProps } from "./types";
+import { TDropDownProps } from "./types";
 
-const DropDown = ({ menuOpen, toggleMenu, chosen, state, handleChange }: IDropDownProps) => {
+const DropDown = ({ menuOpen, toggleMenu, chosen, state, handleChange }: TDropDownProps) => {
     return (
         <div>
             <div>

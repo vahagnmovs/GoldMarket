@@ -9,7 +9,7 @@ if (newProducts.length > 8) {
     newProducts.length = 8
 }
 
-const Collections = () => {
+const NewCollection = () => {
     // const products = useAppSelector(state => state.products)
 
     return (
@@ -19,7 +19,7 @@ const Collections = () => {
                     <h3>New Collection</h3>
                     <div className="badge_collection flex flex-wrap">
                         {
-                            newProducts.map(product => <ProductBadge {...product} />)
+                            newProducts.map(product => <ProductBadge key={product.productID} {...product} />)
                         }
                     </div>
                     <button
@@ -31,4 +31,4 @@ const Collections = () => {
     );
 };
 
-export default Collections;
+export default NewCollection;

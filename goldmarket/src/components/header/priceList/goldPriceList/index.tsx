@@ -1,6 +1,8 @@
 import React from 'react';
 import "src/style/base/_globals.scss"
-function GoldPriceList({isShowMoreBtn}) {
+import {TGoldPriceListProps} from "./type";
+
+function GoldPriceList({isShowMoreBtn}: TGoldPriceListProps) {
     return (
         <div className={"bg_color"}>
             {
