@@ -1,14 +1,14 @@
-.progress-loader {
-	@include position($position: fixed, $top: 0, $left: 0);
-	z-index: 9999;
-	width: 100%;
-	height: 5px;
-	background: $bg-gray;
+// .progress-loader {
+// 	@include position($position: fixed, $top: 0, $left: 0);
+// 	z-index: 9999;
+// 	width: 100%;
+// 	height: 5px;
+// 	background: $bg-gray;
 
-	span {
-		@include position($top: 0, $left: 0);
-		height: 100%;
-		background: $color-error;
-		transition: .3s ease;
-	}
-}
+// 	span {
+// 		@include position($top: 0, $left: 0);
+// 		height: 100%;
+// 		background: $color-error;
+// 		transition: .3s ease;
+// 	}
+// }
