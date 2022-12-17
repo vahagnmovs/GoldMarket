@@ -1,4 +1,4 @@
-import { TDataProps } from "src/components/Centers/types";
+import { TDataProps } from "src/components/centers/types";
 import { useNavigate } from "react-router-dom";
 
 type TDrawCategoryAndMapProp = TDataProps & {

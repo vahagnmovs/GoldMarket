@@ -1,4 +1,4 @@
-import { TDataProps } from "src/components/Centers/types";
+import { TDataProps } from "src/components/centers/types";
 
 export const setNewLengthData = (data: TDataProps[], length = 6) => {
     const newLengthArray = [];

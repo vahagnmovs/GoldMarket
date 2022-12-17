@@ -1,7 +1,7 @@
 import DrawCollactionAndSoppingCenter from "src/components/Centers/drawCollactionAndSoppingCenter";
 import { Collections } from "src/data/categoryData";
 import Navbar from "src/components/Navbar";
-import Footer from "src/components/Footer";
+import Footer from "src/components/footer";
 import Header from "src/components/Header/header";
 
 const CollectionsList = () => {

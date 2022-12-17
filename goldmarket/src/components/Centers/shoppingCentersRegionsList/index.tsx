@@ -1,11 +1,11 @@
-import DrawCollactionAndSoppingCenter from "src/components/Centers/drawCollactionAndSoppingCenter";
+import DrawCollactionAndSoppingCenter from "src/components/centers/drawCollactionAndSoppingCenter";
 import "src/style/components/_centr_style.scss";
 import { MAP } from "src/data/mapData";
 import { useParams } from "react-router-dom";
 import { useMemo } from "react";
-import Header from "src/components/Header/header";
-import Navbar from "src/components/Navbar";
-import Footer from "src/components/Footer";
+import Header from "src/components/header/header";
+import Navbar from "src/components/navbar";
+import Footer from "src/components/footer";
 
 
 const ShoppingCentersRegionsList = () => {

@@ -1,13 +1,12 @@
 import React from "react";
-import {useAppSelector} from "../../hooks/redux-hooks";
 // import {useAppSelector} from "src/hooks/redux-hooks";
 
 import {products} from "src/data/products";
 import ProductBadge from "../productBadge";
 
 const newProducts = products.filter(product => product.newProduct)
-if (newProducts.length > 6) {
-    newProducts.length = 6
+if (newProducts.length > 8) {
+    newProducts.length = 8
 }
 
 const Collections = () => {

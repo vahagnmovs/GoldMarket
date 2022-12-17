@@ -1,7 +1,7 @@
 import svg from "src/style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
-import DrawCategoryAndMap from "src/components/Centers/drawCategoryAndMap";
-import { TDataProps } from "src/components/Centers/types";
+import DrawCategoryAndMap from "src/components/centers/drawCategoryAndMap";
+import { TDataProps } from "src/components/centers/types";
 import "src/style/components/_centr_style.scss";
 
 type TCategoryAndMapListProps = {

@@ -1,11 +1,11 @@
-import ShoppingCentersRegionsList from "src/components/Centers/shoppingCentersRegionsList";
-import ShoppingCentersList from "src/components/Centers/shoppingCentersList";
-import CollectionsList from 'src/components/Centers/collectionsList';
+import ShoppingCentersRegionsList from "src/components/centers/shoppingCentersRegionsList";
+import ShoppingCentersList from "src/components/centers/shoppingCentersList";
+import CollectionsList from 'src/components/centers/collectionsList';
 import {createBrowserRouter} from "react-router-dom";
-import NotFoundPage from "./pages/NotFound";
-import About from "./pages/About";
-import Home from "./pages/Home";
-import Redirect from "src/components/Redirect/redirect";
+import NotFoundPage from "./pages/notFound";
+import About from "./pages/about";
+import Home from "./pages/home";
+import Redirect from "src/components/redirect/redirect";
 
 const router = createBrowserRouter([{
     path: "/",

@@ -1,6 +1,6 @@
 export const banners = {
     aboutUs: {
-        title: "About Us",
+        title: "about Us",
         description: "lorem ipsum, lorem ipsumlorem ipsumlorem ipsum",
         btnName: "Abput Us"
     },
