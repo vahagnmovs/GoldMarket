@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 data.length = 4;
 
-const  RecommendedSeleres = () => {
+const  Index = () => {
 
     // const handleAllBrands = () => {
     //
@@ -20,11 +20,9 @@ const  RecommendedSeleres = () => {
                     and style to any outfit.
                 </p>
             </div>
-            {/*FIXME: change key*/}
             <div className={"block_recommender"}>
-
                 {
-                    data.map((product, index) => <Sellers key={index} {...product} />)
+                    data.map(product => <Sellers {...product} />)
                 }
             </div>
             <button className={"button_show_all_brands"}
@@ -36,4 +34,4 @@ const  RecommendedSeleres = () => {
     );
 };
 
-export default RecommendedSeleres;
+export default Index;
