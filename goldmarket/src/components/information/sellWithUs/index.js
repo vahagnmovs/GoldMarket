@@ -1,7 +1,8 @@
 import './index.css';
-import {srcGirl, textFromGirl} from "./constants";
-import Text from "../Text";
-import Image from "../Image";
+import {srcGirl, textFromGirl} from "src/components/information/sellWithUs/constants";
+import Text from "../text";
+import Image from "../image";
+
 
 const SellWithUs = () => {
 

@@ -1,8 +1,7 @@
 import './index.css';
-import Image from "../Image";
-import Text from "../Text";
-
-import {srcGold, textFromGold} from "./constants";
+import {srcGold, textFromGold} from "src/components/information/aboutUs/constants";
+import Text from "../text";
+import Image from "../image";
 
 const AboutUs = () => {
 
