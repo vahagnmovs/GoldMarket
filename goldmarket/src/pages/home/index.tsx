@@ -9,16 +9,11 @@ import SwitchComponent from 'src/components/centers/switchComponents';
 import BestSales from "src/components/bestSales";
 import MostViewed from "src/components/mostViewed";
 import SignUp from "src/components/signUp";
-<<<<<<< HEAD
 import AboutUs from "../../components/information/aboutUs";
-import WhyGoldCenter from "../../components/information/whyGoldCenter";
-import SellWithUs from "../../components/information/sellWithUs";
 import NewCollection from "src/components/newCollections";
-=======
-import AboutUs from "src/components/information/aboutUs";
-import WhyGoldCenter from "src/components/information/whyGoldCenterBanner";
-import SellWithUs from "src/components/information/sellWithUsBanner";
->>>>>>> 564dc4a5ca76e59006c6135a41ad8c56e5769341
+import SellWithUs from "../../components/information/sellWithUsBanner";
+import WhyGoldCenter from "../../components/information/whyGoldCenterBanner";
+
 
 const Home = () => {
     return (
@@ -28,7 +23,7 @@ const Home = () => {
             FooterComponent={<Footer />}
         >
             <>
-                <SignUp/>
+                {/*<SignUp/>*/}
                 <PriceList />
                 <SwitchComponent />
                 <NewCollection />

@@ -3,7 +3,6 @@ import { IUser } from "./type";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useAppDispatch } from "../../hooks/redux-hooks";
 import { setUser } from 'src/store/users/usersSlice'
-import {log} from "util";
 
 const SignUp = () => {
 

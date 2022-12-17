@@ -57,7 +57,7 @@ const SlideCarousel = ({images}: SlideCarouselProps) => {
     }
     // FIXME: checked code
     const handlePrev = () => {
-        slider.current.slickPrev()
+        slider.current.slickPrev
     }
     return (
         <div>
