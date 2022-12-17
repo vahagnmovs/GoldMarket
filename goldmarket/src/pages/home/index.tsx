@@ -11,8 +11,8 @@ import BestSales from "src/components/bestSales";
 import MostViewed from "src/components/mostViewed";
 import SignUp from "src/components/signUp";
 import AboutUs from "src/components/information/aboutUs";
-import WhyGoldCenter from "src/components/information/whyGoldCenter";
-import SellWithUs from "src/components/information/sellWithUs";
+import WhyGoldCenter from "src/components/information/whyGoldCenterBanner";
+import SellWithUs from "src/components/information/sellWithUsBanner";
 
 const Home = () => {
     return (
