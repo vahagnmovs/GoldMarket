@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import presentImg from "src/style/img/present-product.png"
 import open from "src/style/Icons/open.png";
 import close from "src/style/Icons/close.png"
+import { TSearchCategoryProps } from "./type";
 // import "../../../style/elements/_navbar.scss"
 // import "../../../style/base/_globals.scss"
 // import "../../../style/base/_reset.scss"
 // import "../../../style/utilities/_variables.scss"
 
-type SearchCategoryProps = {
-    title: string,
-}
 
-function SearchCategory({ title }: SearchCategoryProps) {
+
+function SearchCategory({ title }: TSearchCategoryProps) {
     const [mouse, setMouse] = useState(false);
 
     return (
