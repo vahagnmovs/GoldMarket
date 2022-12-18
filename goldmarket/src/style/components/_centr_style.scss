@@ -39,6 +39,7 @@
 .switch_container {
   width: 1200px;
   margin: 0 auto;
+  padding:60px 0;
 
   img {
     width: 387px;
@@ -52,8 +53,9 @@
 .switch_content {
   gap: 30px;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   font-size: 32px;
+
 
   .red {
     color: #CCA653;
@@ -76,6 +78,9 @@
     position: relative;
     transform: scale(1.5);
   }
+  .label:checked{
+    background-color:  #CCA653;
+  }
 
   .ball {
     width: 20px;
@@ -96,14 +101,14 @@
   input:checked + label + .background {
     background: #242424;
   }
+  .fa-sun{
+    background-color: #CCA653;
+  }
 
   .fa-moon {
-    color: yellow;
+    color: #CCA653;
   }
 
-  .fa-sun {
-    color: yellow;
-  }
 }
 
 
@@ -129,10 +134,16 @@
     padding: 40px 0 250px 0;
 
     .Collections {
+
       font-size: 32px;
       color: #1D3865;
 
-
+    .product{
+        img{
+            width: 387px;
+            height: 455px;
+        }
+    }
       span {
         color: #1D3865;
         font-size: 32px;
@@ -140,7 +151,14 @@
     }
   }
 }
-
+.shou_Collections{
+  width: 1200px;
+  margin: 0 auto;
+}
+.product{
+  img{ width: 387px;
+    height: 455px;}
+}
 .map_show_more {
   width: 1200px;
   margin: 0 auto;

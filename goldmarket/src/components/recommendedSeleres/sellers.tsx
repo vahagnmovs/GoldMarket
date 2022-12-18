@@ -1,7 +1,5 @@
 import React from 'react';
-import star from "src/style/Icons/star-regular.svg";
 import { DataSeller } from "src/data/recommendedSellers";
-import firebase from "firebase/compat";
 
 const Sellers = (product: DataSeller) => {
     const { id, name, title, images } = product

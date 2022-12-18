@@ -1,30 +1,26 @@
 import svg from "src/style/Icons/next-16.svg";
 import { useNavigate } from "react-router-dom";
-import DrawCategoryAndMap from "src/components/centers/drawCategoryAndMap";
 import { TDataProps } from "src/components/centers/types";
 import "src/style/components/_centr_style.scss";
+import DrawMapOrShoppingCenters from "src/components/centers/maps/drawMapOrShoppingCenter/indec";
 
 type TCategoryAndMapListProps = {
     data: TDataProps[];
-    shoppingOrMap?: boolean;
+
 }
 
-const CategoryAndMapList = ({ data, shoppingOrMap }: TCategoryAndMapListProps) => {
+const MapList = ({ data }: TCategoryAndMapListProps) => {
     const navigate = useNavigate();
     const handleNavigate = () => {
-        if (shoppingOrMap) {
-            navigate("/collections");
-        } else {
-            navigate("/shoppingcenters");
-        }
+        navigate("/shoppingcenters");
     }
     return (
         <div className={"product_button   justify-center"}>
             <div className="products flex  flex-wrap justify-between ">
                 {
-                    data.map(item => <DrawCategoryAndMap key={
+                    data.map(item => <DrawMapOrShoppingCenters key={
                         item.id
-                    }{...item} shoppingOrMap={shoppingOrMap} />)
+                    }{...item} />)
                 }
             </div>
             <div className="buttonSowMor flex justify-center">
@@ -39,4 +35,4 @@ const CategoryAndMapList = ({ data, shoppingOrMap }: TCategoryAndMapListProps) =
         </div>
     );
 };
-export default CategoryAndMapList;
+export default MapList;

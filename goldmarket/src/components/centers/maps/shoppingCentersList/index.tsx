@@ -1,4 +1,4 @@
-import DrawCollactionAndSoppingCenter from "src/components/centers/drawCollactionAndSoppingCenter";
+import DrawMapOrShoppingCenters from "src/components/centers/maps/drawMapOrShoppingCenter/indec";
 import { MAP } from "src/data/mapData";
 
 const ShoppingCentersList = () => {
@@ -8,7 +8,7 @@ const ShoppingCentersList = () => {
                 <h3>Shopping centers</h3></div>
             <div className="flex flex-wrap justify-between ">
                 {
-                    MAP.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item} navigateCollOrSoppFlag={false} />)
+                    MAP.map(item => <DrawMapOrShoppingCenters key={item.id} {...item} />)
                 }
             </div>
         </div>

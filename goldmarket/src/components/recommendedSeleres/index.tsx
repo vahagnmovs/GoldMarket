@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 data.length = 4;
 
-const Index = () => {
+const RecommendSellers = () => {
 
     // const handleAllBrands = () => {
     //
@@ -32,8 +32,8 @@ const Index = () => {
                     <Link to={"allBrands"}> ALL BRANDS </Link>
                 </button>
             </div>
-        </div>
+        </div >
     );
 };
 
-export default Index;
+export default RecommendSellers;
