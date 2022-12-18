@@ -19,7 +19,6 @@ import {FooterEnd} from "./footerEnd";
 const FooterLinks = () => {
     //TODO: check navigate
     // const navigate = useNavigate()
-    console.log(footerData.goldCenter, "databugbhujnj")
     return (
         <div className={"bg-gray"}>
             <footer className="container footer flex  dir-col">
