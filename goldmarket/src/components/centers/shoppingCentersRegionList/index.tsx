@@ -1,4 +1,4 @@
-import DrawCollactionAndSoppingCenter from "src/components/centers/drawCollactionAndSoppingCenter";
+import DrawShoppingCenterRegion from "src/components/centers/maps/drawShoppingCentersRegion";
 import "src/style/components/_centr_style.scss";
 import { MAP } from "src/data/mapData";
 import { useParams } from "react-router-dom";
@@ -22,7 +22,7 @@ const ShoppingCentersRegionsList = () => {
                     </div>
                     <div className={"flex flex-wrap justify-between"}>
                         {
-                            currentCity?.shops.map(item => <DrawCollactionAndSoppingCenter key={item.id} {...item} />)
+                            currentCity?.shops.map(item => <DrawShoppingCenterRegion key={item.id} {...item} />)
                         }
                     </div>
                 </div>
