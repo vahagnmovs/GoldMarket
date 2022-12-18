@@ -15,6 +15,7 @@ import NewCollection from "src/components/newCollections";
 import SellWithUs from "../../components/information/sellWithUsBanner";
 import WhyGoldCenter from "../../components/information/whyGoldCenterBanner";
 import { AddProduct } from 'src/components/product/AddProduct';
+import { Products } from 'src/components/product';
 
 
 const Home = () => {
@@ -26,16 +27,16 @@ const Home = () => {
         >
             <>
             {/* <AddProduct /> */}
-                {/*<SignUp/>*/}
+                {/* <SignUp/> */}
                  <PriceList />
-                <SwitchComponent />
-                <NewCollection />
-                <SellWithUs />
-                <BestSales />
-                <Index />
-                <MostViewed />
-                <WhyGoldCenter />
-                <AboutUs /> 
+                 <SwitchComponent />
+                 <NewCollection /> 
+                 <SellWithUs /> 
+                 <BestSales /> 
+                 <Index /> 
+                 <MostViewed />
+                 <WhyGoldCenter />
+                 <AboutUs />
             </>
         </Layout>
     );
