@@ -10,8 +10,6 @@ const ProductPage = () => {
     let testId: string = "55";
     //FIXME: typeof any check
     const productInfo:any  = products.find(product => product.productID === testId);
-
-    console.log(productInfo, "data")
     return (
         <>
             <AboutPage productInformation={ productInfo } />

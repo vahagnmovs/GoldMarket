@@ -1,7 +1,5 @@
 import React from 'react';
-
 const Card = ({image}: any) => {
-
     return (
         <div>
             <div style={{
@@ -15,5 +13,4 @@ const Card = ({image}: any) => {
         </div>
     )
 };
-
 export default Card;

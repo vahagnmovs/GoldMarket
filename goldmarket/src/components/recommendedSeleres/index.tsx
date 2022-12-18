@@ -9,7 +9,6 @@ const RecommendSellers = () => {
     // const handleAllBrands = () => {
     //
     // }
-
     return (
         <div className={"container"}>
             <div className="flex dir-col recommended_sellers">
@@ -21,8 +20,9 @@ const RecommendSellers = () => {
                 </div>
 
                 <section className={"flex flex-wrap gap_20"}>
+                    {/*FIXME: check id*/}
                     {
-                        data.map(product => <Sellers {...product} />)
+                        data.map(product => <Sellers key={Math.random()}{...product} />)
                     }
                 </section>
 
