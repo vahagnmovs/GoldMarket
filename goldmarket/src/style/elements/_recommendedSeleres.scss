@@ -1,0 +1,65 @@
+.recommended_sellers {
+  margin-top: 60px;
+  align-items: center;
+
+  button {
+    width: 192px;
+    height: 40px;
+    margin-top: 40px;
+
+  &:hover {
+    background-color: gold;
+    color: white;
+    border: none;
+  }
+  }
+}
+
+.title_recommendedSeleres {
+  width: 425px;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 22px;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 23px;
+    color: grey;
+    margin-bottom: 27px;
+  }
+}
+
+.recommender_sellers_block {
+  width: 386px;
+  background-color: #F6F6F6;
+  padding: 18px;
+  gap: 10px;
+
+
+.list_recommender_jewelry_img {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #E1E4E8;
+}
+
+  .recommender_jewelry {
+    width: 110px;
+    background-color: #F6F6F6
+  }
+}
+
+.jewelry_brands {
+  padding: 18px 0;
+
+  img {
+    width: 140px;
+    margin-right: 18px;
+  }
+
+  h4 {
+    margin-right: 5px;
+  }
+ 
+}

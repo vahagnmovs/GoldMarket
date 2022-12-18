@@ -1,4 +1,3 @@
-import {TFooterData} from "../../data/footerData";
 import {TGoldCenter} from "../../data/footerData";
 import {Link} from "react-router-dom";
 
@@ -16,4 +15,4 @@ const FooterGoldHelp = ({title, data }:TFooterLinks ) =>{
     );
 };
 
-export default FooterGoldHelp;
+export {FooterGoldHelp};

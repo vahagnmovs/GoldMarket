@@ -14,6 +14,9 @@ import AboutUs from "../../components/information/aboutUs";
 import NewCollection from "src/components/newCollections";
 import SellWithUs from "../../components/information/sellWithUsBanner";
 import WhyGoldCenter from "../../components/information/whyGoldCenterBanner";
+import { AddProduct } from 'src/components/product/AddProduct';
+import Video from "../../components/header/video";
+
 
 
 const Home = () => {
@@ -24,16 +27,18 @@ const Home = () => {
             FooterComponent={<Footer />}
         >
             <>
-                {/* <SignUp/> */}
-                 <PriceList />
-                 <SwitchComponent />
-                 <NewCollection /> 
-                 <SellWithUs /> 
-                 <BestSales /> 
-                 <Index /> 
-                 <MostViewed />
-                 <WhyGoldCenter />
-                 <AboutUs />
+            {/* <AddProduct /> */}
+                {/*<SignUp/>*/}
+                <PriceList />
+                <Video/>
+                <SwitchComponent />
+                <NewCollection />
+                <SellWithUs />
+                <BestSales />
+                <Index />
+                <MostViewed />
+                <WhyGoldCenter />
+                <AboutUs />
             </>
         </Layout>
     );

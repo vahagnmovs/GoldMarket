@@ -1,4 +1,3 @@
-
 // import payments icons
 import visa from "src/style/Icons/visa.png"
 import master from "src/style/Icons/master.png"
@@ -14,31 +13,32 @@ import telegramIcon from "src/style/Icons/tg.png"
 import vkIcon from "src/style/Icons/vk.png"
 
 export type TGoldCenter = {
-    name:string;
+    name: string;
     path: string;
 }
 type TGoldHelp = {
     name: string,
     path: string,
 }
-type TContact = {
-    name: string,
-    address: string,
-    phone: string,
-    mail: string,
-}
-type TSocialLinks = {
-    name: string,
+
+export type TSocialLinks = {
+    img: string,
     target: string,
     path: string,
 }
 
+export type TFooterEndLink = {
+    name: string,
+    path: string
+}
+
 export type TFooterData = {
     goldCenter: TGoldCenter[],
-    getHelp:TGoldHelp[],
-    contact:  TContact[],
+    getHelp: TGoldHelp[],
+    contact: string[],
     paymentsMethods: string[],
     socialLinks: TSocialLinks[],
+    footerEndLink: TFooterEndLink[],
 }
 
 export const footerData: TFooterData = {
@@ -67,41 +67,52 @@ export const footerData: TFooterData = {
             path: "/",
         }
     ],
-    contact: [
-        {
-            name: "Main Office",
-            address: "Amiryan 12",
-            phone: "+374 94 73 73 43",
-            mail: "goldCenterInfo@.am",
-        },
+    contact: ["Main Office", "Amiryan 12", "+374 94 73 73 43", "goldCenterInfo@.am",
+
     ],
     paymentsMethods: [visa, master, arca, google_pay, apple_pay],
 
     socialLinks: [
         {
-            name: vkIcon,
+            img: vkIcon,
             target: "_blank",
+            path: "/vk",
+
+        },
+        {
+            img: okIcon,
+            target: "_blank",
+            path: "/ok"
+        },
+        {
+            img: instagramIcon,
+            target: "_blank",
+            path: "/instagram"
+        },
+        {
+            img: facebookIcon,
+            target: "_blank",
+            path: "/facebook"
+        },
+        {
+            img: telegramIcon,
+            target: "_blank",
+            path: "/telegram"
+        },
+    ],
+    footerEndLink:  [
+        {
+            name: "Terms old Use",
             path: "/",
         },
         {
-            name: okIcon,
-            target: "_blank",
-            path: "/"
+            name: "Privacy Policy",
+            path: "/",
         },
         {
-            name: instagramIcon,
-            target: "_blank",
-            path: "/"
-        },
-        {
-            name: facebookIcon,
-            target: "_blank",
-            path: "/"
-        },
-        {
-            name: telegramIcon,
-            target: "_blank",
-            path: "/"
-        },
-    ],
+            name: "Sitemap",
+            path: "/",
+        }
+    ]
+
 }
