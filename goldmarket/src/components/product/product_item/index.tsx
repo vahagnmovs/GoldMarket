@@ -23,7 +23,6 @@ export const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, nam
         navigate(`/products/${id}`)
     }
 
-    // console.log(params, 'params')
 
     return(
         <div className='productItem' onClick={handleNavigate}>

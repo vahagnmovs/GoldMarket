@@ -1,19 +1,23 @@
 import React from 'react'
 
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { product } from "src/components/constants"
 import { ProductItem } from './product_item'
 
 export const Products: React.FC = () => {
 
-    const params = useParams()
+    const navigate = useNavigate()
+
+    const handleNavigate = () => {
+        navigate('/products/addproduct')
+    }
     
     return (
         <div>
             <div className='productNav'>
                 <h1>Products</h1>
                 <input type='text' placeholder='SEARCH PRODUCT' />
-                <button>+ ADD PRODUCT</button> // ste
+                <button onClick={handleNavigate}>+ ADD PRODUCT</button> // ste
             </div>
             <hr></hr>
 

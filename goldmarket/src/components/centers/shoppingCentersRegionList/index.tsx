@@ -4,7 +4,7 @@ import { MAP } from "src/data/mapData";
 import { useParams } from "react-router-dom";
 import { useMemo } from "react";
 import Header from "src/components/header/header";
-import Navbar from "src/components/navbar";
+import Navbar from "src/components/navbarr";
 import Footer from "src/components/footer";
 
 

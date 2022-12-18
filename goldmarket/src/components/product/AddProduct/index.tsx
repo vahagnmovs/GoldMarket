@@ -3,7 +3,7 @@ import { filters, initialDimonds, initialPrices, initialState } from 'src/compon
 import CrateInput from '../createInput'
 
 import { AddImages } from './addImages'
-import Creator from './Creator'
+import Creator from './creator'
 
  
 

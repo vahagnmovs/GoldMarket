@@ -1,4 +1,4 @@
-import React, {Component, useEffect, useMemo, useState} from 'react';
+import React, { Component, useEffect, useMemo, useState } from 'react';
 import { TUser } from "./type";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useAppDispatch } from "../../hooks/redux-hooks";
@@ -12,7 +12,7 @@ const SignUp = () => {
     const [passwordError, setPasswordError] =useState("")
     const [confirmPasswordError, setConfirmPasswordError] = useState("")
 
-    const [userSettings, setUserSettings] = useState<TUser >({
+    const [userSettings, setUserSettings] = useState<TUser>({
         firstName: "",
         lastName: "",
         email: "",
@@ -26,7 +26,7 @@ const SignUp = () => {
         setIsBuyer(!isBuyer)
     }
 
-    const addUserParams = (e: React.ChangeEvent<HTMLInputElement>, name:string) => {
+    const addUserParams = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
         let userValue = e.target.value
         setUserSettings({
             ...userSettings,
@@ -47,7 +47,7 @@ const SignUp = () => {
         } else if(!userSettings.password.split("").filter(val => !isNaN(+val)).length) {
             isValid = false
             setPasswordError("Password mast includes number")
-        } else if(userSettings.password.length < 8){
+        } else if(userSettings.password.length < 8) {
             isValid = false
             setPasswordError("Password minimum characters mast be 8")
         } else if(userSettings.password !== userSettings.confirmPassword) {
@@ -69,7 +69,7 @@ const SignUp = () => {
             // Create a new user with email and password using firebase
             const auth = getAuth()
             createUserWithEmailAndPassword(auth, userSettings.email, userSettings.password)
-                .then(({user}) => {
+                .then(({ user }) => {
                     dispatch(setUser({
                         email: user.email,
                         id: user.uid,

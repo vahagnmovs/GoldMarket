@@ -1,5 +1,5 @@
-import {initializeApp} from "firebase/app";
-import {getFirestore, collection, getDocs, setDoc, addDoc} from "firebase/firestore"
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs, setDoc, addDoc } from "firebase/firestore"
 
 const firebaseConfig = {
     apiKey: "AIzaSyA-xFalv4pTSNOzLF94b_UzAfO0FtRshZ4",
@@ -42,4 +42,6 @@ const app = initializeApp(firebaseConfig);
 //     name: "Sipan",
 //     email: "email@Sipan"
 // })
+
+
 
