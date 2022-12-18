@@ -4,7 +4,7 @@ import PhoneNumber from "./phoneNumber";
 import "src/style/base/_globals.scss"
 
 const PriceList = () => {
-    const [isShowMoreBtn, getIsShowMoreBtn] = useState(true)
+    const [isShowMoreBtn, getIsShowMoreBtn] = useState(false)
 
     const toggleShowMoreBtn = () => {
         getIsShowMoreBtn(!isShowMoreBtn)

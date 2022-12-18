@@ -33,7 +33,6 @@ function Navbar() {
                 {/*searching*/}
                 <div className={"flex justify-between align-center"}>
                     <div className={"relative"}>
-
                         <Search/>
                     </div>
                 </div>
