@@ -8,7 +8,6 @@ import { ProductDetals } from './productDetals'
 export const SingleProduct: React.FC = () => {
 
     const { id }: any = useParams()
-    // console.log(id)
 
     // any-n dzel, verevy tal type handleProduct-i
 
@@ -17,7 +16,6 @@ export const SingleProduct: React.FC = () => {
         return aggr 
     }, {})
 
-    // console.log(handleProduct, 'handleProduct')
     
     const { photo, name } = handleProduct
 

@@ -18,7 +18,6 @@ useEffect(() => {
 
 }, [images.length])
 
-     //
 
       const handleInputChange = (e: any) => {
 
@@ -34,12 +33,10 @@ useEffect(() => {
       }
       
      
-      //
     const deleteImg = (id: string) => {
         setImages((prev: any) => prev.filter((img: any) => img.id !== id))
     }    
 
-    // console.log(images, 'images')
     return(
         <div>
             <h3> ADD IMAGES / VIDEOS </h3>
@@ -60,7 +57,6 @@ useEffect(() => {
 
             } 
 
-            {/* <button onClick={() => handleImgSrces(images)}> add image </button>     */}
         </div>
     )
 }

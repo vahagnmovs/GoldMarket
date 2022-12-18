@@ -3,12 +3,12 @@ import { Outlet, useNavigate } from 'react-router-dom'
 
 
 
-export const Header: React.FC = () => {
+export const SellerNavBar: React.FC = () => {
 
     const navigate = useNavigate()
 
     const handleProduct = () => {
-        navigate('products')
+
     }
 
 
@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
             <div>
                 <span> DASHBOARD </span>
             </div>
-            <div onClick={handleProduct}>
+            <div>
                 <span> PRODUCT </span>
             </div>
             <div>

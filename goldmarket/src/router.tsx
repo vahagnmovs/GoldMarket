@@ -6,6 +6,8 @@ import NotFoundPage from "./pages/notFound";
 import About from "./pages/about";
 import Home from "./pages/home";
 import Redirect from "src/components/redirect/redirect";
+import { SingleProduct } from "./components/product/singleProduct";
+import { AddProduct } from "./components/product/AddProduct";
 
 const router = createBrowserRouter([{
     path: "/",
@@ -41,9 +43,16 @@ const router = createBrowserRouter([{
     path: "/shoppingcenters/:title:id",
     element: <ShoppingCentersRegionsList />
 }, {
-    path: '*',
+    path: "*",
     element: <NotFoundPage />
+},{
+    path: "/products/:id",
+    element: <SingleProduct />
+},{
+    path: "/products/addproduct",
+    element: <AddProduct />
 }
 ]);
 
 export default router;
+

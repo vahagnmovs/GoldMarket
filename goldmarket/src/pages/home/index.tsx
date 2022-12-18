@@ -1,6 +1,7 @@
 import React from 'react';
+
 import Layout from "src/components/layout";
-import Navbar from "src/components/navbar";
+import Navbar from "src/components/navbarr";
 import Header from "src/components/header/header";
 import PriceList from "src/components/header/priceList";
 import Footer from "src/components/footer";
@@ -26,7 +27,7 @@ const Home = () => {
             <>
             {/* <AddProduct /> */}
                 {/*<SignUp/>*/}
-                <PriceList />
+                 <PriceList />
                 <SwitchComponent />
                 <NewCollection />
                 <SellWithUs />
@@ -34,7 +35,7 @@ const Home = () => {
                 <Index />
                 <MostViewed />
                 <WhyGoldCenter />
-                <AboutUs />
+                <AboutUs /> 
             </>
         </Layout>
     );
