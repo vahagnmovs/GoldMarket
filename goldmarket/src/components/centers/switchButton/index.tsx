@@ -10,11 +10,12 @@ const SwitchButton = ({ checked, handleCeckid }: TSwitchButtonProps) => {
       <div>
         <input onChange={handleCeckid} type="checkbox" className="checkbox" id="checkbox" />
         <label htmlFor="checkbox" className="label">
-          <i className="fas fa-moon"></i>
-          <i className='fas fa-sun'></i>
+          <i className="a-moon"></i>
+          <i className="fa-sun"></i>
           <div className='ball' />
           <span className={checked ? "slider" : "slider_activ"}></span>
         </label>
+
       </div>
       <span className={checked ? "" : "red"}>Shopping centers</span>
     </div>
