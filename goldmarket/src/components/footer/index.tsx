@@ -27,32 +27,43 @@ import master from "src/style/Icons/master.png"
 import google_pay from "src/style/Icons/google-pay.png"
 import apple_pay from "src/style/Icons/apple-pay.png";
 
+import { footerData } from "../../data/footerData";
+import FooterGoldHelp from "./footerGoldHelp";
+
+
+
 
 const FooterLinks = () => {
     const navigate = useNavigate()
-
+    console.log(footerData.goldCenter,"databugbhujnj")
     return (
         <div className={"bg-gray"}>
             <footer className="container footer flex  dir-col">
                 <div className={"footer_top flex justify-between"}>
                     <ul className={"justify-between"}>
-                        <li><Link href={"#"}> GOLD CENTER</Link></li>
-                        <li><Link href="#">About us</Link></li>
-                        <li><Link href="#">Shop Jewelry</Link></li>
-                        <li><Link href="#">Shop Stores</Link></li>
+
+                        <FooterGoldHelp title={"GOLD CENTER"} data={footerData.goldCenter}/>
+
+
+                        {/*<li><Link href={"#"}> GOLD CENTER</Link></li>*/}
+                        {/*<li><Link href="#">About us</Link></li>*/}
+                        {/*<li><Link href="#">Shop Jewelry</Link></li>*/}
+                        {/*<li><Link href="#">Shop Stores</Link></li>*/}
                     </ul>
                     <ul>
-                        <li><Link href={"#"}> GET HELP </Link></li>
-                        <li><Link href="#">Account</Link></li>
-                        <li><Link href="#">Orders</Link></li>
+                        <FooterGoldHelp title={"GET HELP"} data={footerData.getHelp}/>
+
+                        {/*<li><Link href={"#"}> GET HELP </Link></li>*/}
+                        {/*<li><Link href="#">Account</Link></li>*/}
+                        {/*<li><Link href="#">Orders</Link></li>*/}
                     </ul>
                     <ul>
-                        <li><Link href={"#"}>CONTACT</Link></li>
-                        <li><Link href={"#"}>Main office,</Link></li>
-                        <li><Link href={"#"}>Baghramyan 26, Yerevan</Link></li>
-                        <li><Link href={"#"}>(+374 00 00 00)</Link></li>
-                        <li><Link href={"#"}>info@yerevan.am</Link></li>
-                        <li><Link href={"#"}>PAYMENT METHODS</Link></li>
+                        {/*<li><Link href={"#"}>CONTACT</Link></li>*/}
+                        {/*<li><Link href={"#"}>Main office,</Link></li>*/}
+                        {/*<li><Link href={"#"}>Baghramyan 26, Yerevan</Link></li>*/}
+                        {/*<li><Link href={"#"}>(+374 00 00 00)</Link></li>*/}
+                        {/*<li><Link href={"#"}>info@yerevan.am</Link></li>*/}
+                        {/*<li><Link href={"#"}>PAYMENT METHODS</Link></li>*/}
                         <div className={"icon-pay"}>
                             <li><img src={visa} alt=""/></li>
                             <li><img src={master} alt=""/></li>
@@ -90,12 +101,12 @@ const FooterLinks = () => {
 
                 <hr/>
 
-                    <ul className={" footer_end flex"}>
-                        <li><Link>&copy; 2022 Golden Center </Link></li>
-                        <li><Link href={""}> Terms od Use </Link></li>
-                        <li><Link href={""}> Privacy Policy </Link></li>
-                        <li><Link href={""}> Sitemap </Link></li>
-                    </ul>
+                <ul className={" footer_end flex"}>
+                    {/*<li><Link>&copy; 2022 Golden Center </Link></li>*/}
+                    {/*<li><Link href={""}> Terms od Use </Link></li>*/}
+                    {/*<li><Link href={""}> Privacy Policy </Link></li>*/}
+                    {/*<li><Link href={""}> Sitemap </Link></li>*/}
+                </ul>
 
 
             </footer>
