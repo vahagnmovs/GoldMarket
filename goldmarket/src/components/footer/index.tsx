@@ -14,6 +14,7 @@ import {FooterGoldHelp} from "./footerGoldHelp";
 import {FooterContact} from "./footerContact";
 import {FooterPayment} from "./footerPayment";
 import {FooterSocialLink} from "./footerSocialLink";
+import {FooterEnd} from "./footerEnd";
 
 const FooterLinks = () => {
     //TODO: check navigate
@@ -54,6 +55,7 @@ const FooterLinks = () => {
                 </div>
                 <hr/>
                 <ul className={" footer_end flex"}>
+                    <FooterEnd title={"2022 Golden Center" } data={footerData.footerEndLink}/>
                 </ul>
             </footer>
         </div>

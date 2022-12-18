@@ -27,12 +27,18 @@ export type TSocialLinks = {
     path: string,
 }
 
+export type TFooterEndLink = {
+    name: string,
+    path: string
+}
+
 export type TFooterData = {
     goldCenter: TGoldCenter[],
     getHelp: TGoldHelp[],
     contact: string[],
     paymentsMethods: string[],
     socialLinks: TSocialLinks[],
+    footerEndLink: TFooterEndLink[],
 }
 
 export const footerData: TFooterData = {
@@ -94,4 +100,19 @@ export const footerData: TFooterData = {
             path: "/telegram"
         },
     ],
+    footerEndLink:  [
+        {
+            name: "Terms old Use",
+            path: "/",
+        },
+        {
+            name: "Privacy Policy",
+            path: "/",
+        },
+        {
+            name: "Sitemap",
+            path: "/",
+        }
+    ]
+
 }
