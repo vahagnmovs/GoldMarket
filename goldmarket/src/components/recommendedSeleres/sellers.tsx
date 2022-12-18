@@ -1,7 +1,5 @@
 import React from 'react';
-import star from "src/style/Icons/star-regular.svg";
 import {DataSeller} from "src/data/recommendedSellers";
-import firebase from "firebase/compat";
 
 const Sellers = (product: DataSeller) => {
     const {id, name, title, images} = product
@@ -10,7 +8,9 @@ const Sellers = (product: DataSeller) => {
 
         <div className={"block_recommender_child"}>
             <div className={"block_recommender_child"}>
-                {images.map((image) => <img
+                {/*FIXME: fix key*/}
+                {images.map((image, index) => <img
+                    key={index}
                     className={"block_recommender_child_jewelry"}
                     src={image}
                     alt=""

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 data.length = 4;
 
-const  Index = () => {
+const  RecommendSellers = () => {
 
     // const handleAllBrands = () => {
     //
@@ -21,8 +21,9 @@ const  Index = () => {
                 </p>
             </div>
             <div className={"block_recommender"}>
+                {/*FIXME: changed key...*/}
                 {
-                    data.map(product => <Sellers {...product} />)
+                    data.map((product) => <Sellers key={product.id} {...product} />)
                 }
             </div>
             <button className={"button_show_all_brands"}
@@ -34,4 +35,4 @@ const  Index = () => {
     );
 };
 
-export default Index;
+export default RecommendSellers;
