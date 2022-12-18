@@ -19,7 +19,7 @@ const NewCollection = () => {
                     <h3>New Collection</h3>
                     <div className="badge_collection flex flex-wrap">
                         {
-                            newProducts.map(product => <ProductBadge {...product} />)
+                            newProducts.map(product => <ProductBadge key={product.productID} {...product} />)
                         }
                     </div>
                     <button
