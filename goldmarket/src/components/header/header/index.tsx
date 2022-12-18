@@ -3,13 +3,11 @@ import logo from "src/style/Icons/logo.png"
 import heart from "src/style/Icons/heart.png"
 import user from "src/style/Icons/user.png"
 import basket from "src/style/Icons/basket.png"
-// import "../../../style/elements/_header.scss"
-// import "../../../style/base/_globals.scss"
-// import "../../../style/base/_reset.scss"
-// import "../../../style/utilities/_variables.scss"
 import DropDown from "src/components/header/header/dropDown";
 import { TData } from "src/components/header/header/types";
-
+import dollar from "src/style/Icons/dollar.png"
+import ruble from "src/style/Icons/ruble.png"
+import  dram from "src/style/Icons/dram.png"
 const flags: TData[] = [
     {
         id: 0,
@@ -32,17 +30,17 @@ const currency: TData[] = [
     {
         id: 0,
         value: "USD",
-        url: "https://static.thenounproject.com/png/990771-200.png",
+        url: dollar,
     },
     {
         id: 1,
         value: "RUR",
-        url: "https://cdn-icons-png.flaticon.com/512/143/143169.png",
+        url: ruble,
     },
     {
         id: 2,
         value: "AMD",
-        url: "https://cdn-icons-png.flaticon.com/512/143/143174.png",
+        url: dram,
     }
 ];
 
