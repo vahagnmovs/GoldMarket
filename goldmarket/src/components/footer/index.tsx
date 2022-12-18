@@ -14,11 +14,11 @@ import {FooterGoldHelp} from "./footerGoldHelp";
 import {FooterContact} from "./footerContact";
 import {FooterPayment} from "./footerPayment";
 import {FooterSocialLink} from "./footerSocialLink";
+import {FooterEnd} from "./footerEnd";
 
 const FooterLinks = () => {
     //TODO: check navigate
     // const navigate = useNavigate()
-    console.log(footerData.goldCenter, "databugbhujnj")
     return (
         <div className={"bg-gray"}>
             <footer className="container footer flex  dir-col">
@@ -54,6 +54,7 @@ const FooterLinks = () => {
                 </div>
                 <hr/>
                 <ul className={" footer_end flex"}>
+                    <FooterEnd title={"2022 Golden Center" } data={footerData.footerEndLink}/>
                 </ul>
             </footer>
         </div>
