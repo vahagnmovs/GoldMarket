@@ -32,7 +32,8 @@ export type ProductsTypes = {
     diamond: DiamondTypes,
     images: string[],
     type: string,
-    newProduct: boolean
+    newProduct: boolean,
+    bestSales: number
 }
 
 const products: ProductsTypes[] = [
@@ -70,7 +71,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/ring1/3.jpg",
 
         ],
-        newProduct: true
+        newProduct: true,
+        bestSales: 10,
     },
     {
         productID: randomID(),
@@ -106,7 +108,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/Ring3/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/Ring4/4.jpg",
         ],
-        newProduct: true
+        newProduct: true,
+        bestSales: 10,
     },
     {
         productID: randomID(),
@@ -142,7 +145,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/ring1/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/ring1/4.jpg",
         ],
-        newProduct: false
+        newProduct: false,
+        bestSales: 15,
     },
     {
         productID: randomID(),
@@ -178,7 +182,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/Ring3/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/Ring4/4.jpg",
         ],
-        newProduct: true
+        newProduct: true,
+        bestSales: 8,
     },
     {
         productID: randomID(),
@@ -214,7 +219,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/ring1/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/ring1/4.jpg",
         ],
-        newProduct: true
+        newProduct: true,
+        bestSales: 10,
     },
     {
         productID: randomID(),
@@ -250,7 +256,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/Ring3/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/Ring4/4.jpg",
         ],
-        newProduct: true
+        newProduct: true,
+        bestSales: 12,
     },
     {
         productID: randomID(),
@@ -286,7 +293,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/ring1/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/ring1/4.jpg",
         ],
-        newProduct: true
+        newProduct: true,
+        bestSales: 1,
     },
     {
         productID: randomID(),
@@ -322,7 +330,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/Ring3/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/Ring4/4.jpg",
         ],
-        newProduct: true
+        newProduct: true,
+        bestSales: 2,
     },
     {
         productID: randomID(),
@@ -358,7 +367,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/ring1/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/ring1/4.jpg",
         ],
-        newProduct: false
+        newProduct: false,
+        bestSales: 10,
     },
     {
         productID: randomID(),
@@ -394,7 +404,8 @@ const products: ProductsTypes[] = [
             "/dataimages/productimages/PRODUCTS-diamond/Ring3/3.jpg",
             "/dataimages/productimages/PRODUCTS-diamond/Ring4/4.jpg",
         ],
-        newProduct: true
+        newProduct: true,
+        bestSales: 10,
     },
 ]
 
