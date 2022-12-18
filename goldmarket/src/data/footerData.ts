@@ -13,9 +13,35 @@ import okIcon from "src/style/Icons/ok.png"
 import telegramIcon from "src/style/Icons/tg.png"
 import vkIcon from "src/style/Icons/vk.png"
 
+export type TGoldCenter = {
+    name:string;
+    path: string;
+}
+type TGoldHelp = {
+    name: string,
+    path: string,
+}
+type TContact = {
+    name: string,
+    address: string,
+    phone: string,
+    mail: string,
+}
+type TSocialLinks = {
+    name: string,
+    target: string,
+    path: string,
+}
 
+export type TFooterData = {
+    goldCenter: TGoldCenter[],
+    getHelp:TGoldHelp[],
+    contact:  TContact[],
+    paymentsMethods: string[],
+    socialLinks: TSocialLinks[],
+}
 
-export const footerDate = {
+export const footerData: TFooterData = {
     goldCenter: [
         {
             name: "About us",
@@ -51,7 +77,7 @@ export const footerDate = {
     ],
     paymentsMethods: [visa, master, arca, google_pay, apple_pay],
 
-    social_Links: [
+    socialLinks: [
         {
             name: vkIcon,
             target: "_blank",
