@@ -51,23 +51,16 @@ const SlideCarousel = ({images}: SlideCarouselProps) => {
             },
         ],
     };
-    // FIXME: checked code
-    const handleNext = () => {
-        slider.current.slickNext()
-    }
-    // FIXME: checked code
-    const handlePrev = () => {
-        slider.current.slickPrev
-    }
+
     return (
         <div>
             <div style={{margin: 20}}>
                 //TODO: added event listening fix
-                <button onClick={handlePrev}>Prev</button>
+                <button onClick={()=>slider.current.slickPrev }>Prev</button>
                 <button
                     style={{marginLeft: 20}}
                     //TODO: look
-                    onClick={handleNext}
+                    onClick={() => slider.current.slickNext()}
                 >
                     Next
                 </button>

@@ -21,8 +21,9 @@ const  RecommendSellers = () => {
                 </p>
             </div>
             <div className={"block_recommender"}>
+                {/*FIXME: changed key...*/}
                 {
-                    data.map((product, index) => <Sellers key={index} {...product} />)
+                    data.map((product) => <Sellers key={product.id} {...product} />)
                 }
             </div>
             <button className={"button_show_all_brands"}
