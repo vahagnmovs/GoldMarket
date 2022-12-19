@@ -9,7 +9,9 @@ const Sellers = (product: DataSeller) => {
             <div className="list_recommender_jewelry_img">
 
                 <div className={"flex flex-wrap gap_10"}>
+                    {/*FIXME: key*/}
                     {images.map((image) => <img
+                        key={Math.random()}
                         className={"recommender_jewelry"}
                         src={image}
                         alt=""
