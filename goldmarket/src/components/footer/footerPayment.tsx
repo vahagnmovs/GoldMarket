@@ -1,11 +1,21 @@
-type TFooterPayment = {
-    data: string[]
+import {TPaymentsMethods} from "../../data/footerData";
+import {Link} from "react-router-dom";
+
+type TFooterPayments = {
+    data: TPaymentsMethods[]
 }
-const FooterPayment = ({data}: TFooterPayment) => {
+
+const FooterPayment = ({data}: TFooterPayments) => {
     return (
         //FIXME: change key...
         <>
-            {data.map(icon => <li key={Math.random()}><img src={icon} alt=""/></li>)}
+            {data.map(elem =>
+                <li key={Math.random()}>
+                    <Link to={elem.path} target={elem.target}>
+                        <img src={elem.img} alt=""/>
+                    </Link>
+                </li>
+            )}
         </>
     );
 };
