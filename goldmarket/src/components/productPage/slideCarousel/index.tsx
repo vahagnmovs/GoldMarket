@@ -61,7 +61,8 @@ const SlideCarousel = ({images}: SlideCarouselProps) => {
                     //TODO: look
                     onClick={() => slider?.current?.slickNext()}
                 >
-                    Next
+                    Nextct slider
+
                 </button>
             </div>
 
