@@ -54,7 +54,7 @@ const FooterLinks = () => {
                 </div>
                 <hr/>
                 <ul className={" footer_end flex"}>
-                    <FooterEnd title={"2022 Golden Center" } data={footerData.footerEndLink}/>
+                    <FooterEnd title={"2022 Golden Center"} data={footerData.footerEndLink}/>
                 </ul>
             </footer>
         </div>

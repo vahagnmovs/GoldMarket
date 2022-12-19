@@ -27,6 +27,12 @@ export type TSocialLinks = {
     path: string,
 }
 
+export type TPaymentsMethods = {
+    img: string,
+    target: string,
+    path: string,
+}
+
 export type TFooterEndLink = {
     name: string,
     path: string
@@ -36,7 +42,7 @@ export type TFooterData = {
     goldCenter: TGoldCenter[],
     getHelp: TGoldHelp[],
     contact: string[],
-    paymentsMethods: string[],
+    paymentsMethods: TPaymentsMethods[],
     socialLinks: TSocialLinks[],
     footerEndLink: TFooterEndLink[],
 }
@@ -70,8 +76,33 @@ export const footerData: TFooterData = {
     contact: ["Main Office", "Amiryan 12", "+374 94 73 73 43", "goldCenterInfo@.am",
 
     ],
-    paymentsMethods: [visa, master, arca, google_pay, apple_pay],
-
+    paymentsMethods: [
+        {
+            img: visa,
+            target: "_blank",
+            path: "/"
+        },
+        {
+            img: master,
+            target: "_blank",
+            path: "/"
+        },
+        {
+            img: arca,
+            target: "_blank",
+            path: "/"
+        },
+        {
+            img: google_pay,
+            target: "_blank",
+            path: "/"
+        },
+        {
+            img: apple_pay,
+            target: "_blank",
+            path: "/"
+        }
+    ],
     socialLinks: [
         {
             img: vkIcon,
@@ -100,7 +131,7 @@ export const footerData: TFooterData = {
             path: "/telegram"
         },
     ],
-    footerEndLink:  [
+    footerEndLink: [
         {
             name: "Terms old Use",
             path: "/",
