@@ -14,6 +14,7 @@ import NewCollection from 'src/components/newCollections';
 import SellWithUs from '../../components/information/sellWithUsBanner';
 import WhyGoldCenter from '../../components/information/whyGoldCenterBanner';
 import Video from '../../components/header/video';
+import Dashboard from 'src/components/centers/dashboard';
 
 const Home = () => {
 	return (
@@ -35,6 +36,7 @@ const Home = () => {
 				<MostViewed />
 				<WhyGoldCenter />
 				<AboutUs />
+				<Dashboard/>
 			</>
 		</Layout>
 	);
