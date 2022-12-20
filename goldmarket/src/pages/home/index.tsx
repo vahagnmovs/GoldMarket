@@ -16,8 +16,6 @@ import SellWithUs from "../../components/information/sellWithUsBanner";
 import WhyGoldCenter from "../../components/information/whyGoldCenterBanner";
 import { AddProduct } from 'src/components/product/AddProduct';
 import Video from "../../components/header/video";
-import Verjin from "../../components/signUp/verjin";
-
 
 const Home = () => {
     return (
@@ -27,7 +25,6 @@ const Home = () => {
             FooterComponent={<Footer />}
         >
             <>
-                <Verjin/>
              {/*<AddProduct />*/}
              {/*   <SignUp/>*/}
              <PriceList />
