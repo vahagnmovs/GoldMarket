@@ -14,8 +14,8 @@ import AboutUs from "../../components/information/aboutUs";
 import NewCollection from "src/components/newCollections";
 import SellWithUs from "../../components/information/sellWithUsBanner";
 import WhyGoldCenter from "../../components/information/whyGoldCenterBanner";
-import { AddProduct } from 'src/components/product/AddProduct';
 import Video from "../../components/header/video";
+import AddProduct from 'src/components/product/AddProduct';
 
 
 

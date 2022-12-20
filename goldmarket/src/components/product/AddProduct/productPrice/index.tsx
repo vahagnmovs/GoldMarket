@@ -11,7 +11,7 @@ interface IProps  {
     handleState: (evt: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export const ProductPrice: React.FC<IProps> = ({ prices: { price, oldPrice }, code, handlePrice, handleState }) => {
+const ProductPrice: React.FC<IProps> = ({ prices: { price, oldPrice }, code, handlePrice, handleState }) => {
 
 
     return(
@@ -34,3 +34,5 @@ export const ProductPrice: React.FC<IProps> = ({ prices: { price, oldPrice }, co
         </div>
     )
 }
+
+export default ProductPrice

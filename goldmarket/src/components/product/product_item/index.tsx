@@ -14,7 +14,7 @@ interface IProductProps {
     }
 }
 
-export const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, category, code, price }}) => {
+const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, category, code, price }}) => {
     
     const params = useParams()
     const navigate = useNavigate()
@@ -43,3 +43,4 @@ export const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, nam
     )
 }
 
+export default ProductItem

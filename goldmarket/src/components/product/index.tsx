@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { product } from "src/components/constants"
-import { ProductItem } from './product_item'
+import  ProductItem from './product_item'
 
-export const Products: React.FC = () => {
+const Products: React.FC = () => {
 
     const navigate = useNavigate()
 
@@ -17,7 +17,7 @@ export const Products: React.FC = () => {
             <div className='productNav'>
                 <h1>Products</h1>
                 <input type='text' placeholder='SEARCH PRODUCT' />
-                <button onClick={handleNavigate}>+ ADD PRODUCT</button> // ste
+                <button onClick={handleNavigate}>+ ADD PRODUCT</button> 
             </div>
             <hr></hr>
 
@@ -40,3 +40,6 @@ export const Products: React.FC = () => {
         </div>
     )
 }
+
+
+export default Products

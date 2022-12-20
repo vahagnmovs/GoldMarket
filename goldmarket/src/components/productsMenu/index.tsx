@@ -1,15 +1,9 @@
 import React from 'react'
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 
 
-export const SellerNavBar: React.FC = () => {
-
-    const navigate = useNavigate()
-
-    const handleProduct = () => {
-
-    }
+const SellerNavBar: React.FC = () => {
 
 
     return(
@@ -38,11 +32,9 @@ export const SellerNavBar: React.FC = () => {
         <main>
             <Outlet />
         </main>
-        <br></br>
-        <hr></hr>
-        {/* <footer>
-            2022
-        </footer> */}
+
      </>
     )
 }
+
+export default SellerNavBar
