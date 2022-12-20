@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import {products} from "src/data/products";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
+import "src/style/components/_mostViewed.scss"
 
 const MostViewed = () => {
     const ref = useRef(null)
@@ -55,22 +56,24 @@ const MostViewed = () => {
     };
 
     return (
-        <div>
-            <div>
+        <div className={'most_Viewed'}>
+            <div className={'most_Viewed_title text-center justify-between  align-center'}>
                 <h3>Most Viewed</h3>
-                <div>
+                <div className={'most_Viewed_button flex'}>
                     <button onClick={handlePrevSlide}>{"<"}</button>
                     <button onClick={handleNextSlide}>{">"}</button>
                 </div>
             </div>
 
+
+
             <Slider ref={ref} {...settings}>
                 {
                     products.map(product =>
                         <div>
-                            <div className="badge_item">
-                                <div className="relative">
-                                    <img style={{width: 200, height: 200}} src={product.images[0]} alt="list_item"/>
+                            <div className="badge_item_most">
+                                <div className="relative_most">
+                                    <img  className={'relative_img'} src={product.images[0]} alt="list_item"/>
                                 </div>
                                 <div className="list_content">
                                     <div className="flex justify-between">

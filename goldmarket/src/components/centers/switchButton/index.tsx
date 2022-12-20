@@ -13,7 +13,7 @@ const SwitchButton = ({ checked, handleCeckid }: TSwitchButtonProps) => {
           <i className="a-moon"></i>
           <i className="fa-sun"></i>
           <div className='ball' />
-          <span className={checked ? "slider" : "slider_activ"}></span>
+          <span className={checked ? "slider" : "slider activ"}></span>
         </label>
 
       </div>
