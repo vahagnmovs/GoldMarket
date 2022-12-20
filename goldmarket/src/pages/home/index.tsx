@@ -30,8 +30,8 @@ const Home = () => {
                 <Verjin/>
              {/*<AddProduct />*/}
              {/*   <SignUp/>*/}
-             <PriceList />*/}
-             <Video/>*/}
+             <PriceList />
+             <Video/>
              <SwitchComponent />
              <NewCollection />
              <SellWithUs />
