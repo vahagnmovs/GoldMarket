@@ -12,6 +12,7 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "firebase": "^9.2.0",
+    "formik": "^2.2.9",
     "local-storage": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,13 +23,16 @@
     "sass": "^1.56.1",
     "slick-carousel": "^1.8.1",
     "typescript": "^4.9.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +53,10 @@
     ]
   },
   "devDependencies": {
-    "@types/react-slick": "^0.23.10"
+    "@types/react-slick": "^0.23.10",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "eslint": "^8.30.0",
+    "eslint-plugin-react": "^7.31.11"
   }
 }

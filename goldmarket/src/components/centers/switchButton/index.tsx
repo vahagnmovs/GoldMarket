@@ -16,10 +16,10 @@ const SwitchButton = ({ checked, handleCeckid }: TSwitchButtonProps) => {
           <span className={checked ? "slider" : "slider activ"}></span>
         </label>
 
-      </div>
-      <span className={checked ? "" : "red"}>Shopping centers</span>
-    </div>
-  );
+			</div>
+			<span className={checked ? '' : 'red'}>Shopping centers</span>
+		</div>
+	);
 };
 
 export default SwitchButton;

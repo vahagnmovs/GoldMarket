@@ -33,7 +33,3 @@ export type ProductsTypes = {
     type: string,
     newProduct: boolean
 }
-
-export type TSellerTypes = {
-
-}

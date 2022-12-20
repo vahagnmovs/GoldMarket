@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Seller = () => {
-    return (
-        <div>
+	return (
+		<div>
             
-        </div>
-    );
+		</div>
+	);
 };
 
 export default Seller;

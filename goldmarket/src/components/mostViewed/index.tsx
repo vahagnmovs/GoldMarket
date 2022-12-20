@@ -6,54 +6,52 @@ import "slick-carousel/slick/slick-theme.css"
 import "src/style/components/_mostViewed.scss"
 
 const MostViewed = () => {
-    const ref = useRef(null)
-    const handleNextSlide = () => {
-        // @ts-ignore
-        ref.current.slickNext();
-    };
+	const ref = useRef<any>(null);
+	const handleNextSlide = () => {
+		ref.current.slickNext();
+	};
 
-    const handlePrevSlide = () => {
-        // @ts-ignore
-        ref.current.slickPrev();
-    };
+	const handlePrevSlide = () => {
+		ref.current.slickPrev();
+	};
 
-    let settings = {
-        dots: false,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: true,
-        autoplay: true,
-        arrows: false,
-        speed: 500,
-        autoplaySpeed: 5000,
-        cssEase: "linear",
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    initialSlide: 3
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            }
-        ]
-    };
+	const settings = {
+		dots: false,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		infinite: true,
+		autoplay: true,
+		arrows: false,
+		speed: 500,
+		autoplaySpeed: 5000,
+		cssEase: 'linear',
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 4,
+					infinite: true,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					initialSlide: 3
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			}
+		]
+	};
 
     return (
         <div className={'most_Viewed'}>
