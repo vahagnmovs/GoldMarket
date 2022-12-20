@@ -1,9 +1,9 @@
-import React, {createRef, RefObject, useRef} from "react";
-import Slider from "react-slick";
-import {products} from "src/data/products";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css"
-import "src/style/components/_mostViewed.scss"
+import React, {createRef, RefObject, useRef} from 'react';
+import Slider from 'react-slick';
+import {products} from 'src/data/products';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'src/style/components/_mostViewed.scss';
 
 const MostViewed = () => {
 	const ref = useRef<any>(null);
@@ -53,46 +53,46 @@ const MostViewed = () => {
 		]
 	};
 
-    return (
-        <div className={'most_Viewed'}>
-            <div className={'most_Viewed_title text-center justify-between  align-center'}>
-                <h3>Most Viewed</h3>
-                <div className={'most_Viewed_button flex'}>
-                    <button onClick={handlePrevSlide}>{"<"}</button>
-                    <button onClick={handleNextSlide}>{">"}</button>
-                </div>
-            </div>
+	return (
+		<div className={'most_Viewed'}>
+			<div className={'most_Viewed_title text-center justify-between  align-center'}>
+				<h3>Most Viewed</h3>
+				<div className={'most_Viewed_button flex'}>
+					<button onClick={handlePrevSlide}>{'<'}</button>
+					<button onClick={handleNextSlide}>{'>'}</button>
+				</div>
+			</div>
 
 
 
-            <Slider ref={ref} {...settings}>
-                {
-                    products.map(product =>
-                        <div>
-                            <div className="badge_item_most">
-                                <div className="relative_most">
-                                    <img  className={'relative_img'} src={product.images[0]} alt="list_item"/>
-                                </div>
-                                <div className="list_content">
-                                    <div className="flex justify-between">
-                                        <div>
-                                            <span className="currentPrice">{product.prices.currentPrice}$</span>
-                                            <span className="oldPrice">{product.prices.oldPrice}$</span>
-                                        </div>
-                                        <div>
-                                            {/*FIXME: after having norm seller data will change this to normal seller name*/}
-                                            {product.sellerID.split("-")[0]}
-                                        </div>
-                                    </div>
-                                    <p>{product.name}</p>
-                                </div>
-                            </div>
-                        </div>
-                    )
-                }
-            </Slider>
-        </div>
-    );
-}
+			<Slider ref={ref} {...settings}>
+				{
+					products.map(product =>
+						<div key={product.productID}>
+							<div className="badge_item_most">
+								<div className="relative_most">
+									<img  className={'relative_img'} src={product.images[0]} alt="list_item"/>
+								</div>
+								<div className="list_content">
+									<div className="flex justify-between">
+										<div>
+											<span className="currentPrice">{product.prices.currentPrice}$</span>
+											<span className="oldPrice">{product.prices.oldPrice}$</span>
+										</div>
+										<div>
+											{/*FIXME: after having norm seller data will change this to normal seller name*/}
+											{product.sellerID.split('-')[0]}
+										</div>
+									</div>
+									<p>{product.name}</p>
+								</div>
+							</div>
+						</div>
+					)
+				}
+			</Slider>
+		</div>
+	);
+};
 
 export default MostViewed;
