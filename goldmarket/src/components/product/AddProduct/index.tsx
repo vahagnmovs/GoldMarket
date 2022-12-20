@@ -3,21 +3,15 @@ import { filters, initialDimonds, initialPrices, initialState } from 'src/compon
 import CrateInput from '../createInput'
 
 import  AddImages  from './addImages'
-import Creator from './creator'
-
- 
-
+import Creator from './Creator'
 
 const AddProduct: React.FC = () => {
    
 
     const [formData, setFormData] = useState(initialState);
-
-
     const [PRICES, setPrices] = useState(initialPrices)
     const [DIMONDS, setDimonds] = useState(initialDimonds)
     const [IMAGES, setImgSrces] = useState([])
-
     const [showSlice, setShowSlice] = useState(false)
 
 
