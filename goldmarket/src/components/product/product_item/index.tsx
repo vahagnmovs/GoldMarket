@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 interface IProductProps {
@@ -16,31 +16,31 @@ interface IProductProps {
 
 const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, category, code, price }}) => {
     
-    const params = useParams()
-    const navigate = useNavigate()
+	const params = useParams();
+	const navigate = useNavigate();
 
-    const handleNavigate = () => {
-        navigate(`/products/${id}`)
-    }
+	const handleNavigate = () => {
+		navigate(`/products/${id}`);
+	};
 
 
-    return(
-        <div className='productItem' onClick={handleNavigate}>
+	return(
+		<div className='productItem' onClick={handleNavigate}>
 
-           <div> <img className='productItemPhoto' src={photo} /> </div>
-           <div className='productItemPhoto'> {name} </div>
-           <div> {category} </div>
-           <div> {code} </div>
-           <div> {price} </div>
+			<div> <img className='productItemPhoto' src={photo} /> </div>
+			<div className='productItemPhoto'> {name} </div>
+			<div> {category} </div>
+			<div> {code} </div>
+			<div> {price} </div>
            
-           <div className='details'>
-               <button>✓</button>  
-               <button>X</button>  
-               <button> DETAILS </button>  
-           </div>
+			<div className='details'>
+				<button>✓</button>  
+				<button>X</button>  
+				<button> DETAILS </button>  
+			</div>
            
-        </div>
-    )
-}
+		</div>
+	);
+};
 
-export default ProductItem
+export default ProductItem;

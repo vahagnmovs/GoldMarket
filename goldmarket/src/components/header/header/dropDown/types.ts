@@ -1,4 +1,4 @@
-import { TData } from "src/components/header/header/types";
+import { TData } from 'src/components/header/header/types';
 
 export type TDropDownProps = {
     menuOpen: boolean,
