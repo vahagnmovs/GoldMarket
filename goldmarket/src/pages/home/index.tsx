@@ -17,8 +17,6 @@ import WhyGoldCenter from "../../components/information/whyGoldCenterBanner";
 import { AddProduct } from 'src/components/product/AddProduct';
 import Video from "../../components/header/video";
 
-
-
 const Home = () => {
     return (
         <Layout
@@ -27,18 +25,18 @@ const Home = () => {
             FooterComponent={<Footer />}
         >
             <>
-            {/* <AddProduct /> */}
-                {/*<SignUp/>*/}
-                <PriceList />
-                <Video/>
-                <SwitchComponent />
-                <NewCollection />
-                <SellWithUs />
-                <BestSales />
-                <Index />
-                <MostViewed />
-                <WhyGoldCenter />
-                <AboutUs />
+             {/*<AddProduct />*/}
+             {/*   <SignUp/>*/}
+             <PriceList />
+             <Video/>
+             <SwitchComponent />
+             <NewCollection />
+             <SellWithUs />
+             <BestSales />
+             <Index />
+             <MostViewed />
+             <WhyGoldCenter />
+             <AboutUs />
             </>
         </Layout>
     );
