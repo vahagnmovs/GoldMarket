@@ -1,14 +1,14 @@
 import React from 'react';
-import { useParams } from "react-router-dom";
+// import { useParams } from 'react-router-dom';
 
 const Products = () => {
-    const { id } = useParams();
+	// const { id } = useParams();
 
-    return (
-        <div>
+	return (
+		<div>
             this is products page
-        </div>
-    );
+		</div>
+	);
 };
 
 export default Products;

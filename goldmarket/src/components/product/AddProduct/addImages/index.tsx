@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react"
+import React, {useEffect, useRef, useState} from 'react';
 
 type TProps = {
     handleImgSrces: (arr: []) => void
@@ -9,63 +9,61 @@ type TImageProps = {
 }
 
 const AddImages: React.FC<TProps> = ({ handleImgSrces }) => {
-    
-
-    const [images, setImages] = useState<TImageProps[] | object[]>([])
-    let idRef = useRef(0)
-
-    function changeImageState(src: any){
-      setImages([...images,...src])
-    }
-
-    useEffect(() => {
-        //@ts-ignore
-        handleImgSrces(images)
-    
-    }, [images.length])
 
 
-      const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> ) => {
+	const [images, setImages] = useState<any>([]);
+	const idRef = useRef(0);
 
-        const { files } = e.target
-        //@ts-ignore
-        changeImageState([...files].map((file) => {
-            return {
-                src: URL.createObjectURL(file),
-                id: ++idRef.current
-              }
-            }))
-            e.target.value = ''
-        }
-      
-     
-       const deleteImg = (id: string) => {
-           setImages((prev: any) => prev.filter((img: any) => img.id !== id))
-       }    
+	function changeImageState(src: any) {
+		setImages([...images, ...src]);
+	}
 
-    return(
-        <div>
-            <h3> ADD IMAGES / VIDEOS </h3>
-            <input className='inputPhoto'  multiple={true} accept="image/jpeg , image/png" 
-                   onChange={handleInputChange} type="file" />
+	useEffect(() => {
+		handleImgSrces(images);
 
-            {
-                images.length !== 0 
-                  &&
-                <div className="imgDiv">
-                    {
-                        images.map((e: any) =>  <div key={e.id}> 
-                            <img src={e.src} />
-                            <button onClick={() => deleteImg(e.id)}>X</button>
-                        </div>)   
-                    }
-                </div>
-
-            } 
-
-        </div>
-    )
-}
+	}, [images.length]);
 
 
-export default AddImages
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+		const {files}: any = e.target;
+		changeImageState([...files].map((file) => {
+			return {
+				src: URL.createObjectURL(file),
+				id: ++idRef.current
+			};
+		}));
+		e.target.value = '';
+	};
+
+
+	const deleteImg = (id: string) => {
+		setImages((prev: any) => prev.filter((img: any) => img.id !== id));
+	};
+
+	return (
+		<div>
+			<h3> ADD IMAGES / VIDEOS </h3>
+			<input className='inputPhoto' multiple={true} accept="image/jpeg , image/png"
+				onChange={handleInputChange} type="file"/>
+
+			{
+				images.length !== 0
+				&&
+				<div className="imgDiv">
+					{
+						images.map((e: any) => <div key={e.id}>
+							<img src={e.src}/>
+							<button onClick={() => deleteImg(e.id)}>X</button>
+						</div>)
+					}
+				</div>
+
+			}
+
+		</div>
+	);
+};
+
+
+export default AddImages;

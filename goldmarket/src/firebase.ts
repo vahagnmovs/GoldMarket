@@ -1,14 +1,14 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, setDoc, addDoc } from "firebase/firestore"
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, getDocs, setDoc, addDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA-xFalv4pTSNOzLF94b_UzAfO0FtRshZ4",
-    authDomain: "goldmarket2022-2.firebaseapp.com",
-    projectId: "goldmarket2022-2",
-    storageBucket: "goldmarket2022-2.appspot.com",
-    messagingSenderId: "835428428435",
-    appId: "1:835428428435:web:edb7241c2da6257d6fbb66",
-}
+	apiKey: 'AIzaSyA-xFalv4pTSNOzLF94b_UzAfO0FtRshZ4',
+	authDomain: 'goldmarket2022-2.firebaseapp.com',
+	projectId: 'goldmarket2022-2',
+	storageBucket: 'goldmarket2022-2.appspot.com',
+	messagingSenderId: '835428428435',
+	appId: '1:835428428435:web:edb7241c2da6257d6fbb66',
+};
 
 // type ProductsType = {
 //     id: string,
