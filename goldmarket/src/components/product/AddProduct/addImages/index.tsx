@@ -1,41 +1,47 @@
 import { useRef, useState, useEffect } from "react"
 
-interface IProps {
+type TProps = {
     handleImgSrces: (arr: []) => void
 }
+type TImageProps = {
+    url?: string;
+    id?: number;
+}
 
-export const AddImages: React.FC<IProps> = ({ handleImgSrces }) => {
+const AddImages: React.FC<TProps> = ({ handleImgSrces }) => {
     
 
-    const [images, setImages] = useState<any>([])
+    const [images, setImages] = useState<TImageProps[] | object[]>([])
     let idRef = useRef(0)
 
     function changeImageState(src: any){
       setImages([...images,...src])
     }
-useEffect(() => {
-    handleImgSrces(images)
 
-}, [images.length])
+    useEffect(() => {
+        //@ts-ignore
+        handleImgSrces(images)
+    
+    }, [images.length])
 
 
-      const handleInputChange = (e: any) => {
+      const handleInputChange = (e: React.ChangeEvent<HTMLInputElement> ) => {
 
         const { files } = e.target
-
+        //@ts-ignore
         changeImageState([...files].map((file) => {
             return {
                 src: URL.createObjectURL(file),
                 id: ++idRef.current
-            }
-        }))
-        e.target.value = ''
-      }
+              }
+            }))
+            e.target.value = ''
+        }
       
      
-    const deleteImg = (id: string) => {
-        setImages((prev: any) => prev.filter((img: any) => img.id !== id))
-    }    
+       const deleteImg = (id: string) => {
+           setImages((prev: any) => prev.filter((img: any) => img.id !== id))
+       }    
 
     return(
         <div>
@@ -62,4 +68,4 @@ useEffect(() => {
 }
 
 
-
+export default AddImages

@@ -7,7 +7,7 @@ import About from "./pages/about";
 import Home from "./pages/home";
 import Redirect from "src/components/redirect/redirect";
 import { SingleProduct } from "./components/product/singleProduct";
-import { AddProduct } from "./components/product/AddProduct";
+import AddProduct from "./components/product/AddProduct";
 
 const router = createBrowserRouter([{
     path: "/",

@@ -11,7 +11,7 @@ const CrateInput: React.FC<IProps> = ({ title, value, handleChangeData }) => {
 
     return(
         <div>
-            <label> {title} </label>
+            <label> { title } </label>
             <input type='text' name={title} placeholder={title} onChange={handleChangeData} value={value} />
         </div>
     )
