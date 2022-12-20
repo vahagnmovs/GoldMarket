@@ -78,6 +78,7 @@
     position: relative;
     transform: scale(1.5);
   }
+
   .label:checked{
     background-color:  #CCA653;
   }
@@ -91,7 +92,10 @@
     left: 2px;
     border-radius: 50%;
     transition: transform 0.2s linear;
+
   }
+
+
 
   /*  target the elemenent after the label*/
   .checkbox:checked + .label .ball {
