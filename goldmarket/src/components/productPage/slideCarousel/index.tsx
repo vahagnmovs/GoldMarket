@@ -1,6 +1,5 @@
 import React, {useMemo, useRef} from 'react';
 import Slider from 'react-slick';
-import './style.css';
 import Card from './card';
 import {ProductsTypes} from 'src/data/products';
 

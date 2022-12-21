@@ -39,7 +39,7 @@ export type ProductsTypes = {
 const products: ProductsTypes[] = [
 	{
 		//FIXME: if you want test slider cheng productID "55"
-		productID: randomID(),
+		productID: '55',
 		name: 'Graziella ring',
 		sellerID: randomID(),
 		color: 'YELLOW',

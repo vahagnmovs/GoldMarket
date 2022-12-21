@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../styleProductPage.css';
+
 
 interface ProductWeightProps {
     sizeOrWeight: number[]
@@ -11,23 +11,16 @@ const ProductSizeWeight = ({sizeOrWeight, title}:ProductWeightProps, ) => {
 		setIndexSizeOrWeight(i);
 	};
 	return (
-		<>
+		<div className={'size_title'}>
 			<p>{title}</p>
-			<div style={{display: 'flex', flexDirection: 'row',}}>
+			<div className={'elements_size flex text-center'} >
 				{sizeOrWeight.map((item, i) =>(
-					<ul
-						key={i}
-						onClick={() => (clickElement(i))}
-					>
-						<li
-							style={{border: '1px solid black', padding: '7px 20px 5px 20px', cursor:'pointer'}}
-							className={indexSizeOrWeight === i ? 'activeWeight' : ''}
-						>{item}
-						</li>
+					<ul key={i} onClick={() => (clickElement(i))}>
+						<li className={indexSizeOrWeight === i ? 'activeWeight' : ''}>{item}</li>
 					</ul>
 				))}
 			</div>
-		</>
+		</div>
 	);
 };
 

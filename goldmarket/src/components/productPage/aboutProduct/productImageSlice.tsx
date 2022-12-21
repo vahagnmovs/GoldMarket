@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import './style.css';
+import right from 'src/style/Icons/right.png';
+
 
 interface ProductImageSliceProps {
     images: string[]
@@ -7,7 +8,6 @@ interface ProductImageSliceProps {
 
 const ProductImageSlice = ({images}:ProductImageSliceProps ) => {
 	const [imageIndex, setImageIndex] = useState(0);
-	console.log(images, 'images');
 	const nextImage = () => {
 		if(imageIndex === images.length - 1) {
 			setImageIndex(0);
@@ -26,24 +26,21 @@ const ProductImageSlice = ({images}:ProductImageSliceProps ) => {
 		setImageIndex(i);
 	};
 	return (
-		<div style={{height: '650px'}}>
-			<h1>IMAGES</h1>
-			<img style={{height: '450px'}} src={images[imageIndex]} alt=""/>
-			<div style={{display:'flex', justifyContent:'space-around'}}>
-				<button onClick={prevImage}>prev</button>
-				<button onClick={nextImage}>next</button>
+		<div className={'product_smole_carousel'}>
+			<div className={'product_smole_carousel_top_photo'}>
+				<img  src={images[imageIndex]} alt=""/>
 			</div>
-			<img src="" alt=""/>
-			<div style={{width: '100%'}}>
+			<div className={'product_smole_carousel_slider flex align-center'} >
+
 				{images.map((image, i) =>
 					<img
 						key={image}
-						style={{height:'180px', cursor:'pointer',}}
 						src={image} alt="no photo"
 						onClick={() => clickImage(i)}
 						className={imageIndex === i ? 'active': ''}
 					/>
 				)}
+				<button onClick={nextImage}><img src={right}/></button>
 			</div>
 		</div>
 	);
