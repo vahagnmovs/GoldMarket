@@ -3,12 +3,6 @@ import presentImg from 'src/style/img/present-product.png';
 import open from 'src/style/Icons/open.png';
 import close from 'src/style/Icons/close.png';
 import { TSearchCategoryProps } from './type';
-// import "../../../style/elements/_navbar.scss"
-// import "../../../style/base/_globals.scss"
-// import "../../../style/base/_reset.scss"
-// import "../../../style/utilities/_variables.scss"
-
-
 
 function SearchCategory({ title }: TSearchCategoryProps) {
 	const [mouse, setMouse] = useState(false);
@@ -24,7 +18,6 @@ function SearchCategory({ title }: TSearchCategoryProps) {
 							<img className={'GOLD'} src={close} alt="" />
 						</div>
 						<div className='openning-navbar' onMouseLeave={() => setMouse(false)}>
-
 							{/*silver-jewelry*/}
 							<div className={'gold-jewelry flex justify-between'}>
 								<ul>
