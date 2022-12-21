@@ -17,19 +17,22 @@ const Search = () => {
 			{
 				isOpenSearchModal
 				&&
-				<div className={'search_modal_open'}>
-					<div className={'flex align-center '}>
-						<input type="text" placeholder={'ENTER KEYWORD TO SEARCH'}/>
-						<img className={'searching-icon'} src={search} alt="search"/>
-					</div>
-					<div className={'searching_block_text flex dir-col  align-centnt'}>
-						<img src={frame} alt=""/>
-						<span> ENTER KEYWORD TO SEARCH </span>
-					</div>
-					<div className={'relative'}>
-						<button className={'absolute'} onClick={toggleOpenModal}>x</button>
+				<div className={'search_fon'}>
+					<div className={'search_modal_open'}>
+						<div className={'flex align-center '}>
+							<input type="text" placeholder={'ENTER KEYWORD TO SEARCH'}/>
+							<img className={'searching-icon'} src={search} alt="search"/>
+						</div>
+						<div className={'searching_block_text flex dir-col  align-centnt'}>
+							<img src={frame} alt=""/>
+							<span> ENTER KEYWORD TO SEARCH </span>
+						</div>
+						<div className={'relative'}>
+							<button className={'absolute'} onClick={toggleOpenModal}>x</button>
+						</div>
 					</div>
 				</div>
+
 
 			}
 		</div>

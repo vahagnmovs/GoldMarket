@@ -25,7 +25,7 @@ const BestSales = () => {
 							bestSaleProducts.map(product => <ProductBadge key={product.productID} {...product} />)
 						}
 					</div>
-					<button
+					<button className={'text-center'}
 						// onClick={}
 					>EXPLORE ALL BEST SALES </button>
 				</div>
