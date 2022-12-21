@@ -1,51 +1,62 @@
-.most_Viewed {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 60px 0;
+.most{
+  background: #F7F7F7;
+  margin: 10px 0;
+  .most_Viewed {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
 
-  .most_Viewed_title {
-    padding-bottom: 45px;
 
-    h3 {
-      font-size: 32px;
-      color: #000000;
-    }
+    .most_Viewed_title {
+      padding-bottom: 45px;
 
-    .list_content {
-      padding-top: 20px;
+      h3 {
+        font-size: 32px;
+        color: #000000;
+      }
 
-      .currentPrice {
-        margin-right: 8px;
+      .list_content {
+        padding-top: 20px;
+
+        .currentPrice {
+          margin-right: 8px;
+        }
+      }
+      p{
+        margin-top: 12px;
       }
     }
-    p{
-      margin-top: 12px;
+
+    .most_Viewed_button {
+      justify-content: flex-end;
+      margin-top: -35px;
+
+
+
+      button {
+        margin-left: 10px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #1D3865;
+        color:  #1D3865;
+        background-color: transparent;
+      }
     }
   }
 
-  .most_Viewed_button {
-    justify-content: flex-end;
-    margin-top: -35px;
 
+  .badge_item_most {
+    margin-left: 20px;
+    .relative_most {
 
-
-    button {
-      margin-left: 10px;
-      width: 40px;
-      height: 40px;
+      img {
+        border: 1px solid rgba(29, 56, 101, 0.05);
+        width: 285px;
+        height: 285px;
+      }
     }
   }
+
 }
 
 
-.badge_item_most {
-  margin-left: 20px;
-  .relative_most {
-
-    img {
-      border: 1px solid rgba(29, 56, 101, 0.05);
-      width: 285px;
-      height: 285px;
-    }
-  }
-}

@@ -27,7 +27,7 @@ const BestSales = () => {
 					</div>
 					<button
 						// onClick={}
-					>EXPLORE ALL BEST SALES {'>'}</button>
+					>EXPLORE ALL BEST SALES </button>
 				</div>
 			</div>
 		</div>

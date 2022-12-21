@@ -5,7 +5,13 @@
       width: 183px;
       height: 40px;
       background: none;
-      border: 0.5px solid;
+      border: 1px solid #1D3865;
+      color:  #1D3865;
+      &:hover {
+        background-color: gold;
+        color: #F6F6F6;
+        border: 1px solid gold;
+      }
     }
 
     img {
@@ -121,7 +127,7 @@
 
   img {
     width: 387px;
-    height: 455px;
+    height: 430px;
   }
 
   .img-title {
@@ -145,7 +151,7 @@
     .product{
         img{
             width: 387px;
-            height: 455px;
+            height: 430px;
         }
     }
       span {
@@ -161,7 +167,7 @@
 }
 .product{
   img{ width: 387px;
-    height: 455px;}
+    height: 430px;}
 }
 .map_show_more {
   width: 1200px;
@@ -186,7 +192,7 @@
 
     img {
       width: 387px;
-      height: 455px;
+      height: 430px;
     }
 
     .city-title {
