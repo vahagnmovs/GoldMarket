@@ -15,6 +15,8 @@ import SellWithUs from '../../components/information/sellWithUsBanner';
 import WhyGoldCenter from '../../components/information/whyGoldCenterBanner';
 import Video from '../../components/header/video';
 
+import AddProduct from 'src/components/product/AddProduct';
+
 const Home = () => {
 	return (
 		<Layout
@@ -23,7 +25,7 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
-				{/*<AddProduct />*/}
+				{/* <AddProduct /> */}
 				{/*   <SignUp/>*/}
 				<PriceList />
 				<Video/>
