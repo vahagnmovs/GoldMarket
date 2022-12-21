@@ -33,6 +33,7 @@
 
 
 
+
       button {
         margin-left: 10px;
         width: 40px;
@@ -40,6 +41,12 @@
         border: 1px solid #1D3865;
         color:  #1D3865;
         background-color: transparent;
+        border-radius: 2px;
+        &:hover {
+          background-color: #1D3865;
+          color: gold;
+          border: 1px solid gold;
+        }
       }
     }
   }
