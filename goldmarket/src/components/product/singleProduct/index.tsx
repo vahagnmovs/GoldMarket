@@ -8,7 +8,7 @@ import { ProductDetals } from './productDetals';
 export const SingleProduct: React.FC = () => {
 
 	const { id }: any = useParams();
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 
 	// any-n dzel, verevy tal type handleProduct-i
 
@@ -26,7 +26,7 @@ export const SingleProduct: React.FC = () => {
 				<img className='productItemPhoto' src={photo} />
 				<div> <span> {name} </span> </div>
 				<div> 
-					<button onClick={() => navigate(`/product/${id}/editproduct`)}>✓</button>   //  
+					<button onClick={() => navigate(`/product/${id}/editproduct`)}>✓</button>
 					<button onClick={() => console.log('Delete this product')}>X</button>    
 				</div> 
 			</div>

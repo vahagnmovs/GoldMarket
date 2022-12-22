@@ -5,21 +5,21 @@ import AddProduct from '../AddProduct';
 
 const EditProduct = () => {
   
-    const { id }: any = useParams();
+	const { id }: any = useParams();
 
-    console.log(id)
-    const product = useAppSelector(({ products }) => products);
-    console.log(product)
+	console.log(id);
+	const product = useAppSelector(({ products }) => products);
+	console.log(product);
 
-    // const find = product.find((el) => console.log(e))
+	// const find = product.find((el) => console.log(e))
     
-    return (
-      <div>EditProduct
+	return (
+		<div>EditProduct
 
-        <AddProduct />
+			<AddProduct />
 
-      </div>
-    )
-}
+		</div>
+	);
+};
 
 export default EditProduct;
