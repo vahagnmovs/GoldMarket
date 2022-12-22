@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 type TOrderHistory = {
     id: number;
@@ -8,13 +9,20 @@ type TOrderHistory = {
 }
 
 const OrderHistory = ({ id, nam2, nam3, nam4 }: TOrderHistory) => {
+
+	// FIXME: irakan OrderHistory anunner@  dnel
+	const navigate = useNavigate();
+	const handleNavigateOrderInfo = () => {
+		navigate('/orderinfo');
+	}; 
+
 	return (
 		<tr>
 			<td>{id}</td>
 			<td>{nam2}</td>
 			<td>{nam3}</td>
 			<td>{nam4}</td>
-			<td><button>ivhrinvcr</button></td>
+			<td><button onClick={handleNavigateOrderInfo}>ivhrinvcr</button></td>
 		</tr>
 	);
 };

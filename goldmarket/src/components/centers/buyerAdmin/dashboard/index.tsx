@@ -1,5 +1,4 @@
 import React from 'react';
-import GoldPriceList from 'src/components/header/priceList/goldPriceList';
 import settins from 'src/style/Icons/settins.svg';
 import dashboard from 'src/style/Icons/dashboard.svg';
 import order from 'src/style/Icons/order.svg';
@@ -7,36 +6,44 @@ import delivery from 'src/style/Icons/delivery.svg';
 import logout from 'src/style/Icons/logout.svg';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
+type TDashboard = {
+	title: string
+}
 
-
-const Dashboard = () => {
+const Dashboard = ({ title }: TDashboard) => {
 	const navigate = useNavigate();
-	const handleNavigate = () => {
+	const handleNavigateOrderHistory = () => {
 		navigate('/orderhistory');
+	};
+	const handleNavigateDeliveryAddress = () => {
+		navigate('/deliveryaddress');
+	};
+	const handleNavigateDashboard = () => {
+		navigate('/dashboard');
 	};
 	return (
 		<div>
-			<h2>Dashboard</h2>
-			<ul className="ul">
+			<h2>{title}</h2>
+			<ul className='ul'>
 				<li>MY ACCOUNT</li>
-				<li>
-					<img src={dashboard} alt="dashboard" />
+				<li onClick={handleNavigateDashboard}>
+					<img src={dashboard} alt='dashboard' />
 					<span>DASHBOARD</span>
 				</li>
-				<li onClick={handleNavigate}>
-					<img src={order} alt="order" />
+				<li onClick={handleNavigateOrderHistory}>
+					<img src={order} alt='order' />
 					<span>ORDER HISTORY</span>
 				</li>
-				<li>
-					<img src={delivery} alt="delivery" />
+				<li onClick={handleNavigateDeliveryAddress}>
+					<img src={delivery} alt='delivery' />
 					<span>DELIVERY ADDRESS</span>
 				</li>
 				<li>
-					<img src={settins} alt="settins" />
+					<img src={settins} alt='settins' />
 					<span>SETTINGS</span>
 				</li>
 				<li>
-					<img src={logout} alt="logout" />
+					<img src={logout} alt='logout' />
 					<span>LOG OUT</span>
 				</li>
 			</ul>

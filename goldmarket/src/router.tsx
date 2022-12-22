@@ -10,6 +10,10 @@ import Redirect from 'src/components/redirect/redirect';
 import { SingleProduct } from './components/product/singleProduct';
 import AddProduct from './components/product/AddProduct';
 import OrderHistoryList from './components/centers/buyerAdmin/orderHistoryList';
+import EditProduct from './components/product/editProduct';
+import DeliveryAddressList from './components/centers/buyerAdmin/deliveryAddressList';
+import DashboardList from './components/centers/buyerAdmin/dashboardList';
+import OrderInfo from './components/centers/buyerAdmin/orderInfo';
 
 const router = createBrowserRouter([{
 	path: '/',
@@ -53,14 +57,26 @@ const router = createBrowserRouter([{
 	path: '/orderhistory',
 	element: <OrderHistoryList />
 }, {
+	path: '/deliveryaddress',
+	element: <DeliveryAddressList />
+}, {
+	path: '/dashboard',
+	element: <DashboardList />
+}, {
+	path: '/orderinfo',
+	element: <OrderInfo />
+}, {
 	path: '*',
 	element: <NotFoundPage />
-},{
+}, {
 	path: '/products/:id',
 	element: <SingleProduct />
-},{
+}, {
 	path: '/products/addproduct',
 	element: <AddProduct />
+},{
+	path: '/product/:id/editproduct',
+	element: <EditProduct />
 }
 ]);
 

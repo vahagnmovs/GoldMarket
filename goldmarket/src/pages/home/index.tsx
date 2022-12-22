@@ -26,12 +26,11 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
-
 				{/*<ProductPage/>*/}
 				{/*<AddProduct />*/}
-				<SignUp/>
+				{/*<SignUp/>*/}
 				<PriceList />
-				<Video/>
+				<Video />
 				<SwitchComponent />
 				<NewCollection />
 				<SellWithUs />
@@ -40,7 +39,6 @@ const Home = () => {
 				<MostViewed />
 				<WhyGoldCenter />
 				<AboutUs />
-				{/* <Dashboard/> */}
 			</>
 		</Layout>
 	);

@@ -2,7 +2,7 @@ import React from 'react';
 import Dashboard from '../dashboard';
 import OrderHistory from '../orderHistory';
 import './style.css';
-
+// FIXME: hanel datan erb irakan datan unenanq
 const data = [{
 	id: Math.random(),
 	nam2: 'name',
@@ -28,14 +28,14 @@ const data = [{
 const OrderHistoryList = () => {
 	return (
 		<div>
-			<Dashboard/>
+			<Dashboard title={'Order history'} />
 			<table className='table'>
 				<tr>
-					<th>ORDER DATE & TIME</th>
-					<th>ORDER NUMBER</th>
-					<th>SOLD BY</th>
-					<th>ORDER TOTAL</th>
-					<th>ACTION</th>
+					<td>ORDER DATE & TIME</td>
+					<td>ORDER NUMBER</td>
+					<td>SOLD BY</td>
+					<td>ORDER TOTAL</td>
+					<td>ACTION</td>
 				</tr>
 				{data.map(item => <OrderHistory key={item.id} {...item} />)}
 			</table>
