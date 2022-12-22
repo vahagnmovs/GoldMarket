@@ -16,12 +16,15 @@ const Dashboard = () => {
 	const handleNavigateDeliveryAddress = () => {
 		navigate('/deliveryaddress');
 	};
+	const handleNavigateDashboard = () => {
+		navigate('/dashboard');
+	};
 	return (
 		<div>
 			<h2>Dashboard</h2>
 			<ul className='ul'>
 				<li>MY ACCOUNT</li>
-				<li>
+				<li onClick={handleNavigateDashboard}>
 					<img src={dashboard} alt='dashboard' />
 					<span>DASHBOARD</span>
 				</li>

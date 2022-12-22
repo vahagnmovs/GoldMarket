@@ -28,7 +28,7 @@ const data = [{
 const OrderHistoryList = () => {
 	return (
 		<div>
-			<Dashboard/>
+			<Dashboard />
 			<table className='table'>
 				<tr>
 					<th>ORDER DATE & TIME</th>
