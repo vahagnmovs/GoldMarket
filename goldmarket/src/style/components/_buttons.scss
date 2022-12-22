@@ -1,3 +1,25 @@
+.show_more_btn {
+  height: 40px;
+  color: #1D3865;
+  border: 1px solid #1D3865;
+  border-radius: 2px;
+  text-align: center;
+  background-color: transparent;
+  font-size: 14px;
+  display: block;
+  height: 50px;
+
+  &:hover{
+    background-color: #1D3865;
+    color: gold;
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 // .btn {
 // 	background: none;
 // 	border: none;
