@@ -32,7 +32,7 @@ const data = [{
 const DeliveryAddressList = () => {
 	return (
 		<div>
-			<Dashboard />
+			<Dashboard title={'Delivery Address'}/>
 			{data.map(item => <DeliveryAddress radio={'radio'} key={item.id} {...item} />)}
 		</div>
 	);

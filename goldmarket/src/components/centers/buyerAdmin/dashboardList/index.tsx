@@ -5,7 +5,7 @@ import Dashboard from '../dashboard';
 const DashboardList = () => {
 	return (
 		<div>
-			<Dashboard/>
+			<Dashboard title={'Dashboard'}/>
 			<GoldPriceList isShowMoreBtn={true} />
 		</div>
 	);

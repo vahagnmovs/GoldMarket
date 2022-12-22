@@ -6,9 +6,11 @@ import delivery from 'src/style/Icons/delivery.svg';
 import logout from 'src/style/Icons/logout.svg';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
+type TDashboard = {
+	title: string
+}
 
-
-const Dashboard = () => {
+const Dashboard = ({ title }: TDashboard) => {
 	const navigate = useNavigate();
 	const handleNavigateOrderHistory = () => {
 		navigate('/orderhistory');
@@ -21,7 +23,7 @@ const Dashboard = () => {
 	};
 	return (
 		<div>
-			<h2>Dashboard</h2>
+			<h2>{title}</h2>
 			<ul className='ul'>
 				<li>MY ACCOUNT</li>
 				<li onClick={handleNavigateDashboard}>

@@ -8,6 +8,7 @@ type TOrderHistory = {
 }
 
 const OrderHistory = ({ id, nam2, nam3, nam4 }: TOrderHistory) => {
+	// FIXME: irakan OrderHistory anunner@  dnel
 	return (
 		<tr>
 			<td>{id}</td>

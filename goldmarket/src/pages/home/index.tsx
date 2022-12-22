@@ -39,7 +39,7 @@ const Home = () => {
 				<MostViewed />
 				<WhyGoldCenter />
 				<AboutUs />
-				<Dashboard />
+				<Dashboard title={'Dashboard'} />
 			</>
 		</Layout>
 	);
