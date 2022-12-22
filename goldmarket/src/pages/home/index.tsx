@@ -16,6 +16,7 @@ import WhyGoldCenter from '../../components/information/whyGoldCenterBanner';
 import Video from '../../components/header/video';
 import Dashboard from 'src/components/centers/dashboard';
 import ProductPage from '../../components/productPage';
+import AddProduct from 'src/components/product/AddProduct';
 
 const Home = () => {
 	return (

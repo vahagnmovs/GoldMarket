@@ -5,6 +5,7 @@ export type PriceTypes = {
 }
 
 export type DiamondTypes = {
+	selectStone: string,
     carat: number,
     pcs: number,
     color: string,
@@ -55,6 +56,7 @@ const products: ProductsTypes[] = [
 		weight: [5, 5.5, 6, 6.5, 7.5, 8, 8.5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone',
 			carat: 0.2,
 			pcs: 5,
 			color: 'H',
@@ -92,6 +94,7 @@ const products: ProductsTypes[] = [
 		weight: [3, 3.5, 4, 4.5, 5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone2',
 			carat: 0.08,
 			pcs: 20,
 			color: 'J',
@@ -129,6 +132,7 @@ const products: ProductsTypes[] = [
 		weight: [5, 5.5, 6, 6.5, 7.5, 8, 8.5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone3',
 			carat: 0.2,
 			pcs: 5,
 			color: 'H',
@@ -166,6 +170,7 @@ const products: ProductsTypes[] = [
 		weight: [3, 3.5, 4, 4.5, 5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone4',
 			carat: 0.08,
 			pcs: 20,
 			color: 'J',
@@ -203,6 +208,7 @@ const products: ProductsTypes[] = [
 		weight: [5, 5.5, 6, 6.5, 7.5, 8, 8.5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone5',
 			carat: 0.2,
 			pcs: 5,
 			color: 'H',
@@ -240,6 +246,7 @@ const products: ProductsTypes[] = [
 		weight: [3, 3.5, 4, 4.5, 5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone6',
 			carat: 0.08,
 			pcs: 20,
 			color: 'J',
@@ -277,6 +284,7 @@ const products: ProductsTypes[] = [
 		weight: [5, 5.5, 6, 6.5, 7.5, 8, 8.5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone7',
 			carat: 0.2,
 			pcs: 5,
 			color: 'H',
@@ -314,6 +322,7 @@ const products: ProductsTypes[] = [
 		weight: [3, 3.5, 4, 4.5, 5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone8',
 			carat: 0.08,
 			pcs: 20,
 			color: 'J',
@@ -351,6 +360,7 @@ const products: ProductsTypes[] = [
 		weight: [5, 5.5, 6, 6.5, 7.5, 8, 8.5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone9',
 			carat: 0.2,
 			pcs: 5,
 			color: 'H',
@@ -388,6 +398,7 @@ const products: ProductsTypes[] = [
 		weight: [3, 3.5, 4, 4.5, 5],
 		stone: true,
 		diamond: {
+			selectStone: 'selectStone10',
 			carat: 0.08,
 			pcs: 20,
 			color: 'J',

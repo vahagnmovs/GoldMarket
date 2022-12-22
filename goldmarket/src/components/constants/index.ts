@@ -1,3 +1,39 @@
+type TInitialState = {
+	ID: string | number 
+	NAME: string
+	SELLERID: string | number
+	DESCRIPTION: string
+	METAL: string
+	FORWHOM: string
+	COLLECTION: string
+	FINENESS: string
+	COLOR: string
+	PUBLISH: boolean | undefined,
+	WIEGHT: number[] | string[] 
+	SIZE:  number[] | string[]
+	COUNT: string 
+	DISCOUNT: string
+	DIMOND: TInitialDimonds,
+	PRICES: TInitialPrice,
+	CODE: string,
+	//FIXME: image componenti ts -y dzel 
+	IMAGES: any, 
+}
+
+type TInitialDimonds = {
+	SELECTSTONE: boolean | undefined;
+	CARAT: string;
+	DIMONDCOLOR: string;
+	CLARITY: string;
+	CUT: string;
+	PCS: string;
+};
+
+type TInitialPrice = {
+	PRICE: string;
+	OLDPRICE: string;
+}
+
 
 export const product = [
 	{   
@@ -37,75 +73,71 @@ export const product = [
 ];
 
 export const filters = {
-
 	nameDescription: [
 		{ NAME: '' },
 		{ DESCRIPTION: '' },
 	],
-
 	firstCategory: [
 		{ METAL: ['gold', 'silver'] },
 		{ FORWHOM: ['women', 'men', 'children'] },
 		{ COLLECTION: ['Bracelets', 'Rings', 'Wdding rings', 'Sets', 'Pendants', 'Earrings', 
 			'Chain', 'Necklaces', 'Engagement Rings', 'Crosses', 'Other'] }
 	],
-
 	productDetals: [
 		{ FINENESS: [333, 375, 416, 585, 750, 875, 900, 916, 958, 999] },
 		{ COLOR: ['yellow', 'white', 'red', 'rose gold'] },
-		{ PUBLISH: ['yes', 'no'] },
-		{ SIZE: [13, 13.5, 14, 14.5, 15, 15.5, 16, 16.5, 17, 17.5, 18] }
 	],
-	WIGHT: '',
-
-	STONE: '',
-	CARAT: '',
-	PCS: '',
-	DIMONDS: [
+	dimonds: [
 		{ DIMONDCOLOR: ['L-Z', 'K', 'J', 'H', 'G', 'F', 'E', 'D'] },
 		{ CLARITY: ['FL', 'F', 'VVST', 'VVS2', 'VS1', 'VS2', 'SI', 'SI2', 'I1', 'I2', 'I3'] },
 		{ CUT: ['ROUND', 'PRINCESS', 'EMERALD', 'CUSHION', 'RADIANT' 
-			,'ASSCHER', 'PEAR', 'OVAL', 'HEART', 'MARQUISE'] }
-
+			,'ASSCHER', 'PEAR', 'OVAL', 'HEART', 'MARQUISE'] },
 	],
-
-	PRICE: '',
-	OLDPRICE: '',
-   
-	CODE: '', 
 };
 
 
-export const initialPrices = { PRICE: '', OLDPRICE: '' };
+export const initialPrices: TInitialPrice = { PRICE: '', OLDPRICE: '' };
 
-export const initialDimonds = {
+
+
+export const initialDimonds: TInitialDimonds = {
+	SELECTSTONE: undefined,
+	CARAT: '',
 	DIMONDCOLOR: '',
 	CLARITY: '',
 	CUT: '',
+	PCS: '',
 };
 
 
-export const initialState = {
+
+
+
+export const initialState: TInitialState = {
+	// FIXME: dzel id
+	ID: Math.random(),  
 	NAME: '',
+	SELLERID: Math.random(),
 	DESCRIPTION: '',
 	METAL: '',
 	FORWHOM: '', 
 	COLLECTION: '',
 	FINENESS: '',
 	COLOR: '',
-	PUBLISH: '',
-	WIGHT: '',
-	SIZE: '',
-	STONE: '',
-	CARAT: '',
-	PCS: '',
-	DIMONDS: initialDimonds,
+	PUBLISH: false,
+	WIEGHT: [2, 3, 4, 5, 6, 7, 8], 
+	SIZE: [5, 6, 7, 8, 9, 10],
+	COUNT: '',  
+	DISCOUNT: '',
+	DIMOND: initialDimonds,
 	PRICES: initialPrices,
 	CODE: '', 
 	IMAGES: []
 };
 
 
+export const weightListData = [2, 3, 4, 5, 6, 7, 8];
+export const sizeListData = [5, 6, 7, 8, 9, 10];
 
 
 
