@@ -9,13 +9,13 @@ import Index from 'src/components/recommendedSeleres';
 import SwitchComponent from 'src/components/centers/switchComponents';
 import BestSales from 'src/components/bestSales';
 import MostViewed from 'src/components/mostViewed';
-import AboutUs from '../../components/information/aboutUs';
+import AboutUs from 'src/components/information/aboutUs';
 import NewCollection from 'src/components/newCollections';
-import SellWithUs from '../../components/information/sellWithUsBanner';
-import WhyGoldCenter from '../../components/information/whyGoldCenterBanner';
-import Video from '../../components/header/video';
-import Dashboard from 'src/components/centers/dashboard';
-import ProductPage from '../../components/productPage';
+import SellWithUs from 'src/components/information/sellWithUsBanner';
+import WhyGoldCenter from 'src/components/information/whyGoldCenterBanner';
+import Video from 'src/components/header/video';
+import Dashboard from 'src/components/centers/buyerAdmin/dashboard';
+import ProductPage from 'src/components/productPage';
 
 const Home = () => {
 	return (
@@ -38,7 +38,7 @@ const Home = () => {
 				<MostViewed />
 				<WhyGoldCenter />
 				<AboutUs />
-				<Dashboard/>
+				{/* <Dashboard/> */}
 			</>
 		</Layout>
 	);
