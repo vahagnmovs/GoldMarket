@@ -18,6 +18,7 @@ import Dashboard from 'src/components/centers/dashboard';
 import ProductPage from '../../components/productPage';
 import AddProduct from 'src/components/product/AddProduct';
 
+
 const Home = () => {
 	return (
 		<Layout
