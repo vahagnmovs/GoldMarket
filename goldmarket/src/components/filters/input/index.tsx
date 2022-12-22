@@ -22,7 +22,7 @@ const InputArrays = ({title, data, getInput}: TInputTypes) => {
             {
                 hoverFlag &&
                 // @ts-ignore
-                data.map(el => <div>
+                data.map(el => <div key={el}>
                     <input type="checkbox" id={el} onChange={(e) => handleChecked(e, el)}/>
                     <label htmlFor={el}>{el}</label>
                 </div>)

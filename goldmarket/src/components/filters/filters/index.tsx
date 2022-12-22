@@ -1,19 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import RangeInput from "../rangeInputs";
-import {products, ProductsTypes} from "src/data/products";
-export {globalFilters} from 'src/data/index'
-import ProductBadge from "../productBadge";
-import InputArrays from "../input";
-import InputBooleans from "../inputBooleans";
+import RangeInput from '../rangeInputs';
+import {products, ProductsTypes} from 'src/data/products';
+import ProductBadge from 'src/components/productBadge';
+import InputArrays from '../input';
+import InputBooleans from '../inputBooleans';
 import './index.css';
 import { globalFilters } from 'src/data';
+import {THandleFilters} from "src/pages/products";
 
 type TMinMaxTypes = {
     min: string | number,
     max: string | number
 }
 
-type TFiltersTypes = {
+export type TFiltersTypes = {
     priceRanges: TMinMaxTypes,
     metal: string[],
     forWhom: string[],
@@ -26,9 +26,8 @@ type TFiltersTypes = {
     color: string[],
 }
 
-const Filters = () => {
-    const [filteredProducts, setFilteredProducts] = useState<ProductsTypes[]>([])
-    const [filters, setFilters] = useState<TFiltersTypes>({
+const Filters = ({handleFilters}: THandleFilters) => {
+    const [myFilters, setMyFilters] = useState<TFiltersTypes>({
         priceRanges: {
             min: '',
             max: ''
@@ -46,115 +45,11 @@ const Filters = () => {
         fineness: [],
         color: [],
     })
-    const [settings, setSettings] = useState([]);
 
     useEffect(() => {
-        const filteredAllProducts = products.filter(product => {
-            const currentPrice = product.prices.currentPrice;
-            if (filters.priceRanges.min) {
-                if (filters.priceRanges.min > currentPrice) {
-                    return false;
-                }
-            }
+        handleFilters(myFilters)
+    }, [myFilters])
 
-            if (filters.priceRanges.max) {
-                if (filters.priceRanges.max < currentPrice) {
-                    return false;
-                }
-            }
-
-            const currentWeights = [];
-            const productWeights = product.weight;
-            if (filters.weightRanges.min) {
-                productWeights.forEach(currentWeight => {
-                    if (filters.weightRanges.min < currentWeight) {
-                        currentWeights.push(currentWeight)
-                    }
-                })
-                if (!currentWeights.length) {
-                    return false;
-                }
-            }
-
-            if (filters.weightRanges.max) {
-                productWeights.forEach(currentWeight => {
-                    if (filters.weightRanges.max > currentWeight) {
-                        currentWeights.push(currentWeight)
-                    }
-                })
-                if (!currentWeights.length) {
-                    return false;
-                }
-            }
-
-            if (filters.size.length) {
-                const currentSizes = [];
-                product.size.forEach(currentSize => {
-                    if (filters.size.includes(currentSize)) {
-                        currentSizes.push(currentSize)
-                    }
-                })
-                if(!currentSizes.length) {
-                    return false;
-                }
-            }
-
-            if (filters.fineness.length) {
-                const currentFinenesses = [];
-                product.fineness.forEach(currentFineness => {
-                    if (filters.fineness.includes(currentFineness)) {
-                        currentFinenesses.push(currentFineness)
-                    }
-                })
-                if(!currentFinenesses.length) {
-                    return false;
-                }
-            }
-
-            if (filters.metal.length) {
-                if (!filters.metal.includes(product.metal)) {
-                    return false;
-                }
-            }
-
-            if (filters.forWhom.length) {
-                if (!filters.forWhom.includes(product.forWhom)) {
-                    return false;
-                }
-            }
-
-            if (filters.color.length) {
-                if (!filters.color.includes(product.color)) {
-                    return false;
-                }
-            }
-
-            if (filters.type.length) {
-                if (!filters.type.includes(product.type)) {
-                    return false;
-                }
-            }
-
-            if (filters.stone) {
-                if (!product.stone) {
-                    return false;
-                }
-            }
-
-            if (filters.certificate) {
-                if (!product.certificate) {
-                    return false;
-                }
-            }
-
-            return product;
-        })
-        setFilteredProducts(filteredAllProducts)
-    }, [filters])
-
-    useEffect(() => {
-        setFilteredProducts(products)
-    }, [])
 
     const [show, setShow] = useState(false)
     const showFilName = !show ? ' +  SHOW ALL FILTERS' : ' x  HIDE FILTERS'
@@ -163,8 +58,8 @@ const Filters = () => {
     }
 
     const getRanges = (min: string, max: string, name: string): void => {
-        setFilters({
-            ...filters, [ name ]: {
+        setMyFilters({
+            ...myFilters, [ name ]: {
                 min, max
             }
         })
@@ -173,33 +68,30 @@ const Filters = () => {
     const getInputArrays = (value: boolean, title: string, name: string) => {
         if (value) {
             // @ts-ignore
-            const myTitle = [...filters[ title ]]
-            setFilters({
-                ...filters,
+            const myTitle = [...myFilters[ title ]]
+            setMyFilters({
+                ...myFilters,
                 [ title ]: [...myTitle, name]
             })
-            // @ts-ignore
-            setSettings(prev => [...prev, name])
         } else {
             // @ts-ignore
-            const myTitle = [...filters[ title ]]
-            setFilters({
-                ...filters,
+            const myTitle = [...myFilters[ title ]]
+            setMyFilters({
+                ...myFilters,
                 [ title ]: [...myTitle].filter(el => el !== name)
             })
-            setSettings(prev => prev.filter(el => el !== name))
         }
     }
 
     const getInputRadio = (id: string, title: string) => {
         if (id === 'yes') {
-            setFilters({
-                ...filters,
+            setMyFilters({
+                ...myFilters,
                 [ title ]: true
             })
         } else if (id === 'no') {
-            setFilters({
-                ...filters,
+            setMyFilters({
+                ...myFilters,
                 [ title ]: false
             })
         }
@@ -232,19 +124,7 @@ const Filters = () => {
                 {/*@ts-ignore*/}
                 <button onClick={() => window.location.reload(false)}>Clear filters</button>
             </div>
-            <div className="bg_grey">
-                <div className="container">
-                    <div className="collection flex dir-col">
-                        <div className="badge_collection flex flex-wrap">
-                            {
-                                filteredProducts.length
-                                    ? filteredProducts.map(product => <ProductBadge {...product}/>)
-                                    : "No products found, please change filters"
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     )
 }
