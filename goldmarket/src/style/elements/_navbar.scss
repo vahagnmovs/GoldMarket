@@ -29,8 +29,8 @@
 }
 
   .searching-icon {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
 }
 
 .switch {
@@ -54,9 +54,10 @@
       color: black;
 
       &:hover {
-        background-color: gold;
-        border-radius: 5px;
-        color: #FFFFFF;
+
+          background-color: #1D3865;
+          color: gold;
+
       }
 
     }
@@ -91,7 +92,10 @@
   }
 }
 
-
+.search_fon{
+  background-color:gray;
+  opacity: 2%;
+}
   .search_modal_open{
     padding: 30px;
     background-color: #F7F7F7;
@@ -112,6 +116,11 @@
     }
     button{
       left: -100px;
+      border-radius: 2px;
+      &:hover {
+        background-color: #1D3865;
+        color: gold;
+      }
     }
     span{
 
@@ -129,7 +138,9 @@
   }
 
 
-
+.search_close{
+  gap:10px
+}
 
 
 
