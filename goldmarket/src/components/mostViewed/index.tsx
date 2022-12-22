@@ -5,7 +5,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'src/style/components/_mostViewed.scss';
 
-const MostViewed = () => {
+type TMostViewed = {
+	title?: string
+}
+
+const MostViewed = ({title}:TMostViewed) => {
 	const ref = useRef<any>(null);
 	const handleNextSlide = () => {
 		ref.current.slickNext();
@@ -57,15 +61,12 @@ const MostViewed = () => {
 		<div className={'most'}>
 			<div className={'most_Viewed'}>
 				<div className={'most_Viewed_title text-center justify-between  align-center'}>
-					<h3>Most Viewed</h3>
+					<h3>{title}</h3>
 					<div className={'most_Viewed_button flex'}>
 						<button onClick={handlePrevSlide}>{'<'}</button>
 						<button onClick={handleNextSlide}>{'>'}</button>
 					</div>
 				</div>
-
-
-
 				<Slider ref={ref} {...settings}>
 					{
 						products.map(product =>
