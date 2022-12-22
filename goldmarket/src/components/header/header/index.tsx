@@ -111,9 +111,9 @@ const Header = () => {
 					{/*wishlist*/}
 					<div className={'top_right_content'}>
 						<ul className={'flex align-center'}>
-							<WishList />
-							<Login />
-							<Cart />
+							<li><WishList /></li>
+							<li><Login /></li>
+							<li><Cart /></li>
 						</ul>
 					</div>
 

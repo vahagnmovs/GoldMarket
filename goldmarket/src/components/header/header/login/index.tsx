@@ -14,14 +14,14 @@ const Login = () => {
 						<h1 className={'logo'}>LOGIN</h1>
 						<div>
 							<div className='group'>
-								<input type='text' required/>
+								<input type='text' required />
 								<span className='highlight'></span>
 								<span className='bar'></span>
 								<label>Name</label>
 							</div>
 
 							<div className='group'>
-								<input type='text' required/>
+								<input type='text' required />
 								<span className='highlight'></span>
 								<span className='bar'></span>
 								<label>Email</label>
