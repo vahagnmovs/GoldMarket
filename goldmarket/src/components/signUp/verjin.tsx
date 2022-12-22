@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import {useAppDispatch} from '../../hooks/redux-hooks';
-import {useFormik} from 'formik';
+import React, { useState } from 'react';
+import { useAppDispatch } from '../../hooks/redux-hooks';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
@@ -10,7 +10,6 @@ const Verjin = () => {
 	const dispatch = useAppDispatch();
 
 	const [isBuyer, setIsBuyer] = useState(true);
-
 
 	const formik = useFormik({
 		initialValues: {

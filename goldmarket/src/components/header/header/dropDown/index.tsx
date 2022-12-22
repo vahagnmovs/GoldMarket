@@ -12,7 +12,7 @@ const DropDown = ({ menuOpen, toggleMenu, chosen, state, handleChange }: TDropDo
 				<span>{chosen.value}</span>
 				<img className={'drop_down'} src={menuOpen ? close : open} alt="drop_down" />
 			</div>
-			{ menuOpen && <ul className={'list_dropdown'}>
+			{menuOpen && <ul className={'list_dropdown'}>
 				{state.map(elem => {
 					return (
 						<li className='list_dropdown_items flex justify-between' onClick={() => handleChange(elem)} key={elem.id}>
@@ -21,7 +21,7 @@ const DropDown = ({ menuOpen, toggleMenu, chosen, state, handleChange }: TDropDo
 								<span>{elem.value}</span>
 							</div>
 							{
-								elem.id === chosen.id && <img className={'icon_select'} src={select} alt="chosen"/>
+								elem.id === chosen.id && <img className={'icon_select'} src={select} alt="chosen" />
 							}
 						</li>
 					);

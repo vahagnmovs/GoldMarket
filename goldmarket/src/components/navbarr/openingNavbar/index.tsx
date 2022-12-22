@@ -13,7 +13,7 @@ function SearchCategory({ title }: TSearchCategoryProps) {
 				mouse
 					?
 					<div>
-						<div  className={'flex justify-between align-center'} onMouseLeave={() => setMouse(false)}>
+						<div className={'flex justify-between align-center'} onMouseLeave={() => setMouse(false)}>
 							<span>{title}</span>
 							<img className={'GOLD'} src={close} alt="" />
 						</div>
@@ -62,7 +62,7 @@ function SearchCategory({ title }: TSearchCategoryProps) {
 						</div>
 					</div>
 					:
-					<div  className={'flex justify-between align-center'}
+					<div className={'flex justify-between align-center'}
 						onMouseEnter={() => setMouse(true)}
 					>
 						<span >{title}</span>

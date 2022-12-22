@@ -1,25 +1,12 @@
 
 .product_button {
-  .buttonSowMor {
-    button {
-      width: 183px;
-      height: 40px;
-      background: none;
-      border: 1px solid #1D3865;
-      color:  #1D3865;
-      border-radius: 2px;
-      &:hover {
-        background-color: #1D3865;
-        color: gold;
-        border: 1px solid gold;
-      }
-    }
-
+  .show_more_btn {
+    width: 183px;
+  }
     img {
       width: 20px;
       height: 20px;
     }
-  }
 }
 
 .product {
@@ -33,18 +20,12 @@
     }
     button{
       border: 1px solid white;
+        background-color: transparent;
 
       &:hover {
-        //background-color: #1D3865;
         color: gold;
-        border: 1px solid gold;
-      }
-      span {
-        //color: #1D3865
       }
     }
-
-
 
     img {
       width: 23px;
@@ -67,13 +48,11 @@
 
 
 //button svitch change  centry
-
 .switch_content {
   gap: 30px;
   text-align: center;
   padding-bottom: 60px;
   font-size: 32px;
-
 
   .red {
     color: #CCA653;
@@ -85,7 +64,7 @@
   }
 
   .label {
-    width: 45.5px;
+    width: 45px;
     height: 20px;
     background-color: #1D3865;
     display: flex;
@@ -97,10 +76,6 @@
     transform: scale(1.5);
   }
 
-  .label:checked{
-    background-color:  #CCA653;
-  }
-
   .ball {
     width: 15px;
     left: 3px;
@@ -108,28 +83,14 @@
     background-color: white;
     position: absolute;
     border-radius: 50%;
+    top: calc((100% - 15px) / 2);
     transition: transform 0.2s linear;
-
   }
-
-
 
   /*  target the elemenent after the label*/
   .checkbox:checked + .label .ball {
     transform: translateX(24px);
   }
-
-  input:checked + label + .background {
-    background: #242424;
-  }
-  .fa-sun{
-    background-color: #CCA653;
-  }
-
-  .fa-moon {
-    color: #CCA653;
-  }
-
 }
 
 
