@@ -10,6 +10,7 @@ import Redirect from 'src/components/redirect/redirect';
 import { SingleProduct } from './components/product/singleProduct';
 import AddProduct from './components/product/AddProduct';
 import OrderHistoryList from './components/centers/buyerAdmin/orderHistoryList';
+import EditProduct from './components/product/editProduct';
 
 const router = createBrowserRouter([{
 	path: '/',
@@ -61,6 +62,9 @@ const router = createBrowserRouter([{
 },{
 	path: '/products/addproduct',
 	element: <AddProduct />
+},{
+	path: '/product/:id/editproduct',
+	element: <EditProduct />
 }
 ]);
 

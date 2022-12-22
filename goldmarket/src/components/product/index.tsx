@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { product } from 'src/components/constants';
 import  ProductItem from './product_item';
 
+import './css/style.css'
+
 const Products: React.FC = () => {
 
 	const navigate = useNavigate();
