@@ -1,23 +1,34 @@
 import React, {useState} from 'react';
-import Buyer from './buyer';
-import Seller from './seller';
-
+import user from 'src/style/Icons/user.png';
 
 const Login = () => {
+
+	const [isOpenLogInModal, setIsOpenLogInModal] = useState(false);
+
 	return (
 		<div>
-			<h3>LOGIN</h3>
-			<div>
-				<input type="email" defaultValue={'E-MAIL'}/>
-				<input type="password" defaultValue={'PASSWORD'}/>
-				<button>LOGIN</button>
-			</div>
-			<p>FORGOT YOUR PASSWORD </p>
-			<p>NEW CUSTOMER?</p>
-			<div>
-				<h3>START NEW</h3>
-				<button>REGISTRATION</button>
-			</div>
+			{
+				isOpenLogInModal
+					?
+					<div>
+						<h3>LOGIN</h3>
+						<span>X</span>
+						<div>
+							<input type='email' placeholder={'E-MAIL'}/>
+							<input type='password' placeholder={'PASSWORD'}/>
+							<button>LOGIN</button>
+						</div>
+						<span>FORGOT YOUR PASSWORD?</span>
+						<span>NEW CUSTOMER? </span>
+						<h3>Start Now</h3>
+						<button>REGISTRATION</button>
+					</div>
+					:
+					<li onClick={() => setIsOpenLogInModal(true)} className={'login_content flex align-center'}>
+						<span>LOGIN</span>
+						<img className={'user_icon'} src={user} alt='user_icon'/>
+					</li>
+			}
 		</div>
 	);
 };

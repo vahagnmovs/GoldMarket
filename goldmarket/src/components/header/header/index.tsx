@@ -1,13 +1,14 @@
 import React, {useCallback, useState} from 'react';
 import logo from 'src/style/Icons/site_logo.png';
-import heart from 'src/style/Icons/heart.png';
-import user from 'src/style/Icons/user.png';
-import basket from 'src/style/Icons/basket.png';
 import DropDown from 'src/components/header/header/dropDown';
 import {TData} from 'src/components/header/header/types';
 import dollar from 'src/style/Icons/dollar.png';
 import ruble from 'src/style/Icons/ruble.png';
 import dram from 'src/style/Icons/dram.png';
+import {useNavigate} from 'react-router-dom';
+import WishList from './wishList';
+import Cart from './cart';
+import Login from './login';
 
 const flags: TData[] = [
 	{
@@ -47,6 +48,7 @@ const currency: TData[] = [
 
 const Header = () => {
 
+	const navigate = useNavigate();
 	const [flagState, setFlagState] = useState(flags);
 	const [chosenFlag, setChosenFlag] = useState(flags[0]);
 	const [flagMenuOpen, setFlagMenuOpen] = useState(false);
@@ -103,26 +105,15 @@ const Header = () => {
 
 					{/*site_logo*/}
 					<div>
-						<img className={'site_logo'} src={logo} alt={'site_logo'}/>
+						<img onClick={() => navigate('/')} className={'site_logo'} src={logo} alt={'site_logo'}/>
 					</div>
 
 					{/*wishlist*/}
 					<div className={'top_right_content'}>
 						<ul className={'flex align-center'}>
-							<li className={'wishlist_content flex align-center'}>
-								<span>WISHLIST</span>
-								<img className={'icon_favorite'} src={heart} alt="icon_favorite"/>
-								<span>(0)</span>
-							</li>
-							<li className={'login_content flex align-center'}>
-								<span>LOGIN</span>
-								<img className={'user_icon'} src={user} alt="user_icon"/>
-							</li>
-							<li className={'cart_content flex align-center'}>
-								<span>CART</span>
-								<img className={'icon_card'} src={basket} alt="icon_card"/>
-								<span>(0)</span>
-							</li>
+							<WishList/>
+							<Login/>
+							<Cart/>
 						</ul>
 					</div>
 
