@@ -1,32 +1,21 @@
 import React from 'react';
 
-const Buyer = () => {
+const LogInBuyer = () => {
 	return (
 		<div>
-			<h3>Description</h3>
-			<span>With Goldcenter.am account, you can save time during checkout, access your shopping bag from any device and view your order history.</span>
+			<h3>LOGIN</h3>
+			<span>X</span>
 			<div>
-				<input type="text" placeholder={'FIRST NAME'}/>
-				<input type="text" placeholder={'LAST NAME'}/>
-				<input type="emails" placeholder={'EMAIL'}/>
-				<input type="number" placeholder={'PHONE NUMBER'}/>
+				<input type="email" placeholder={'E-MAIL'}/>
 				<input type="password" placeholder={'PASSWORD'}/>
-				<input type="password" placeholder={'CONFIRM PASSWORD'}/>
-				<div>
-					<label>
-						<input type="radio" name={'a'}/>
-						MANUFACTURER
-					</label>
-					<label>
-						<input type="radio" name={'a'}/>
-						SERVICE
-					</label>
-				</div>
-				<button>SING IN</button>
+				<button>LOGIN</button>
 			</div>
-			<span>HAVE AN ACCOUNT? LOGIN</span>
+			<span>FORGOT YOUR PASSWORD?</span>
+			<span>NEW CUSTOMER? </span>
+			<h3>Start Now</h3>
+			<button>REGISTRATION</button>
 		</div>
 	);
 };
 
-export default Buyer;
+export default LogInBuyer;
