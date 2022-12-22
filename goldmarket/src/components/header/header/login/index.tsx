@@ -11,33 +11,31 @@ const Login = () => {
 				isOpenLogInModal
 					?
 					<form className={'box'}>
-						<h1 className={'logo'}>LOGIN</h1>
+						<h3 className={'logo'}>LOGIN</h3>
 						<div>
 							<div className='group'>
 								<input type='text' required />
 								<span className='highlight'></span>
 								<span className='bar'></span>
-								<label>Name</label>
+								<label>e-mail</label>
 							</div>
 
 							<div className='group'>
 								<input type='text' required />
 								<span className='highlight'></span>
 								<span className='bar'></span>
-								<label>Email</label>
+								<label>Password</label>
 							</div>
-							<button className='button-65'>Submit</button>
+							<button className='button-65'>Login</button>
 
-							<p>Forgot your password?</p>
+							<span className='forgot_password'>Forgot your password?</span>
 
 							<div className="separator">New customer?</div>
 
-							<h2>Start Now</h2>
-							<button className='button_2 button-65'>REGISTRATION</button>
+							<h3>Start Now</h3>
+							<button className='button_2 btn_registration'>REGISTRATION</button>
 						</div>
 					</form>
-
-
 					:
 					<li onClick={() => setIsOpenLogInModal(true)} className={'login_content flex align-center'}>
 						<span>LOGIN</span>
