@@ -7,12 +7,14 @@ import Creator from './Creator';
 import PublishSelecStoneBollean from './PublishSelecStoneBollean';
 import WeightSizeCratorValue from './WeightSizeCratorValue';
 
+import { useAppDispatch } from 'src/hooks/redux-hooks';
+import { addProduct } from 'src/store/products/productSlice';
+
 export type TWeight = {
 	name: { key: number[] | string[]} | {}
 }
-
+ 
 const AddProduct: React.FC = () => {
-
 
 	const [formData, setFormData] = useState(initialState);
 
@@ -28,6 +30,8 @@ const AddProduct: React.FC = () => {
 	
 	const [showSlice, setShowSlice] = useState(false);
 
+
+	const dispatch = useAppDispatch();
 
 
 	useEffect(() => {
@@ -113,7 +117,7 @@ const AddProduct: React.FC = () => {
 
 
 	const handleSave = () => {
-		console.log(formData, 'formData');
+		dispatch(addProduct(formData));
 	};
 
 	return (
@@ -152,7 +156,7 @@ const AddProduct: React.FC = () => {
  
  			<AddImages handleImgSrces={handleImgSrces} />
 
-			<button disabled={disAdd} onClick={handleSave}>save product</button>
+			<button disabled={false} onClick={handleSave}>save product</button>
 		</div>
 	);
 };
