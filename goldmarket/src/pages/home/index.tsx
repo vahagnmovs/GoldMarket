@@ -14,7 +14,7 @@ import NewCollection from 'src/components/newCollections';
 import SellWithUs from '../../components/information/sellWithUsBanner';
 import WhyGoldCenter from '../../components/information/whyGoldCenterBanner';
 import Video from '../../components/header/video';
-import Dashboard from 'src/components/centers/dashboard';
+import Dashboard from 'src/components/centers/buyerAdmin/dashboard';
 import ProductPage from '../../components/productPage';
 import AddProduct from 'src/components/product/AddProduct';
 
@@ -39,7 +39,7 @@ const Home = () => {
 				<MostViewed />
 				<WhyGoldCenter />
 				<AboutUs />
-				{/* <Dashboard/> */}
+				<Dashboard/>
 			</>
 		</Layout>
 	);

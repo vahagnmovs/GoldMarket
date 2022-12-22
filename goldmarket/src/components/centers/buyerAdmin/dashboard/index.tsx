@@ -1,5 +1,4 @@
 import React from 'react';
-import GoldPriceList from 'src/components/header/priceList/goldPriceList';
 import settins from 'src/style/Icons/settins.svg';
 import dashboard from 'src/style/Icons/dashboard.svg';
 import order from 'src/style/Icons/order.svg';
@@ -11,32 +10,35 @@ import { useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
 	const navigate = useNavigate();
-	const handleNavigate = () => {
+	const handleNavigateOrderHistory = () => {
 		navigate('/orderhistory');
+	};
+	const handleNavigateDeliveryAddress = () => {
+		navigate('/deliveryaddress');
 	};
 	return (
 		<div>
 			<h2>Dashboard</h2>
-			<ul className="ul">
+			<ul className='ul'>
 				<li>MY ACCOUNT</li>
 				<li>
-					<img src={dashboard} alt="dashboard" />
+					<img src={dashboard} alt='dashboard' />
 					<span>DASHBOARD</span>
 				</li>
-				<li onClick={handleNavigate}>
-					<img src={order} alt="order" />
+				<li onClick={handleNavigateOrderHistory}>
+					<img src={order} alt='order' />
 					<span>ORDER HISTORY</span>
 				</li>
-				<li>
-					<img src={delivery} alt="delivery" />
+				<li onClick={handleNavigateDeliveryAddress}>
+					<img src={delivery} alt='delivery' />
 					<span>DELIVERY ADDRESS</span>
 				</li>
 				<li>
-					<img src={settins} alt="settins" />
+					<img src={settins} alt='settins' />
 					<span>SETTINGS</span>
 				</li>
 				<li>
-					<img src={logout} alt="logout" />
+					<img src={logout} alt='logout' />
 					<span>LOG OUT</span>
 				</li>
 			</ul>
