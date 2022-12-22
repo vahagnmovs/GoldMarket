@@ -14,6 +14,7 @@ import EditProduct from './components/product/editProduct';
 import DeliveryAddressList from './components/centers/buyerAdmin/deliveryAddressList';
 import DashboardList from './components/centers/buyerAdmin/dashboardList';
 import OrderInfo from './components/centers/buyerAdmin/orderInfo';
+import ProductPage from "src/pages/products";
 
 const router = createBrowserRouter([{
 	path: '/',
@@ -21,6 +22,9 @@ const router = createBrowserRouter([{
 }, {
 	path: '/home',
 	element: <Home />
+}, {
+	path: '/products',
+	element: <ProductPage />
 },
 //Social link
 {
