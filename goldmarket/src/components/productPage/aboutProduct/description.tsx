@@ -6,7 +6,7 @@ interface  DescriptionProps {
 }
 const Description = ({infoProduct}: DescriptionProps ) => {
 	const {carat, color, clarity, cut, pcs,}:DiamondTypes = infoProduct.diamond;
-	const {name, material, fineness, weight} = infoProduct;
+	const {name, metal, fineness, weight} = infoProduct;
 	return (
 		<div className={'description_page'}>
 			<div className={'description_into'}>
@@ -25,7 +25,7 @@ const Description = ({infoProduct}: DescriptionProps ) => {
 							<td>{name}</td>
 							<td>NEW</td>
 							<td>ARMENIA</td>
-							<td>{material}</td>
+							<td>{metal}</td>
 							<td>{fineness}</td>
 							{/*//FIXME:*/}
 							{/*<th>{weight[indexweight]}</th>*/}
