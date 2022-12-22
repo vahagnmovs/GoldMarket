@@ -1,11 +1,11 @@
-import React, {useCallback, useState} from 'react';
+import React, { useCallback, useState } from 'react';
 import logo from 'src/style/Icons/site_logo.png';
 import DropDown from 'src/components/header/header/dropDown';
-import {TData} from 'src/components/header/header/types';
+import { TData } from 'src/components/header/header/types';
 import dollar from 'src/style/Icons/dollar.png';
 import ruble from 'src/style/Icons/ruble.png';
 import dram from 'src/style/Icons/dram.png';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import WishList from './wishList';
 import Cart from './cart';
 import Login from './login';
@@ -76,7 +76,7 @@ const Header = () => {
 	}, [currencyMenuOpen]);
 
 	return (
-	// container
+		// container
 		<header>
 			<div className={'container_top'}>
 				{/*header*/}
@@ -105,15 +105,15 @@ const Header = () => {
 
 					{/*site_logo*/}
 					<div>
-						<img onClick={() => navigate('/')} className={'site_logo'} src={logo} alt={'site_logo'}/>
+						<img onClick={() => navigate('/')} className={'site_logo'} src={logo} alt={'site_logo'} />
 					</div>
 
 					{/*wishlist*/}
 					<div className={'top_right_content'}>
 						<ul className={'flex align-center'}>
-							<WishList/>
-							<Login/>
-							<Cart/>
+							<WishList />
+							<Login />
+							<Cart />
 						</ul>
 					</div>
 

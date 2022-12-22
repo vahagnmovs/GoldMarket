@@ -6,7 +6,7 @@ import 'src/style/components/_centr_style.scss';
 import DrawMapOrShoppingCenters from 'src/components/centers/maps/drawMapOrShoppingCenter/indec';
 
 type TCategoryAndMapListProps = {
-    data: TDataProps[];
+	data: TDataProps[];
 
 }
 
@@ -24,8 +24,8 @@ const MapList = ({ data }: TCategoryAndMapListProps) => {
 					}{...item} />)
 				}
 			</div>
-			<div className="buttonSowMor flex justify-center text-center">
-				<button
+			<div className="flex justify-center text-center">
+				<button className='show_more_btn'
 					onClick={handleNavigate}>
 					<div className={'flex align-center justify-center'}>
 						<p>SHOW MORE</p>

@@ -6,7 +6,7 @@ import { TDataProps } from 'src/components/centers/types';
 import 'src/style/components/_centr_style.scss';
 
 type TCategoryListProps = {
-    data: TDataProps[];
+	data: TDataProps[];
 
 }
 
@@ -16,7 +16,7 @@ const CategoryList = ({ data }: TCategoryListProps) => {
 		navigate('/collections');
 	};
 	return (
-		<div className={'product_button   justify-center'}>
+		<div className={'product_button justify-center'}>
 			<div className="products flex  flex-wrap justify-between ">
 				{
 					data.map(item => <DrawCategoryOrCollection key={
@@ -24,8 +24,8 @@ const CategoryList = ({ data }: TCategoryListProps) => {
 					}{...item} />)
 				}
 			</div>
-			<div className="buttonSowMor flex  justify-center  ">
-				<button
+			<div className="flex  justify-center  ">
+				<button className='show_more_btn'
 					onClick={handleNavigate}>
 					<div className={'flex align-center justify-center'}>
 						<p>SHOW MORE</p>

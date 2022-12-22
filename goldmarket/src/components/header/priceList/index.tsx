@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import GoldPriceList from './goldPriceList';
 import PhoneNumber from './phoneNumber';
 import 'src/style/base/_globals.scss';
@@ -15,16 +15,15 @@ const PriceList = () => {
 			<div className={'container_price'}>
 				<div className={'container_price2'}>
 					<div className={'Phone'}>
-						<PhoneNumber/>
+						<PhoneNumber />
 					</div>
 					<div >
-						<GoldPriceList isShowMoreBtn={isShowMoreBtn}/>
+						<GoldPriceList isShowMoreBtn={isShowMoreBtn} />
 					</div>
 				</div>
-				<div className={'Show-more text-center'}>
-					<button onClick={toggleShowMoreBtn}>SHOW MORE</button>
+				<div>
+					<button className={'show_more_btn width_100'} onClick={toggleShowMoreBtn}>SHOW MORE</button>
 				</div>
-
 			</div>
 		</div>
 

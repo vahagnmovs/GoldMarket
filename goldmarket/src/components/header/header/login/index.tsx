@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import user from 'src/style/Icons/user.png';
 
 const Login = () => {
@@ -41,7 +41,7 @@ const Login = () => {
 					:
 					<li onClick={() => setIsOpenLogInModal(true)} className={'login_content flex align-center'}>
 						<span>LOGIN</span>
-						<img className={'user_icon'} src={user} alt='user_icon'/>
+						<img className={'user_icon'} src={user} alt='user_icon' />
 					</li>
 			}
 		</div>

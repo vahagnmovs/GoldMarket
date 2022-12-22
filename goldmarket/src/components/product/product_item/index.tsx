@@ -4,18 +4,18 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 
 interface IProductProps {
-    product: {
-        id: number
-        photo: string
-        name: string
-        category: string
-        code: string
-        price: string
-    }
+	product: {
+		id: number
+		photo: string
+		name: string
+		category: string
+		code: string
+		price: string
+	}
 }
 
-const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, category, code, price }}) => {
-    
+const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, category, code, price } }) => {
+
 	const navigate = useNavigate();
 
 	const handleNavigate = () => {
@@ -28,7 +28,7 @@ const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, cate
 	};
 
 
-	return(
+	return (
 		<div className='productItem' onClick={handleNavigate}>
 
 			<div> <img className='productItemPhoto' src={photo} /> </div>
@@ -36,13 +36,13 @@ const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, cate
 			<div> {category} </div>
 			<div> {code} </div>
 			<div> {price} </div>
-           
+
 			<div className='details'>
-				<button onClick={handleEditNavigate}>✓</button>  
-				<button>X</button>  
-				<button> DETAILS </button>  
+				<button onClick={handleEditNavigate}>✓</button>
+				<button>X</button>
+				<button> DETAILS </button>
 			</div>
-           
+
 		</div>
 	);
 };
