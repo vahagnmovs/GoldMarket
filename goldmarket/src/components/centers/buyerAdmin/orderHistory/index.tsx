@@ -8,15 +8,15 @@ type TOrderHistory = {
 }
 
 const OrderHistory = ({ id, nam2, nam3, nam4 }: TOrderHistory) => {
-    return (
-        <tr>
-            <td>{id}</td>
-            <td>{nam2}</td>
-            <td>{nam3}</td>
-            <td>{nam4}</td>
-            <td><button>ivhrinvcr</button></td>
-        </tr>
-    );
+	return (
+		<tr>
+			<td>{id}</td>
+			<td>{nam2}</td>
+			<td>{nam3}</td>
+			<td>{nam4}</td>
+			<td><button>ivhrinvcr</button></td>
+		</tr>
+	);
 };
 
 export default OrderHistory;

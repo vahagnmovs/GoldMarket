@@ -13,9 +13,12 @@ const signUp = () => {
 	};
 
 	return (
-		<div>
-			<span onClick={toggleIsBuyer}>BUYER</span>
-			<span onClick={toggleIsSeller}>SELLER</span>
+		<div className={'sing_up_container'}>
+			<div className={'buyer_seller flex '}>
+				<button onClick={toggleIsBuyer}>BUYER</button>
+				<button onClick={toggleIsSeller}>SELLER</button>
+			</div>
+
 			{
 				isBuyer
 					?
