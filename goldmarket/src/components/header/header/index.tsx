@@ -1,13 +1,14 @@
-import React, { useCallback, useState } from 'react';
-import logo from 'src/style/Icons/logo.png';
+import React, {useCallback, useState} from 'react';
+import logo from 'src/style/Icons/site_logo.png';
 import heart from 'src/style/Icons/heart.png';
 import user from 'src/style/Icons/user.png';
 import basket from 'src/style/Icons/basket.png';
 import DropDown from 'src/components/header/header/dropDown';
-import { TData } from 'src/components/header/header/types';
+import {TData} from 'src/components/header/header/types';
 import dollar from 'src/style/Icons/dollar.png';
 import ruble from 'src/style/Icons/ruble.png';
-import  dram from 'src/style/Icons/dram.png';
+import dram from 'src/style/Icons/dram.png';
+
 const flags: TData[] = [
 	{
 		id: 0,
@@ -51,7 +52,7 @@ const Header = () => {
 	const [flagMenuOpen, setFlagMenuOpen] = useState(false);
 
 	const [currencyState, setCurrencyState] = useState(currency);
-	const [chosenCurrency, setChosenCurrency] =useState(currency[0]);
+	const [chosenCurrency, setChosenCurrency] = useState(currency[0]);
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
 	const handleChangeLanguage = (flag: TData) => {
@@ -63,70 +64,73 @@ const Header = () => {
 		setFlagMenuOpen(!flagMenuOpen);
 	}, [flagMenuOpen]);
 
-	const handleChangeCurrency = (currency:any) => {
+	const handleChangeCurrency = (currency: any) => {
 		setChosenCurrency(currency);
 		setCurrencyMenuOpen(false);
 	};
 
 	const toggleCurrencyMenu = useCallback(() => {
 		setCurrencyMenuOpen(!currencyMenuOpen);
-	},[currencyMenuOpen]);
+	}, [currencyMenuOpen]);
 
 	return (
-	// containrt
-		<div className={'container-top'}>
-			{/*header*/}
-			<header className={'header flex justify-between align-center'}>
-				{/*top_left_content*/}
-				<div className={'top_left_content flex justify-between align-center'}>
-					{/*flag_content*/}
-					<div className={'flag_content'}>
-						<DropDown menuOpen={flagMenuOpen}
-							toggleMenu={toggleFlagMenu}
-							chosen={chosenFlag}
-							state={flagState}
-							handleChange={handleChangeLanguage}
-						/>
+	// container
+		<header>
+			<div className={'container_top'}>
+				{/*header*/}
+				<div className={'header flex justify-between align-center'}>
+					{/*top_left_content*/}
+					<div className={'top_left_block flex justify-between align-center'}>
+						{/*flag_content*/}
+						<div className={'relative'}>
+							<DropDown menuOpen={flagMenuOpen}
+								toggleMenu={toggleFlagMenu}
+								chosen={chosenFlag}
+								state={flagState}
+								handleChange={handleChangeLanguage}
+							/>
+						</div>
+						{/*valuta_content*/}
+						<div className={'relative'}>
+							<DropDown menuOpen={currencyMenuOpen}
+								toggleMenu={toggleCurrencyMenu}
+								chosen={chosenCurrency}
+								state={currencyState}
+								handleChange={handleChangeCurrency}
+							/>
+						</div>
 					</div>
-					{/*valuta_content*/}
-					<div /*className={"valuta_content flex align-center"}*/ className={'flag_content'}>
-						<DropDown menuOpen={currencyMenuOpen}
-							toggleMenu={toggleCurrencyMenu}
-							chosen={chosenCurrency}
-							state={currencyState}
-							handleChange={handleChangeCurrency}
-						/>
+
+					{/*site_logo*/}
+					<div>
+						<img className={'site_logo'} src={logo} alt={'site_logo'}/>
 					</div>
+
+					{/*wishlist*/}
+					<div className={'top_right_content'}>
+						<ul className={'flex align-center'}>
+							<li className={'wishlist_content flex align-center'}>
+								<span>WISHLIST</span>
+								<img className={'icon_favorite'} src={heart} alt="icon_favorite"/>
+								<span>(0)</span>
+							</li>
+							<li className={'login_content flex align-center'}>
+								<span>LOGIN</span>
+								<img className={'user_icon'} src={user} alt="user_icon"/>
+							</li>
+							<li className={'cart_content flex align-center'}>
+								<span>CART</span>
+								<img className={'icon_card'} src={basket} alt="icon_card"/>
+								<span>(0)</span>
+							</li>
+						</ul>
+					</div>
+
 				</div>
 
-				{/*site_logo*/}
-				<div>
-					<img className={'site_logo'} src={logo} alt={'site_logo'} />
-				</div>
+			</div>
+		</header>
 
-				{/*wishlist*/}
-				<div className={'top_right_content flex align-center'}>
-					<ul className={'flex align-center'}>
-						<li className={'wishlist_content flex align-center'}>
-							<span>WISHLIST</span>
-							<img className={'icon_favorite'} src={heart} alt="icon_favorite" />
-							<span>(0)</span>
-						</li>
-						<li className={'login_content flex align-center'}>
-							<span>LOGIN</span>
-							<img className={'user_icon'} src={user} alt="user_icon" />
-						</li>
-						<li className={'cart_content flex align-center'}>
-							<span>CART</span>
-							<img className={'icon_card'} src={basket} alt="icon_card" />
-							<span>(0)</span>
-						</li>
-					</ul>
-				</div>
-
-			</header>
-
-		</div>
 	);
 };
 

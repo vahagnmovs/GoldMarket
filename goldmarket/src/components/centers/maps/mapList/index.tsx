@@ -24,7 +24,7 @@ const MapList = ({ data }: TCategoryAndMapListProps) => {
 					}{...item} />)
 				}
 			</div>
-			<div className="buttonSowMor flex justify-center">
+			<div className="buttonSowMor flex justify-center text-center">
 				<button
 					onClick={handleNavigate}>
 					<div className={'flex align-center justify-center'}>

@@ -24,7 +24,7 @@ const NewCollection = () => {
 					</div>
 					<button
 						// onClick={}
-					>EXPLORE ALL NEW COLLECTIONS {'>'}</button>
+					>EXPLORE ALL NEW COLLECTIONS</button>
 				</div>
 			</div>
 		</div>

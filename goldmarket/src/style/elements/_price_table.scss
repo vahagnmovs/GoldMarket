@@ -4,12 +4,22 @@
   background-color: #F6F6F6;
   padding-top: 30px;
 
+  .container_price2 {
+    margin-top: 80px;
+  }
 
   .Show-more{
-    padding:25px;
+    padding: 25px 0;
     button{
       width: 1200px;
       height: 40px;
+      color: #1D3865;
+      border: 1px solid #1D3865;
+      border-radius: 2px;
+      &:hover {
+        background-color: #1D3865;
+        color: gold;
+      }
 
     }
 

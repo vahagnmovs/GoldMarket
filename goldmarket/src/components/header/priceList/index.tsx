@@ -21,7 +21,7 @@ const PriceList = () => {
 						<GoldPriceList isShowMoreBtn={isShowMoreBtn}/>
 					</div>
 				</div>
-				<div className={'Show-more'}>
+				<div className={'Show-more text-center'}>
 					<button onClick={toggleShowMoreBtn}>SHOW MORE</button>
 				</div>
 

@@ -1,0 +1,11 @@
+.ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ul li img {
+  width: 30px;
+}
+.ul li{
+    cursor: pointer;
+}

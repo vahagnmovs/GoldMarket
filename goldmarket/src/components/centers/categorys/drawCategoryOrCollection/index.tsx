@@ -10,8 +10,10 @@ const DrawCategoryOrCollection = ({ id, title, img }: TDataProps) => {
 			<div className={'img-title  text-center'}>
 				<h4>{title} </h4>
 				<div>
-					<span> EXPLORE </span>
-					<img src={svg} alt="next" />
+					<button>
+						<span> EXPLORE </span>
+					</button>
+					{/*<img src={svg} alt="next" />*/}
 				</div>
 			</div>
 		</div>

@@ -1,6 +1,7 @@
 .products_manu-content {
   position: relative;
   padding: 0 40px;
+  top: 80px;
 }
 
 .products_manu {
@@ -9,9 +10,6 @@
 }
 
 .navbar {
-  // margin-bottom: 30px;
-
-
   .navbar_ul {
     gap: 24px;
       img {
@@ -31,76 +29,12 @@
 }
 
   .searching-icon {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
 }
 
 .switch {
   width: 70px;
-//   .button-contener {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: relative;
-//  }
-
-// .switch {
-//     margin-top: 20px;
-//     position: relative;
-//     display: inline-block;
-//     width: 60px;
-//     height: 32px;
-// }
-
-// .switch input {
-//     opacity: 0;
-//     width: 0;
-//     height: 0;
-// }
-
-// .slider {
-//     position: absolute;
-//     cursor: pointer;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     background-color: #ccc;
-//     border-radius: 16px;
-//     transition: 0.4s;
-// }
-
-// .slider::before {
-//     position: absolute;
-//     content: "";
-//     width: 26px;
-//     height: 26px;
-//     left: 4px;
-//     bottom: 3px;
-//     background-color: rgb(250, 215, 215);
-//     transition: 0.4s;
-//     border-radius: 50%;
-// }
-
-// .activ::before {
-//     position: absolute;
-//     content: "";
-//     width: 26px;
-//     height: 26px;
-//     left: 4px;
-//     bottom: 3px;
-//     background-color: rgb(250, 215, 215);
-//     transition: 0.4s;
-//     border-radius: 50%;
-// }
-
-// input:checked + .slider {
-//     background-color: rgb(255, 218, 53);
-// }
-
-// .red {
-//     color: rgb(255, 218, 53);
-// }
 }
 
 //navbar 2
@@ -120,9 +54,10 @@
       color: black;
 
       &:hover {
-        background-color: gold;
-        border-radius: 5px;
-        color: #FFFFFF;
+
+          background-color: #1D3865;
+          color: gold;
+
       }
 
     }
@@ -157,7 +92,10 @@
   }
 }
 
-
+.search_fon{
+  background-color:gray;
+  opacity: 2%;
+}
   .search_modal_open{
     padding: 30px;
     background-color: #F7F7F7;
@@ -178,6 +116,11 @@
     }
     button{
       left: -100px;
+      border-radius: 2px;
+      &:hover {
+        background-color: #1D3865;
+        color: gold;
+      }
     }
     span{
 
@@ -195,7 +138,9 @@
   }
 
 
-
+.search_close{
+  gap:10px
+}
 
 
 

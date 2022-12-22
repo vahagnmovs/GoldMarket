@@ -25,6 +25,12 @@
       height: 50px;
       background: #CCA653;
       border: none;
+      border-radius: 2px;
+      &:hover {
+        background-color: #1D3865;
+        color: gold;
+        border: 1px solid gold;
+      }
     }
 
   }
@@ -74,6 +80,12 @@
       height: 50px;
       background: #CCA653;
       border: none;
+      border-radius: 2px;
+      &:hover {
+        background-color: #1D3865;
+        color: gold;
+        border: 1px solid gold;
+      }
     }
 
   }

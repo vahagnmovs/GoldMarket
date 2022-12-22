@@ -27,7 +27,7 @@ const RecommendSellers = () => {
 					}
 				</section>
 
-				<button className={'button_show_all_brands'}
+				<button className={'button_show_all_brands text-center'}
 					// onClick={handleAllBrands} NAVIGATE-ov urish ej uxaki
 				>
 					<Link to={'allBrands'}> ALL BRANDS </Link>

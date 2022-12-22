@@ -6,10 +6,15 @@
     width: 192px;
     height: 40px;
     margin-top: 40px;
+    border: 1px solid #1D3865;
+    color:  #1D3865;
+    background-color: transparent;
+    border-radius: 2px;
+
 
   &:hover {
-    background-color: gold;
-    color: white;
+    background-color: #1D3865;
+    color: gold;
     border: none;
   }
   }
@@ -21,6 +26,8 @@
 
   h2 {
     margin-bottom: 22px;
+    font-size: 32px;
+
   }
 
   p {

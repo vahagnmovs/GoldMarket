@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import {products} from 'src/data/products';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import 'src/style/components/_mostViewed.scss';
 
 const MostViewed = () => {
 	const ref = useRef<any>(null);
@@ -53,42 +54,47 @@ const MostViewed = () => {
 	};
 
 	return (
-		<div>
-			<div>
-				<h3>Most Viewed</h3>
-				<div>
-					<button onClick={handlePrevSlide}>{'<'}</button>
-					<button onClick={handleNextSlide}>{'>'}</button>
+		<div className={'most'}>
+			<div className={'most_Viewed'}>
+				<div className={'most_Viewed_title text-center justify-between  align-center'}>
+					<h3>Most Viewed</h3>
+					<div className={'most_Viewed_button flex'}>
+						<button onClick={handlePrevSlide}>{'<'}</button>
+						<button onClick={handleNextSlide}>{'>'}</button>
+					</div>
 				</div>
-			</div>
 
-			<Slider ref={ref} {...settings}>
-				{
-					products.map(product =>
-						<div key={product.productID}>
-							<div className="badge_item">
-								<div className="relative">
-									<img style={{width: 200, height: 200}} src={product.images[0]} alt="list_item"/>
-								</div>
-								<div className="list_content">
-									<div className="flex justify-between">
-										<div>
-											<span className="currentPrice">{product.prices.currentPrice}$</span>
-											<span className="oldPrice">{product.prices.oldPrice}$</span>
-										</div>
-										<div>
-											{/*FIXME: after having norm seller data will change this to normal seller name*/}
-											{product.sellerID.split('-')[0]}
-										</div>
+
+
+				<Slider ref={ref} {...settings}>
+					{
+						products.map(product =>
+							<div key={product.productID}>
+								<div className="badge_item_most">
+									<div className="relative_most">
+										<img  className={'relative_img'} src={product.images[0]} alt="list_item"/>
 									</div>
-									<p>{product.name}</p>
+									<div className="list_content">
+										<div className="flex justify-between">
+											<div>
+												<span className="currentPrice">{product.prices.currentPrice}$</span>
+												<span className="oldPrice">{product.prices.oldPrice}$</span>
+											</div>
+											<div>
+												{/*FIXME: after having norm seller data will change this to normal seller name*/}
+												{product.sellerID.split('-')[0]}
+											</div>
+										</div>
+										<p>{product.name}</p>
+									</div>
 								</div>
 							</div>
-						</div>
-					)
-				}
-			</Slider>
+						)
+					}
+				</Slider>
+			</div>
 		</div>
+
 	);
 };
 

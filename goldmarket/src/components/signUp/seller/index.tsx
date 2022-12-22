@@ -1,22 +1,39 @@
-import React, {useState} from 'react';
-import {useAppDispatch} from '../../hooks/redux-hooks';
+import React from 'react';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
 
-const Verjin = () => {
+const SellerSignUp = () => {
 
-	const dispatch = useAppDispatch();
-
-	const [isBuyer, setIsBuyer] = useState(true);
-
+	// const dispatch = useAppDispatch();
+	//
+	// const register = () => {
+	// 	// Create a new user with email and password using firebase
+	// 	const auth = getAuth();
+	// 	createUserWithEmailAndPassword(auth, formik.values.email, formik.values.password)
+	// 		.then(({user}) => {
+	// 			dispatch(setUser({
+	// 				email: user.email,
+	// 				id: user.uid,
+	// 				token: user.refreshToken,
+	// 				phoneNumber: formik.values.phoneNumber,
+	// 				lastName: formik.values.lastName,
+	// 				firstName: formik.values.firstName,
+	// 			}));
+	// 		})
+	// 		.catch((error) => {
+	// 			const errorCode = error.code;
+	// 			const errorMessage = error.message;
+	// 		});
+	// };
 
 	const formik = useFormik({
 		initialValues: {
 			firstName: '',
 			lastName: '',
 			email: '',
+			companyName: '',
 			password: '',
 			confirmPassword: '',
 			phoneNumber: '',
@@ -24,11 +41,20 @@ const Verjin = () => {
 		validationSchema: Yup.object({
 			firstName: Yup
 				.string()
-				.max(10, 'name  must be 10 characters or less')
+				.max(10, 'Name  must be 10 characters or less')
 				.required('Required'),
 			lastName: Yup
 				.string()
-				.max(15, 'name  must be be 15 characters or less')
+				.max(15, 'last name  must be be 15 characters or less')
+				.required('Required'),
+			companyName: Yup
+				.string()
+				.max(15, 'Company name  must be 15 characters or less')
+				.required('Required'),
+			phoneNumber: Yup
+				.string()
+				.min(11, 'Phone number must be 11 characters')
+				.max(11, 'Phone number must be 11 characters')
 				.required('Required'),
 			email: Yup
 				.string()
@@ -43,46 +69,18 @@ const Verjin = () => {
 				.required('Required')
 				.matches(passwordRegex, 'Confirm password is not valid')
 				.oneOf([Yup.ref('password'), null], 'Passwords must match'),
-			phoneNumber: Yup
-				.string()
-				.min(11, 'phone number must be 11 characters')
-				.max(11, 'Phone number must be 11 characters')
-				.required('Required'),
 		}),
 		onSubmit: (values) => {
 			console.log(values);
 		}
 	});
 
-	// const dispatch = useAppDispatch()
-	//
-	// const [isBuyer, setIsBuyer] = useState(true)
 
-	// const register = (e: React.FormEvent) => {
-	//     e.preventDefault()
-	//     // Create a new user with email and password using firebase
-	//     const auth = getAuth()
-	//     createUserWithEmailAndPassword(auth, formik.values.email, formik.values.password)
-	//         .then(({user}) => {
-	//             dispatch(setUser({
-	//                 email: user.email,
-	//                 id: user.uid,
-	//                 token: user.refreshToken,
-	//                 phoneNumber: formik.values.phoneNumber,
-	//                 lastName: formik.values.lastName,
-	//                 firstName: formik.values.firstName,
-	//             }))
-	//         })
-	//         .catch((error) => {
-	//             const errorCode = error.code;
-	//             const errorMessage = error.message;
-	//         });
-	// }
 	return (
 		<div>
 			<h3>Registration</h3>
 			<span>With Goldcenter.am account, you can save time during checkout, access your shopping bag from any device and view your order history.</span>
-			<form onSubmit={formik.handleSubmit}>
+			<form onSubmit={(e) => formik.handleSubmit(e)}>
 				<div>
 					<input type="text"
 						id="firstName"
@@ -104,6 +102,30 @@ const Verjin = () => {
 						value={formik.values.lastName}
 					/>
 					{formik.touched.lastName && formik.errors.lastName ? <p>{formik.errors.lastName}</p> : null}
+				</div>
+				<div>
+					<input type="text"
+						id="companyName"
+						name="companyName"
+						placeholder="Company name"
+						onChange={formik.handleChange}
+						onBlur={formik.handleBlur}
+						value={formik.values.companyName}
+					/>
+					{formik.touched.companyName && formik.errors.companyName ?
+						<p>{formik.errors.companyName}</p> : null}
+				</div>
+				<div>
+					<input type="number"
+						id="phoneNumber"
+						name="phoneNumber"
+						placeholder="Phone Number"
+						onChange={formik.handleChange}
+						onBlur={formik.handleBlur}
+						value={formik.values.phoneNumber}
+					/>
+					{formik.touched.phoneNumber && formik.errors.phoneNumber ?
+						<p>{formik.errors.phoneNumber}</p> : null}
 				</div>
 				<div>
 					<input type="email"
@@ -139,18 +161,6 @@ const Verjin = () => {
 					{formik.touched.confirmPassword && formik.errors.confirmPassword ?
 						<p>{formik.errors.confirmPassword}</p> : null}
 				</div>
-				<div>
-					<input type="number"
-						id="phoneNumber"
-						name="phoneNumber"
-						placeholder="Phone Number"
-						onChange={formik.handleChange}
-						onBlur={formik.handleBlur}
-						value={formik.values.phoneNumber}
-					/>
-					{formik.touched.phoneNumber && formik.errors.phoneNumber ?
-						<p>{formik.errors.phoneNumber}</p> : null}
-				</div>
 				<button type={'submit'}>Sign Up</button>
 			</form>
 
@@ -158,4 +168,4 @@ const Verjin = () => {
 	);
 };
 
-export default Verjin;
+export default SellerSignUp;

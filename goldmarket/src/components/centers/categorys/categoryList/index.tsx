@@ -24,12 +24,11 @@ const CategoryList = ({ data }: TCategoryListProps) => {
 					}{...item} />)
 				}
 			</div>
-			<div className="buttonSowMor flex justify-center">
+			<div className="buttonSowMor flex  justify-center  ">
 				<button
 					onClick={handleNavigate}>
 					<div className={'flex align-center justify-center'}>
 						<p>SHOW MORE</p>
-						<img src={svg} alt="Shou More" />
 					</div>
 				</button>
 			</div>
