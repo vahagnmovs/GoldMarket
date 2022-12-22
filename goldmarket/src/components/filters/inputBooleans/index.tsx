@@ -9,26 +9,25 @@ type TInputBooleans = {
 
 const InputBooleans = ({title, name, data, getInput}: TInputBooleans) => {
 
-    const [showFlag, setShowFlag] = useState(false)
+	const [showFlag, setShowFlag] = useState(false);
 
-    const handleFlag = () => {
-        setShowFlag(!showFlag)
-    }
+	const handleFlag = () => {
+		setShowFlag(!showFlag);
+	};
 
-    const handleChecked = (e: React.ChangeEvent<HTMLInputElement>, title: string) => {
-        getInput(e.target.id, title)
-    }
+	const handleChecked = (e: React.ChangeEvent<HTMLInputElement>, title: string) => {
+		getInput(e.target.id, title);
+	};
 
-    return (
-        <div>
-            <p onClick={handleFlag}>{title.toUpperCase()}</p>
-            {
-                showFlag &&
-                // @ts-ignore
-                data.map(el => <input type="radio" id={el} name={name} onChange={(e) => handleChecked(e, title)}/>)
-            }
-        </div>
-    );
+	return (
+		<div>
+			<p onClick={handleFlag}>{title.toUpperCase()}</p>
+			{
+				showFlag &&
+                data.map(el => <input key={el} type="radio" id={el} name={name} onChange={(e) => handleChecked(e, title)}/>)
+			}
+		</div>
+	);
 };
 
 export default InputBooleans;

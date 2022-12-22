@@ -7,28 +7,27 @@ type TInputTypes = {
 }
 
 const InputArrays = ({title, data, getInput}: TInputTypes) => {
-    const [hoverFlag, setHoverFlag] = useState(false)
-    const handleChecked = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
-        getInput(e.target.checked, title, name)
-    }
+	const [hoverFlag, setHoverFlag] = useState(false);
+	const handleChecked = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
+		getInput(e.target.checked, title, name);
+	};
 
-    const handleFlag = () => {
-        setHoverFlag(!hoverFlag)
-    }
+	const handleFlag = () => {
+		setHoverFlag(!hoverFlag);
+	};
 
-    return (
-        <div>
-            <p onClick={handleFlag}>{title.toUpperCase()}</p>
-            {
-                hoverFlag &&
-                // @ts-ignore
-                data.map(el => <div>
-                    <input type="checkbox" id={el} onChange={(e) => handleChecked(e, el)}/>
-                    <label htmlFor={el}>{el}</label>
+	return (
+		<div>
+			<p onClick={handleFlag}>{title.toUpperCase()}</p>
+			{
+				hoverFlag &&
+                data.map(el => <div key={el}>
+                	<input type="checkbox" id={el} onChange={(e) => handleChecked(e, el)}/>
+                	<label htmlFor={el}>{el}</label>
                 </div>)
-            }
-        </div>
-    );
+			}
+		</div>
+	);
 };
 
 export default InputArrays;
