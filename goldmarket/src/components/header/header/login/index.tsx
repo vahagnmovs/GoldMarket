@@ -2,15 +2,14 @@ import React, { useState } from 'react';
 import user from 'src/style/Icons/user.png';
 
 const Login = () => {
-
 	const [isOpenLogInModal, setIsOpenLogInModal] = useState(false);
 
 	return (
-		<div>
+		<div className='relative'>
 			{
 				isOpenLogInModal
 					?
-					<div>
+					<div className='modal_login'>
 						<h3>LOGIN</h3>
 						<span>X</span>
 						<div>
