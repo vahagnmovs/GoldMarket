@@ -1,4 +1,5 @@
-import randomID from '../hooks/uuid'
+import randomID from '../hooks/uuid';
+
 export type PriceTypes = {
 	currentPrice: number,
 	oldPrice: number

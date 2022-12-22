@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 
 interface ProductWeightProps {
-    sizeOrWeight: number[]
+    sizeOrWeight: string[]
     title: string
 }
 const ProductSizeWeight = ({sizeOrWeight, title}:ProductWeightProps, ) => {

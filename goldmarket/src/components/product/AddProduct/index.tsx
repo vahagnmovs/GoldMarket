@@ -139,11 +139,8 @@ const AddProduct: React.FC = () => {
 					<input type="checkbox" onChange={toggleShowSlice} checked={showSlice}/>
 				</label>
 				{
-					showSlice
-					||
-					<>
-						<Creator data={filters.dimonds} handleChangeData={handleDimonds}/>
-						<CrateInput title='CARAT' value={formData.DIMOND.CARAT} handleChangeData={handleDimonds} /><CrateInput title='PCS' value={formData.DIMOND.PCS} handleChangeData={handleDimonds} /><PublishSelecStoneBollean name={'SELECTSTONE'} handleBoolean={handleBoolean} />
+					showSlice ||
+					<><Creator data={filters.dimonds} handleChangeData={handleDimonds}/><CrateInput title='CARAT' value={formData.DIMOND.CARAT} handleChangeData={handleDimonds} /><CrateInput title='PCS' value={formData.DIMOND.PCS} handleChangeData={handleDimonds} /><PublishSelecStoneBollean name={'SELECTSTONE'} handleBoolean={handleBoolean} />
 					</>
 				}
 			</div>
@@ -151,11 +148,6 @@ const AddProduct: React.FC = () => {
 			<CrateInput title={'PRICE'} value={formData.PRICES.PRICE} handleChangeData={handlePrice} />
 			<CrateInput title={'OLDPRICE'} value={formData.PRICES.OLDPRICE} handleChangeData={handlePrice} />
 			<CrateInput title={'CODE'} value={formData.CODE} handleChangeData={handleChangeFormData} /><AddImages handleImgSrces={handleImgSrces} />
-			<button disabled={disAdd} onClick={handleSave}>save product</button>
-			<CrateInput title={'CODE'} value={formData.CODE} handleChangeData={handleChangeFormData} />
- 
- 			<AddImages handleImgSrces={handleImgSrces} />
-
 			<button disabled={false} onClick={handleSave}>save product</button>
 		</div>
 	);
