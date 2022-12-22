@@ -16,7 +16,7 @@ import WhyGoldCenter from '../../components/information/whyGoldCenterBanner';
 import Video from '../../components/header/video';
 import ProductPage from '../../components/productPage';
 import AddProduct from 'src/components/product/AddProduct';
-import Products from 'src/components/product'
+import SignUp from '../../components/signUp';
 
 const Home = () => {
 	return (
@@ -27,7 +27,7 @@ const Home = () => {
 		>
 			<>
 				{/*<ProductPage/>*/}
-				{/* <Products /> */}
+				{/*<AddProduct />*/}
 				{/*<SignUp/>*/}
 				<PriceList />
 				<Video />
