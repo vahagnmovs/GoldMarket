@@ -16,12 +16,16 @@ interface IProductProps {
 
 const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, category, code, price }}) => {
     
-	const params = useParams();
 	const navigate = useNavigate();
 
 	const handleNavigate = () => {
 		navigate(`/products/${id}`);
 	};
+
+	const handleEditNavigate = (event: any) => {
+        event.stopPropagation()
+		navigate(`/product/${id}/editproduct`)
+	}
 
 
 	return(
@@ -34,7 +38,7 @@ const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, cate
 			<div> {price} </div>
            
 			<div className='details'>
-				<button>✓</button>  
+				<button onClick={handleEditNavigate}>✓</button>  
 				<button>X</button>  
 				<button> DETAILS </button>  
 			</div>

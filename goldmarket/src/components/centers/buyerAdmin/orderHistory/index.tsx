@@ -9,11 +9,13 @@ type TOrderHistory = {
 }
 
 const OrderHistory = ({ id, nam2, nam3, nam4 }: TOrderHistory) => {
+
 	// FIXME: irakan OrderHistory anunner@  dnel
 	const navigate = useNavigate();
 	const handleNavigateOrderInfo = () => {
 		navigate('/orderinfo');
 	}; 
+
 	return (
 		<tr>
 			<td>{id}</td>
