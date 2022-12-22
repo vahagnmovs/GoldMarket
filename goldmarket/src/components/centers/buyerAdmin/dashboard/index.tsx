@@ -6,9 +6,14 @@ import order from 'src/style/Icons/order.svg';
 import delivery from 'src/style/Icons/delivery.svg';
 import logout from 'src/style/Icons/logout.svg';
 import './style.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const Dashboard = () => {
+	const navigate = useNavigate();
+	const handleNavigate = () => {
+		navigate('/orderhistory');
+	};
 	return (
 		<div>
 			<h2>Dashboard</h2>
@@ -18,7 +23,7 @@ const Dashboard = () => {
 					<img src={dashboard} alt="dashboard" />
 					<span>DASHBOARD</span>
 				</li>
-				<li>
+				<li onClick={handleNavigate}>
 					<img src={order} alt="order" />
 					<span>ORDER HISTORY</span>
 				</li>
@@ -35,9 +40,7 @@ const Dashboard = () => {
 					<span>LOG OUT</span>
 				</li>
 			</ul>
-			<GoldPriceList isShowMoreBtn={true} />
 		</div>
-
 	);
 };
 
