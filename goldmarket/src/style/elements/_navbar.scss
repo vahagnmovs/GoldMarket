@@ -2,6 +2,7 @@
   position: relative;
   padding: 0 40px;
   top: 80px;
+  background-color: #FFFFFF;
 }
 
 .products_manu {
@@ -70,13 +71,13 @@
   }
 
 .openning-navbar {
-
   padding-top: 30px;
-
   border-top: 1px solid #1D3865;
   position: absolute;
+  padding: 30px 50px;
   top: 50px;
-   width: 100%;
+  left: 0;
+  width: 100%;
   background-color: #FFFFFF;
 
   ul {
@@ -84,36 +85,35 @@
     margin-right: 54px;
   }
 
-  // width: 100%;
-
   .presentImg {
     width: 488px!important;
     height: 300px!important;
   }
 }
 
-.search_fon{
-  background-color:gray;
-  opacity: 2%;
+.search {
+  gap:10px
+
 }
-  .search_modal_open{
+
+.search_modal_open{
     padding: 30px;
-    background-color: #F7F7F7;
+    background-color: white;
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: -820px;
     width: 700px;
     height: 300px;
+    z-index: 2;
+    
     input{
       width: 100%;
       background-color: #F7F7F7;
-      height: 40px;
-      padding: 22px 30px;
-      border: 0.5px solid;
+      height: 60px;
+      padding: 0 30px;
+      border: 1px solid #C5C5C5
     }
-    .a{
-
-    }
+  
     button{
       left: -100px;
       border-radius: 2px;
@@ -122,28 +122,32 @@
         color: gold;
       }
     }
-    span{
 
-    }
     .searching-icon{
       margin-left: -60px;
     }
+
     .searching_block_text{
+      margin-top: 75px;
       img{
         width: 24px;
         height: 24px;
+        margin-bottom: 20px;
 
       }
     }
-  }
 
+    .search_close_btn {
+      position: absolute;
+      top: calc((100% - 60px) / 2); 
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      background-color: #FFFFFF;
+    }
 
-.search_close{
-  gap:10px
 }
-
-
-
 
 
 

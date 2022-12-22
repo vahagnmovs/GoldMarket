@@ -3,26 +3,11 @@
   width: 1200px;
   background-color: #F6F6F6;
   padding-top: 30px;
+  margin-bottom: 20px;
+
 
   .container_price2 {
     margin-top: 80px;
-  }
-
-  .Show-more{
-    padding: 25px 0;
-    button{
-      width: 1200px;
-      height: 40px;
-      color: #1D3865;
-      border: 1px solid #1D3865;
-      border-radius: 2px;
-      &:hover {
-        background-color: #1D3865;
-        color: gold;
-      }
-
-    }
-
   }
 }
 
@@ -43,7 +28,7 @@
 }
 
 .phone_icons {
-
+  display: flex;
   img {
     margin-right: 15px;
 
@@ -60,13 +45,31 @@
 .table-price {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 15px;
+
+   tr:nth-child(odd){
+    background-color: #F1F1F1;
+
+  }
+
+  .table_shoe_more tr:nth-child(even) {
+    background-color: #F1F1F1;
+
+  }
 
   th {
     background-color: white;
+    text-align: left;
+    color: #808080;
   }
 
   th,td {
     padding: 12px 30px;
+  }
+
+  td {
+    color: #000;
+    font-weight: 600;
   }
 }
 

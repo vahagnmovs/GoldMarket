@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import user from 'src/style/Icons/user.png';
 
 const Login = () => {
@@ -14,8 +14,8 @@ const Login = () => {
 						<h3>LOGIN</h3>
 						<span>X</span>
 						<div>
-							<input type='email' placeholder={'E-MAIL'}/>
-							<input type='password' placeholder={'PASSWORD'}/>
+							<input type='email' placeholder={'E-MAIL'} />
+							<input type='password' placeholder={'PASSWORD'} />
 							<button>LOGIN</button>
 						</div>
 						<span>FORGOT YOUR PASSWORD?</span>
@@ -26,7 +26,7 @@ const Login = () => {
 					:
 					<li onClick={() => setIsOpenLogInModal(true)} className={'login_content flex align-center'}>
 						<span>LOGIN</span>
-						<img className={'user_icon'} src={user} alt='user_icon'/>
+						<img className={'user_icon'} src={user} alt='user_icon' />
 					</li>
 			}
 		</div>

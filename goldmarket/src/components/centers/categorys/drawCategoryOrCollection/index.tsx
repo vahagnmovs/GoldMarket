@@ -7,13 +7,13 @@ const DrawCategoryOrCollection = ({ id, title, img }: TDataProps) => {
 	return (
 		<div id={id} className="product">
 			<img src={img} alt="Nkar" />
-			<div className={'img-title  text-center'}>
+			<div className={'img-title text-center'}>
 				<h4>{title} </h4>
 				<div>
-					<button>
+					<button >
 						<span> EXPLORE </span>
 					</button>
-					{/*<img src={svg} alt="next" />*/}
+					<img src={svg} alt="next" />
 				</div>
 			</div>
 		</div>

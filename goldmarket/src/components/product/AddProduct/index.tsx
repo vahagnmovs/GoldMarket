@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
-import {filters, initialDimonds, initialPrices, initialState, sizeListData, weightListData} from 'src/components/constants';
+import React, { useEffect, useState } from 'react';
+import { filters, initialDimonds, initialPrices, initialState, sizeListData, weightListData } from 'src/components/constants';
 import CrateInput from '../createInput';
 
 import AddImages from './addImages';
@@ -11,9 +11,9 @@ import { useAppDispatch } from 'src/hooks/redux-hooks';
 import { addProduct } from 'src/store/products/productSlice';
 
 export type TWeight = {
-	name: { key: number[] | string[]}
+	name: { key: number[] | string[] }
 }
- 
+
 const AddProduct: React.FC = () => {
 
 	const [formData, setFormData] = useState(initialState);
@@ -21,13 +21,13 @@ const AddProduct: React.FC = () => {
 	const [PRICES, setPrices] = useState(initialPrices);
 	const [DIMOND, setDimonds] = useState(initialDimonds);
 	const [IMAGES, setImgSrces] = useState([]);
-	
+
 	const [WIEGHT, setWeight] = useState<any>([]);
 	const [SIZE, setSize] = useState<any>([]);
-	
+
 	const [PUBLISH, setBublish] = useState<boolean | undefined>();
 	const [SELECTSTONE, setSelectStone] = useState<boolean | undefined>();
-	
+
 	const [showSlice, setShowSlice] = useState(false);
 
 
@@ -35,39 +35,39 @@ const AddProduct: React.FC = () => {
 
 
 	useEffect(() => {
-		setFormData({...formData, IMAGES});
+		setFormData({ ...formData, IMAGES });
 	}, [IMAGES]);
 
 	useEffect(() => {
-		setFormData({...formData, DIMOND});
+		setFormData({ ...formData, DIMOND });
 	}, [DIMOND]);
 
 	useEffect(() => {
-		setFormData({...formData, PRICES});
+		setFormData({ ...formData, PRICES });
 	}, [PRICES]);
 
 	useEffect(() => {
-		setFormData({...formData, WIEGHT});
+		setFormData({ ...formData, WIEGHT });
 	}, [WIEGHT]);
-    
+
 	useEffect(() => {
-		setFormData({...formData, SIZE});
+		setFormData({ ...formData, SIZE });
 	}, [SIZE]);
 
 	useEffect(() => {
-		setFormData({...formData, PUBLISH});
+		setFormData({ ...formData, PUBLISH });
 	}, [PUBLISH]);
-    
+
 	useEffect(() => {
-		setDimonds({...DIMOND, SELECTSTONE});
+		setDimonds({ ...DIMOND, SELECTSTONE });
 	}, [SELECTSTONE]);
 
 
 
 	const handleImgSrces = (arr: []) => setImgSrces(prev => [...arr]);
 
-	const handleChangeFormData = ({target}: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>) => {
-		const {name, value} = target;
+	const handleChangeFormData = ({ target }: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = target;
 
 		setFormData({
 			...formData,
@@ -75,21 +75,21 @@ const AddProduct: React.FC = () => {
 			IMAGES,
 		});
 	};
-     
-	const handleDimonds = ({target}: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>) => {
-		const {name, value} = target;
 
-		setDimonds({...DIMOND, [name]: value});
+	const handleDimonds = ({ target }: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = target;
+
+		setDimonds({ ...DIMOND, [name]: value });
 	};
 
-	const handlePrice = ({target}: React.ChangeEvent<HTMLInputElement>) => {
-		const {name, value} = target;
+	const handlePrice = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = target;
 
-		setPrices({...PRICES, [name]: value});
+		setPrices({ ...PRICES, [name]: value });
 	};
 
 	const disAdd = (formData.NAME.trim().length === 0) || (formData.DESCRIPTION.trim().length === 0) ||
-                   (formData.CODE.trim().length === 0);
+		(formData.CODE.trim().length === 0);
 
 
 	const toggleShowSlice = () => setShowSlice(!showSlice);
@@ -105,15 +105,15 @@ const AddProduct: React.FC = () => {
 		const { name, value } = event.target;
 
 		if (name === 'PUBLISH') {
-			if (value === 'yes') setBublish(true); 
-			else setBublish(false); 
+			if (value === 'yes') setBublish(true);
+			else setBublish(false);
 		}
 
 		else if (name === 'SELECTSTONE') {
-			if (value === 'yes') setSelectStone(true); 
-			else setSelectStone(false); 
+			if (value === 'yes') setSelectStone(true);
+			else setSelectStone(false);
 		}
-	}; 
+	};
 
 
 	const handleSave = () => {
@@ -123,7 +123,7 @@ const AddProduct: React.FC = () => {
 	return (
 		<div className='addProduct'>
 			<CrateInput title='NAME' value={formData.NAME} handleChangeData={handleChangeFormData} />
-			<CrateInput title='DESCRIPTION' value={formData.DESCRIPTION} handleChangeData={handleChangeFormData}/>
+			<CrateInput title='DESCRIPTION' value={formData.DESCRIPTION} handleChangeData={handleChangeFormData} />
 
 			<Creator data={filters.firstCategory} handleChangeData={handleChangeFormData} />
 			<PublishSelecStoneBollean name={'PUBLISH'} handleBoolean={handleBoolean} />
@@ -136,11 +136,11 @@ const AddProduct: React.FC = () => {
 
 			<div>
 				<label> ADD STOUNS ATRIBUTS
-					<input type="checkbox" onChange={toggleShowSlice} checked={showSlice}/>
+					<input type="checkbox" onChange={toggleShowSlice} checked={showSlice} />
 				</label>
 				{
 					showSlice ||
-					<><Creator data={filters.dimonds} handleChangeData={handleDimonds}/><CrateInput title='CARAT' value={formData.DIMOND.CARAT} handleChangeData={handleDimonds} /><CrateInput title='PCS' value={formData.DIMOND.PCS} handleChangeData={handleDimonds} /><PublishSelecStoneBollean name={'SELECTSTONE'} handleBoolean={handleBoolean} />
+					<><Creator data={filters.dimonds} handleChangeData={handleDimonds} /><CrateInput title='CARAT' value={formData.DIMOND.CARAT} handleChangeData={handleDimonds} /><CrateInput title='PCS' value={formData.DIMOND.PCS} handleChangeData={handleDimonds} /><PublishSelecStoneBollean name={'SELECTSTONE'} handleBoolean={handleBoolean} />
 					</>
 				}
 			</div>
