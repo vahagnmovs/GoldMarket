@@ -39,8 +39,11 @@
   li {
     padding: 15px;
 
+
     &:hover {
-      background-color: gold;
+     background-color: #1D3865;
+      color: gold;
+      cursor: pointer;
     }
 
     &:not(:last-child) {
