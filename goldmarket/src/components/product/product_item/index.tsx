@@ -23,9 +23,9 @@ const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, cate
 	};
 
 	const handleEditNavigate = (event: any) => {
-        event.stopPropagation()
-		navigate(`/product/${id}/editproduct`)
-	}
+		event.stopPropagation();
+		navigate(`/product/${id}/editproduct`);
+	};
 
 
 	return(
