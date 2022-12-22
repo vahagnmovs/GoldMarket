@@ -12,6 +12,7 @@ import AddProduct from './components/product/AddProduct';
 import OrderHistoryList from './components/centers/buyerAdmin/orderHistoryList';
 import DeliveryAddressList from './components/centers/buyerAdmin/deliveryAddressList';
 import DashboardList from './components/centers/buyerAdmin/dashboardList';
+import OrderInfo from './components/centers/buyerAdmin/orderInfo';
 
 const router = createBrowserRouter([{
 	path: '/',
@@ -60,6 +61,9 @@ const router = createBrowserRouter([{
 }, {
 	path: '/dashboard',
 	element: <DashboardList />
+}, {
+	path: '/orderinfo',
+	element: <OrderInfo />
 }, {
 	path: '*',
 	element: <NotFoundPage />
