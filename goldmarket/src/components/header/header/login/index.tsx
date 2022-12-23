@@ -74,7 +74,7 @@ const Login = ({toggleIsLogInUser}:TLoginProps) => {
 							<div className="separator">New customer?</div>
 
 							<h3>Start Now</h3>
-							<button className='button_2 btn_registration'>REGISTRATION</button>
+							<button className='button-65 btn_registration'>REGISTRATION</button>
 						</div>
 					</form>
 			}

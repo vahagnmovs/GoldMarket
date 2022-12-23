@@ -5,7 +5,7 @@ import ProductBadge from 'src/components/productBadge';
 import InputArrays from '../input';
 import InputBooleans from '../inputBooleans';
 import './index.css';
-import { globalFilters } from 'src/data';
+import {globalFilters} from 'src/data';
 import {THandleFilters} from "src/pages/products";
 
 type TMinMaxTypes = {
@@ -24,6 +24,15 @@ export type TFiltersTypes = {
     weightRanges: TMinMaxTypes,
     fineness: string[],
     color: string[],
+}
+
+export enum TFilterKey {
+    'metal' = 'metal',
+    'forWhom' = 'forWhom',
+    'type' = 'type',
+    'size' = 'size',
+    'fineness' = 'fineness',
+    'color' = 'color'
 }
 
 const Filters = ({handleFilters}: THandleFilters) => {
@@ -65,16 +74,14 @@ const Filters = ({handleFilters}: THandleFilters) => {
         })
     }
 
-    const getInputArrays = (value: boolean, title: string, name: string) => {
+    const getInputArrays = (value: boolean, title: TFilterKey, name: string) => {
         if (value) {
-            // @ts-ignore
             const myTitle = [...myFilters[ title ]]
             setMyFilters({
                 ...myFilters,
                 [ title ]: [...myTitle, name]
             })
         } else {
-            // @ts-ignore
             const myTitle = [...myFilters[ title ]]
             setMyFilters({
                 ...myFilters,
@@ -101,10 +108,10 @@ const Filters = ({handleFilters}: THandleFilters) => {
         <div>
             <div className='filMenuContainer'>
                 <RangeInput title={'price'} getRanges={getRanges}/>
-                <InputArrays title={'metal'} data={globalFilters.metal} getInput={getInputArrays}/>
-                <InputArrays title={'forWhom'} data={globalFilters.forWhom} getInput={getInputArrays}/>
-                <InputArrays title={'type'} data={globalFilters.type} getInput={getInputArrays}/>
-                <InputArrays title={'size'} data={globalFilters.size} getInput={getInputArrays}/>
+                <InputArrays title={TFilterKey.metal} data={globalFilters.metal} getInput={getInputArrays}/>
+                <InputArrays title={TFilterKey.forWhom} data={globalFilters.forWhom} getInput={getInputArrays}/>
+                <InputArrays title={TFilterKey.type} data={globalFilters.type} getInput={getInputArrays}/>
+                <InputArrays title={TFilterKey.size} data={globalFilters.size} getInput={getInputArrays}/>
                 {
                     show
                     &&
@@ -113,16 +120,15 @@ const Filters = ({handleFilters}: THandleFilters) => {
                                        getInput={getInputRadio}/>
                         <InputBooleans name={'certificate'} title={'certificate'} data={globalFilters.certificate}
                                        getInput={getInputRadio}/>
-                        <InputArrays title={'color'} data={globalFilters.color} getInput={getInputArrays}/>
-                        <InputArrays title={'fineness'} data={globalFilters.fineness} getInput={getInputArrays}/>
+                        <InputArrays title={TFilterKey.color} data={globalFilters.color} getInput={getInputArrays}/>
+                        <InputArrays title={TFilterKey.fineness} data={globalFilters.fineness} getInput={getInputArrays}/>
                         <RangeInput title={'weight'} getRanges={getRanges}/>
                     </>
                 }
             </div>
-                <p className='showFilName' onClick={handleSow}> {showFilName} </p>
+            <p className='showFilName' onClick={handleSow}> {showFilName} </p>
             <div>
-                {/*@ts-ignore*/}
-                <button onClick={() => window.location.reload(false)}>Clear filters</button>
+                <button onClick={() => window.location.reload()}>Clear filters</button>
             </div>
 
         </div>

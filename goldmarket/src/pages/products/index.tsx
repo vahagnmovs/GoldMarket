@@ -5,11 +5,15 @@ import ProductBadge from "../../components/productBadge";
 import {ProductsTypes} from "src/data/products";
 import {TFiltersTypes} from "src/components/filters/filters";
 
+
 export type THandleFilters = {
     handleFilters: (myFilters: TFiltersTypes) => void
 }
 
 const ProductsPage = () => {
+    const URL = window.location.href;
+    const searchParams = new URLSearchParams(URL)
+    const metal = searchParams.get('metal');
     const [filters, setFilters] = useState<TFiltersTypes>({
         priceRanges: {
             min: '',
@@ -28,9 +32,13 @@ const ProductsPage = () => {
         fineness: [],
         color: [],
     });
-    const [filteredProducts, setFilteredProducts] = useState<ProductsTypes[]>([])
+    const [filteredProducts, setFilteredProducts] = useState<ProductsTypes[]>([...products])
+    const navigatedFilters = {
+        metal
+    }
 
     useEffect(() => {
+        console.log(filters)
         const filteredAllProducts = products.filter(product => {
             const currentPrice = product.prices.currentPrice;
             if (filters.priceRanges.min) {
@@ -112,6 +120,7 @@ const ProductsPage = () => {
             }
 
             if (filters.type.length) {
+                console.log(filters)
                 if (!filters.type.includes(product.type)) {
                     return false;
                 }
@@ -135,7 +144,12 @@ const ProductsPage = () => {
     }, [filters])
 
     useEffect(() => {
-        setFilteredProducts(products)
+        if(metal) {
+            setFilters({
+                ...filters,
+                metal: [metal]
+            })
+        }
     }, [])
 
     const handleFilters = (myFilters: TFiltersTypes) => {
