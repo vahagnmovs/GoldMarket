@@ -1,31 +1,37 @@
 import React from 'react';
 import trash from 'src/style/Icons/trash.svg';
 type TDeliveryAddress = {
-	id: string;
-	name: string;
-	lastName: string;
+	
+	
 	radio: string;
-	claymont: string;
-	xx: string;
-	yy: string;
+	id: string,
+	name: string,
+	surname: string,
+	city: string,
+	region: string,
+	country: string,
+	phoneNumber: string,
+
+	
 }
 
-const DeliveryAddress = ({ id, name, lastName, radio, claymont, xx, yy }: TDeliveryAddress) => {
+const DeliveryAddress = ({ id, name, surname, radio, city, region, country, phoneNumber }: TDeliveryAddress) => {
+
 	return (
 		<div>
 			<span>MY ADDRESS NAME</span>
 			<div>
 				<label>MAKE DEFAULT
-					<input type="radio" name='radio' />
+					<input type="radio" name={radio} />
 				</label>
 			</div>
 			<p>
 				<span>{name}</span>
-				<span>{lastName}</span>
-				<span>{radio}</span>
-				<span>{claymont}</span>
-				<span>{xx}</span>
-				<span>{yy}</span>
+				<span>{surname}</span>
+				<span>{city}</span>
+				<span>{region}</span>
+				<span>{country}</span>
+				<span>{phoneNumber}</span>
 			</p>
 			<button>EDIT ADDRESS</button>
 			<button><img src={trash} alt="trash" /></button>
