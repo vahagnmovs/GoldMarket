@@ -33,17 +33,17 @@ const Home = () => {
 				{/*<ProductPage/>*/}
 				{/*<AddProduct />*/}
 				{/*<SignUp/>*/}
-				{/*<PriceList />*/}
-				{/*<Video />*/}
-				{/*<SwitchComponent />*/}
-				{/*<NewCollection />*/}
-				{/*<SellWithUs />*/}
-				{/*<BestSales />*/}
-				{/*<Index />*/}
-				{/*<MostViewed />*/}
-				{/*<WhyGoldCenter />*/}
-				{/*<AboutUs />*/}
-                <LoginModal/>
+				<PriceList />
+				<Video />
+				<SwitchComponent />
+				<NewCollection />
+				<SellWithUs />
+				<BestSales />
+				<Index />
+				<MostViewed />
+				<WhyGoldCenter />
+				<AboutUs />
+                {/*<LoginModal/>*/}
 			</>
 		</Layout>
 	);
