@@ -1,11 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React, {useCallback, useState} from 'react';
 import logo from 'src/style/Icons/site_logo.png';
 import DropDown from 'src/components/header/header/dropDown';
-import { TData } from 'src/components/header/header/types';
+import {TData} from 'src/components/header/header/types';
 import dollar from 'src/style/Icons/dollar.png';
 import ruble from 'src/style/Icons/ruble.png';
 import dram from 'src/style/Icons/dram.png';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import WishList from './wishList';
 import Cart from './cart';
 import Login from './login';
@@ -57,6 +57,8 @@ const Header = () => {
 	const [chosenCurrency, setChosenCurrency] = useState(currency[0]);
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
+	const [isLogInUser, setIsLogInUser] = useState(false)
+
 	const handleChangeLanguage = (flag: TData) => {
 		setChosenFlag(flag);
 		setFlagMenuOpen(false);
@@ -74,6 +76,10 @@ const Header = () => {
 	const toggleCurrencyMenu = useCallback(() => {
 		setCurrencyMenuOpen(!currencyMenuOpen);
 	}, [currencyMenuOpen]);
+
+	const toggleIsLogInUser = () =>{
+		setIsLogInUser(true)
+	}
 
 	return (
 		// container
@@ -111,9 +117,15 @@ const Header = () => {
 					{/*wishlist*/}
 					<div className={'top_right_content'}>
 						<ul className={'flex align-center'}>
-							<li><WishList /></li>
-							<li><Login /></li>
-							<li><Cart /></li>
+							<WishList/>
+							{
+								isLogInUser
+									?
+									<li>USER</li>
+									:
+									<Login toggleIsLogInUser={ toggleIsLogInUser }/>
+							}
+							<Cart/>
 						</ul>
 					</div>
 

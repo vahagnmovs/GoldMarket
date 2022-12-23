@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GoldPriceList from './goldPriceList';
 import PhoneNumber from './phoneNumber';
 import 'src/style/base/_globals.scss';
 
 const PriceList = () => {
-	const [isShowMoreBtn, getIsShowMoreBtn] = useState(false);
-
-	const toggleShowMoreBtn = () => {
-		getIsShowMoreBtn(!isShowMoreBtn);
-	};
 
 	return (
 		<div className={'bg_color'}>
@@ -18,15 +13,11 @@ const PriceList = () => {
 						<PhoneNumber />
 					</div>
 					<div >
-						<GoldPriceList isShowMoreBtn={isShowMoreBtn} />
+						<GoldPriceList />
 					</div>
-				</div>
-				<div>
-					<button className={'show_more_btn width_100'} onClick={toggleShowMoreBtn}>SHOW MORE</button>
 				</div>
 			</div>
 		</div>
-
 	);
 };
 

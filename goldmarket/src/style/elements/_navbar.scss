@@ -7,12 +7,16 @@
 
 .products_manu {
   font-size: 14px;
-  height: 60px;
+  height: 75px;
 }
 
 .navbar {
   .navbar_ul {
     gap: 24px;
+
+    li:first-child {
+      padding: 20px 0;
+    }
       img {
         width: 20px;
         height: 20px;
@@ -20,7 +24,7 @@
   }
 
   li:hover {
-    background-color: rgb(138, 133, 108);
+    //background-color: rgb(138, 133, 108);
   }
 
 }
@@ -75,7 +79,7 @@
   border-top: 1px solid #1D3865;
   position: absolute;
   padding: 30px 50px;
-  top: 50px;
+  top: 60px;
   left: 0;
   width: 100%;
   background-color: #FFFFFF;

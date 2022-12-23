@@ -17,13 +17,18 @@ const OrderHistory = ({ id, nam2, nam3, nam4 }: TOrderHistory) => {
 	}; 
 
 	return (
-		<tr>
-			<td>{id}</td>
-			<td>{nam2}</td>
-			<td>{nam3}</td>
-			<td>{nam4}</td>
-			<td><button onClick={handleNavigateOrderInfo}>ivhrinvcr</button></td>
-		</tr>
+		<tbody>
+			<tr>
+				<td>{id}</td>
+				<td>{nam2}</td>
+				<td>{nam3}</td>
+				<td>{nam4}</td>
+				<td><button onClick={handleNavigateOrderInfo}>ivhrinvcr</button></td>
+			</tr>
+
+		</tbody>
+
+
 	);
 };
 
