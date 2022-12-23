@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Layout from 'src/components/layout';
 import Navbar from 'src/components/navbarr';
 import Header from 'src/components/header/header';
@@ -17,6 +16,7 @@ import Video from 'src/components/header/video';
 import ProductPage from 'src/components/productInfo';
 import AddProduct from 'src/components/product/AddProduct';
 import SignUp from 'src/components/signUp';
+import ProductInfo from "../../components/productInfo";
 
 const Home = () => {
 	return (
@@ -26,6 +26,7 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
+				{/*<ProductInfo/>*/}
 				{/*<ProductPage/>*/}
 				{/*<AddProduct />*/}
 				{/*<SignUp/>*/}

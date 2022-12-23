@@ -10,11 +10,11 @@ const Description = ({ infoProduct }: DescriptionProps) => {
 	return (
 		<div className={'description_page'}>
 			<div className={'description_into'}>
-				<span>Description</span>
-				<table >
+				<h1>Description</h1>
+				<table className={'table-price'} >
 					<tbody>
 						<tr>
-							<th>NAME</th>
+							<th className={'large-width'}>NAME</th>
 							<th>CONDITION</th>
 							<th>ORIGIN</th>
 							<th>material</th>
@@ -31,7 +31,7 @@ const Description = ({ infoProduct }: DescriptionProps) => {
 							{/*<th>{weight[indexweight]}</th>*/}
 						</tr>
 						<tr >
-							<td>STONE</td>
+							<td className={'large-width'}>STONE</td>
 							<td>CARAT</td>
 							<td>PCS</td>
 							<td>COLOR</td>
