@@ -1,22 +1,42 @@
 .show_more_btn {
-  height: 40px;
-  color: #1D3865;
-  border: 1px solid #1D3865;
-  border-radius: 2px;
+  border-radius: 4px;
+  background-color: #1D3865;
+  border: none;
+  color: #FFFFFF!important;
   text-align: center;
-  background-color: transparent;
-  font-size: 14px;
-  display: block;
-  height: 50px;
+  font-size: 15px;
+  padding: 20px;
+  width: 185px;
+  transition: all 0.5s;
 
-  &:hover{
-    background-color: #1D3865;
-    color: gold;
+  span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+    &:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: -8px;
+      right: -20px;
+      transition: 0.5s;
+      font-size: 25px;
+    }
   }
 
-  img {
-    width: 24px;
-    height: 24px;
+  &:hover {
+    background-color: #1366d6;
+  }
+
+  &:hover span {
+    padding-right: 25px;
+  }
+
+  &:hover span:after {
+    opacity: 1;
+    right: 0;
   }
 }
 
