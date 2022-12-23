@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Layout from 'src/components/layout';
 import Navbar from 'src/components/navbarr';
 import Header from 'src/components/header/header';
@@ -11,12 +10,12 @@ import BestSales from 'src/components/bestSales';
 import MostViewed from 'src/components/mostViewed';
 import AboutUs from 'src/components/information/aboutUs';
 import NewCollection from 'src/components/newCollections';
-import SellWithUs from '../../components/information/sellWithUsBanner';
-import WhyGoldCenter from '../../components/information/whyGoldCenterBanner';
-import Video from '../../components/header/video';
-import ProductPage from '../../components/productInfo';
+import SellWithUs from 'src/components/information/sellWithUsBanner';
+import WhyGoldCenter from 'src/components/information/whyGoldCenterBanner';
+import Video from 'src/components/header/video';
+import ProductPage from 'src/components/productInfo';
 import AddProduct from 'src/components/product/AddProduct';
-import SignUp from '../../components/signUp';
+import SignUp from 'src/components/signUp';
 import ProductInfo from "../../components/productInfo";
 
 const Home = () => {
