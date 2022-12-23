@@ -22,9 +22,7 @@ const NewCollection = () => {
 							newProducts.map(product => <ProductBadge key={product.productID} {...product} />)
 						}
 					</div>
-					<button className='show_more_btn'
-					// onClick={}
-					>EXPLORE ALL NEW COLLECTIONS</button>
+					<button className="show_more_btn"><span>EXPLORE ALL NEW COLLECTIONS</span></button>
 				</div>
 			</div>
 		</div>

@@ -4,6 +4,7 @@ import {products} from 'src/data/products';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'src/style/components/_mostViewed.scss';
+import {Link} from "react-router-dom";
 
 type TMostViewed = {
 	title?: string
@@ -63,8 +64,9 @@ const MostViewed = ({title}:TMostViewed) => {
 				<div className={'most_Viewed_title text-center justify-between  align-center'}>
 					<h3>{title}</h3>
 					<div className={'most_Viewed_button flex'}>
-						<button onClick={handlePrevSlide}>{'<'}</button>
-						<button onClick={handleNextSlide}>{'>'}</button>
+						<button className="show_more_btn" onClick={handlePrevSlide}>{"<"}<span></span></button>
+						<button className="show_more_btn" onClick={handleNextSlide}>{">"}<span></span></button>
+
 					</div>
 				</div>
 				<Slider ref={ref} {...settings}>

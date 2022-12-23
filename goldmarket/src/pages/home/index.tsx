@@ -29,7 +29,6 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
-
 				{/*<AddProduct />*/}
 				{/*<SignUp/>*/}
 				<PriceList />
@@ -42,7 +41,6 @@ const Home = () => {
 				<MostViewed />
 				<WhyGoldCenter />
 				<AboutUs />
-                {/*<LoginModal/>*/}
 			</>
 		</Layout>
 	);
