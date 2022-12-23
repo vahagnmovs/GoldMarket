@@ -30,17 +30,17 @@ const Home = () => {
 				{/*<ProductInfo/>*/}
 				{/*<ProductPage/>*/}
 				{/*<AddProduct />*/}
-				{/*<SignUp/>*/}
-				<PriceList />
-				<Video />
-				<SwitchComponent />
-				<NewCollection />
-				<SellWithUs />
-				<BestSales />
-				<Index />
-				<MostViewed />
-				<WhyGoldCenter />
-				<AboutUs />
+				<SignUp/>
+				{/*<PriceList />*/}
+				{/*<Video />*/}
+				{/*<SwitchComponent />*/}
+				{/*<NewCollection />*/}
+				{/*<SellWithUs />*/}
+				{/*<BestSales />*/}
+				{/*<Index />*/}
+				{/*<MostViewed />*/}
+				{/*<WhyGoldCenter />*/}
+				{/*<AboutUs />*/}
 			</>
 		</Layout>
 	);
