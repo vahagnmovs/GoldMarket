@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import {TFilterKey} from "../filters";
 
 type TInputTypes = {
-    title: string,
+    title: TFilterKey,
     data: string[],
-    getInput: (e: boolean, title: string, name: string) => void
+    getInput: (e: boolean, title: TFilterKey, name: string) => void
 }
 
 const InputArrays = ({title, data, getInput}: TInputTypes) => {
@@ -21,7 +22,6 @@ const InputArrays = ({title, data, getInput}: TInputTypes) => {
             <p onClick={handleFlag}>{title.toUpperCase()}</p>
             {
                 hoverFlag &&
-                // @ts-ignore
                 data.map(el => <div key={el}>
                     <input type="checkbox" id={el} onChange={(e) => handleChecked(e, el)}/>
                     <label htmlFor={el}>{el}</label>
