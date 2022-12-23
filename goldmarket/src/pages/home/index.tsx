@@ -27,20 +27,20 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
-				<ProductInfo/>
+				{/*<ProductInfo/>*/}
 				{/*<ProductPage/>*/}
 				{/*<AddProduct />*/}
 				{/*<SignUp/>*/}
-				{/*<PriceList />*/}
-				{/*<Video />*/}
-				{/*<SwitchComponent />*/}
-				{/*<NewCollection />*/}
-				{/*<SellWithUs />*/}
-				{/*<BestSales />*/}
-				{/*<Index />*/}
-				{/*<MostViewed />*/}
-				{/*<WhyGoldCenter />*/}
-				{/*<AboutUs />*/}
+				<PriceList />
+				<Video />
+				<SwitchComponent />
+				<NewCollection />
+				<SellWithUs />
+				<BestSales />
+				<Index />
+				<MostViewed />
+				<WhyGoldCenter />
+				<AboutUs />
 			</>
 		</Layout>
 	);
