@@ -17,6 +17,8 @@ import ProductPage from 'src/components/productInfo';
 import AddProduct from 'src/components/product/AddProduct';
 import SignUp from 'src/components/signUp';
 import ProductInfo from "../../components/productInfo";
+import LoginModal from "../../components/loginModal";
+
 
 const Home = () => {
 	return (
@@ -29,17 +31,18 @@ const Home = () => {
 				{/*<ProductInfo/>*/}
 				{/*<ProductPage/>*/}
 				{/*<AddProduct />*/}
-				<SignUp/>
-				{/*<PriceList />*/}
-				{/*<Video />*/}
-				{/*<SwitchComponent />*/}
-				{/*<NewCollection />*/}
-				{/*<SellWithUs />*/}
-				{/*<BestSales />*/}
-				{/*<Index />*/}
-				{/*<MostViewed />*/}
-				{/*<WhyGoldCenter />*/}
-				{/*<AboutUs />*/}
+				{/*<SignUp/>*/}
+				<PriceList />
+				<Video />
+				<SwitchComponent />
+				<NewCollection />
+				<SellWithUs />
+				<BestSales />
+				<Index />
+				<MostViewed />
+				<WhyGoldCenter />
+				<AboutUs />
+                {/*<LoginModal/>*/}
 			</>
 		</Layout>
 	);
