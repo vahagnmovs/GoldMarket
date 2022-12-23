@@ -10,6 +10,7 @@ import BestSales from 'src/components/bestSales';
 import MostViewed from 'src/components/mostViewed';
 import AboutUs from 'src/components/information/aboutUs';
 import NewCollection from 'src/components/newCollections';
+
 import SellWithUs from 'src/components/information/sellWithUsBanner';
 import WhyGoldCenter from 'src/components/information/whyGoldCenterBanner';
 import Video from 'src/components/header/video';
@@ -17,6 +18,8 @@ import ProductPage from 'src/components/productInfo';
 import AddProduct from 'src/components/product/AddProduct';
 import SignUp from 'src/components/signUp';
 import ProductInfo from "../../components/productInfo";
+import LoginModal from "../../components/loginModal";
+
 
 const Home = () => {
 	return (
@@ -26,8 +29,6 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
-				{/*<ProductInfo/>*/}
-				{/*<ProductPag	e/>*/}
 				{/*<AddProduct />*/}
 				{/*<SignUp/>*/}
 				<PriceList />

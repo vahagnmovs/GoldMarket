@@ -8,16 +8,17 @@ function SearchCategory({ title }: TSearchCategoryProps) {
 	const [mouse, setMouse] = useState(false);
 
 	return (
-		<div>
+		<li className={'flex justify-between align-center'}
+			onMouseEnter={() => setMouse(true)}
+			onMouseLeave={() => setMouse(false)}>
+			<div className={'flex justify-between align-center'}>
+				<span >{title}</span>
+				<img className={'GOLD '} src={open} alt="" />
+			</div>
 			{
 				mouse
-					?
-					<div>
-						<div className={'flex justify-between align-center'} onMouseLeave={() => setMouse(false)}>
-							<span>{title}</span>
-							<img className={'GOLD'} src={close} alt="" />
-						</div>
-						<div className='openning-navbar' onMouseLeave={() => setMouse(false)}>
+					&&
+						<div className='openning-navbar'>
 							{/*silver-jewelry*/}
 							<div className={'gold-jewelry flex justify-between'}>
 								<ul>
@@ -60,17 +61,8 @@ function SearchCategory({ title }: TSearchCategoryProps) {
 
 
 						</div>
-					</div>
-					:
-					<div className={'flex justify-between align-center'}
-						onMouseEnter={() => setMouse(true)}
-					>
-						<span >{title}</span>
-						<img className={'GOLD '} src={open} alt="" />
-					</div>
-
 			}
-		</div>
+		</li>
 	);
 }
 
