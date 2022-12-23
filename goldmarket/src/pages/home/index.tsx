@@ -18,6 +18,8 @@ import ProductPage from '../../components/productInfo';
 import AddProduct from 'src/components/product/AddProduct';
 import SignUp from '../../components/signUp';
 import ProductInfo from "../../components/productInfo";
+import LoginModal from "../../components/loginModal";
+
 
 const Home = () => {
 	return (
@@ -30,7 +32,7 @@ const Home = () => {
 				{/*<ProductInfo/>*/}
 				{/*<ProductPage/>*/}
 				{/*<AddProduct />*/}
-				<SignUp/>
+				{/*<SignUp/>*/}
 				{/*<PriceList />*/}
 				{/*<Video />*/}
 				{/*<SwitchComponent />*/}
@@ -41,6 +43,7 @@ const Home = () => {
 				{/*<MostViewed />*/}
 				{/*<WhyGoldCenter />*/}
 				{/*<AboutUs />*/}
+                <LoginModal/>
 			</>
 		</Layout>
 	);
