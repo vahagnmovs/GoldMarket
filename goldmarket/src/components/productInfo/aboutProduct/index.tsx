@@ -8,7 +8,7 @@ import {ProductColor} from './productColor';
 import {ProductContactThe} from './productContactThe';
 import {ProductCenaButton} from './productCenaButton';
 import {SellerInfo} from './sellerInfo';
-
+import  frame from 'src/style/Icons/Frame.png'
 
 interface AboutPageProps {
     productInformation: ProductsTypes

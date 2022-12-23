@@ -17,6 +17,7 @@ import Video from '../../components/header/video';
 import ProductPage from '../../components/productInfo';
 import AddProduct from 'src/components/product/AddProduct';
 import SignUp from '../../components/signUp';
+import ProductInfo from "../../components/productInfo";
 
 const Home = () => {
 	return (
@@ -26,19 +27,20 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
+				<ProductInfo/>
 				{/*<ProductPage/>*/}
 				{/*<AddProduct />*/}
 				{/*<SignUp/>*/}
-				<PriceList />
-				<Video />
-				<SwitchComponent />
-				<NewCollection />
-				<SellWithUs />
-				<BestSales />
-				<Index />
-				<MostViewed />
-				<WhyGoldCenter />
-				<AboutUs />
+				{/*<PriceList />*/}
+				{/*<Video />*/}
+				{/*<SwitchComponent />*/}
+				{/*<NewCollection />*/}
+				{/*<SellWithUs />*/}
+				{/*<BestSales />*/}
+				{/*<Index />*/}
+				{/*<MostViewed />*/}
+				{/*<WhyGoldCenter />*/}
+				{/*<AboutUs />*/}
 			</>
 		</Layout>
 	);

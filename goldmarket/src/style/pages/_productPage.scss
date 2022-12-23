@@ -119,6 +119,7 @@
   }
 
   .fines {
+    gap: 10px;
     width: 100%;
     padding: 11px 0;
     background-color: #F7F7F7;
@@ -199,13 +200,50 @@
 
 //description
 
-.description_page{
+.description_page {
   background-color: #F7F7F7;
   margin-top: 160px;
-  .description_into{
+  padding: 40px 0;
+
+  .description_into {
     width: 1200px;
     margin: 0 auto;
+
   }
+
+
 }
 
+.Contact_page {
+  margin: 60px 0;
 
+  .product_infi_contact {
+    h2 {
+      font-size: 28px;
+      color: #1D3865;
+      margin-bottom: 54px;
+    }
+    ul li{
+      margin-top: 20px;
+       font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      color: #000000;;
+    }
+
+    button{
+      margin-top: 45px;
+      padding: 10px 24px;
+      width: 553px;
+      height: 40px;
+      border: 1px solid #1D3865;
+      background-color:transparent;
+    }
+  }
+  iframe{
+    border: none;
+  }
+
+}
