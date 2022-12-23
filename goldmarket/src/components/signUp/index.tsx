@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import SellerSignUp from './seller';
 import BuyerSignUp from './buyer';
 
-const signUp = () => {
+const SignUp = () => {
 
 	const [isBuyer, setIsBuyer] = useState(true);
 	const toggleIsBuyer = () => {
@@ -30,4 +30,4 @@ const signUp = () => {
 	);
 };
 
-export default signUp;
+export default SignUp;

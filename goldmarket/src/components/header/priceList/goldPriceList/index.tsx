@@ -1,14 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'src/style/base/_globals.scss';
 import { TGoldPriceListProps } from './type';
+import {tableProductsPrice} from 'src/data/tableData'
+import GoldPrice from "../goldPrice";
+import newLengthTablePrice from "./newLengthTablePrice";
 
-function GoldPriceList({ isShowMoreBtn }: TGoldPriceListProps) {
+function GoldPriceList() {
+	const [newLength, setNewLength] = useState(4)
+	const [isShowMoreBtn, getIsShowMoreBtn] = useState(false);
+	const goldPrice = newLengthTablePrice(tableProductsPrice, newLength)
+	const handleLength = () => {
+		if(newLength === 4){
+			setNewLength(8);
+			getIsShowMoreBtn(!isShowMoreBtn);
+		}else{
+			setNewLength(4);
+			getIsShowMoreBtn(!isShowMoreBtn);
+		}
+	}
 	return (
 		<div>
 			<div className={'bg_color'}>
 				<table className={'table-price'}>
-					<colgroup>
-					</colgroup>
 					<thead>
 						<tr>
 							<th className="large-width">GOLD</th>
@@ -18,63 +31,12 @@ function GoldPriceList({ isShowMoreBtn }: TGoldPriceListProps) {
 							<th>TIME</th>
 						</tr>
 					</thead>
-
-					<tbody>
-						<tr>
-							<td className={'tr2'}>999 - 24k</td>
-							<td>56.3</td>
-							<td>56.9</td>
-							<td className='green'>-0.20</td>
-							<td>15:29:23</td>
-						</tr>
-						<tr>
-							<td className="large-width">999 - 24k</td>
-							<td>56.3</td>
-							<td>56.9</td>
-							<td className='green'>-0.20</td>
-							<td>15:29:23</td>
-						</tr>
-					</tbody>
-
-					<tr className={'tr2'}>
-						<td className="large-width">999 - 24k</td>
-						<td >56.3</td>
-						<td>56.9</td>
-						<td className='green'>-0.20</td>
-						<td>15:29:23</td>
-					</tr>
+					{goldPrice.map((item, i) => <GoldPrice key={item.time} index={i} gold={item.gold} buy={item.buy} sell={item.sell} incOrder={item.incOrder} time={item.time}/>
+						)}
 				</table>
-				{
-					isShowMoreBtn
-					&&
-					<table className={'table-price table_shoe_more'}>
-						<tbody>
-							<tr>
-								<td className={'tr2'}>999 - 24k</td>
-								<td>56.3</td>
-								<td>56.9</td>
-								<td className='green'>-0.20</td>
-								<td>15:29:23</td>
-							</tr>
-							<tr>
-								<td className="large-width">999 - 24k</td>
-								<td>56.3</td>
-								<td>56.9</td>
-								<td className='green'>-0.20</td>
-								<td>15:29:23</td>
-							</tr>
-						</tbody>
-						<tfoot>
-							<tr className={'tr2'}>
-								<td className="large-width">999 - 24k</td>
-								<td>56.3</td>
-								<td>56.9</td>
-								<td className='green'>-0.20</td>
-								<td>15:29:23</td>
-							</tr>
-						</tfoot>
-					</table>
-				}
+				<button className={'show_more_btn width_100'}
+						onClick={handleLength}>{isShowMoreBtn ? "SHOW LESS" : "SHOW MORE"}
+				</button>
 			</div>
 		</div>
 	);
