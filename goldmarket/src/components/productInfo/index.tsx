@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import {products} from '../../data/products';
 import AboutPage from './aboutProduct';
 import Contacts from './contacts';
