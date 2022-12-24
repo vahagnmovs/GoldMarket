@@ -3,7 +3,7 @@ import Sellers from './sellers';
 import { data } from 'src/data/recommendedSellers';
 import { Link } from 'react-router-dom';
 
-data.length = 4;
+data.length = 3;
 
 const RecommendSellers = () => {
 
@@ -12,7 +12,7 @@ const RecommendSellers = () => {
 	// }
 	return (
 		<div className={'container'}>
-			<div className="flex dir-col recommended_sellers">
+			<div className="recommended_sellers flex dir-col">
 				<div className="title_recommendedSeleres">
 					<h2>Recommended sellers</h2>
 					<p>
@@ -26,9 +26,7 @@ const RecommendSellers = () => {
 						data.map(product => <Sellers key={Math.random()}{...product} />)
 					}
 				</section>
-
 				<button className="show_more_btn"><Link to={'allBrands'}><span>ALL Brands</span></Link></button>
-
 			</div>
 		</div >
 	);

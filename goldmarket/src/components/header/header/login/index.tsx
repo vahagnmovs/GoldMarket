@@ -11,7 +11,7 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [modal, setModal] = useState(false);
-
+	const [error, setError] = useState('')
 	const colRef = collection(db, "buyers")
 	const ls = require('local-storage');
 
@@ -51,7 +51,7 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 					.catch((error) => {
 						const errorCode = error.code;
 						const errorMessage = error.message;
-						console.log(errorMessage)
+						throw new Error(`${errorCode}`)
 					})
 			})
 	}

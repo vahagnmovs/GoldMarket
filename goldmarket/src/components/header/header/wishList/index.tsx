@@ -7,23 +7,26 @@ const WishList = () => {
 	const [isOpenWishList, setIsOpenWishList] = useState(false);
 	const liked = useAppSelector(state => state.users.wishList);
 
-	return (
-		<>
+	const toggleIsOpenWishList = () => {
+		setIsOpenWishList(!isOpenWishList)
+	}
+
+	return (<>
+			<li className={'wishlist_content flex align-center'} onClick={toggleIsOpenWishList}>
+				<span>WISHLIST</span>
+				<img className={'icon_favorite'} src={heart} alt="icon_favorite"/>
+				<span>({liked.length})</span>
+			</li>
 			{
 				isOpenWishList
+				&&
+				(liked.length
 					?
-					liked.length
-						?
-						liked.map((product: ProductsTypes) => <div key={product.productID}>{product.name}</div>)
-						:
-						<span>Looks like you are not watching any items yet.</span>
+					liked.map((product: ProductsTypes) => <div key={product.productID}>{product.name}</div>)
 					:
-					<li className={'wishlist_content flex align-center'} onClick={() => setIsOpenWishList(true)}>
-						<span>WISHLIST</span>
-						<img className={'icon_favorite'} src={heart} alt="icon_favorite"/>
-						<span>({liked.length})</span>
-					</li>
+					<span>Looks like you are not watching any items yet.</span>)
 			}
+
 		</>
 
 	);
