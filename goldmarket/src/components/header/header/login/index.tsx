@@ -10,6 +10,7 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 	const [isOpenLogInModal, setIsOpenLogInModal] = useState(false);
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
+	const [modal, setModal] = useState(false);
 	const [error, setError] = useState('')
 	const colRef = collection(db, "buyers")
 	const ls = require('local-storage');
@@ -55,6 +56,19 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 			})
 	}
 
+
+
+
+	const toggleModal = () => {
+		setModal(!modal);
+	};
+
+	if(modal) {
+		document.body.classList.add('active-modal')
+	} else {
+		document.body.classList.remove('active-modal')
+	}
+
 	return (
 		<>
 			<li onClick={() => setIsOpenLogInModal(true)} className={'login_content flex align-center'}>
@@ -64,37 +78,49 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 			{
 				isOpenLogInModal
 					&&
-					<form className={'box'} onSubmit={ toggleUserSignIn }>
-						<h3 className={'logo'}>LOGIN</h3>
-						<div>
-							<div className='group'>
-								<input type='email'
-									   onChange={(e) => handleInput(e,"email")}
-									   value={email}
-								/>
-								<span className='highlight'></span>
-								<span className='bar'></span>
-								<label>e-mail</label>
+
+
+				<div className="modal">
+					<div onClick={toggleModal} className="overlay"></div>
+					<div>
+
+						<form className={'box'} onSubmit={ toggleUserSignIn }>
+							<button className="close-modal" onClick={() => setModal(!modal)}>
+								X
+							</button>
+							<h3 className={'logo'}>LOGIN</h3>
+							<div>
+								<div className='group'>
+									<input type='email'
+										   onChange={(e) => handleInput(e,"email")}
+										   value={email}
+									/>
+									<span className='highlight'></span>
+									<span className='bar'></span>
+									<label>e-mail</label>
+								</div>
+
+								<div className='group'>
+									<input type='password'
+										   onChange={(e) => handleInput(e,"password")}
+										   value={password}/>
+									<span className='highlight'></span>
+									<span className='bar'></span>
+									<label>Password</label>
+								</div>
+								<button className='button-65'>Login</button>
+
+								<span className='forgot_password'>Forgot your password?</span>
+
+								<div className="separator">New customer?</div>
+
+								<h3>Start Now</h3>
+								<button className='button-65 btn_registration'>REGISTRATION</button>
 							</div>
+						</form>
+					</div>
+				</div>
 
-							<div className='group'>
-								<input type='password'
-									   onChange={(e) => handleInput(e,"password")}
-									   value={password}/>
-								<span className='highlight'></span>
-								<span className='bar'></span>
-								<label>Password</label>
-							</div>
-							<button className='button-65'>Login</button>
-
-							<span className='forgot_password'>Forgot your password?</span>
-
-							<div className="separator">New customer?</div>
-
-							<h3>Start Now</h3>
-							<button className='button-65 btn_registration'>REGISTRATION</button>
-						</div>
-					</form>
 			}
 		</>
 	);

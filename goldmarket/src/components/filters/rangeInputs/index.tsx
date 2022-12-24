@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import open_filter from 'src/style/Icons/open.png'
+
 const RangeInput = ({getRanges, title}: any) => {
     const [showFilters, setShowFilters] = useState(false);
     const [range, setRange] =useState({
@@ -20,9 +22,15 @@ const RangeInput = ({getRanges, title}: any) => {
 
     return (
         <div>
-            <div onClick={() => setShowFilters(!showFilters)}>{title.toUpperCase()}</div>
+            <div className={'button_open_filter flex justify-between align-center text-center'}>
+                <p onClick={() => setShowFilters(!showFilters)}>{title.toUpperCase()}
+                </p>
+                <img src={open_filter}/>
+            </div>
+
             {
-                showFilters && <div>
+                showFilters &&
+                <div className={'open_filter1 flex dir-col'}>
                     <input
                         type="number"
                         onChange={(e) => handleInput(e, "min")}
