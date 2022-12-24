@@ -19,7 +19,7 @@ import AddProduct from 'src/components/product/AddProduct';
 import SignUp from 'src/components/signUp';
 import ProductInfo from "../../components/productInfo";
 import LoginModal from "../../components/loginModal";
-import Dashboard from 'src/components/centers/buyerAdmin/dashboard';
+
 
 
 const Home = () => {
@@ -44,7 +44,6 @@ const Home = () => {
 				<WhyGoldCenter />
 				<AboutUs />
                 {/*<LoginModal/>*/}
-					 <Dashboard title={'Dashboard'}/>
 			</>
 		</Layout>
 	);
