@@ -5,9 +5,63 @@
   padding-top: 30px;
   margin-bottom: 20px;
 
-
   .container_price2 {
-    margin-top: 80px;
+    margin-top: 100px;
+
+    .show_more_btn_big {
+      border-radius: 4px;
+      background-color: #1D3865;
+      border: none;
+      color: #FFFFFF!important;
+      text-align: center;
+      font-size: 15px;
+      padding: 20px;
+      transition: all 0.5s;
+      width: 100% !important;
+
+      span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .showMore:after {
+        content: '\27F1'!important;
+        position: absolute;
+        opacity: 0;
+        top: 20px;
+        left: 35px;
+        transition: 0.5s;
+        font-size: 20px;
+      }
+
+      .showLess:after {
+        content: '\27F0'!important;
+        position: absolute;
+        opacity: 0;
+        top: -20px;
+        left: 35px;
+        transition: 0.5s;
+        font-size: 20px;
+      }
+
+      &:hover {
+        background-color: #1366d6;
+      }
+
+      &:hover .showMore:after {
+        opacity: 1;
+        bottom: 0;
+        top: 13px;
+      }
+
+      &:hover .showLess:after {
+        opacity: 1;
+        bottom: 0;
+        top: -18px;
+      }
+    }
   }
 }
 

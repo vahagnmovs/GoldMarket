@@ -21,15 +21,17 @@ const Product = (props: ProductsTypes) => {
 		<div className="badge_item">
 			<div className="relative">
 				<img src={images[0]} alt="list_item" />
-				<div className="badge_item_top flex  absolute">
+				<div className="badge_item_top flex absolute">
 					{newProduct ? <span className="new">NEW</span> : <span></span>}
 					{discount ? <span className="discount">-{discount}%</span> : <span></span>}
 					{/*FIXME: ADD TOGGLE AND SRC*/}
-					<img
-						src={lovedFlag ? '' : ''}
-						alt=""
-						onClick={toggleLoved}
-					/>
+					<figure className={'relative'}>
+						<img
+							src={lovedFlag ? '' : ''}
+							alt=""
+							onClick={toggleLoved}
+						/>
+					</figure>
 				</div>
 			</div>
 
