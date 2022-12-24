@@ -5,10 +5,11 @@ import {TData} from 'src/components/header/header/types';
 import dollar from 'src/style/Icons/dollar.png';
 import ruble from 'src/style/Icons/ruble.png';
 import dram from 'src/style/Icons/dram.png';
+import user1 from 'src/style/Icons/user.png';
 import {useNavigate} from 'react-router-dom';
 import WishList from './wishList';
 import Cart from './cart';
-import Login from './login';
+import Login from './login'
 
 const flags: TData[] = [
 	{
@@ -56,7 +57,8 @@ const Header = () => {
 	const [currencyState, setCurrencyState] = useState(currency);
 	const [chosenCurrency, setChosenCurrency] = useState(currency[0]);
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
-
+	const ls = require('local-storage')
+	const user = ls('buyer')
 	const [isLogInUser, setIsLogInUser] = useState(false)
 
 	const handleChangeLanguage = (flag: TData) => {
@@ -121,9 +123,12 @@ const Header = () => {
 							{
 								isLogInUser
 									?
-									<li>USER</li>
+									<li className={'flex align-center'}>
+										<div className={'user_prof'}>{`${user.firstName} ${user.lastName[0]}.`}</div>
+										<img className={'user_icon'} src={user1} alt='user_icon' />
+									</li>
 									:
-									<Login toggleIsLogInUser={ toggleIsLogInUser }/>
+									<Login toggleIsLogInUser={toggleIsLogInUser} />
 							}
 							<Cart/>
 						</ul>

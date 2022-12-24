@@ -1,39 +1,57 @@
 import React, {useState} from 'react';
 import user from 'src/style/Icons/user.png';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {TLoginProps} from "./type";
+import {collection, getDocs} from "firebase/firestore";
+import {db} from 'src/firebase'
 
-const Login = ({toggleIsLogInUser}:TLoginProps) => {
+const Login = ({toggleIsLogInUser}: TLoginProps) => {
 
 	const [isOpenLogInModal, setIsOpenLogInModal] = useState(false);
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 
-
-
+	const colRef = collection(db, "buyers")
+	const ls = require('local-storage');
 
 	const handleInput = (e: React.ChangeEvent<HTMLInputElement>, input: string) => {
-		if(input === "email"){
+		if (input === "email") {
 			setEmail(e.target.value)
 		}
-		if(input === "password"){
+		if (input === "password") {
 			setPassword(e.target.value)
 		}
 	}
-
 
 	const toggleUserSignIn = (e:React.FormEvent) => {
 		e.preventDefault()
 		const auth = getAuth();
 		signInWithEmailAndPassword(auth, email, password)
 			.then(({user}) => {
-				toggleIsLogInUser()
-				console.log(user)
-			})
-			.catch((error) => {
-				const errorCode = error.code;
-				const errorMessage = error.message;
-				console.log(errorMessage)
+				getDocs(colRef)
+					.then((snapshot) => {
+						const buyers: any = []
+						snapshot.docs.forEach((doc) => {
+							buyers.push({
+								...doc.data(),
+							})
+						})
+						return buyers.find((buyer: any) => buyer.buyerID === user.uid)
+					})
+					.then(docSnap => {
+						if (docSnap.firstName) {
+							ls('buyer', docSnap)
+							toggleIsLogInUser()
+						} else {
+							// doc.data() will be undefined in this case
+							console.log("No such document!");
+						}
+					})
+					.catch((error) => {
+						const errorCode = error.code;
+						const errorMessage = error.message;
+						console.log(errorMessage)
+					})
 			})
 	}
 
@@ -80,6 +98,8 @@ const Login = ({toggleIsLogInUser}:TLoginProps) => {
 			}
 		</>
 	);
-};
+	};
+
+
 
 export default Login;

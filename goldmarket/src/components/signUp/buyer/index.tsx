@@ -3,7 +3,8 @@ import {useAppDispatch} from '../../../hooks/redux-hooks';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import {createUserWithEmailAndPassword, getAuth} from 'firebase/auth';
-import {setUser} from 'src/store/users/usersSlice';
+import {addDoc, collection} from "firebase/firestore";
+import {db} from 'src/firebase'
 
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
 
@@ -16,14 +17,15 @@ const BuyerSignUp = () => {
 		const auth = getAuth();
 		createUserWithEmailAndPassword(auth, formik.values.email, formik.values.password)
 			.then(({user}) => {
-				dispatch(setUser({
-					email: user.email,
-					id: user.uid,
-					token: user.refreshToken,
-					phoneNumber: formik.values.phoneNumber,
-					lastName: formik.values.lastName,
+				addDoc(collection(db, "buyers"), {
 					firstName: formik.values.firstName,
-				}));
+					lastName: formik.values.lastName,
+					email: user.email,
+					buyerID: user.uid,
+					cart: [],
+					wishList: [],
+					phone: formik.values.phoneNumber
+				})
 			})
 			.catch((error) => {
 				const errorCode = error.code;
