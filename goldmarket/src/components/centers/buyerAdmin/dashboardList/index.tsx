@@ -6,7 +6,7 @@ const DashboardList = () => {
 	return (
 		<div>
 			<Dashboard title={'Dashboard'}/>
-			<GoldPriceList />
+			<GoldPriceList  show={false}/>
 		</div>
 	);
 };
