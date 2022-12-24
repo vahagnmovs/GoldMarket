@@ -39,7 +39,6 @@ const OrderHistoryList = () => {
 						<th>ACTION</th>
 					</tr>
 				</thead>
-
 				{data.map(item => <OrderHistory key={item.id} {...item} />)}
 			</table>
 		</div>

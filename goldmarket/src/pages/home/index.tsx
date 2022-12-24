@@ -21,6 +21,7 @@ import ProductInfo from "../../components/productInfo";
 import LoginModal from "../../components/loginModal";
 
 
+
 const Home = () => {
 	return (
 		<Layout
