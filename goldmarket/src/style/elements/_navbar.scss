@@ -75,7 +75,6 @@
   }
 
 .openning-navbar {
-  padding-top: 30px;
   border-top: 1px solid #1D3865;
   position: absolute;
   padding: 30px 50px;
@@ -101,14 +100,14 @@
 }
 
 .search_modal_open{
-    padding: 30px;
-    background-color: white;
-    position: absolute;
-    top: 50px;
-    left: -820px;
-    width: 700px;
-    height: 300px;
-    z-index: 2;
+  padding: 30px;
+  background-color: white;
+  position: absolute;
+  top: -245px;
+  left: -8px;
+  width: 700px;
+  height: 300px;
+  z-index: 2;
     
     input{
       width: 100%;

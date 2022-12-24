@@ -11,6 +11,8 @@ import instagramIcon from 'src/style/Icons/insta.png';
 import okIcon from 'src/style/Icons/ok.png';
 import telegramIcon from 'src/style/Icons/tg.png';
 import vkIcon from 'src/style/Icons/vk.png';
+import Redirect from "../components/redirect/redirect";
+import React from "react";
 
 export type TGoldCenter = {
     name: string;
@@ -107,30 +109,30 @@ export const footerData: TFooterData = {
 		{
 			img: vkIcon,
 			target: '_blank',
-			path: '/vk',
-
+			path: 'https://vk.com/id768387018',
 		},
 		{
 			img: okIcon,
 			target: '_blank',
-			path: '/ok'
+			path: 'https://ok.ru'
 		},
 		{
 			img: instagramIcon,
 			target: '_blank',
-			path: '/instagram'
+			path: 'https://www.instagram.com/goldmarketproject/'
 		},
 		{
 			img: facebookIcon,
 			target: '_blank',
-			path: '/facebook'
+			path: 'https://www.facebook.com/profile.php?id=100088524672046'
 		},
 		{
 			img: telegramIcon,
 			target: '_blank',
-			path: '/telegram'
+			path: 'https://web.telegram.org/z/'
 		},
 	],
+
 	footerEndLink: [
 		{
 			name: 'Terms old Use',
