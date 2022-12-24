@@ -31,19 +31,19 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
-				{/*<AddProduct />*/}
-				{/*<SignUp/>*/}
-				{/*<PriceList />*/}
-				{/*<Video />*/}
-				{/*<SwitchComponent />*/}
-				{/*<NewCollection />*/}
-				{/*<SellWithUs />*/}
-				{/*<BestSales />*/}
-				{/*<Index />*/}
-				{/*<MostViewed />*/}
-				{/*<WhyGoldCenter />*/}
-				{/*<AboutUs />*/}
-				<Products/>
+				<AddProduct />
+				<SignUp/>
+				<PriceList />
+				<Video />
+				<SwitchComponent />
+				<NewCollection />
+				<SellWithUs />
+				<BestSales />
+				<Index />
+				<MostViewed />
+				<WhyGoldCenter />
+				<AboutUs />
+				{/*<Products/>*/}
 			</>
 		</Layout>
 	);
