@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import open_filter from "../../../style/Icons/open.png";
 
 type TInputBooleans = {
     title: string,
@@ -21,7 +22,12 @@ const InputBooleans = ({title, name, data, getInput}: TInputBooleans) => {
 
     return (
         <div>
-            <p onClick={handleFlag}>{title.toUpperCase()}</p>
+
+            <div className={'button_open_filter flex justify-between align-center text-center'}>
+                <p onClick={handleFlag}>{title.toUpperCase()}</p>
+                <img src={open_filter}/>
+            </div>
+
             {
                 showFlag &&
                 // @ts-ignore

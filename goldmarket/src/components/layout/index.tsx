@@ -20,18 +20,18 @@ const Layout = (props: LayoutProps) => {
 
 	return (
 		<main>
-			<div id={'header'}>
-				{HeaderComponent}
-			</div>
-			<div id={'nav-bar'}>
-				{NavBarComponent}
-			</div>
+			{/*<div id={'header'}>*/}
+			{/*	{HeaderComponent}*/}
+			{/*</div>*/}
+			{/*<div id={'nav-bar'}>*/}
+			{/*	{NavBarComponent}*/}
+			{/*</div>*/}
 			<div id={'page-container'}>
 				{children}
 			</div>
-			<div id={'footer'}>
-				{FooterComponent}
-			</div>
+			{/*<div id={'footer'}>*/}
+			{/*	{FooterComponent}*/}
+			{/*</div>*/}
 		</main>
 	);
 };
