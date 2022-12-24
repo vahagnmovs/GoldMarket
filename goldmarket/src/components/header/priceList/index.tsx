@@ -6,7 +6,6 @@ import 'src/style/base/_globals.scss';
 const PriceList = () => {
 
 	return (
-		<div className={'bg_color'}>
 			<div className={'container_price'}>
 				<div className={'container_price2'}>
 					<div className={'Phone'}>
@@ -17,7 +16,6 @@ const PriceList = () => {
 					</div>
 				</div>
 			</div>
-		</div>
 	);
 };
 

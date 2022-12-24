@@ -20,7 +20,6 @@ function GoldPriceList() {
 	}
 	return (
 		<div>
-			<div className={'bg_color'}>
 				<table className={'table-price'}>
 					<thead>
 						<tr>
@@ -34,10 +33,9 @@ function GoldPriceList() {
 					{goldPrice.map((item, i) => <GoldPrice key={item.time} index={i} gold={item.gold} buy={item.buy} sell={item.sell} incOrder={item.incOrder} time={item.time}/>
 						)}
 				</table>
-				<button className={'show_more_btn width_100'}
-						onClick={handleLength}>{isShowMoreBtn ? "SHOW LESS" : "SHOW MORE"}
+				<button className={'show_more_btn_big'}
+						onClick={handleLength}><span>{isShowMoreBtn ? <span className={'showLess'}>SHOW LESS</span> : <span className={'showMore'}>SHOW MORE</span>}</span>
 				</button>
-			</div>
 		</div>
 	);
 }

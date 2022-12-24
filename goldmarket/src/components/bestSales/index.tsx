@@ -15,7 +15,6 @@ const BestSales = () => {
 	// const products = useAppSelector(state => state.products)
 
 	return (
-		<div className="bg_grey">
 			<div className="container">
 				<div className="collection flex dir-col">
 					<h3>Best sales</h3>
@@ -26,11 +25,8 @@ const BestSales = () => {
 						}
 					</div>
 					<button className="show_more_btn"><span>EXPLORE ALL BEST SALES</span></button>
-
 				</div>
 			</div>
-		</div>
-
 	);
 };
 
