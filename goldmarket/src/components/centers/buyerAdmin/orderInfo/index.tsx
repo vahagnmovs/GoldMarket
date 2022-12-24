@@ -1,14 +1,30 @@
-import React from 'react';
-import Dashboard from '../dashboard';
+import React from 'react'
 
-const OrderInfo = () => {
-	return (
-		<div>
-			<Dashboard title={'Order Info'}/>
-			<h2>OrderInfo</h2>
-		</div>
-		
-	);
-};
+type TOrderInfo ={
+   time : string;
+   total : string;
+   orderNumber : string;
+   soldBy : string;
+}
 
-export default OrderInfo;
+const OrderInfo = ({time, total, orderNumber, soldBy} : TOrderInfo) => {
+  return (
+    <div>
+      <div>
+         <p>TIME PLACED</p>
+         <p>{time}</p>
+         <p>TOTAL</p>
+         <p>{total}</p>
+      </div>
+      <div>
+         <p>ORDER NUMBER</p>
+         <p>{orderNumber}</p>
+         <p>SALD BY</p>
+         <p>{soldBy}</p>
+
+      </div>
+    </div>
+  )
+}
+
+export default OrderInfo
