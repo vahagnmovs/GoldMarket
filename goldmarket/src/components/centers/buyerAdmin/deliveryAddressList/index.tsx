@@ -45,16 +45,21 @@ const DeliveryAddressList = () => {
 		setAddress(initialState);
 		setModall(false);
 	}
-console.log(data);
-
 	return (
 		<div>
 			{modal && <div>
+				<div>
+					<div>
+						<p>ARMENIA</p>
+					</div>
+					<div>
+						<p>YEREVAN</p>
+					</div>
+				</div>
 				<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS'} inputValue={address.streetAddress} name={'streetAddress'} />
 				<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS OPTIONAL'} inputValue={address.streetAddressOptional} name={'streetAddressOptional'} />
 				<ModalInput handleOnCange={handleOnCange} title={'ZIP CODE'} inputValue={address.zipCode} name={'zipCode'} />
 				<ModalInput handleOnCange={handleOnCange} title={'PHONE NUMBER'} inputValue={address.phoneNumber} name={'phoneNumber'} />
-
 				<button onClick={handlePush}>SAVE</button>
 			</div>}
 			<div>
