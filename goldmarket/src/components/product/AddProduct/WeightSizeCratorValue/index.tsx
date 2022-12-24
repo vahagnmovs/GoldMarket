@@ -4,6 +4,7 @@ type TProps = {
     listData: number[] | string[]
     handleWeight: (value: string[] | number[]) => void
     name: string
+	 initialCheckdArr?: any
 }
 
 const WeightSizeCratorValue = ({ listData, name, handleWeight }: TProps) => {
@@ -34,7 +35,7 @@ const WeightSizeCratorValue = ({ listData, name, handleWeight }: TProps) => {
 
 	return (
 		<div>
-			<span style={{cursor: 'pointer'}} onClick={handleFlag}> {name} </span>
+			<span style={{cursor: 'pointer'}} onClick={handleFlag}> {name.toUpperCase()} </span>
 			{flag || listData.map((item, index) => {
 				return (
 					<div key={index} className="checkbox-container">

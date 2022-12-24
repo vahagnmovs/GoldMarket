@@ -13,13 +13,12 @@ const Creator: React.FC<IProps> = ({ data, handleChangeData }) => {
 					const key = Object.keys(elem).join();
               
 					return <div key={elem.key}>
-						<label> {key} </label>
+						<label> {key.toUpperCase()} </label>
 						<select name={key} onChange={handleChangeData}>
 							<option selected disabled>{key}</option>
-							{ elem[key].map((el: any) => <option key={el.key} value={el}> {el} </option>) }
+							{ elem[key].map((el: any) => <option key={el} value={el}> {el} </option>) }
 						</select> 
-					</div>;
-                                    
+					</div>;                      
 				})
 			}   
 		</div>
