@@ -28,9 +28,7 @@ const LogedPage = ({toggleIsLogInUser}: TLoginProps) => {
                     isOpenModal
                     &&
                     <div className={'user_prof_modal flex dir-col justify-around absolute'}>
-                        {/*<div >*/}
-                            <span className={'user_account block'} onClick={() => navigate('/dashboard')}>ACCOUNT</span>
-                        {/*</div>*/}
+                        <span className={'user_account block'} onClick={() => navigate('/dashboard')}>ACCOUNT</span>
                         <button onClick={handelLogOut}>LOG OUT</button>
                     </div>
                 }
