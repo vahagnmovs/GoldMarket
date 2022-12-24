@@ -4,22 +4,24 @@ type TProps = {
     listData: number[] | string[]
     handleWeight: (value: string[] | number[]) => void
     name: string
+	 initialCheckdArr?: any
+
 }
 
 const WeightSizeCratorValue = ({ listData, name, handleWeight }: TProps) => {
 
 	const [checkedList, setCheckedList] = useState<string[]>([]);
 	const [flag, setFlag] = useState(true);
+
   
 	useEffect(() => {
 		handleWeight(checkedList);
 	}, [checkedList]);
 
 
-
 	const handleSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const { value, checked  } = event.target;
- 
+
 		if (checked) {
 			setCheckedList([...checkedList, value]);
 		} else {
@@ -28,13 +30,12 @@ const WeightSizeCratorValue = ({ listData, name, handleWeight }: TProps) => {
 		}
 	};
 
-
 	const handleFlag = () => setFlag(!flag);
-
+	
 
 	return (
 		<div>
-			<span style={{cursor: 'pointer'}} onClick={handleFlag}> {name} </span>
+			<span style={{cursor: 'pointer'}} onClick={handleFlag}> {name.toUpperCase()} </span>
 			{flag || listData.map((item, index) => {
 				return (
 					<div key={index} className="checkbox-container">

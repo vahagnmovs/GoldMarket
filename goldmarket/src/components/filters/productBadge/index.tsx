@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {ProductsTypes} from "../../data/products";
+import {ProductsTypes} from "src/data/products";
 // FIXME:
 // import {useAppSelector} from "src/hooks/redux-hooks";
 

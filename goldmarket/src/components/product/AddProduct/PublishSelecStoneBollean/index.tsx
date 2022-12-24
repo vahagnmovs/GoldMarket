@@ -9,7 +9,7 @@ const PublishSelecStoneBollean = ({ name, handleBoolean }: TProps) => {
 
 	return (
 		<div>
-			<label>{name}</label>
+			<label>{name.toUpperCase()}</label>
 			<select name={name} onChange={handleBoolean}>
 				<option disabled selected>{name}</option>
 				<option value={'yes'}>yes</option>

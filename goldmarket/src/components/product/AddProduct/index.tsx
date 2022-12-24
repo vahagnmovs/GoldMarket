@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {filters, initialDimonds, initialPrices, initialState, sizeListData, weightListData} from 'src/components/constants';
+import {filters, initialColor, initialDimonds, initialPrices, initialState, sizeListData, weightListData} from 'src/components/constants';
 import CrateInput from '../createInput';
 
 import AddImages from './addImages';
@@ -9,58 +9,59 @@ import WeightSizeCratorValue from './WeightSizeCratorValue';
 
 import { useAppDispatch } from 'src/hooks/redux-hooks';
 import { addProduct } from 'src/store/products/productSlice';
+import AddColor from './Creator/addColor';
 
-export type TWeight = {
-	name: { key: number[] | string[]}
-}
  
 const AddProduct: React.FC = () => {
 
 	const [formData, setFormData] = useState(initialState);
 
-	const [PRICES, setPrices] = useState(initialPrices);
-	const [DIMOND, setDimonds] = useState(initialDimonds);
-	const [IMAGES, setImgSrces] = useState([]);
+	const [prices, setPrices] = useState(initialPrices);
+	const [diamond, setDimonds] = useState(initialDimonds);
 	
-	const [WIEGHT, setWeight] = useState<any>([]);
-	const [SIZE, setSize] = useState<any>([]);
+	const [weight, setWeight] = useState<any>([]);
+	const [size, setSize] = useState<any>([]);
 	
-	const [PUBLISH, setBublish] = useState<boolean | undefined>();
-	const [SELECTSTONE, setSelectStone] = useState<boolean | undefined>();
-	
-	const [showSlice, setShowSlice] = useState(false);
+	const [publish, setBublish] = useState<boolean | undefined>();
+	const [stone, setSone] = useState<boolean | undefined>(false);
+	const [newProduct, setNewProduct] = useState<boolean | undefined>(false);
 
+	const [showSlice, setShowSlice] = useState(false);
+	const [images, setImgSrces] = useState([]);
 
 	const dispatch = useAppDispatch();
 
+	useEffect(() => {
+		setFormData({...formData, images});
+	}, [images]);
 
 	useEffect(() => {
-		setFormData({...formData, IMAGES});
-	}, [IMAGES]);
+		setFormData({...formData, diamond});
+	}, [diamond]);
 
 	useEffect(() => {
-		setFormData({...formData, DIMOND});
-	}, [DIMOND]);
+		setFormData({...formData, prices});
+	}, [prices]);
 
 	useEffect(() => {
-		setFormData({...formData, PRICES});
-	}, [PRICES]);
-
-	useEffect(() => {
-		setFormData({...formData, WIEGHT});
-	}, [WIEGHT]);
+		setFormData({...formData, weight});
+	}, [weight]);
     
 	useEffect(() => {
-		setFormData({...formData, SIZE});
-	}, [SIZE]);
+		setFormData({...formData, size});
+	}, [size]);
 
 	useEffect(() => {
-		setFormData({...formData, PUBLISH});
-	}, [PUBLISH]);
+		setFormData({...formData, publish});
+	}, [publish]);
     
 	useEffect(() => {
-		setDimonds({...DIMOND, SELECTSTONE});
-	}, [SELECTSTONE]);
+		setFormData({...formData, stone});
+	}, [stone]);
+
+	useEffect(() => {
+		setFormData({...formData, newProduct});
+	}, [newProduct]);
 
 
 
@@ -72,24 +73,23 @@ const AddProduct: React.FC = () => {
 		setFormData({
 			...formData,
 			[name]: value,
-			IMAGES,
 		});
 	};
      
 	const handleDimonds = ({target}: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = target;
 
-		setDimonds({...DIMOND, [name]: value});
+		setDimonds({...diamond, [name]: value});
 	};
 
 	const handlePrice = ({target}: React.ChangeEvent<HTMLInputElement>) => {
 		const {name, value} = target;
 
-		setPrices({...PRICES, [name]: value});
+		setPrices({...prices, [name]: value});
 	};
 
-	const disAdd = (formData.NAME.trim().length === 0) || (formData.DESCRIPTION.trim().length === 0) ||
-                   (formData.CODE.trim().length === 0);
+	const disAdd = (formData.name.trim().length === 0) || (formData.description.trim().length === 0) ||
+                   (formData.code.trim().length === 0);
 
 
 	const toggleShowSlice = () => setShowSlice(!showSlice);
@@ -97,6 +97,7 @@ const AddProduct: React.FC = () => {
 	const handleWeight = (value: string[] | number[]) => {
 		setWeight((prev: []) => [...value]);
 	};
+
 	const handleSize = (value: string[] | number[]) => {
 		setSize((prev: []) => [...value]);
 	};
@@ -104,35 +105,50 @@ const AddProduct: React.FC = () => {
 	const handleBoolean = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		const { name, value } = event.target;
 
-		if (name === 'PUBLISH') {
+		if (name === 'publish') {
 			if (value === 'yes') setBublish(true); 
 			else setBublish(false); 
 		}
 
-		else if (name === 'SELECTSTONE') {
-			if (value === 'yes') setSelectStone(true); 
-			else setSelectStone(false); 
+		else if (name === 'stone') {
+			if (value === 'yes') setSone(true); 
+			else setSone(false)
 		}
+
+		else if (name === 'newProduct') {
+			if (value === 'yes') setNewProduct(true); 
+			else setNewProduct(false)
+		}
+
 	}; 
 
 
 	const handleSave = () => {
+		console.log(formData, 'add object')
 		dispatch(addProduct(formData));
 	};
 
+
 	return (
 		<div className='addProduct'>
-			<CrateInput title='NAME' value={formData.NAME} handleChangeData={handleChangeFormData} />
-			<CrateInput title='DESCRIPTION' value={formData.DESCRIPTION} handleChangeData={handleChangeFormData}/>
+
+			<CrateInput title='name' value={formData.name} handleChangeData={handleChangeFormData} />
+			<CrateInput title='description' value={formData.description} handleChangeData={handleChangeFormData}/>
 
 			<Creator data={filters.firstCategory} handleChangeData={handleChangeFormData} />
-			<PublishSelecStoneBollean name={'PUBLISH'} handleBoolean={handleBoolean} />
+			<PublishSelecStoneBollean name={'publish'} handleBoolean={handleBoolean} />
+			<PublishSelecStoneBollean name={'stone'} handleBoolean={handleBoolean} />
+			<PublishSelecStoneBollean name={'newProduct'} handleBoolean={handleBoolean} />
 
 			<Creator data={filters.productDetals} handleChangeData={handleChangeFormData} />
-			<WeightSizeCratorValue name={'WEIGHT'} listData={weightListData} handleWeight={handleWeight} />
-			<WeightSizeCratorValue name={'SIZE'} listData={sizeListData} handleWeight={handleSize} />
-			<CrateInput title='COUNT' value={formData.COUNT} handleChangeData={handleChangeFormData} />
-			<CrateInput title='DISCOUNT' value={formData.DISCOUNT} handleChangeData={handleChangeFormData} />
+			<WeightSizeCratorValue name={'weight'} listData={weightListData} handleWeight={handleWeight} />
+			<WeightSizeCratorValue name={'size'} listData={sizeListData} handleWeight={handleSize} />
+			<CrateInput title='count' value={formData.count} handleChangeData={handleChangeFormData} />
+			<CrateInput title='discount' value={formData.discount} handleChangeData={handleChangeFormData} />
+			<CrateInput title='bestSales' value={formData.bestSales} handleChangeData={handleChangeFormData} />
+
+
+			<AddColor name={'color'} data={initialColor}  handleChangeData={handleChangeFormData} />
 
 			<div>
 				<label> ADD STOUNS ATRIBUTS
@@ -140,14 +156,20 @@ const AddProduct: React.FC = () => {
 				</label>
 				{
 					showSlice ||
-					<><Creator data={filters.dimonds} handleChangeData={handleDimonds}/><CrateInput title='CARAT' value={formData.DIMOND.CARAT} handleChangeData={handleDimonds} /><CrateInput title='PCS' value={formData.DIMOND.PCS} handleChangeData={handleDimonds} /><PublishSelecStoneBollean name={'SELECTSTONE'} handleBoolean={handleBoolean} />
+					<>
+					   <Creator data={filters.dimonds} handleChangeData={handleDimonds}/>
+					   <CrateInput title='carat' value={formData.diamond.carat} handleChangeData={handleDimonds} />
+					   <CrateInput title='pcs' value={formData.diamond.pcs} handleChangeData={handleDimonds} />
 					</>
 				}
 			</div>
 
-			<CrateInput title={'PRICE'} value={formData.PRICES.PRICE} handleChangeData={handlePrice} />
-			<CrateInput title={'OLDPRICE'} value={formData.PRICES.OLDPRICE} handleChangeData={handlePrice} />
-			<CrateInput title={'CODE'} value={formData.CODE} handleChangeData={handleChangeFormData} /><AddImages handleImgSrces={handleImgSrces} />
+			<CrateInput title={'price'} value={formData.prices.price} handleChangeData={handlePrice} />
+			<CrateInput title={'oldPrice'} value={formData.prices.oldPrice} handleChangeData={handlePrice} />
+			<CrateInput title={'code'} value={formData.code} handleChangeData={handleChangeFormData} />
+			<AddImages handleImgSrces={handleImgSrces} />
+
+
 			<button disabled={false} onClick={handleSave}>save product</button>
 		</div>
 	);
