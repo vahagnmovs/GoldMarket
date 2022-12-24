@@ -3,7 +3,7 @@ import Sellers from './sellers';
 import { data } from 'src/data/recommendedSellers';
 import { Link } from 'react-router-dom';
 
-data.length = 4;
+data.length = 3;
 
 const RecommendSellers = () => {
 
