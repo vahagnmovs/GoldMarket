@@ -10,6 +10,8 @@ import WishList from './wishList';
 import Cart from './cart';
 import Login from './login'
 import LogedPage from "./logedPage";
+import useModal from "src/hooks/useModal";
+
 const flags: TData[] = [
 	{
 		id: 0,
@@ -57,6 +59,7 @@ const Header = () => {
 	const [chosenCurrency, setChosenCurrency] = useState(currency[0]);
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
+	const {isShowing, toggle} = useModal();
 	const [isLogInUser, setIsLogInUser] = useState(false)
 	const ls = require('local-storage')
 
