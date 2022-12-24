@@ -5,7 +5,12 @@ import {tableProductsPrice} from 'src/data/tableData'
 import GoldPrice from "../goldPrice";
 import newLengthTablePrice from "./newLengthTablePrice";
 
-function GoldPriceList() {
+type TGoldPriceList = {
+	show: boolean;
+}
+
+
+function GoldPriceList({show}: TGoldPriceList) {
 	const [newLength, setNewLength] = useState(4)
 	const [isShowMoreBtn, getIsShowMoreBtn] = useState(false);
 	const goldPrice = newLengthTablePrice(tableProductsPrice, newLength)

@@ -1,24 +1,49 @@
-import React, { useState } from 'react';
-import user from 'src/style/Icons/user.png';
+import React, {useState} from 'react';
+import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 
 const Login = () => {
 
-    const [isOpenLogInModal, setIsOpenLogInModal] = useState(false);
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+
+
+
+    const handleInput = (e: React.ChangeEvent<HTMLInputElement>, input: string) => {
+        if(input === "email"){
+            setEmail(e.target.value)
+        }
+        if(input === "password"){
+            setPassword(e.target.value)
+        }
+    }
+    const handelSignIn = (e:React.FormEvent) => {
+        e.preventDefault()
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+            .then(({user}) => {
+                console.log(user)
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                console.log(errorMessage)
+            })
+    }
 
     return (
         <div>
-                    <form className={'box'}>
+                    <form className={'box'} onSubmit={handelSignIn}>
                         <h3 className={'logo'}>LOGIN</h3>
                         <div >
                             <div className='group'>
-                                <input type='text' required />
+                                <input type='text' onChange={(e) => handleInput(e,"email")}  />
                                 <span className='highlight'></span>
                                 <span className='bar'></span>
                                 <label>e-mail</label>
                             </div>
-
                             <div className='group'>
-                                <input type='text' required />
+                                <input type='password' onChange={(e) => handleInput(e,"password")} />
                                 <span className='highlight'></span>
                                 <span className='bar'></span>
                                 <label>Password</label>

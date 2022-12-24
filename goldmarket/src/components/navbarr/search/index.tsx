@@ -8,6 +8,18 @@ const Search = () => {
 		setIsOpenSearchModal(!isOpenSearchModal);
 	};
 
+
+	const [modal, setModal] = useState(false);
+	const toggleModal = () => {
+		setModal(!modal);
+	};
+
+	if(modal) {
+		document.body.classList.add('active-modal')
+	} else {
+		document.body.classList.remove('active-modal')
+	}
+
 	return (
 		<div className={'relative'}>
 			<div className={'search flex justify-between align-center'} onClick={toggleOpenModal}>
@@ -17,18 +29,27 @@ const Search = () => {
 			{
 				isOpenSearchModal
 				&&
-				<div className={'search_modal_open relative'}>
-					<div className={'flex align-center'}>
-						<input type="text" placeholder={'ENTER KEYWORD TO SEARCH'} />
-						<img className={'searching-icon'} src={search} alt="search" />
-					</div>
-					<div className={'searching_block_text flex dir-col align-center'}>
-						<img src={frame} alt="" />
-						<span> ENTER KEYWORD TO SEARCH </span>
-					</div>
+				<div className="modal">
+					<div onClick={toggleModal} className="overlay"></div>
+					<div className="modal-content">
+						<div className={'search_modal_open relative'}>
+							<div className={'flex align-center'}>
+								<input type="text" placeholder={'ENTER KEYWORD TO SEARCH'} />
+								<img className={'searching-icon'} src={search} alt="search" />
+							</div>
+							<div className={'searching_block_text flex dir-col align-center'}>
+								<img src={frame} alt="" />
+								<span> ENTER KEYWORD TO SEARCH </span>
+							</div>
 
-					<button className={'search_close_btn'} onClick={toggleOpenModal}>x</button>
+							<button className={'search_close_btn'} onClick={toggleOpenModal}>x</button>
+						</div>
+
+					</div>
 				</div>
+
+
+
 			}
 		</div>
 	);

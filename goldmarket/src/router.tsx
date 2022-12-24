@@ -13,7 +13,7 @@ import OrderHistoryList from './components/centers/buyerAdmin/orderHistoryList';
 import EditProduct from './components/product/editProduct';
 import DeliveryAddressList from './components/centers/buyerAdmin/deliveryAddressList';
 import DashboardList from './components/centers/buyerAdmin/dashboardList';
-import OrderInfo from './components/centers/buyerAdmin/orderInfo';
+import OrderInfoList from './components/centers/buyerAdmin/orderInfoList';
 import ProductPage from "src/pages/products";
 
 const router = createBrowserRouter([{
@@ -25,27 +25,7 @@ const router = createBrowserRouter([{
 }, {
 	path: '/products',
 	element: <ProductPage />
-},
-//Social link
-{
-	path: '/facebook',
-	element: <Redirect url={'https://www.facebook.com/profile.php?id=100088524672046'} />
 }, {
-	path: '/ok',
-	//    FIXME: check pass.
-	element: <Redirect url={'https://ok.ru/'} />
-}, {
-	path: '/vk',
-	element: <Redirect url={'https://vk.com/id768387018'} />
-}, {
-	path: '/instagram',
-	element: <Redirect url={'https://www.instagram.com/goldmarketproject/'} />
-}, {
-	path: '/telegram',
-	element: <Redirect url={'https://web.telegram.org/z/'} />
-},
-//End Social link
-{
 	path: '/about',
 	element: <About />
 }, {
@@ -68,7 +48,7 @@ const router = createBrowserRouter([{
 	element: <DashboardList />
 }, {
 	path: '/orderinfo',
-	element: <OrderInfo />
+	element: <OrderInfoList />
 }, {
 	path: '*',
 	element: <NotFoundPage />

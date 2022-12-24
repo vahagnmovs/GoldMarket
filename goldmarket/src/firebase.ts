@@ -19,13 +19,13 @@ const firebaseConfig = {
 // init firebase app
 const app = initializeApp(firebaseConfig);
 // // init services
-// const db = getFirestore(app)
+export const db = getFirestore(app)
 // //  collection ref
 // const colRef = collection(db, "products")
-// // get collection data
+// get collection data
 // getDocs(colRef)
 //     .then((snapshot) => {
-//         let products: ProductsType[] = [];
+//         let products: ProductsTypes[] = [];
 //         snapshot.docs.forEach((doc) => {
 //             products.push({
 //                 ...doc.data(),

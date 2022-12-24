@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import logo from 'src/style/Icons/site_logo.png';
 import DropDown from 'src/components/header/header/dropDown';
 import {TData} from 'src/components/header/header/types';
@@ -8,8 +8,8 @@ import dram from 'src/style/Icons/dram.png';
 import {useNavigate} from 'react-router-dom';
 import WishList from './wishList';
 import Cart from './cart';
-import Login from './login';
-
+import Login from './login'
+import LogedPage from "./logedPage";
 const flags: TData[] = [
 	{
 		id: 0,
@@ -58,12 +58,18 @@ const Header = () => {
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
 	const [isLogInUser, setIsLogInUser] = useState(false)
+	const ls = require('local-storage')
 
 	const handleChangeLanguage = (flag: TData) => {
 		setChosenFlag(flag);
 		setFlagMenuOpen(false);
 	};
 
+	useEffect(() => {
+		if(ls.get('buyer')) {
+			setIsLogInUser(!isLogInUser)
+		}
+	}, [])
 	const toggleFlagMenu = useCallback(() => {
 		setFlagMenuOpen(!flagMenuOpen);
 	}, [flagMenuOpen]);
@@ -78,7 +84,7 @@ const Header = () => {
 	}, [currencyMenuOpen]);
 
 	const toggleIsLogInUser = () =>{
-		setIsLogInUser(true)
+		setIsLogInUser(!isLogInUser)
 	}
 
 	return (
@@ -121,9 +127,9 @@ const Header = () => {
 							{
 								isLogInUser
 									?
-									<li>USER</li>
+									<LogedPage toggleIsLogInUser={toggleIsLogInUser}/>
 									:
-									<Login toggleIsLogInUser={ toggleIsLogInUser }/>
+									<Login toggleIsLogInUser={toggleIsLogInUser} />
 							}
 							<Cart/>
 						</ul>

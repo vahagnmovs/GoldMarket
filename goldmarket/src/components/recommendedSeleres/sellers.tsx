@@ -2,7 +2,7 @@ import React from 'react';
 import { DataSeller } from 'src/data/recommendedSellers';
 
 const Sellers = (product: DataSeller) => {
-	const { id, name, title, images } = product;
+	const { id, name,  images ,sellerLogo } = product;
 
 	return (
 		<div className={'recommender_sellers_block'}>
@@ -18,14 +18,10 @@ const Sellers = (product: DataSeller) => {
 					)}
 				</div>
 			</div>
-
 			<div className='jewelry_brands flex'>
-				{/* brand img */}
-				<img src="" alt=" brand img" />
+				<img src={sellerLogo} alt=" brand img" />
 				<h4>{name}</h4>
-				<span>{title}</span>
 			</div>
-
 		</div>
 	);
 };

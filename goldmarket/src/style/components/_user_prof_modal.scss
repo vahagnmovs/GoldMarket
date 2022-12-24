@@ -1,0 +1,32 @@
+.user_prof_modal {
+  width: 250px;
+  height: 205px;
+  top: 45px;
+  left: -100px;
+  background-color: #FFFFFF;
+  box-shadow: 10px 10px 5px gray;
+  padding: 0 20px;
+
+  .user_account {
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 15px;
+
+    &:hover {
+      background-color: #77d0f7;
+    }
+  }
+
+  button {
+    height: 50px;
+    border-radius: 15px;
+    border: 1px solid ;
+    background-color: #1D3865;
+    color: #FFFFFF;
+
+    &:hover {
+      background-color: #1366d6;
+      color: #FFFFFF;
+    }
+  }
+}
