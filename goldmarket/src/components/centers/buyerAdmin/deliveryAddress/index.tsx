@@ -11,14 +11,14 @@ type TDeliveryAddress = {
 	region: string,
 	country: string,
 	phoneNumber: string,
-
+	handleDelete: (id: string)=>void
 	
 }
 
-const DeliveryAddress = ({ id, name, surname, radio, city, region, country, phoneNumber }: TDeliveryAddress) => {
+const DeliveryAddress = ({ id, name, surname, radio, city, region, country, phoneNumber, handleDelete}: TDeliveryAddress) => {
 
 	return (
-		<div>
+		<div id={id}>
 			<span>MY ADDRESS NAME</span>
 			<div>
 				<label>MAKE DEFAULT
@@ -34,7 +34,7 @@ const DeliveryAddress = ({ id, name, surname, radio, city, region, country, phon
 				<span>{phoneNumber}</span>
 			</p>
 			<button>EDIT ADDRESS</button>
-			<button><img src={trash} alt="trash" /></button>
+			<button onClick={() =>handleDelete(id)}><img src={trash} alt="trash" /></button>
 		</div>
 	);
 };

@@ -6,7 +6,7 @@ import ModalInput from '../modall';
 // FIXME: hanel datan erb irakan datan unenanq
 
 const data = [{
-	id: '3',
+	id: `${Math.random()}`,
 	name: 'VAHAGN',
 	surname: 'MOVSESYAN',
 	streetAddress: '950 Ridge RD C25',
@@ -25,9 +25,15 @@ const initialState = {
 }
 const DeliveryAddressList = () => {
 	const [modal, setModall] = useState(false)
+	const [state, setState] = useState(data)
 	const [address, setAddress] = useState(initialState);
 	const handleNewAddress = () => {
 		setModall(!modal)
+	}
+	const handleDelete = (id: string) => {
+		const newStart = state.filter(item => item.id !== id)
+		setState(newStart)
+		
 	}
 	const handleOnCange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const name = event.target.name
@@ -35,8 +41,9 @@ const DeliveryAddressList = () => {
 		setAddress({ ...address, [name]: value })
 	}
 	const handlePush = () => {
-		data.push({
+		state.push({
 			...data[0],
+			id: `${Math.random()}`,
 			streetAddress: address.streetAddress,
 			streetAddressOptional: address.streetAddressOptional,
 			phoneNumber: address.phoneNumber,
@@ -66,7 +73,7 @@ const DeliveryAddressList = () => {
 				<Dashboard title={'Delivery Address'} />
 				<button onClick={handleNewAddress}>+ ADD NEW ADDRESS</button>
 			</div>
-			{data.map(item => <DeliveryAddress radio={'radio'} key={item.streetAddress} {...item} />)}
+			{state.map(item => <DeliveryAddress handleDelete={handleDelete} radio={'radio'} key={item.streetAddress} {...item} />)}
 		</div>
 	);
 };
