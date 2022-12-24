@@ -69,11 +69,15 @@
 .top_right_content {
   width: 342px;
 
+  .user_prof {
+    min-width: 100%;
+  }
+
   ul {
     gap: 34px;
   }
 
-  li {
+  li:not(:nth-child(2)) {
     gap: 8px;
   }
 
