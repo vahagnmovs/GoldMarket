@@ -22,10 +22,6 @@ const EditProduct = () => {
 	const [publish, setBublish] = useState<boolean | undefined>(formData!.publish);
 	const [stone, setStone] = useState<boolean | undefined>(formData!.stone);
 	const [images, setImgSrces] = useState(formData!.images);
-
-
-
-
 	const [showSlice, setShowSlice] = useState(false);
 
 

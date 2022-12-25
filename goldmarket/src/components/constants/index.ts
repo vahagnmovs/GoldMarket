@@ -1,3 +1,5 @@
+import randomID from "src/hooks/uuid";
+
 
 type TInitialDimonds = {
 	carat: string;
@@ -24,7 +26,7 @@ type TInitialState = {
 	description: string
 	metal: string
 	forWhom: string
-	collection: string
+	type: string
 	fineness: string
 	bestSales: number | string
 	color: string[]
@@ -44,7 +46,7 @@ type TInitialState = {
 export const product = [
 	{   
 		id: Math.random(),
-		category: 'ENGAGEMENT RINGS',
+		type: 'ENGAGEMENT RINGS',
 		name: 'AQUAMARINE AND 1/4 CT.TW.DIMOND RING IN 10K ROZE GOLD2',
 		color: 'yellow',
 		code: '11847LL',
@@ -56,12 +58,12 @@ export const product = [
 		origin: 'IMPORTANT',
 		forWhom: 'MEN',
 		viewed: 105,
-		discription: 'text',
+		description: 'text',
 		photo: 'https://images.ctfassets.net/ydv6sq0kb5bw/6DdVeAxmaUa6oPotOKPcfI/d4ed432882c00cd38e32681f278c254b/tacky_accessories_thick_chain.jpg?fit=fill&q=75&fm=webp&w=3840&h=3840',
 	},
 	{   
 		id: Math.random(),
-		category: 'ENGAGEMENT RINGS',
+		type: 'ENGAGEMENT RINGS',
 		name: 'AQUAMARINE AND 1/4 CT.TW.DIMOND RING IN 10K ROZE GOLD2',
 		color: 'yellow',
 		code: '11847LL',
@@ -73,7 +75,7 @@ export const product = [
 		origin: 'IMPORTANT',
 		forWhom: 'MEN',
 		viewed: 105,
-		discription: 'text',
+		description: 'text',
 		photo: 'https://images.ctfassets.net/ydv6sq0kb5bw/6DdVeAxmaUa6oPotOKPcfI/d4ed432882c00cd38e32681f278c254b/tacky_accessories_thick_chain.jpg?fit=fill&q=75&fm=webp&w=3840&h=3840',
 	}
 ];
@@ -86,7 +88,7 @@ export const filters = {
 		{ collection: ['Bracelets', 'Rings', 'Wdding rings', 'Sets', 'Pendants', 'Earrings', 
 			'Chain', 'Necklaces', 'Engagement Rings', 'Crosses', 'Other'] }
 	],
-	productDetals: [
+	productDetails: [
 		{ fineness: [333, 375, 416, 585, 750, 875, 900, 916, 958, 999] },
 
 	],
@@ -113,14 +115,13 @@ export const initialDimonds: TInitialDimonds = {
 
 
 export const initialState: TInitialState = {
-	// FIXME: dzel id
-	productID: Math.random(),  
+	productID: randomID(),
 	name: '',
-	sellerID: Math.random(),
+	sellerID: '',
 	description: '',
 	metal: '',  
 	forWhom: '', 
-	collection: '',
+	type: '',
 	fineness: '',
 	bestSales: '',
 	color: ['yellow', 'white', 'red', 'rose gold'] ,
