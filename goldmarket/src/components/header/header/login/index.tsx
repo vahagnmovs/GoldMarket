@@ -9,6 +9,7 @@ import useOnClickOutside from "../../../../hooks/useOnClickOutside";
 const Login = ({toggleIsLogInUser}: TLoginProps) => {
 
 	const [isOpenLogInModal, setIsOpenLogInModal] = useState(false);
+	const [isBuyer, setIsBuyer] = useState(false)
 	const [email, setEmail] = useState("")
 	const [password, setPassword] = useState("")
 	const [modal, setModal] = useState(false);
@@ -26,7 +27,38 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 		}
 	}
 
-	const toggleUserSignIn = (e:React.FormEvent) => {
+	const toggleSellerSignIn = (e:React.FormEvent) => {
+		e.preventDefault()
+		const auth = getAuth();
+		signInWithEmailAndPassword(auth, email, password)
+			.then(({user}) => {
+				getDocs(colRef)
+					.then((snapshot) => {
+						const sellers: any = []
+						snapshot.docs.forEach((doc) => {
+							sellers.push({
+								...doc.data(),
+							})
+						})
+						return sellers.find((sellers: any) => sellers.buyerID === sellers.uid)
+					})
+					.then(docSnap => {
+						if (docSnap.firstName) {
+							ls('sellers', docSnap)
+							toggleIsLogInUser()
+						} else {
+							console.log("No such document!");
+						}
+					})
+					.catch((error) => {
+						const errorCode = error.code;
+						const errorMessage = error.message;
+						throw new Error(`${errorCode}`)
+					})
+			})
+	}
+
+	const toggleBuyerSignIn = (e:React.FormEvent) => {
 		e.preventDefault()
 		const auth = getAuth();
 		signInWithEmailAndPassword(auth, email, password)
@@ -73,16 +105,21 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 			{
 				isOpenLogInModal
 				&&
+				
 				<div className="modal" >
+					
 					<div onClick={toggleModal} className="overlay"></div>
 					<div ref={ref}>
-
-						<form className={'box'} onSubmit={ toggleUserSignIn }>
+							
+						<form className={'box'} onSubmit={ isBuyer? toggleSellerSignIn :toggleBuyerSignIn }>
 							<button className="close-modal" onClick={() => setIsOpenLogInModal(false)}>
 								X
 							</button>
 							<h3 className={'logo'}>LOGIN</h3>
 							<div>
+							<div><span onClick={()=>setIsBuyer(false)}>BUYER</span>
+									<span onClick={()=>setIsBuyer(true)}>SELLER</span>
+							</div>
 								<div className='group'>
 									<input type='email'
 										   onChange={(e) => handleInput(e,"email")}
