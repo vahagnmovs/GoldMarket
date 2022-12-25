@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from 'src/components/header/header';
 import Dashboard from '../dashboard';
 import DeliveryAddress from '../deliveryAddress';
 import ModalInput from '../modall';
@@ -82,7 +83,21 @@ const DeliveryAddressList = () => {
 	};
 
 	return (
-		<div>
+		<>
+			<Header />
+			<div className='dash'>
+				<Dashboard />
+			</div>
+			<div className='container'>
+				<div>
+					<h3>Delivery Address</h3>
+					<button onClick={handleNewAddress}>+ ADD NEW ADDRESS</button>
+				</div>
+				{state.address.map(item => <DeliveryAddress city={state.city}
+					name={state.name} region={state.region} surname={state.surname}
+					country={state.country} handleEdit={handleEdit} handleDelete={handleDelete}
+					radio={'radio'} key={item.addressId} {...item} />)}
+			</div>
 			{modal &&
 				<div>
 					<button onClick={handleNewAddress}>X</button>
@@ -99,17 +114,8 @@ const DeliveryAddressList = () => {
 					</div>
 					<button onClick={handleSave}>SAVE</button>
 				</div>}
-			<div>
-				<Dashboard />
-				<h4>MY ACCOUNT</h4>
-				<h3>Delivery Address</h3>
-				<button onClick={handleNewAddress}>+ ADD NEW ADDRESS</button>
-			</div>
-			{state.address.map(item => <DeliveryAddress city={state.city}
-				name={state.name} region={state.region} surname={state.surname}
-				country={state.country} handleEdit={handleEdit} handleDelete={handleDelete}
-				radio={'radio'} key={item.addressId} {...item} />)}
-		</div>
+
+		</>
 	);
 };
 
