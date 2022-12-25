@@ -6,4 +6,5 @@ export type TDropDownProps = {
     chosen: TData,
     state: TData[],
     handleChange: (flag: TData) => void,
+    colsDropDown: (isOpened:boolean) => void,
 }
