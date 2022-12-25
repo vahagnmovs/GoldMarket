@@ -13,12 +13,12 @@ const DropDown = ({ menuOpen, toggleMenu, chosen, state, handleChange,colsDropDo
 
 	return (
 		<>
-			<div className='flex align-center gap_8' ref={ref} onClick={toggleMenu}>
+			<div className='flex align-center gap_8'  onClick={toggleMenu}>
 				<img className={'icons'} src={chosen.url} alt="flag_img" />
 				<span>{chosen.value}</span>
 				<img className={'drop_down'} src={menuOpen ? close : open} alt="drop_down" />
 			</div>
-			{menuOpen && <ul className={'list_dropdown'}>
+			{menuOpen && <ul ref={ref} className={'list_dropdown'}>
 				{state.map(elem => {
 					return (
 						<li className='list_dropdown_items flex justify-between' onClick={() => handleChange(elem)} key={elem.id}>

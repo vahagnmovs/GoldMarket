@@ -24,13 +24,16 @@ const WishList = () => {
 			{
 				isOpenWishList
 				&&
-				(liked.length
-					?
-					liked.map((product: ProductsTypes) => <div key={product.productID}>{product.name}</div>)
-					:
-					<span>Looks like you are not watching any items yet.</span>)
+				<div ref={ref}>
+					{
+						liked.length
+							?
+							liked.map((product: ProductsTypes) => <div key={product.productID}>{product.name}</div>)
+							:
+							<span>Looks like you are not watching any items yet.</span>
+					}
+				</div>
 			}
-
 		</>
 
 	);

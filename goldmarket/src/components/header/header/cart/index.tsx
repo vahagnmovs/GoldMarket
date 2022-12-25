@@ -17,7 +17,7 @@ const Cart = () => {
 
 	return (
 		<>
-			<li className={'cart_content flex align-center'} ref={ref} onClick={toggleIsShowCart}>
+			<li className={'cart_content flex align-center'} onClick={toggleIsShowCart}>
 				<span>CART</span>
 				<img className={'icon_card'} src={basket} alt='icon_card'/>
 				<span>({cart.length})</span>
@@ -25,11 +25,16 @@ const Cart = () => {
 			{
 				isShowCarts
 					&&
-				(cart.length
-					?
-					cart.map((product: ProductsTypes) => <div key={product.productID}>{product.name}</div>)
-					:
-					<span>Looks like you are not watching any items yet.</span>)
+				<div>
+					{
+						cart.length
+							?
+							cart.map((product: ProductsTypes) => <div key={product.productID} ref={ref}>{product.name}</div>)
+							:
+							<span ref={ref}>Looks like you are not watching any items yet.</span>
+					}
+				</div>
+
 			}
 		</>
 	);

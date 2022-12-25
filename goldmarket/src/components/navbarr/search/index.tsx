@@ -27,14 +27,14 @@ const Search = () => {
 
 	return (
 		<div className={'relative'}>
-			<div className={'search flex justify-between align-center'} ref={ref} onClick={toggleOpenModal}>
+			<div className={'search flex justify-between align-center'} onClick={toggleOpenModal}>
 				<span className={'text'}>SEARCH</span>
 				<img className={'searching-icon'} src={search} alt="search" />
 			</div>
 			{
 				isOpenSearchModal
 				&&
-				<div className="modal">
+				<div className="modal" ref={ref}>
 					<div onClick={toggleModal} className="overlay"></div>
 					<div className="modal-content">
 						<div className={'search_modal_open relative'}>

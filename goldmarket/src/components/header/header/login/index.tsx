@@ -46,7 +46,6 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 							ls('buyer', docSnap)
 							toggleIsLogInUser()
 						} else {
-							// doc.data() will be undefined in this case
 							console.log("No such document!");
 						}
 					})
@@ -66,16 +65,17 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 
 	return (
 		<>
-			<li onClick={() => setIsOpenLogInModal(true)} ref={ref} className={'login_content flex align-center'}>
+			<li onClick={() => setIsOpenLogInModal(true)} className={'login_content flex align-center'}>
 				<span>LOGIN</span>
 				<img className={'user_icon'} src={user} alt='user_icon' />
 			</li>
+
 			{
 				isOpenLogInModal
-					&&
-				<div className="modal">
+				&&
+				<div className="modal" >
 					<div onClick={toggleModal} className="overlay"></div>
-					<div>
+					<div ref={ref}>
 
 						<form className={'box'} onSubmit={ toggleUserSignIn }>
 							<button className="close-modal" onClick={() => setIsOpenLogInModal(false)}>
