@@ -70,7 +70,6 @@ const BuyerSignUp = () => {
 				.required('Required'),
 		}),
 		onSubmit: (values) => {
-			console.log(values);
 			register();
 		}
 	});

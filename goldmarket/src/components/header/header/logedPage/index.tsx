@@ -3,7 +3,7 @@ import user1 from 'src/style/Icons/user.png';
 import {useNavigate} from "react-router-dom";
 import {TLoginProps} from "../login/type";
 
-const LogedPage = ({toggleIsLogInUser}: TLoginProps) => {
+const LogedPage = ({toggleIsLogInUser, isBuyer}: TLoginProps) => {
     const [isOpenModal, setIsOpenModal] = useState(false)
 
     const ls = require('local-storage')

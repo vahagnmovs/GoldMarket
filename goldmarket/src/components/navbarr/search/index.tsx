@@ -34,9 +34,9 @@ const Search = () => {
 			{
 				isOpenSearchModal
 				&&
-				<div className="modal" ref={ref}>
+				<div className="modal">
 					<div onClick={toggleModal} className="overlay"></div>
-					<div className="modal-content">
+					<div className="modal-content" ref={ref}>
 						<div className={'search_modal_open relative'}>
 							<div className={'flex align-center'}>
 								<input type="text" placeholder={'ENTER KEYWORD TO SEARCH'} />

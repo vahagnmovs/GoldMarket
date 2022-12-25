@@ -61,7 +61,9 @@ const Header = () => {
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
 	const [isLogInUser, setIsLogInUser] = useState(false)
+	const [isBuyer, setIsBuyer] = useState(true)
 	const ls = require('local-storage')
+
 
 	const handleChangeLanguage = (flag: TData) => {
 		setChosenFlag(flag);
@@ -132,9 +134,13 @@ const Header = () => {
 							{
 								isLogInUser
 									?
-									<LogedPage toggleIsLogInUser={toggleIsLogInUser}/>
+									<LogedPage toggleIsLogInUser={toggleIsLogInUser}
+													isBuyer={isBuyer}
+									/>
 									:
-									<Login toggleIsLogInUser={toggleIsLogInUser} />
+									<Login toggleIsLogInUser={toggleIsLogInUser}
+												isBuyer={isBuyer}
+									/>
 							}
 							<Cart/>
 						</ul>

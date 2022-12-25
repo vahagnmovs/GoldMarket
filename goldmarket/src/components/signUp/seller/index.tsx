@@ -1,32 +1,34 @@
 import React from 'react';
+import {useAppDispatch} from '../../../hooks/redux-hooks';
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
-
+import {createUserWithEmailAndPassword, getAuth} from 'firebase/auth';
+import {addDoc, collection} from "firebase/firestore";
+import {db} from 'src/firebase'
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
 
 const SellerSignUp = () => {
+	const register = () => {
+		// Create a new user with email and password using firebase
+		const auth = getAuth();
+		createUserWithEmailAndPassword(auth, formik.values.email, formik.values.password)
+			.then(({user}) => {
+				addDoc(collection(db, "sellers"), {
+					firstName: formik.values.firstName,
+					lastName: formik.values.lastName,
+					email: user.email,
+					buyerID: user.uid,
+					cart: [],
+					wishList: [],
+					phone: formik.values.phoneNumber
+				})
+			})
+			.catch((error) => {
+				const errorCode = error.code;
+				const errorMessage = error.message;
+			});
+	};
 
-	// const dispatch = useAppDispatch();
-	//
-	// const register = () => {
-	// 	// Create a new user with email and password using firebase
-	// 	const auth = getAuth();
-	// 	createUserWithEmailAndPassword(auth, formik.values.email, formik.values.password)
-	// 		.then(({user}) => {
-	// 			dispatch(setUser({
-	// 				email: user.email,
-	// 				id: user.uid,
-	// 				token: user.refreshToken,
-	// 				phoneNumber: formik.values.phoneNumber,
-	// 				lastName: formik.values.lastName,
-	// 				firstName: formik.values.firstName,
-	// 			}));
-	// 		})
-	// 		.catch((error) => {
-	// 			const errorCode = error.code;
-	// 			const errorMessage = error.message;
-	// 		});
-	// };
 
 	const formik = useFormik({
 		initialValues: {
@@ -71,7 +73,7 @@ const SellerSignUp = () => {
 				.oneOf([Yup.ref('password'), null], 'Passwords must match'),
 		}),
 		onSubmit: (values) => {
-			console.log(values);
+			register()
 		}
 	});
 
