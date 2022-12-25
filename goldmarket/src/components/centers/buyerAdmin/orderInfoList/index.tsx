@@ -45,7 +45,7 @@ const orderInfoData = [
 const OrderInfoList = () => {
 	return (
 		<div>
-			<Dashboard title={'Order Info'} />
+			<Dashboard />
 			<div>
 				<h3>Order info</h3>
 				{orderInfoData.map(item => <OrderInfo key={item.id} time={item.time}

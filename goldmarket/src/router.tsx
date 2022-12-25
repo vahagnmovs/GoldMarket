@@ -15,6 +15,7 @@ import DeliveryAddressList from './components/centers/buyerAdmin/deliveryAddress
 import DashboardList from './components/centers/buyerAdmin/dashboardList';
 import OrderInfoList from './components/centers/buyerAdmin/orderInfoList';
 import ProductPage from "src/pages/products";
+import SettingsList from './components/centers/buyerAdmin/settingsList';
 
 const router = createBrowserRouter([{
 	path: '/',
@@ -49,6 +50,9 @@ const router = createBrowserRouter([{
 }, {
 	path: '/orderinfo',
 	element: <OrderInfoList />
+}, {
+	path: '/settings',
+	element: <SettingsList />
 }, {
 	path: '*',
 	element: <NotFoundPage />
