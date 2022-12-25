@@ -1,41 +1,31 @@
 import React from 'react';
+import {ProductsTypes} from "src/data/products";
 
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
-interface IProductProps {
-	product: {
-		id: number
-		photo: string
-		name: string
-		category: string
-		code: string
-		price: string
-	}
-}
 
-const ProductItem: React.FC<IProductProps> = ({ product: { id, photo, name, category, code, price } }) => {
+const ProductItem = ({ productID, images, name, type, code, prices }: ProductsTypes) => {
 
 	const navigate = useNavigate();
-
 	const handleNavigate = () => {
-		navigate(`/products/${id}`);
+		navigate(`/products/${productID}`);
 	};
 
 	const handleEditNavigate = (event: any) => {
 		event.stopPropagation();
-		navigate(`/product/${id}/editproduct`);
+		navigate(`/product/${productID}/editproduct`);
 	};
 
 
 	return (
 		<div className='productItem' onClick={handleNavigate}>
 
-			<div> <img className='productItemPhoto' src={photo} /> </div>
+			<div> <img className='productItemPhoto' src={images[0]} /> </div>
 			<div className='productItemPhoto'> {name} </div>
-			<div> {category} </div>
+			<div> {type} </div>
 			<div> {code} </div>
-			<div> {price} </div>
+			<div> {prices.currentPrice} </div>
 
 			<div className='details'>
 				<button onClick={handleEditNavigate}>✓</button>

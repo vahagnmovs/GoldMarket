@@ -1,15 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { filters, initialColor, initialDimonds, initialPrices, initialState, sizeListData, weightListData } from 'src/components/constants';
+import React, {useEffect, useState} from 'react';
+import {
+	filters,
+	initialColor,
+	initialDimonds,
+	initialPrices,
+	initialState,
+	sizeListData,
+	weightListData
+} from 'src/components/constants';
 import CrateInput from '../createInput';
-
 import AddImages from './addImages';
 import Creator from './Creator';
 import PublishSelecStoneBollean from './PublishSelecStoneBollean';
 import WeightSizeCratorValue from './WeightSizeCratorValue';
-
-import { useAppDispatch } from 'src/hooks/redux-hooks';
-import { addProduct } from 'src/store/products/productSlice';
+import {useAppDispatch} from 'src/hooks/redux-hooks';
+import {addProduct} from 'src/store/products/productSlice';
 import AddColor from './Creator/addColor';
+import {db} from 'src/firebase';
+import {addDoc, collection} from "firebase/firestore";
+import {log} from "util";
+import randomID from "src/hooks/uuid";
+import { redirect } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export type TWeight = {
 	name: { key: number[] | string[] }
@@ -17,70 +29,75 @@ export type TWeight = {
 
 const AddProduct: React.FC = () => {
 
-	const [formData, setFormData] = useState(initialState);
+	// const searchParams = new URLSearchParams(window.location.href);
+	// const sellerID = searchParams.get('sellerID')
+	const sellerID = 'A001';
+
+	const [product, setProduct] = useState(initialState);
 
 	const [prices, setPrices] = useState(initialPrices);
 	const [diamond, setDimonds] = useState(initialDimonds);
 	const [weight, setWeight] = useState<any>([]);
 	const [size, setSize] = useState<any>([]);
 
-	const [publish, setBublish] = useState<boolean | undefined>();
+	const [publish, setPublish] = useState<boolean | undefined>();
 	const [stone, setStone] = useState<boolean | undefined>(false);
 	const [newProduct, setNewProduct] = useState<boolean | undefined>(false);
 
 	const [showSlice, setShowSlice] = useState(false);
-	const [images, setImgSrces] = useState([]);
+	const [images, setImgSources] = useState([]);
 
 
 	const dispatch = useAppDispatch();
-
+	const navigate = useNavigate()
 
 	useEffect(() => {
-		setFormData({ ...formData, images });
+		setProduct({ ...product, images });
 	}, [images]);
 
 	useEffect(() => {
-		setFormData({ ...formData, diamond });
+		setProduct({ ...product, diamond });
 	}, [diamond]);
 
 	useEffect(() => {
-		setFormData({ ...formData, prices });
+		setProduct({ ...product, prices });
 	}, [prices]);
 
 	useEffect(() => {
-		setFormData({ ...formData, weight });
+		setProduct({ ...product, weight });
 	}, [weight]);
 
 	useEffect(() => {
-		setFormData({ ...formData, size });
+		setProduct({ ...product, size });
 	}, [size]);
 
 	useEffect(() => {
-		setFormData({ ...formData, publish });
+		setProduct({ ...product, publish });
 	}, [publish]);
 
 	useEffect(() => {
-		setFormData({ ...formData, stone });
+		setProduct({ ...product, stone });
 	}, [stone]);
 
 	useEffect(() => {
-		setFormData({...formData, newProduct});
+		setProduct({...product, newProduct});
 	}, [newProduct]);
 
 
 
-	const handleImgSrces = (arr: []) => setImgSrces(prev => [...arr]);
+	const handleImgSources = (arr: []) => setImgSources(prev => [...arr]);
 
 	const handleChangeFormData = ({ target }: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = target;
 
-		setFormData({
-			...formData,
+		setProduct({
+			...product,
+			sellerID,
 			[name]: value,
 		});
 	};
 
-	const handleDimonds = ({ target }: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>) => {
+	const handleDiamonds = ({ target }: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = target;
 
 		setDimonds({ ...diamond, [name]: value });
@@ -92,8 +109,8 @@ const AddProduct: React.FC = () => {
 		setPrices({ ...prices, [name]: value });
 	};
 
-	const disAdd = (formData.name.trim().length === 0) || (formData.description.trim().length === 0) ||
-                   (formData.code.trim().length === 0);
+	const disAdd = (product.name.trim().length === 0) || (product.description.trim().length === 0) ||
+                   (product.code.trim().length === 0);
 
 
 	const toggleShowSlice = () => setShowSlice(!showSlice);
@@ -109,8 +126,8 @@ const AddProduct: React.FC = () => {
 		const { name, value } = event.target;
 
 		if (name === 'publish') {
-			if (value === 'yes') setBublish(true);
-			else setBublish(false);
+			if (value === 'yes') setPublish(true);
+			else setPublish(false);
 		}
 
 		else if (name === 'stone') {
@@ -125,14 +142,17 @@ const AddProduct: React.FC = () => {
 
 
 	const handleSave = () => {
-		console.log(formData, 'formData')
-		dispatch(addProduct(formData));
+		// console.log(formData, 'formData')
+		addDoc(collection(db, 'products'), {
+				...product
+		})
+			.then(() => navigate('/products'))
 	};
 
 	return (
 		<div className='addProduct'>
-			<CrateInput title='name' value={formData.name} handleChangeData={handleChangeFormData} />
-			<CrateInput title='description' value={formData.description} handleChangeData={handleChangeFormData} />
+			<CrateInput title='name' value={product.name} handleChangeData={handleChangeFormData} />
+			<CrateInput title='description' value={product.description} handleChangeData={handleChangeFormData} />
 
 			<Creator data={filters.firstCategory} handleChangeData={handleChangeFormData} />
 			<PublishSelecStoneBollean name={'publish'} handleBoolean={handleBoolean} />
@@ -140,31 +160,31 @@ const AddProduct: React.FC = () => {
 			<PublishSelecStoneBollean name={'newProduct'} handleBoolean={handleBoolean} />
 
 
-			<Creator data={filters.productDetals} handleChangeData={handleChangeFormData} />
+			<Creator data={filters.productDetails} handleChangeData={handleChangeFormData} />
 			<WeightSizeCratorValue name={'weight'} listData={weightListData} handleWeight={handleWeight} />
 			<WeightSizeCratorValue name={'size'} listData={sizeListData} handleWeight={handleSize} />
-			<CrateInput title='count' value={formData.count} handleChangeData={handleChangeFormData} />
-			<CrateInput title='discount' value={formData.discount} handleChangeData={handleChangeFormData} />
-			<CrateInput title='bestSales' value={formData.bestSales} handleChangeData={handleChangeFormData} />
+			<CrateInput title='count' value={product.count} handleChangeData={handleChangeFormData} />
+			<CrateInput title='discount' value={product.discount} handleChangeData={handleChangeFormData} />
+			<CrateInput title='bestSales' value={product.bestSales} handleChangeData={handleChangeFormData} />
 			<AddColor name={'color'} data={initialColor}  handleChangeData={handleChangeFormData} />
 			<div>
-				<label> ADD STOUNS ATRIBUTS
+				<label> ADD STONE ATTRIBUTES
 					<input type="checkbox" onChange={toggleShowSlice} checked={showSlice} />
 				</label>
 				{
 					showSlice ||
 					<>
-					   <Creator data={filters.diamonds} handleChangeData={handleDimonds}/>
-					   <CrateInput title='carat' value={formData.diamond.carat} handleChangeData={handleDimonds} />
-					   <CrateInput title='pcs' value={formData.diamond.pcs} handleChangeData={handleDimonds} />
+					   <Creator data={filters.diamonds} handleChangeData={handleDiamonds}/>
+					   <CrateInput title='carat' value={product.diamond.carat} handleChangeData={handleDiamonds} />
+					   <CrateInput title='pcs' value={product.diamond.pcs} handleChangeData={handleDiamonds} />
 					</>
 				}
 			</div>
 
-			<CrateInput title={'price'} value={formData.prices.price} handleChangeData={handlePrice} />
-			<CrateInput title={'oldPrice'} value={formData.prices.oldPrice} handleChangeData={handlePrice} />
-			<CrateInput title={'code'} value={formData.code} handleChangeData={handleChangeFormData} />
-			<AddImages handleImgSrces={handleImgSrces} />
+			<CrateInput title={'price'} value={product.prices.price} handleChangeData={handlePrice} />
+			<CrateInput title={'oldPrice'} value={product.prices.oldPrice} handleChangeData={handlePrice} />
+			<CrateInput title={'code'} value={product.code} handleChangeData={handleChangeFormData} />
+			<AddImages handleImgSrces={handleImgSources} />
 
 
 			<button disabled={false} onClick={handleSave}>save product</button>
