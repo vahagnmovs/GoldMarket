@@ -29,7 +29,7 @@ const SettingsList = () => {
       <>
          <Header />
          <div className='dash'>
-            <Dashboard />
+            <Dashboard /> 
          </div>
          <div className='container'>
             <h3>Settings</h3>
