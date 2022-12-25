@@ -6,11 +6,8 @@ import delivery from 'src/style/Icons/delivery.svg';
 import logout from 'src/style/Icons/logout.svg';
 import './style.css';
 import { useNavigate } from 'react-router-dom';
-type TDashboard = {
-	title: string
-}
 
-const Dashboard = ({ title }: TDashboard) => {
+const Dashboard = () => {
 	const navigate = useNavigate();
 	const handleNavigateOrderHistory = () => {
 		navigate('/orderhistory');
@@ -21,11 +18,13 @@ const Dashboard = ({ title }: TDashboard) => {
 	const handleNavigateDashboard = () => {
 		navigate('/dashboard');
 	};
+	const handleNavigateSettings = () => {
+		navigate('/settings');
+	};
+
 	return (
 		<div>
-			<h2>{title}</h2>
 			<ul className='ul'>
-				<li>MY ACCOUNT</li>
 				<li onClick={handleNavigateDashboard}>
 					<img src={dashboard} alt='dashboard' />
 					<span>DASHBOARD</span>
@@ -38,7 +37,7 @@ const Dashboard = ({ title }: TDashboard) => {
 					<img src={delivery} alt='delivery' />
 					<span>DELIVERY ADDRESS</span>
 				</li>
-				<li>
+				<li onClick={handleNavigateSettings}>
 					<img src={settins} alt='settins' />
 					<span>SETTINGS</span>
 				</li>

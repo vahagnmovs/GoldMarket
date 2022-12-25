@@ -20,32 +20,32 @@ const data = {
 		zipCode: "eijf2ijf",
 	}]
 };
+
 const initialState = {
 	addressId: '',
 	streetAddress: '',
 	streetAddressOptional: '',
 	phoneNumber: '',
 	zipCode: ''
-}
+};
 
 const DeliveryAddressList = () => {
-	const [modal, setModall] = useState(false)
-	const [state, setState] = useState(data)
+	const [modal, setModall] = useState(false);
+	const [state, setState] = useState(data);
 	const [address, setAddress] = useState(initialState);
+
 	const handleNewAddress = () => {
 		setModall(!modal);
-	}
+	};
 
 	const handleDelete = (id: string) => {
-		const newStart = state.address.filter(item => item.addressId !== id)
+		const newStart = state.address.filter(item => item.addressId !== id);
 		setState({ ...state, address: newStart });
-	}
-
+	};
 
 	const handleEdit = (addressId: string) => {
-		const newStart = state.address.find(item => item.addressId === addressId)
+		const newStart = state.address.find(item => item.addressId === addressId);
 		handleNewAddress();
-
 		if (newStart?.addressId) {
 			setAddress({
 				addressId: newStart.addressId,
@@ -54,16 +54,17 @@ const DeliveryAddressList = () => {
 				phoneNumber: newStart.phoneNumber,
 				zipCode: newStart.zipCode
 			});
-		}
+		};
+	};
 
-	}
 	const handleOnCange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const name = event.target.name
-		const value = event.target.value
-		setAddress({ ...address, [name]: value })
-	}
+		const name = event.target.name;
+		const value = event.target.value;
+		setAddress({ ...address, [name]: value });
+	};
+
 	const handleSave = () => {
-		if(address.streetAddress.trim()){
+		if (address.streetAddress.trim()) {
 			state.address.push({
 				...data.address[0],
 				addressId: `${Math.random()}`,
@@ -71,31 +72,34 @@ const DeliveryAddressList = () => {
 				streetAddressOptional: address.streetAddressOptional,
 				phoneNumber: address.phoneNumber,
 				zipCode: address.zipCode
-			})
-		}
+			});
+		};
 		setAddress(initialState);
 		setModall(false);
-		handleDelete(address.addressId)
-	}
+		handleDelete(address.addressId);
+	};
+
 	return (
 		<div>
-			{modal && <div>
+			{modal &&
 				<div>
+					<p>ADD NEW ADDRESS</p>
 					<div>
 						<p>ARMENIA</p>
+						<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS'} inputValue={address.streetAddress} name={'streetAddress'} />
+						<ModalInput handleOnCange={handleOnCange} title={'ZIP CODE'} inputValue={address.zipCode} name={'zipCode'} />
 					</div>
 					<div>
 						<p>YEREVAN</p>
+						<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS OPTIONAL'} inputValue={address.streetAddressOptional} name={'streetAddressOptional'} />
+						<ModalInput handleOnCange={handleOnCange} title={'PHONE NUMBER'} inputValue={address.phoneNumber} name={'phoneNumber'} />
 					</div>
-				</div>
-				<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS'} inputValue={address.streetAddress} name={'streetAddress'} />
-				<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS OPTIONAL'} inputValue={address.streetAddressOptional} name={'streetAddressOptional'} />
-				<ModalInput handleOnCange={handleOnCange} title={'ZIP CODE'} inputValue={address.zipCode} name={'zipCode'} />
-				<ModalInput handleOnCange={handleOnCange} title={'PHONE NUMBER'} inputValue={address.phoneNumber} name={'phoneNumber'} />
-				<button onClick={handleSave}>SAVE</button>
-			</div>}
+					<button onClick={handleSave}>SAVE</button>
+				</div>}
 			<div>
-				<Dashboard title={'Delivery Address'} />
+				<Dashboard />
+				<h4>MY ACCOUNT</h4>
+				<h3>Delivery Address</h3>
 				<button onClick={handleNewAddress}>+ ADD NEW ADDRESS</button>
 			</div>
 			{state.address.map(item => <DeliveryAddress city={state.city}

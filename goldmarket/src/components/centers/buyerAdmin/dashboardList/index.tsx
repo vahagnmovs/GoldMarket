@@ -5,8 +5,10 @@ import Dashboard from '../dashboard';
 const DashboardList = () => {
 	return (
 		<div>
-			<Dashboard title={'Dashboard'}/>
-			<GoldPriceList  show={false}/>
+			<Dashboard />
+			<h4>MY ACCOUNT</h4>
+			<h3>Dashboard</h3>
+			<GoldPriceList show={false} />
 		</div>
 	);
 };

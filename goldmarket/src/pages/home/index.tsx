@@ -19,7 +19,7 @@ import AddProduct from 'src/components/product/AddProduct';
 import SignUp from 'src/components/signUp';
 import ProductInfo from "../../components/productInfo";
 import LoginModal from "../../components/loginModal";
-import Dashboard from 'src/components/centers/buyerAdmin/dashboard';
+
 
 
 
@@ -43,7 +43,6 @@ const Home = () => {
 				<MostViewed />
 				<WhyGoldCenter />
 				<AboutUs />
-				<Dashboard title='Dashboard'/>
 			</>
 		</Layout>
 	);
