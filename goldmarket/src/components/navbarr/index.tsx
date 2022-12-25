@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import SearchCategory from './openingNavbar';
-import open from 'src/style/Icons/open.png';
-import search from 'src/style/Icons/search.png';
 import Search from './search';
+
 
 function Navbar() {
 	return (

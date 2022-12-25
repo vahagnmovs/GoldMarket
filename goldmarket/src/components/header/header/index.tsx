@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
 import logo from 'src/style/Icons/site_logo.png';
 import DropDown from 'src/components/header/header/dropDown';
 import {TData} from 'src/components/header/header/types';
@@ -10,7 +10,8 @@ import WishList from './wishList';
 import Cart from './cart';
 import Login from './login'
 import LogedPage from "./logedPage";
-import useModal from "src/hooks/useModal";
+import useModal from "src/hooks/useOnClickOutside";
+import useOnClickOutside from "src/hooks/useOnClickOutside";
 
 const flags: TData[] = [
 	{
@@ -59,7 +60,6 @@ const Header = () => {
 	const [chosenCurrency, setChosenCurrency] = useState(currency[0]);
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
-	const {isShowing, toggle} = useModal();
 	const [isLogInUser, setIsLogInUser] = useState(false)
 	const ls = require('local-storage')
 
@@ -105,6 +105,7 @@ const Header = () => {
 								chosen={chosenFlag}
 								state={flagState}
 								handleChange={handleChangeLanguage}
+								colsDropDown={setFlagMenuOpen}
 							/>
 						</div>
 						{/*valuta_content*/}
@@ -114,6 +115,7 @@ const Header = () => {
 								chosen={chosenCurrency}
 								state={currencyState}
 								handleChange={handleChangeCurrency}
+								colsDropDown={setCurrencyMenuOpen}
 							/>
 						</div>
 					</div>

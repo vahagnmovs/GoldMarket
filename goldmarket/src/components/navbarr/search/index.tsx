@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {useRef, useState} from 'react';
 import search from 'src/style/Icons/search.png';
 import frame from 'src/style/Icons/Frame.png';
+import useOnClickOutside from "../../../hooks/useOnClickOutside";
 
 const Search = () => {
 	const [isOpenSearchModal, setIsOpenSearchModal] = useState(false);
@@ -8,11 +9,15 @@ const Search = () => {
 		setIsOpenSearchModal(!isOpenSearchModal);
 	};
 
+	const ref = useRef<null>(null);
 
 	const [modal, setModal] = useState(false);
 	const toggleModal = () => {
 		setModal(!modal);
 	};
+
+	useOnClickOutside(ref, () => setIsOpenSearchModal(false));
+
 
 	if(modal) {
 		document.body.classList.add('active-modal')
@@ -22,7 +27,7 @@ const Search = () => {
 
 	return (
 		<div className={'relative'}>
-			<div className={'search flex justify-between align-center'} onClick={toggleOpenModal}>
+			<div className={'search flex justify-between align-center'} ref={ref} onClick={toggleOpenModal}>
 				<span className={'text'}>SEARCH</span>
 				<img className={'searching-icon'} src={search} alt="search" />
 			</div>

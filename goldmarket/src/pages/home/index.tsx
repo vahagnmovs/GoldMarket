@@ -32,8 +32,8 @@ const Home = () => {
 			FooterComponent={<Footer />}
 		>
 			<>
-				<AddProduct />
-				<SignUp/>
+				{/*<AddProduct />*/}
+				{/*<SignUp/>*/}
 				<PriceList />
 				<Video />
 				<SwitchComponent />

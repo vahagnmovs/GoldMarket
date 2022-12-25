@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import user from 'src/style/Icons/user.png';
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {TLoginProps} from "./type";
 import {collection, getDocs} from "firebase/firestore";
 import {db} from 'src/firebase'
+import useOnClickOutside from "../../../../hooks/useOnClickOutside";
 
 const Login = ({toggleIsLogInUser}: TLoginProps) => {
 
@@ -14,6 +15,7 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 	const [error, setError] = useState('')
 	const colRef = collection(db, "buyers")
 	const ls = require('local-storage');
+	const ref = useRef<null>(null);
 
 	const handleInput = (e: React.ChangeEvent<HTMLInputElement>, input: string) => {
 		if (input === "email") {
@@ -56,36 +58,27 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 			})
 	}
 
-
-
-
 	const toggleModal = () => {
 		setModal(!modal);
 	};
 
-	if(modal) {
-		document.body.classList.add('active-modal')
-	} else {
-		document.body.classList.remove('active-modal')
-	}
+	useOnClickOutside(ref, () => setIsOpenLogInModal(false));
 
 	return (
 		<>
-			<li onClick={() => setIsOpenLogInModal(true)} className={'login_content flex align-center'}>
+			<li onClick={() => setIsOpenLogInModal(true)} ref={ref} className={'login_content flex align-center'}>
 				<span>LOGIN</span>
 				<img className={'user_icon'} src={user} alt='user_icon' />
 			</li>
 			{
 				isOpenLogInModal
 					&&
-
-
 				<div className="modal">
 					<div onClick={toggleModal} className="overlay"></div>
 					<div>
 
 						<form className={'box'} onSubmit={ toggleUserSignIn }>
-							<button className="close-modal" onClick={() => setModal(!modal)}>
+							<button className="close-modal" onClick={() => setIsOpenLogInModal(false)}>
 								X
 							</button>
 							<h3 className={'logo'}>LOGIN</h3>
