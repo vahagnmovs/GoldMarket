@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from 'src/components/header/header';
 import Dashboard from '../dashboard';
 import OrderHistory from '../orderHistory';
 import './style.css';
@@ -26,25 +27,30 @@ const data = [{
 },];
 
 const OrderHistoryList = () => {
-	return (
-		<div>
-			<Dashboard />
-			<h4>MY ACCOUNT</h4>
-			<h3>Order history</h3>
-			<table className='table'>
-				<thead>
-					<tr>
-						<th>ORDER DATE & TIME</th>
-						<th>ORDER NUMBER</th>
-						<th>SOLD BY</th>
-						<th>ORDER TOTAL</th>
-						<th>ACTION</th>
-					</tr>
-				</thead>
-				{data.map(item => <OrderHistory key={item.id} {...item} />)}
-			</table>
-		</div>
+	return (<>
+		<Header />
+		<div className='dash'>
+				<Dashboard />
+			</div>
+		<div className='container'>
+			<div className='OrderHistoryList'>
+				<h3>Order history</h3>
+				<table className='table'>
+					<thead>
+						<tr>
+							<th>ORDER DATE & TIME</th>
+							<th>ORDER NUMBER</th>
+							<th>SOLD BY</th>
+							<th>ORDER TOTAL</th>
+							<th>ACTION</th>
+						</tr>
+					</thead>
+					{data.map(item => <OrderHistory key={item.id} {...item} />)}
+				</table>
+			</div>
 
+		</div>
+	</>
 	);
 };
 

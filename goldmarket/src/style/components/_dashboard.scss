@@ -1,0 +1,50 @@
+.navbar_dashboard_top{
+  // position: relative;
+  padding: 0 40px;
+  // top: 80px;
+  background-color:red;
+  width: 100%;
+
+}
+.navbar_dashboard_top_ul{
+  width: 100%;
+  height: 55px;
+  background-color: red;
+
+  img{
+    width: 18px;
+    height: 18px;
+
+  }
+
+}
+.dashboard_top_ul{
+  padding: 28px 40px;
+  width: 100%;
+}
+ul li{
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title_dashboard{
+  font-size: 22px;
+  color: #000000;
+  position: relative;
+  top: 145px;
+}
+.Dashboard_table{
+  margin-bottom: 150px;
+}
+
+
+.dash{
+  position: relative;
+  top: 70px;
+}
+
+.container{
+  position: relative;
+top: 100px;
+}
