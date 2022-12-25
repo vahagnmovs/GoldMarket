@@ -6,12 +6,13 @@ import GoldPrice from "../goldPrice";
 import newLengthTablePrice from "./newLengthTablePrice";
 
 type TGoldPriceList = {
+	length: number;
 	show: boolean;
 }
 
 
-function GoldPriceList({show}: TGoldPriceList) {
-	const [newLength, setNewLength] = useState(4)
+function GoldPriceList({length, show}: TGoldPriceList) {
+	const [newLength, setNewLength] = useState(length)
 	const [isShowMoreBtn, getIsShowMoreBtn] = useState(false);
 	const goldPrice = newLengthTablePrice(tableProductsPrice, newLength)
 	const handleLength = () => {
@@ -38,9 +39,9 @@ function GoldPriceList({show}: TGoldPriceList) {
 					{goldPrice.map((item, i) => <GoldPrice key={item.time} index={i} gold={item.gold} buy={item.buy} sell={item.sell} incOrder={item.incOrder} time={item.time}/>
 						)}
 				</table>
-				<button className={'show_more_btn_big'}
+				{show && <button className={'show_more_btn_big'}
 						onClick={handleLength}><span>{isShowMoreBtn ? <span className={'showLess'}>SHOW LESS</span> : <span className={'showMore'}>SHOW MORE</span>}</span>
-				</button>
+				</button>}
 		</div>
 	);
 }

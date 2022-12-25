@@ -12,7 +12,7 @@ const PriceList = () => {
 						<PhoneNumber />
 					</div>
 					<div >
-						<GoldPriceList show={true}/>
+						<GoldPriceList show={true} length={4}/>
 					</div>
 				</div>
 			</div>

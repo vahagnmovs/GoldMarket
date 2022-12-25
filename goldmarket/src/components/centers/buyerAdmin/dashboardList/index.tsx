@@ -8,7 +8,7 @@ const DashboardList = () => {
 			<Dashboard />
 			<h4>MY ACCOUNT</h4>
 			<h3>Dashboard</h3>
-			<GoldPriceList show={false} />
+			<GoldPriceList show={false} length={8}/>
 		</div>
 	);
 };
