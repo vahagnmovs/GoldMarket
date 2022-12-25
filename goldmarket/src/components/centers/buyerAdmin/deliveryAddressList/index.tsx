@@ -5,13 +5,15 @@ import ModalInput from '../modall';
 
 // FIXME: hanel datan erb irakan datan unenanq
 
-const data = {
+export const data = {
 	id: '1',
 	name: 'VAHAGN',
 	surname: 'MOVSESYAN',
 	city: 'P4332 Claymont',
 	region: 'DE 19703-3538',
 	country: 'United States',
+	email: 'goldmarket@gmail.com',
+	phoneNumber: '(302)xxxxx67',
 	address: [{
 		addressId: `${Math.random()}`,
 		streetAddress: '950 Ridge RD C25',
@@ -83,6 +85,7 @@ const DeliveryAddressList = () => {
 		<div>
 			{modal &&
 				<div>
+					<button onClick={handleNewAddress}>X</button>
 					<p>ADD NEW ADDRESS</p>
 					<div>
 						<p>ARMENIA</p>
