@@ -1,25 +1,25 @@
-.Why_Gold_Center {
-  width: 1200px;
-  margin: 0 auto;
+.why_gold_center {
+  background-color: #FFFFFF;
+  padding-top: 20px;
+  padding-bottom: 100px;
 
-
-  h1 {
+  h3 {
     font-size: 32px;
     color: #000000;
     padding-bottom: 20px;
+    margin-top: 30px;
   }
 
   p {
-
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
-
+    line-height: 20px;
   }
+
 .container_menu{
   gap: 20px;
 }
 }
-
 
 //img Why_Gold_Center
 .item_menu_div {
@@ -30,6 +30,8 @@
   }
 
   .item_title {
+    margin-top: 20px;
+
     span {
       font-size: 22px;
       text-align: center;

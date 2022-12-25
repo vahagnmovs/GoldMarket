@@ -17,8 +17,7 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  cursor: pointer;
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 /* Sections
    ========================================================================== */
@@ -26,6 +25,10 @@ html {
 /**
  * Remove the margin in all browsers.
  */
+
+button, a {
+  cursor: pointer;
+}
 
 body {
   margin: 0;

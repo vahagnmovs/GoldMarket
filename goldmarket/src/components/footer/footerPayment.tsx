@@ -10,13 +10,16 @@ const FooterPayment = ({data}: TFooterPayments) => {
 	return (
 	//FIXME: change key...
 		<>
-			{data.map(elem =>
-				<li key={Math.random()}>
-					<Link to={elem.path} target={elem.target}>
-						<img src={elem.img} alt=""/>
-					</Link>
-				</li>
-			)}
+			<h3>PAYMENTS METHODS</h3>
+			<ul className={'payment_icons flex'}>
+				{data.map(elem =>
+					<li key={Math.random()}>
+						<Link to={elem.path} target={elem.target}>
+							<img src={elem.img} alt=""/>
+						</Link>
+					</li>
+				)}
+			</ul>
 		</>
 	);
 };

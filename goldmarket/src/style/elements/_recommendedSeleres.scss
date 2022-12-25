@@ -1,5 +1,5 @@
 .recommended_sellers {
-  //margin-top: 60px;
+  margin-top: 70px;
   align-items: center;
 
   button {
@@ -34,10 +34,14 @@
   padding: 18px;
   gap: 10px;
 
-
 .list_recommender_jewelry_img {
   padding-bottom: 18px;
   border-bottom: 1px solid #E1E4E8;
+
+  img {
+      width: 110px;
+      height: 110px;
+  }
 }
 
   .recommender_jewelry {
@@ -57,5 +61,4 @@
   h4 {
     margin-right: 5px;
   }
- 
 }

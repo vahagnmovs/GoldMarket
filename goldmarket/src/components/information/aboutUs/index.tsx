@@ -1,24 +1,21 @@
 import React from 'react';
 import banner2 from 'src/style/img/banner2.png';
-import 'src/style/components/_banner.scss';
 
 const AboutUs = () => {
 
 	return (
-		<div className={'banner_2'}>
-			<div className="banner_2_center flex justify-between">
-				<div className={'banner_img '}>
+		<div className={'container'}>
+			<div className="bg_about flex justify-between align-center">
+				<div className={'banner_img'}>
 					<img src={banner2} alt={'banner2'}/>
 				</div>
-				<div className={'banner_2_title text-center'}>
+				<div className={'banner_about_text'}>
 					<h3>ABOUT US</h3>
-					<p>lorem ipsumlorem lorem ipsumloremlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-						ipsumlorem ipsum </p>
+					<p>With a long history of fine craftsmanship, Italian gold jewelry from brings sophistication and style to any outfit.</p>
 					<button>ABOUT US</button>
 				</div>
 			</div>
 		</div>
-
 	);
 };
 

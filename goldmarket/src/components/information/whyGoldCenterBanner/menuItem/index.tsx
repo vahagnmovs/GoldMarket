@@ -1,5 +1,5 @@
 import React from 'react';
-import 'src/style/components/_Why_Gold_Center.scss';
+import 'src/style/components/_why_gold_center.scss';
 import {TMenuItemProps} from './type';
 const MenuItem = ({ imgSrc, title }: TMenuItemProps) => {
 	return(

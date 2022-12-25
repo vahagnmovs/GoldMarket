@@ -1,0 +1,36 @@
+.bg_about {
+  background-color: #1D3865;
+  padding: 60px;
+
+  & > div {
+    width: 500px;
+  }
+
+  .banner_img {
+
+  }
+
+  .banner_about_text {
+    text-align: center;
+
+    h3 {
+      color: #FFFFFF;
+
+    }
+
+    color: #FFFFFF;
+  }
+
+  button {
+    width: 200px;
+    margin-top: 30px;
+    background-color: #CCA653;
+    height: 50px;
+    border: none;
+    color: #FFFFFF;
+
+    &:hover {
+      background-color: #0A46E4;
+    }
+  }
+}
