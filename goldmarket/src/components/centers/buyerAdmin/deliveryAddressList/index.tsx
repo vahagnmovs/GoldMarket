@@ -37,6 +37,20 @@ const DeliveryAddressList = () => {
 	const [state, setState] = useState(data);
 	const [address, setAddress] = useState(initialState);
 
+
+
+	const toggleModal = () => {
+		setModall(!modal);
+	};
+
+	if(modal) {
+		document.body.classList.add('active-modal')
+	} else {
+		document.body.classList.remove('active-modal')
+	}
+
+
+
 	const handleNewAddress = () => {
 		setModall(!modal);
 	};
@@ -89,30 +103,50 @@ const DeliveryAddressList = () => {
 				<Dashboard />
 			</div>
 			<div className='container'>
-				<div>
+				<div className={'delivery_button flex justify-between'}>
 					<h3>Delivery Address</h3>
 					<button onClick={handleNewAddress}>+ ADD NEW ADDRESS</button>
 				</div>
-				{state.address.map(item => <DeliveryAddress city={state.city}
-					name={state.name} region={state.region} surname={state.surname}
-					country={state.country} handleEdit={handleEdit} handleDelete={handleDelete}
-					radio={'radio'} key={item.addressId} {...item} />)}
+
+<div className={'flex justify-between'}>
+	{state.address.map(item => <DeliveryAddress city={state.city}
+												name={state.name} region={state.region} surname={state.surname}
+												country={state.country} handleEdit={handleEdit} handleDelete={handleDelete}
+												radio={'radio'} key={item.addressId} {...item} />)}
+</div>
+
+
 			</div>
 			{modal &&
-				<div>
-					<button onClick={handleNewAddress}>X</button>
-					<p>ADD NEW ADDRESS</p>
-					<div>
-						<p>ARMENIA</p>
-						<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS'} inputValue={address.streetAddress} name={'streetAddress'} />
-						<ModalInput handleOnCange={handleOnCange} title={'ZIP CODE'} inputValue={address.zipCode} name={'zipCode'} />
+
+
+				<div className="modal">
+					<div onClick={toggleModal} className="overlay"></div>
+					<div className="modal-content  modal-content_title">
+						<p>ADD NEW ADDRESS</p>
+						<div className={'modal_title2 flex justify-between '}>
+							<div>
+								<div className={'armenia  flex align-center'}>
+									<h1>ARMENIA</h1>
+								</div>
+
+								<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS'} inputValue={address.streetAddress} name={'streetAddress'} />
+								<ModalInput handleOnCange={handleOnCange} title={'ZIP CODE'} inputValue={address.zipCode} name={'zipCode'} />
+							</div>
+							<div>
+								<div  className={'armenia flex align-center '}>
+									<h1>YEREVAN</h1>
+
+								</div>
+								<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS OPTIONAL'} inputValue={address.streetAddressOptional} name={'streetAddressOptional'} />
+								<ModalInput handleOnCange={handleOnCange} title={'PHONE NUMBER'} inputValue={address.phoneNumber} name={'phoneNumber'} />
+							</div>
+						</div>
+
+						<button className={' modal-content_title_button'} onClick={handleSave}>SAVE</button>
+						<button className="close-modal" onClick={toggleModal}>X</button>
 					</div>
-					<div>
-						<p>YEREVAN</p>
-						<ModalInput handleOnCange={handleOnCange} title={'STREET ADDRESS OPTIONAL'} inputValue={address.streetAddressOptional} name={'streetAddressOptional'} />
-						<ModalInput handleOnCange={handleOnCange} title={'PHONE NUMBER'} inputValue={address.phoneNumber} name={'phoneNumber'} />
-					</div>
-					<button onClick={handleSave}>SAVE</button>
+
 				</div>}
 
 		</>

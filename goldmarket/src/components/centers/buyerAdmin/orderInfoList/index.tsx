@@ -49,25 +49,30 @@ const OrderInfoList = () => {
 		<div className='dash'>
 			<Dashboard />
 		</div>
-		<div className='container'>
-			<div className='OrderInfoList'>
+		<div className='container1'>
+			<div className='OrderInfoList flex justify-between  dir-col'>
 				<div>
 					<h3>Order info</h3>
+				</div>
+				<div className={'flex align-center gapinfo '}>
 					{orderInfoData.map(item => <OrderInfo key={item.id} time={item.time}
 						total={item.total} orderNumber={item.orderNumber} soldBy={item.soldBy} />)}
 				</div>
-				<div>
-					<h3>Shippind address</h3>
+
+				<div className={'Shippind_address'}><h3>Shippind address</h3> </div>
+				<div className={'flex align-center gapinfo '}>
+
 					{orderInfoData.map(item => <ShippindAddress key={item.id} fullNamme={item.fullNamme}
 						address={item.address} />)}
 				</div>
-				<div>
-					<h3>Payment info</h3>
+				<div className={'paymeny_info'}> <h3>Payment info</h3></div>
+				<div className={'flex align-center gapinfo'}>
 					{orderInfoData.map(item => <PaymentInfo key={item.id} creditCard={item.creditCard}
 						fullNamme={item.fullNamme} items={item.items} total={item.total} />)}
 				</div>
-				<div>
-					<h3>Products (2)</h3>
+				<div className={'product4'}><h3>Products (2)</h3> </div>
+				<div className={'flex   dir-col'}>
+
 					{orderInfoData.map(item => <Products key={item.id} name={item.productName}
 						img={item.img} price={item.price} gold={item.color} size={item.size}
 						productCode={item.productCode} />)}

@@ -9,17 +9,17 @@ type TOrderInfo ={
 
 const OrderInfo = ({time, total, orderNumber, soldBy} : TOrderInfo) => {
   return (
-    <div>
+    <div className={'orderinfo'}>
       <div>
-         <p>TIME PLACED</p>
+         <h1>TIME PLACED</h1>
          <p>{time}</p>
-         <p>TOTAL</p>
+         <h1>TOTAL</h1>
          <p>{total}</p>
       </div>
       <div>
-         <p>ORDER NUMBER</p>
+         <h1>ORDER NUMBER</h1>
          <p>{orderNumber}</p>
-         <p>SALD BY</p>
+         <h1>SALD BY</h1>
          <p>{soldBy}</p>
 
       </div>

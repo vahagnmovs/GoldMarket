@@ -1,50 +1,336 @@
-.navbar_dashboard_top{
+.navbar_dashboard_top {
   // position: relative;
   padding: 0 40px;
   // top: 80px;
-  background-color:red;
+  background-color: red;
   width: 100%;
 
 }
-.navbar_dashboard_top_ul{
+
+.navbar_dashboard_top_ul {
   width: 100%;
   height: 55px;
   background-color: red;
 
-  img{
+  img {
     width: 18px;
     height: 18px;
 
   }
 
 }
-.dashboard_top_ul{
+
+.dashboard_top_ul {
   padding: 28px 40px;
   width: 100%;
 }
-ul li{
+
+ul li {
   gap: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.title_dashboard{
+
+.title_dashboard {
   font-size: 22px;
   color: #000000;
   position: relative;
   top: 145px;
 }
-.Dashboard_table{
+
+.Dashboard_table {
   margin-bottom: 150px;
 }
 
 
-.dash{
+.dash {
   position: relative;
   top: 70px;
 }
 
-.container{
+.container {
   position: relative;
-top: 100px;
+  top: 100px;
+}
+
+
+.table-price1 {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+
+  th {
+    background-color: white;
+    text-align: left;
+    color: #808080;
+  }
+
+  th, td {
+    padding: 12px 30px;
+  }
+
+  td {
+    color: #000;
+    font-weight: 600;
+  }
+}
+
+.large-width {
+  width: 300px;
+}
+
+button {
+  background-color: transparent;
+  height: 30px;
+  width: 100px;
+  padding: 0;
+  border: 1px solid #1D3865;
+}
+
+.delivery_button {
+  button {
+    width: 208.5px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid #1D3865;
+    color: #1D3865;;
+  }
+}
+
+.user_addres {
+  width: 437px;
+  height: 227px;
+  background-color: white;
+
+  input {
+    margin-left: 5px;
+  }
+
+  .a1 {
+    padding: 20px;
+
+    .user_info_1 {
+      margin-top: 25px;
+
+      span {
+        font-size: 14px;
+        color: #000000;
+      }
+    }
+
+    hr {
+      margin-top: 20px;
+    }
+
+    .user_addres_title {
+      span {
+        font-size: 12px;
+        color: #1D3865;
+      }
+
+      h1 {
+        font-size: 12px;
+        color: #000000;
+        opacity: 0.5;
+      }
+
+      input {
+        width: 24px;
+        height: 24px;
+      }
+
+
+    }
+
+    .button_edit_address {
+      margin-top: 20px;
+
+      button {
+        width: 343px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid #1D3865;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        left: 802px;
+        top: 413px;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.modal-content {
+  max-width: 768px;
+}
+
+.modal-content_title {
+  font-size: 32px;
+  color: #1D3865;
+  margin-top: 20px;
+
+}
+
+.modal_title2 {
+  font-size: 14px;
+
+}
+
+.modal-content_title_button {
+  width: 708px;
+  height: 60px;
+  background: #1D3865;
+  color: #FFFFFF;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+
+.input_title_text {
+  margin-top: 20px;
+
+  input {
+    margin-top: 7px;
+    width: 344px;
+    height: 50px;
+
+  }
+}
+
+.armenia {
+  width: 344px;
+  height: 50px;
+  background-color: #F7F7F7;
+  margin-top: 20px;
+
+  h1 {
+    font-size: 14px;
+    color: black;
+  }
+}
+
+.title_setings {
+  h3 {
+    font-size: 36px;
+    color: #1D3865;
+    padding-left: 95px;
+  }
+
+  h4 {
+    padding-left: 95px;
+    font-size: 20px;
+    line-height: 31px;
+    color: #000000;
+  }
+
+
+}
+
+.settings_input {
+  gap: 120px;
+  margin-left: 95px;
+
+  input {
+    width: 440px;
+    height: 60px;
+    margin-top: 20px;
+  }
+
+}
+
+.settings_save_input {
+
+  button {
+    width: 208.5px;
+    height: 40px;
+    border: 1px solid #1D3865;
+    color: #1D3865;
+    margin-top: 30px;
+    margin-left: 95px;
+  }
+}
+
+.loading {
+  font-size: 36px;
+  color: red;
+}
+
+.orderinfo{
+  p{
+    margin-top: 10px;
+  }
+h1{
+  font-size: 14px;
+  color: #1D3865;
+
+}
+}
+
+.gapinfo{
+  gap: 100px;
+}
+.Shippind_address{
+  margin-top: 30px;
+
+}
+.container1{
+  margin: 0 auto !important;
+  width: 700px;
+  padding-top: 90px;
+}
+.paymeny_info{
+  margin-top: 20px;
+}
+.product{
+  margin-top: 20px;
+}
+.payments_info_p{
+  p{
+    margin-top: 10px;
+
+  }
+
+}
+
+.products_img{
+  img{
+    width: 160px;
+    height: 160px;
+  }
+
+
+}
+.gap2{
+  gap: 10px;
+}
+
+.product_info_order{
+  p{
+    font-size: 14px;
+    color: #1D3865;
+  }
+  h1{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+    span{
+      color: black;
+    }
+  }
+  h6{
+    font-size: 12px;
+    color: #000000;
+    margin-top: 7px;
+  }
+  h2{
+    font-size: 14px;
+    color: #1D3865;
+    margin-top: 25px;
+
+  }
+}
+.product4{
+  margin-top: 10px;
 }

@@ -35,7 +35,7 @@ const OrderHistoryList = () => {
 		<div className='container'>
 			<div className='OrderHistoryList'>
 				<h3>Order history</h3>
-				<table className='table'>
+				<table className='table-price1'>
 					<thead>
 						<tr>
 							<th>ORDER DATE & TIME</th>
