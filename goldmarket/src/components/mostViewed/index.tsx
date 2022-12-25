@@ -1,9 +1,6 @@
 import React, {createRef, RefObject, useRef} from 'react';
 import Slider from 'react-slick';
 import {products} from 'src/data/products';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import 'src/style/components/_mostViewed.scss';
 import {Link} from "react-router-dom";
 
 type TMostViewed = {
@@ -60,13 +57,12 @@ const MostViewed = ({title}:TMostViewed) => {
 
 	return (
 		<div className={'most'}>
-			<div className={'most_Viewed'}>
+			<div className={'most_Viewed container'}>
 				<div className={'most_Viewed_title text-center justify-between  align-center'}>
 					<h3>{title}</h3>
-					<div className={'most_Viewed_button flex'}>
-						<button className="show_more_btn" onClick={handlePrevSlide}>{"<"}<span></span></button>
-						<button className="show_more_btn" onClick={handleNextSlide}>{">"}<span></span></button>
-
+					<div className={'most_Viewed_buttons flex'}>
+						<button onClick={handlePrevSlide}>{"<"}<span></span></button>
+						<button onClick={handleNextSlide}>{">"}<span></span></button>
 					</div>
 				</div>
 				<Slider ref={ref} {...settings}>

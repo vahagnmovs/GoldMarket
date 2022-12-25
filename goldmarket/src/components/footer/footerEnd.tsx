@@ -13,7 +13,7 @@ const FooterEnd = ({title, data}: TFooterEnd) => {
 		<>
 			{/*FIXME: key*/}
 			<li>&copy;{title} </li>
-			{data.map(elem => <li key={Math.random()}><Link to={elem.path}></Link> {elem.name} </li>)}
+			{data.map(elem => <li key={Math.random()}><Link to={elem.path}>{elem.name}</Link>  </li>)}
 		</>
 	);
 };

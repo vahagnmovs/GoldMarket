@@ -2,12 +2,6 @@ import React from 'react';
 
 import {useNavigate} from 'react-router-dom';
 
-import 'src/style/elements/_footer.scss';
-import 'src/style/base/_base.scss';
-import 'src/style/base/_globals.scss';
-import 'src/style/base/_reset.scss';
-import 'src/style/utilities/_variables.scss';
-
 import right from 'src/style/Icons/right.png';
 import {footerData} from '../../data/footerData';
 import {FooterGoldHelp} from './footerGoldHelp';
@@ -21,22 +15,23 @@ const FooterLinks = () => {
 	// const navigate = useNavigate()
 	return (
 		<div className={'bg-gray'}>
-			<footer className="container footer flex  dir-col">
-				<div className={'footer_top flex justify-between'}>
-					<ul className={'justify-between'}>
+			<footer className="footer flex dir-col">
+				<div className={'footer_top container  flex justify-between'}>
+					<ul>
 						<FooterGoldHelp title={'GOLD CENTER'} data={footerData.goldCenter}/>
 					</ul>
 					<ul>
 						<FooterGoldHelp title={'GET HELP'} data={footerData.getHelp}/>
 					</ul>
-					<ul>
-						<FooterContact title={'CONTACT'} data={footerData.contact}/>
-						<li>PAYMENTS METHODS</li>
-						<div className={'icon-pay'}>
+					<div>
+						<ul className={'contact'}>
+							<FooterContact title={'CONTACT'} data={footerData.contact}/>
+						</ul>
+						<div className={'payment flex dir-col'}>
 							<FooterPayment data={footerData.paymentsMethods}/>
-
 						</div>
-					</ul>
+					</div>
+
 					<div className="input_list">
 						<span>SIGN UP OUR MAILING LIST</span>
 						<div className={'search_input'}><input type="email" placeholder={'Enter E-MAIL'}/>
@@ -45,15 +40,17 @@ const FooterLinks = () => {
 						<p>With a long history of fine craftsmanship, Italic gold jewelry from brings</p>
 					</div>
 				</div>
-				<hr/>
-				<div className={'footer_soc_links'}>
+
+				<div className={'border_line'}>
+				</div>
+				<div className={'footer_soc_links container '}>
 					<h5 className={'text-center'}>SOCIAL LINKS</h5>
-					<ul className={'social_links_icons  flex  justify-center '}>
+					<ul className={'social_links_icons flex justify-center '}>
 						<FooterSocialLink data={footerData.socialLinks}/>
 					</ul>
 				</div>
-				<hr/>
-				<ul className={' footer_end flex'}>
+				<div className={'border_line'}></div>
+				<ul className={'footer_end flex align-center justify-center container'}>
 					<FooterEnd title={'2022 Golden Center'} data={footerData.footerEndLink}/>
 				</ul>
 			</footer>
