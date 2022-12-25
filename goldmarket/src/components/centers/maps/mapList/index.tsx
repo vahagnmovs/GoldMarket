@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { TDataProps } from 'src/components/centers/types';
 import 'src/style/components/_centr_style.scss';
 import DrawMapOrShoppingCenters from 'src/components/centers/maps/drawMapOrShoppingCenter/indec';
+import Header from 'src/components/header/header';
 
 type TCategoryAndMapListProps = {
 	data: TDataProps[];
@@ -24,13 +25,10 @@ const MapList = ({ data }: TCategoryAndMapListProps) => {
 					}{...item} />)
 				}
 			</div>
-			<div className="flex justify-center text-center">
+			<div className={'flex justify-center'}>
 				<button className='show_more_btn'
 					onClick={handleNavigate}>
-					<div className={'flex align-center justify-center'}>
-						<p>SHOW MORE</p>
-						<img src={svg} alt="Shou More" />
-					</div>
+					<span>SHOW MORE</span>
 				</button>
 			</div>
 		</div>
