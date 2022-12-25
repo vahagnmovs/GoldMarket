@@ -173,10 +173,15 @@ button {
   color: #1D3865;
   margin-top: 20px;
 
+
 }
 
 .modal_title2 {
   font-size: 14px;
+
+  input {
+    padding-left: 5px;
+  }
 
 }
 
@@ -201,10 +206,7 @@ button {
 }
 
 .armenia {
-  width: 344px;
-  height: 50px;
-  background-color: #F7F7F7;
-  margin-top: 20px;
+  color: #1D3865;
 
   h1 {
     font-size: 14px;
@@ -237,6 +239,7 @@ button {
     width: 440px;
     height: 60px;
     margin-top: 20px;
+    padding-left: 5px;
   }
 
 }
@@ -258,79 +261,136 @@ button {
   color: red;
 }
 
-.orderinfo{
-  p{
+.orderinfo {
+  p {
     margin-top: 10px;
   }
-h1{
-  font-size: 14px;
-  color: #1D3865;
 
-}
+  h1 {
+    font-size: 14px;
+    color: #1D3865;
+
+  }
 }
 
-.gapinfo{
+.gapinfo {
   gap: 100px;
 }
-.Shippind_address{
+
+.Shippind_address {
   margin-top: 30px;
 
 }
-.container1{
+
+.container1 {
   margin: 0 auto !important;
   width: 700px;
   padding-top: 90px;
 }
-.paymeny_info{
+
+.paymeny_info {
   margin-top: 20px;
 }
-.product{
+
+.product {
   margin-top: 20px;
 }
-.payments_info_p{
-  p{
+
+.payments_info_p {
+  p {
     margin-top: 10px;
 
   }
 
 }
 
-.products_img{
-  img{
+.products_img {
+  img {
     width: 160px;
     height: 160px;
+
   }
 
 
 }
-.gap2{
+
+.gap2 {
   gap: 10px;
+  margin-top: 10px;
 }
 
-.product_info_order{
-  p{
+.product_info_order {
+  p {
     font-size: 14px;
     color: #1D3865;
   }
-  h1{
+
+  h1 {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
-    span{
+
+    span {
       color: black;
     }
   }
-  h6{
+
+  h6 {
     font-size: 12px;
     color: #000000;
     margin-top: 7px;
   }
-  h2{
+
+  h2 {
     font-size: 14px;
     color: #1D3865;
     margin-top: 25px;
 
   }
 }
-.product4{
+
+.product4 {
   margin-top: 10px;
+}
+
+.OrderInfoList {
+  gap: 400px;
+
+  h2 {
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 5px;
+    font-weight: 200;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #1D3865;
+  }
+}
+
+.OrderInfoList2 {
+  gap: 488px;
+
+  h2 {
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 5px;
+    font-weight: 200;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #1D3865;
+  }
+}
+.ket{
+  p{
+    margin-top: 5px;
+  }
+
+}
+.ket2{
+  margin-bottom: 20px;
 }

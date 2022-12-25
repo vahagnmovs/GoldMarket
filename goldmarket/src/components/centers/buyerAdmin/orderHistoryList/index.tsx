@@ -2,7 +2,7 @@ import React from 'react';
 import Header from 'src/components/header/header';
 import Dashboard from '../dashboard';
 import OrderHistory from '../orderHistory';
-import './style.css';
+
 // FIXME: hanel datan erb irakan datan unenanq
 const data = [{
 	id: Math.random(),
