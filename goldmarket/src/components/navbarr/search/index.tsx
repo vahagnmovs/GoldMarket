@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {useRef, useState} from 'react';
 import search from 'src/style/Icons/search.png';
 import frame from 'src/style/Icons/Frame.png';
+import useOnClickOutside from "../../../hooks/useOnClickOutside";
 
 const Search = () => {
 	const [isOpenSearchModal, setIsOpenSearchModal] = useState(false);
@@ -8,11 +9,15 @@ const Search = () => {
 		setIsOpenSearchModal(!isOpenSearchModal);
 	};
 
+	const ref = useRef<null>(null);
 
 	const [modal, setModal] = useState(false);
 	const toggleModal = () => {
 		setModal(!modal);
 	};
+
+	useOnClickOutside(ref, () => setIsOpenSearchModal(false));
+
 
 	if(modal) {
 		document.body.classList.add('active-modal')
@@ -29,7 +34,7 @@ const Search = () => {
 			{
 				isOpenSearchModal
 				&&
-				<div className="modal">
+				<div className="modal" ref={ref}>
 					<div onClick={toggleModal} className="overlay"></div>
 					<div className="modal-content">
 						<div className={'search_modal_open relative'}>

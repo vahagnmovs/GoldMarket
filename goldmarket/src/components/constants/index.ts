@@ -1,39 +1,45 @@
-type TInitialState = {
-	ID: string | number 
-	NAME: string
-	SELLERID: string | number
-	DESCRIPTION: string
-	METAL: string
-	FORWHOM: string
-	COLLECTION: string
-	FINENESS: string
-	COLOR: string
-	PUBLISH: boolean | undefined,
-	WIEGHT: number[] | string[] 
-	SIZE:  number[] | string[]
-	COUNT: string 
-	DISCOUNT: string
-	DIMOND: TInitialDimonds,
-	PRICES: TInitialPrice,
-	CODE: string,
-	//FIXME: image componenti ts -y dzel 
-	IMAGES: any, 
-}
 
 type TInitialDimonds = {
-	SELECTSTONE: boolean | undefined;
-	CARAT: string;
-	DIMONDCOLOR: string;
-	CLARITY: string;
-	CUT: string;
-	PCS: string;
+	carat: string;
+	diamondColor: string;
+	clarity: string;
+	cut: string;
+	pcs: string;
 };
 
 type TInitialPrice = {
-	PRICE: string;
-	OLDPRICE: string;
+	price: string;
+	oldPrice: string;
 }
 
+type TImagesElements = {
+	id: number | string
+	src: string
+}
+
+type TInitialState = {
+	productID: string | number 
+	name: string
+	sellerID: string | number
+	description: string
+	metal: string
+	forWhom: string
+	collection: string
+	fineness: string
+	bestSales: number | string
+	color: string[]
+	publish: boolean | undefined
+	stone: boolean | undefined
+	newProduct: boolean | undefined
+	weight: number[] | string[] 
+	size:  number[] | string[]
+	count: string 
+	discount: string
+	diamond: TInitialDimonds,
+	prices: TInitialPrice,
+	code: string,
+	images: TImagesElements[], 
+}
 
 export const product = [
 	{   
@@ -73,73 +79,78 @@ export const product = [
 ];
 
 export const filters = {
-	nameDescription: [
-		{ NAME: '' },
-		{ DESCRIPTION: '' },
-	],
+
 	firstCategory: [
-		{ METAL: ['gold', 'silver'] },
-		{ FORWHOM: ['women', 'men', 'children'] },
-		{ COLLECTION: ['Bracelets', 'Rings', 'Wdding rings', 'Sets', 'Pendants', 'Earrings', 
+		{ metal: ['gold', 'silver'] },
+		{ forWhom: ['women', 'men', 'children'] },
+		{ collection: ['Bracelets', 'Rings', 'Wdding rings', 'Sets', 'Pendants', 'Earrings', 
 			'Chain', 'Necklaces', 'Engagement Rings', 'Crosses', 'Other'] }
 	],
 	productDetals: [
-		{ FINENESS: [333, 375, 416, 585, 750, 875, 900, 916, 958, 999] },
-		{ COLOR: ['yellow', 'white', 'red', 'rose gold'] },
+		{ fineness: [333, 375, 416, 585, 750, 875, 900, 916, 958, 999] },
+
 	],
-	dimonds: [
-		{ DIMONDCOLOR: ['L-Z', 'K', 'J', 'H', 'G', 'F', 'E', 'D'] },
-		{ CLARITY: ['FL', 'F', 'VVST', 'VVS2', 'VS1', 'VS2', 'SI', 'SI2', 'I1', 'I2', 'I3'] },
-		{ CUT: ['ROUND', 'PRINCESS', 'EMERALD', 'CUSHION', 'RADIANT' 
+	diamonds: [
+		{ diamondColor: ['L-Z', 'K', 'J', 'H', 'G', 'F', 'E', 'D'] },
+		{ clarity: ['FL', 'F', 'VVST', 'VVS2', 'VS1', 'VS2', 'SI', 'SI2', 'I1', 'I2', 'I3'] },
+		{ cut: ['ROUND', 'PRINCESS', 'EMERALD', 'CUSHION', 'RADIANT' 
 			,'ASSCHER', 'PEAR', 'OVAL', 'HEART', 'MARQUISE'] },
 	],
 };
 
 
-export const initialPrices: TInitialPrice = { PRICE: '', OLDPRICE: '' };
+export const initialPrices: TInitialPrice = { price: '', oldPrice: '' };
 
 
 
 export const initialDimonds: TInitialDimonds = {
-	SELECTSTONE: undefined,
-	CARAT: '',
-	DIMONDCOLOR: '',
-	CLARITY: '',
-	CUT: '',
-	PCS: '',
+	carat: '',
+	diamondColor: '',
+	clarity: '',
+	cut: '',
+	pcs: '',
 };
-
-
-
 
 
 export const initialState: TInitialState = {
 	// FIXME: dzel id
-	ID: Math.random(),  
-	NAME: '',
-	SELLERID: Math.random(),
-	DESCRIPTION: '',
-	METAL: '',
-	FORWHOM: '', 
-	COLLECTION: '',
-	FINENESS: '',
-	COLOR: '',
-	PUBLISH: false,
-	WIEGHT: [2, 3, 4, 5, 6, 7, 8], 
-	SIZE: [5, 6, 7, 8, 9, 10],
-	COUNT: '',  
-	DISCOUNT: '',
-	DIMOND: initialDimonds,
-	PRICES: initialPrices,
-	CODE: '', 
-	IMAGES: []
+	productID: Math.random(),  
+	name: '',
+	sellerID: Math.random(),
+	description: '',
+	metal: '',  
+	forWhom: '', 
+	collection: '',
+	fineness: '',
+	bestSales: '',
+	color: ['yellow', 'white', 'red', 'rose gold'] ,
+	publish: false,
+	stone: false,
+	newProduct: false,
+	weight: [], 
+	size: [],
+	count: '',  
+	discount: '',
+	diamond: initialDimonds,
+	prices: initialPrices,
+	code: '', 
+	images: []
 };
 
 
-export const weightListData = [2, 3, 4, 5, 6, 7, 8];
-export const sizeListData = [5, 6, 7, 8, 9, 10];
+export const weightListData: string[] | number[] = [5, 5.5, 6, 6.5, 7.5, 8, 8.5];
+export const sizeListData: string[] | number[] = [14, 14.5, 15, 15.5, 16, 16.5, 17];
 
+export const initialMetal: string[] = ['gold', 'silver'];
+export const initialForWhom: string[] = ['women', 'men', 'children'];
+export const initialCollection: string[] = ['Bracelets', 'Rings', 'Wdding rings', 'Sets', 'Pendants', 'Earrings', 
+			                                	   'Chain', 'Necklaces', 'Engagement Rings', 'Crosses', 'Other'];
 
+export const initialPublish = ['yes', 'no']															
 
-
-
+export const initialFinenes: string[] | number[] = [333, 375, 416, 585, 750, 875, 900, 916, 958, 999];
+export const initialColor: string[] = ['yellow', 'white', 'red', 'rose gold'];
+															  
+export const initialDiamondColor: string[] | undefined = ['L-Z', 'K', 'J', 'H', 'G', 'F', 'E', 'D'];
+export const initialClarity: string[] = ['FL', 'F', 'VVST', 'VVS2', 'VS1', 'VS2', 'SI', 'SI2', 'I1', 'I2', 'I3'];
+export const initialCut: string[] =['ROUND', 'PRINCESS', 'EMERALD', 'CUSHION', 'RADIANT', 'ASSCHER', 'PEAR', 'OVAL', 'HEART', 'MARQUISE'];

@@ -10,7 +10,6 @@ const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])
 
 const BuyerSignUp = () => {
 
-	const dispatch = useAppDispatch();
 
 	const register = () => {
 		// Create a new user with email and password using firebase

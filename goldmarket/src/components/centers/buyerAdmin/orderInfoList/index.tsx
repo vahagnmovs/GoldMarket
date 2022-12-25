@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from 'src/components/header/header';
 import Dashboard from '../dashboard';
 import OrderInfo from '../orderInfo';
 import PaymentInfo from '../paymentinfo';
@@ -43,31 +44,39 @@ const orderInfoData = [
 	}
 ]
 const OrderInfoList = () => {
-	return (
-		<div>
-			<Dashboard title={'Order Info'} />
-			<div>
-				<h3>Order info</h3>
-				{orderInfoData.map(item => <OrderInfo key={item.id} time={item.time}
-					total={item.total} orderNumber={item.orderNumber} soldBy={item.soldBy} />)}
-			</div>
-			<div>
-				<h3>Shippind address</h3>
-				{orderInfoData.map(item => <ShippindAddress key={item.id} fullNamme={item.fullNamme}
-				 address={item.address} />)}
-			</div>
-			<div>
-				<h3>Payment info</h3>
-				{orderInfoData.map(item => <PaymentInfo key={item.id} creditCard={item.creditCard}
-				 fullNamme={item.fullNamme} items={item.items} total={item.total} />)}
-			</div>
-			<div>
-				<h3>Products (2)</h3>
-				{orderInfoData.map(item => <Products key={item.id} name={item.productName}
-				 img={item.img} price={item.price} gold={item.color} size={item.size} 
-				 productCode={item.productCode} />)}
+	return (<>
+		<Header />
+		<div className='dash'>
+			<Dashboard />
+		</div>
+		<div className='container'>
+			<div className='OrderInfoList'>
+				<div>
+					<h3>Order info</h3>
+					{orderInfoData.map(item => <OrderInfo key={item.id} time={item.time}
+						total={item.total} orderNumber={item.orderNumber} soldBy={item.soldBy} />)}
+				</div>
+				<div>
+					<h3>Shippind address</h3>
+					{orderInfoData.map(item => <ShippindAddress key={item.id} fullNamme={item.fullNamme}
+						address={item.address} />)}
+				</div>
+				<div>
+					<h3>Payment info</h3>
+					{orderInfoData.map(item => <PaymentInfo key={item.id} creditCard={item.creditCard}
+						fullNamme={item.fullNamme} items={item.items} total={item.total} />)}
+				</div>
+				<div>
+					<h3>Products (2)</h3>
+					{orderInfoData.map(item => <Products key={item.id} name={item.productName}
+						img={item.img} price={item.price} gold={item.color} size={item.size}
+						productCode={item.productCode} />)}
+				</div>
 			</div>
 		</div>
+
+	</>
+
 
 	);
 };

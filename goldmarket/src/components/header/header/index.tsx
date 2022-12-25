@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
 import logo from 'src/style/Icons/site_logo.png';
 import DropDown from 'src/components/header/header/dropDown';
 import {TData} from 'src/components/header/header/types';
@@ -10,6 +10,9 @@ import WishList from './wishList';
 import Cart from './cart';
 import Login from './login'
 import LogedPage from "./logedPage";
+import useModal from "src/hooks/useOnClickOutside";
+import useOnClickOutside from "src/hooks/useOnClickOutside";
+
 const flags: TData[] = [
 	{
 		id: 0,
@@ -102,6 +105,7 @@ const Header = () => {
 								chosen={chosenFlag}
 								state={flagState}
 								handleChange={handleChangeLanguage}
+								colsDropDown={setFlagMenuOpen}
 							/>
 						</div>
 						{/*valuta_content*/}
@@ -111,6 +115,7 @@ const Header = () => {
 								chosen={chosenCurrency}
 								state={currencyState}
 								handleChange={handleChangeCurrency}
+								colsDropDown={setCurrencyMenuOpen}
 							/>
 						</div>
 					</div>

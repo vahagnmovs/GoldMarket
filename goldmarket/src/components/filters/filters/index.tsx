@@ -7,6 +7,8 @@ import InputBooleans from '../inputBooleans';
 import './index.css';
 import {globalFilters} from 'src/data';
 import {THandleFilters} from "src/pages/products";
+import banner_product from 'src/style/img/banner_products.png'
+import Header from "../../header/header";
 
 type TMinMaxTypes = {
     min: string | number,
@@ -68,7 +70,7 @@ const Filters = ({handleFilters}: THandleFilters) => {
 
     const getRanges = (min: string, max: string, name: string): void => {
         setMyFilters({
-            ...myFilters, [ name ]: {
+            ...myFilters, [name]: {
                 min, max
             }
         })
@@ -76,16 +78,16 @@ const Filters = ({handleFilters}: THandleFilters) => {
 
     const getInputArrays = (value: boolean, title: TFilterKey, name: string) => {
         if (value) {
-            const myTitle = [...myFilters[ title ]]
+            const myTitle = [...myFilters[title]]
             setMyFilters({
                 ...myFilters,
-                [ title ]: [...myTitle, name]
+                [title]: [...myTitle, name]
             })
         } else {
-            const myTitle = [...myFilters[ title ]]
+            const myTitle = [...myFilters[title]]
             setMyFilters({
                 ...myFilters,
-                [ title ]: [...myTitle].filter(el => el !== name)
+                [title]: [...myTitle].filter(el => el !== name)
             })
         }
     }
@@ -94,44 +96,63 @@ const Filters = ({handleFilters}: THandleFilters) => {
         if (id === 'yes') {
             setMyFilters({
                 ...myFilters,
-                [ title ]: true
+                [title]: true
             })
         } else if (id === 'no') {
             setMyFilters({
                 ...myFilters,
-                [ title ]: false
+                [title]: false
             })
         }
     }
 
     return (
-        <div>
-            <div className='filMenuContainer'>
-                <RangeInput title={'price'} getRanges={getRanges}/>
-                <InputArrays title={TFilterKey.metal} data={globalFilters.metal} getInput={getInputArrays}/>
-                <InputArrays title={TFilterKey.forWhom} data={globalFilters.forWhom} getInput={getInputArrays}/>
-                <InputArrays title={TFilterKey.type} data={globalFilters.type} getInput={getInputArrays}/>
-                <InputArrays title={TFilterKey.size} data={globalFilters.size} getInput={getInputArrays}/>
-                {
-                    show
-                    &&
-                    <>
-                        <InputBooleans name={'diamond'} title={'diamond'} data={globalFilters.diamond}
-                                       getInput={getInputRadio}/>
-                        <InputBooleans name={'certificate'} title={'certificate'} data={globalFilters.certificate}
-                                       getInput={getInputRadio}/>
-                        <InputArrays title={TFilterKey.color} data={globalFilters.color} getInput={getInputArrays}/>
-                        <InputArrays title={TFilterKey.fineness} data={globalFilters.fineness} getInput={getInputArrays}/>
-                        <RangeInput title={'weight'} getRanges={getRanges}/>
-                    </>
-                }
-            </div>
-            <p className='showFilName' onClick={handleSow}> {showFilName} </p>
-            <div>
-                <button onClick={() => window.location.reload()}>Clear filters</button>
-            </div>
+        <div className={'banner_products'}>
+            <Header/>
+            <img src={banner_product}/>
+            <div className='container'>
+                <div className={'top_products_page'}>
+                    <div className={'clear_filters flex justify-between align-center'}>
+                        <h1>Engagement rings</h1>
+                        <button onClick={() => window.location.reload()}>Clear filters</button>
+                    </div>
+                    <div className={'top_products_page_input '}>
+                        <ul className={'top_products_page_input_1 flex justify-between'}>
+                            <li><RangeInput title={'price'} getRanges={getRanges}/></li>
+                            <li><InputArrays title={TFilterKey.metal} data={globalFilters.metal}
+                                             getInput={getInputArrays}/></li>
+                            <li><InputArrays title={TFilterKey.forWhom} data={globalFilters.forWhom}
+                                             getInput={getInputArrays}/></li>
+                            <li><InputArrays title={TFilterKey.type} data={globalFilters.type}
+                                             getInput={getInputArrays}/></li>
+                            <li><InputArrays title={TFilterKey.size} data={globalFilters.size}
+                                             getInput={getInputArrays}/></li>
+                        </ul>
 
+                        {
+                            show
+                            &&
+                            <ul className={'top_products_page_input_2 top_products_page_input_1 flex justify-between'}>
+                                <li><InputBooleans name={'diamond'} title={'diamond'} data={globalFilters.diamond}
+                                                   getInput={getInputRadio}/></li>
+
+                                <li><InputBooleans name={'certificate'} title={'certificate'}
+                                                   data={globalFilters.certificate}
+                                                   getInput={getInputRadio}/></li>
+                                <li><InputArrays title={TFilterKey.color} data={globalFilters.color}
+                                                 getInput={getInputArrays}/></li>
+                                <li><InputArrays title={TFilterKey.fineness} data={globalFilters.fineness}
+                                                 getInput={getInputArrays}/></li>
+                                <li><RangeInput title={'weight'} getRanges={getRanges}/></li>
+                            </ul>
+                        }
+                        <button className='showFilName' onClick={handleSow}> {showFilName} </button>
+                    </div>
+
+                </div>
+            </div>
         </div>
+
     )
 }
 

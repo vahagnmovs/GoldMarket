@@ -19,6 +19,8 @@ import AddProduct from 'src/components/product/AddProduct';
 import SignUp from 'src/components/signUp';
 import ProductInfo from "../../components/productInfo";
 import LoginModal from "../../components/loginModal";
+import Products from "../products";
+
 
 
 
@@ -42,6 +44,7 @@ const Home = () => {
 				<MostViewed />
 				<WhyGoldCenter />
 				<AboutUs />
+				{/*<Products/>*/}
 			</>
 		</Layout>
 	);
