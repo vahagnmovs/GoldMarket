@@ -74,6 +74,9 @@ const Header = () => {
 	useEffect(() => {
 		if(ls.get('buyer')) {
 			setIsLogInUser(!isLogInUser)
+		};
+		if(ls.get('seller')) {
+			setIsLogInUser(!isLogInUser)
 		}
 	}, [])
 	const toggleFlagMenu = useCallback(() => {

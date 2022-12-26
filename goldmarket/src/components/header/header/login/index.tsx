@@ -35,7 +35,6 @@ const Login = ({toggleIsLogInUser, handelSeller}: TLoginProps) => {
 		const auth = getAuth();
 		signInWithEmailAndPassword(auth, email, password)
 			.then(({user}) => {
-				console.log(333)
 				getDocs(colRefSellers)
 					.then((snapshot) => {
 						const sellers: any = []
@@ -44,7 +43,6 @@ const Login = ({toggleIsLogInUser, handelSeller}: TLoginProps) => {
 								...doc.data(),
 							})
 						})
-						console.log(sellers,";;;a")
 						return sellers.find((seller: any) => seller.sellerID === user.uid)
 					})
 					.then(docSnap => {
@@ -52,13 +50,10 @@ const Login = ({toggleIsLogInUser, handelSeller}: TLoginProps) => {
 						if (docSnap.firstName) {
 							ls('seller', docSnap)
 							toggleIsLogInUser()
-						} else {
-							console.log("No such document!");
 						}
 					})
 					.catch((error) => {
 						setError("user do not find")
-						console.log("aaaaaaa")
 					})
 			})
 	}
@@ -82,8 +77,6 @@ const Login = ({toggleIsLogInUser, handelSeller}: TLoginProps) => {
 						if (docSnap.firstName) {
 							ls('buyer', docSnap)
 							toggleIsLogInUser()
-						} else {
-							console.log("No such document!");
 						}
 					})
 					.catch((error) => {
