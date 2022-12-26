@@ -42,8 +42,8 @@ const AddImages: React.FC<TProps> = ({ handleImgSrces }) => {
 	};
 
 	return (
-		<div>
-			<h3> ADD IMAGES / VIDEOS </h3>
+		<div className={'flex dir-col ddd align-center text-center'}>
+
 			<input className='inputPhoto' multiple={true} accept="image/jpeg , image/png"
 				onChange={handleInputChange} type="file"/>
 
