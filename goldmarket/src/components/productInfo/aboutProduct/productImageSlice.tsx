@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import right from 'src/style/Icons/right.png';
+import { ImagesType } from 'src/components/product/editProduct/data';
 
 
 interface ProductImageSliceProps {
-    images: string[]
+    images: ImagesType[]
 }
 
 const ProductImageSlice = ({images}:ProductImageSliceProps ) => {
+	
+	
 	const [imageIndex, setImageIndex] = useState(0);
 	const nextImage = () => {
 		if(imageIndex === images.length - 1) {
@@ -28,14 +31,14 @@ const ProductImageSlice = ({images}:ProductImageSliceProps ) => {
 	return (
 		<div className={'product_smole_carousel'}>
 			<div className={'product_smole_carousel_top_photo'}>
-				<img  src={images[imageIndex]} alt=""/>
+				<img  src={images[imageIndex].src} alt=""/>
 			</div>
 			<div className={'product_smole_carousel_slider flex align-center'} >
 
 				{images.map((image, i) =>
 					<img
-						key={image}
-						src={image} alt="no photo"
+						key={image.id}
+						src={image.src} alt="no photo"
 						onClick={() => clickImage(i)}
 						className={imageIndex === i ? 'active': ''}
 					/>

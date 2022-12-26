@@ -9,7 +9,6 @@ type TFooterSocialLinkProps = {
 }
 
 const FooterSocialLink = ({ data}: TFooterSocialLinkProps) => {
-	console.log(data,'data')
 	const [modal, setModal] = useState(false);
 	const navigate = useNavigate();
 	const [isRedirect, setIsRedirect] = useState(false);

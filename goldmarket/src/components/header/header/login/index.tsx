@@ -5,8 +5,9 @@ import {TLoginProps} from "./type";
 import {collection, getDocs} from "firebase/firestore";
 import {db} from 'src/firebase'
 import useOnClickOutside from "../../../../hooks/useOnClickOutside";
+import {useNavigate} from "react-router-dom";
 
-const Login = ({toggleIsLogInUser}: TLoginProps) => {
+const Login = ({toggleIsLogInUser, handelSeller}: TLoginProps) => {
 
 	const [isOpenLogInModal, setIsOpenLogInModal] = useState(false);
 	const [isBuyer, setIsBuyer] = useState(false)
@@ -14,9 +15,11 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 	const [password, setPassword] = useState("")
 	const [modal, setModal] = useState(false);
 	const [error, setError] = useState('')
-	const colRef = collection(db, "buyers")
+	const colRefBuyers = collection(db, "buyers")
+	const colRefSellers = collection(db,"sellers")
 	const ls = require('local-storage');
 	const ref = useRef<null>(null);
+	const navigate = useNavigate()
 
 	const handleInput = (e: React.ChangeEvent<HTMLInputElement>, input: string) => {
 		if (input === "email") {
@@ -32,7 +35,7 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 		const auth = getAuth();
 		signInWithEmailAndPassword(auth, email, password)
 			.then(({user}) => {
-				getDocs(colRef)
+				getDocs(colRefSellers)
 					.then((snapshot) => {
 						const sellers: any = []
 						snapshot.docs.forEach((doc) => {
@@ -40,20 +43,17 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 								...doc.data(),
 							})
 						})
-						return sellers.find((sellers: any) => sellers.buyerID === sellers.uid)
+						return sellers.find((seller: any) => seller.sellerID === user.uid)
 					})
 					.then(docSnap => {
+						console.log(docSnap,";;;;;asjdhabx")
 						if (docSnap.firstName) {
-							ls('sellers', docSnap)
+							ls('seller', docSnap)
 							toggleIsLogInUser()
-						} else {
-							console.log("No such document!");
 						}
 					})
 					.catch((error) => {
-						const errorCode = error.code;
-						const errorMessage = error.message;
-						throw new Error(`${errorCode}`)
+						setError("user do not find")
 					})
 			})
 	}
@@ -63,7 +63,7 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 		const auth = getAuth();
 		signInWithEmailAndPassword(auth, email, password)
 			.then(({user}) => {
-				getDocs(colRef)
+				getDocs(colRefBuyers)
 					.then((snapshot) => {
 						const buyers: any = []
 						snapshot.docs.forEach((doc) => {
@@ -77,14 +77,11 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 						if (docSnap.firstName) {
 							ls('buyer', docSnap)
 							toggleIsLogInUser()
-						} else {
-							console.log("No such document!");
 						}
 					})
 					.catch((error) => {
-						const errorCode = error.code;
-						const errorMessage = error.message;
-						throw new Error(`${errorCode}`)
+						setError("user do not find")
+						console.log("saasaaaassss")
 					})
 			})
 	}
@@ -94,6 +91,15 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 	};
 
 	useOnClickOutside(ref, () => setIsOpenLogInModal(false));
+
+	const handelBuyer = () => {
+		handelSeller('buyer')
+		setIsBuyer(false)
+	}
+	const handelSellerChange = () => {
+		handelSeller('seller')
+		setIsBuyer(true)
+	}
 
 	return (
 		<>
@@ -107,19 +113,22 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 				&&
 				
 				<div className="modal" >
-					
+					<div>{error}</div>
 					<div onClick={toggleModal} className="overlay"></div>
 					<div ref={ref}>
-							
-						<form className={'box'} onSubmit={ isBuyer? toggleSellerSignIn :toggleBuyerSignIn }>
+
+
+						<form className={'box'} onSubmit={ isBuyer ? toggleSellerSignIn : toggleBuyerSignIn }>
 							<button className="close-modal" onClick={() => setIsOpenLogInModal(false)}>
 								X
 							</button>
 							<h3 className={'logo'}>LOGIN</h3>
 							<div>
-							<div><span onClick={()=>setIsBuyer(false)}>BUYER</span>
-									<span onClick={()=>setIsBuyer(true)}>SELLER</span>
-							</div>
+								<div className={"logo_top_bottom"}>
+									<span onClick={handelBuyer}>BUYER</span>
+									<span onClick={handelSellerChange}>SELLER</span>
+								</div>
+								<span>{error}</span>
 								<div className='group'>
 									<input type='email'
 										   onChange={(e) => handleInput(e,"email")}
@@ -138,14 +147,14 @@ const Login = ({toggleIsLogInUser}: TLoginProps) => {
 									<span className='bar'></span>
 									<label>Password</label>
 								</div>
-								<button className='button-65'>Login</button>
+								<button className='button-65' type={"submit"}>Login</button>
 
 								<span className='forgot_password'>Forgot your password?</span>
 
 								<div className="separator">New customer?</div>
 
 								<h3>Start Now</h3>
-								<button className='button-65 btn_registration'>REGISTRATION</button>
+								<button className='button-65 btn_registration' onClick={() => navigate("/signUp")}>REGISTRATION</button>
 							</div>
 						</form>
 					</div>

@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import user1 from 'src/style/Icons/user.png';
 import {useNavigate} from "react-router-dom";
 import {TLoginProps} from "../login/type";
+import {TLogedPageProps} from "./type";
 
-const LogedPage = ({toggleIsLogInUser, isBuyer}: TLoginProps) => {
+const LogedPage = ({toggleIsLogInUser, sellerBuyer, handelSeller}: TLogedPageProps) => {
     const [isOpenModal, setIsOpenModal] = useState(false)
 
     const ls = require('local-storage')
-    const user = ls('buyer')
+    const user = ls(sellerBuyer)
 
     const navigate = useNavigate()
     const toggleModal = () => {

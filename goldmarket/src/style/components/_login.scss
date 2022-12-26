@@ -1,0 +1,15 @@
+.logo_top_bottom {
+  margin-top: 20px;
+
+  span {
+    //height: 40px;
+    margin-right: 15px;
+    padding: 10px 15px;
+
+    &:hover {
+      background-color: #0A46E4;
+      color: #FFFFFF;
+
+    }
+  }
+}

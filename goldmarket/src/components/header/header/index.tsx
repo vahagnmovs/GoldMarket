@@ -10,8 +10,6 @@ import WishList from './wishList';
 import Cart from './cart';
 import Login from './login'
 import LogedPage from "./logedPage";
-import useModal from "src/hooks/useOnClickOutside";
-import useOnClickOutside from "src/hooks/useOnClickOutside";
 
 const flags: TData[] = [
 	{
@@ -61,9 +59,12 @@ const Header = () => {
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
 	const [isLogInUser, setIsLogInUser] = useState(false)
-	const [isBuyer, setIsBuyer] = useState(true)
+	const [seller, setSeller] = useState("seller")
 	const ls = require('local-storage')
 
+	const handelSeller = (user: string) => {
+		setSeller(user)
+	}
 
 	const handleChangeLanguage = (flag: TData) => {
 		setChosenFlag(flag);
@@ -72,6 +73,9 @@ const Header = () => {
 
 	useEffect(() => {
 		if(ls.get('buyer')) {
+			setIsLogInUser(!isLogInUser)
+		};
+		if(ls.get('seller')) {
 			setIsLogInUser(!isLogInUser)
 		}
 	}, [])
@@ -111,7 +115,7 @@ const Header = () => {
 							/>
 						</div>
 						{/*valuta_content*/}
-						<div className={'relative'}>
+						<div className={'valuta_icons relative'}>
 							<DropDown menuOpen={currencyMenuOpen}
 								toggleMenu={toggleCurrencyMenu}
 								chosen={chosenCurrency}
@@ -135,11 +139,12 @@ const Header = () => {
 								isLogInUser
 									?
 									<LogedPage toggleIsLogInUser={toggleIsLogInUser}
-													isBuyer={isBuyer}
+												sellerBuyer={seller}
+											   handelSeller={handelSeller}
 									/>
 									:
 									<Login toggleIsLogInUser={toggleIsLogInUser}
-												isBuyer={isBuyer}
+										   handelSeller={handelSeller}
 									/>
 							}
 							<Cart/>

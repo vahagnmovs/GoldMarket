@@ -54,7 +54,7 @@ const MostViewed = ({title}:TMostViewed) => {
 			}
 		]
 	};
-
+	
 	return (
 		<div className={'most'}>
 			<div className={'most_Viewed container'}>
@@ -71,7 +71,7 @@ const MostViewed = ({title}:TMostViewed) => {
 							<div key={product.productID}>
 								<div className="badge_item_most">
 									<div className="relative_most">
-										<img  className={'relative_img'} src={product.images[0]} alt="list_item"/>
+										<img  className={'relative_img'} src={product.images[0].src} alt="list_item"/>
 									</div>
 									<div className="list_content">
 										<div className="flex justify-between">

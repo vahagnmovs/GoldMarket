@@ -1,4 +1,4 @@
 export type TLoginProps = {
     toggleIsLogInUser: () => void,
-    isBuyer: boolean,
+    handelSeller: (user:string) => void,
 }
