@@ -4,7 +4,7 @@ import 'src/style/components/_banner.scss';
 
 const Video = () => {
 	return (
-	  <video muted autoPlay loop controls width="100%">
+	  <video muted autoPlay loop width="100%">
 		<source src="/viddeo/videoo.mp4" type="video/mp4"/>
 	  </video>
 	);
