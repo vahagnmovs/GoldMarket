@@ -115,7 +115,7 @@ const Header = () => {
 							/>
 						</div>
 						{/*valuta_content*/}
-						<div className={'relative'}>
+						<div className={'valuta_icons relative'}>
 							<DropDown menuOpen={currencyMenuOpen}
 								toggleMenu={toggleCurrencyMenu}
 								chosen={chosenCurrency}
