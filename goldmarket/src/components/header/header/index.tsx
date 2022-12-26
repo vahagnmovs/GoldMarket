@@ -10,8 +10,6 @@ import WishList from './wishList';
 import Cart from './cart';
 import Login from './login'
 import LogedPage from "./logedPage";
-import useModal from "src/hooks/useOnClickOutside";
-import useOnClickOutside from "src/hooks/useOnClickOutside";
 
 const flags: TData[] = [
 	{
@@ -61,9 +59,12 @@ const Header = () => {
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
 	const [isLogInUser, setIsLogInUser] = useState(false)
-	const [isBuyer, setIsBuyer] = useState(true)
+	const [seller, setSeller] = useState("seller")
 	const ls = require('local-storage')
 
+	const handelSeller = (user: string) => {
+		setSeller(user)
+	}
 
 	const handleChangeLanguage = (flag: TData) => {
 		setChosenFlag(flag);
@@ -135,11 +136,12 @@ const Header = () => {
 								isLogInUser
 									?
 									<LogedPage toggleIsLogInUser={toggleIsLogInUser}
-													isBuyer={isBuyer}
+												sellerBuyer={seller}
+											   handelSeller={handelSeller}
 									/>
 									:
 									<Login toggleIsLogInUser={toggleIsLogInUser}
-												isBuyer={isBuyer}
+										   handelSeller={handelSeller}
 									/>
 							}
 							<Cart/>

@@ -5,9 +5,12 @@ import * as Yup from 'yup';
 import {createUserWithEmailAndPassword, getAuth} from 'firebase/auth';
 import {addDoc, collection} from "firebase/firestore";
 import {db} from 'src/firebase'
+import {useNavigate} from "react-router-dom";
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
 
 const SellerSignUp = () => {
+
+	const navigate = useNavigate()
 	const register = () => {
 		// Create a new user with email and password using firebase
 		const auth = getAuth();
@@ -17,7 +20,7 @@ const SellerSignUp = () => {
 					firstName: formik.values.firstName,
 					lastName: formik.values.lastName,
 					email: user.email,
-					buyerID: user.uid,
+					sellerID: user.uid,
 					cart: [],
 					wishList: [],
 					phone: formik.values.phoneNumber
@@ -74,6 +77,7 @@ const SellerSignUp = () => {
 		}),
 		onSubmit: (values) => {
 			register()
+			navigate('/')
 		}
 	});
 

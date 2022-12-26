@@ -5,11 +5,13 @@ import * as Yup from 'yup';
 import {createUserWithEmailAndPassword, getAuth} from 'firebase/auth';
 import {addDoc, collection} from "firebase/firestore";
 import {db} from 'src/firebase'
+import {useNavigate} from "react-router-dom";
 
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
 
 const BuyerSignUp = () => {
 
+	const navigate = useNavigate()
 
 	const register = () => {
 		// Create a new user with email and password using firebase
@@ -69,8 +71,9 @@ const BuyerSignUp = () => {
 				.max(11, 'Phone number must be 11 characters')
 				.required('Required'),
 		}),
-		onSubmit: (values) => {
+		onSubmit: () => {
 			register();
+			navigate('/')
 		}
 	});
 
