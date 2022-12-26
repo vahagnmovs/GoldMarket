@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import user1 from 'src/style/Icons/user.png';
 import {useNavigate} from "react-router-dom";
-import {TLoginProps} from "../login/type";
 import {TLogedPageProps} from "./type";
 
 const LogedPage = ({toggleIsLogInUser, sellerBuyer, handelSeller}: TLogedPageProps) => {
@@ -9,7 +8,6 @@ const LogedPage = ({toggleIsLogInUser, sellerBuyer, handelSeller}: TLogedPagePro
 
     const ls = require('local-storage')
     const user = ls(sellerBuyer)
-
     const navigate = useNavigate()
     const toggleModal = () => {
         setIsOpenModal(!isOpenModal)

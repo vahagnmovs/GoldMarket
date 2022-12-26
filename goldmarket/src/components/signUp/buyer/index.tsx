@@ -10,7 +10,8 @@ import {useNavigate} from "react-router-dom";
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
 
 const BuyerSignUp = () => {
-	const navigate = useNavigate()
+	const ls = require("local-storage")
+  const navigate = useNavigate()
 
 	const register = () => {
 		// Create a new user with email and password using firebase
@@ -72,6 +73,7 @@ const BuyerSignUp = () => {
 		}),
 		onSubmit: () => {
 			register();
+			ls("buyer",formik.values)
 			navigate('/')
 		}
 	});
