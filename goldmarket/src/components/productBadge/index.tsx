@@ -20,7 +20,7 @@ const Product = (props: ProductsTypes) => {
 	return (
 		<div className="badge_item">
 			<div className="relative">
-				<img src={images[0]} alt="list_item" />
+				<img src={images[0].src} alt="list_item" />
 				<div className="badge_item_top flex absolute">
 					{newProduct ? <span className="new">NEW</span> : <span></span>}
 					{discount ? <span className="discount">-{discount}%</span> : <span></span>}
