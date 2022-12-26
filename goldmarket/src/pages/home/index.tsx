@@ -20,6 +20,7 @@ import SignUp from 'src/components/signUp';
 import ProductInfo from "../../components/productInfo";
 import LoginModal from "../../components/loginModal";
 import Products from "../products";
+import VideoPlayer from "src/components/header/video";
 
 
 
@@ -35,7 +36,8 @@ const Home = () => {
 				{/*<AddProduct />*/}
 				{/*<SignUp/>*/}
 				<PriceList />
-				<Video />
+				<VideoPlayer/>
+				{/*<Video />*/}
 				<SwitchComponent />
 				<NewCollection />
 				<SellWithUs />
