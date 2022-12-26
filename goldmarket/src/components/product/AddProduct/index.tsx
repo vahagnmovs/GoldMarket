@@ -142,7 +142,6 @@ const AddProduct: React.FC = () => {
 
 
 	const handleSave = () => {
-		// console.log(formData, 'formData')
 		addDoc(collection(db, 'products'), {
 				...product
 		})

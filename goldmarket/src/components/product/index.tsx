@@ -8,7 +8,7 @@ import {collection, getDocs, query, where } from "firebase/firestore";
 import {db} from "../../firebase";
 import {ProductsTypes} from "src/data/products";
 
-const Products: React.FC = () => {
+const ProductsS: React.FC = () => {
 	//TODO: sellerID (URL.searchParams)
 	// const searchParams = new URLSearchParams(window.location.href);
 	// const sellerID = searchParams.get('sellerID')
@@ -32,7 +32,10 @@ const Products: React.FC = () => {
 			setSellerProducts(currentSellerProducts)
 		})
 	}, [])
+   
 
+	console.log(sellerProducts, 'sellerProducts');
+	
 	return (
 		<div>
 			<div className='productNav'>
@@ -63,4 +66,4 @@ const Products: React.FC = () => {
 };
 
 
-export default Products;
+export default ProductsS;

@@ -18,14 +18,15 @@ const ProductItem = ({ productID, images, name, type, code, prices }: ProductsTy
 	};
 
 
+
 	return (
 		<div className='productItem' onClick={handleNavigate}>
 
-			<div> <img className='productItemPhoto' src={images[0]} /> </div>
+			{/* <div> <img className='productItemPhoto' src={images[0].src} /> </div> */}
 			<div className='productItemPhoto'> {name} </div>
 			<div> {type} </div>
 			<div> {code} </div>
-			<div> {prices.currentPrice} </div>
+			<div> {prices?.currentPrice} </div>
 
 			<div className='details'>
 				<button onClick={handleEditNavigate}>✓</button>
