@@ -8,9 +8,9 @@ interface IProps {
 const CrateInput = ({ title, value, handleChangeData }: IProps) => {
 
 	return(
-		<div>
+		<div className={'flex dir-col add_product_input align-center '}>
 			<label> { title?.toUpperCase() } </label>
-			<input type='text' name={title} placeholder={title} onChange={handleChangeData} value={value} />
+			<input className={'add_product_input_de'} type='text' name={title} placeholder={title} onChange={handleChangeData} value={value} />
 		</div>
 	);
 };

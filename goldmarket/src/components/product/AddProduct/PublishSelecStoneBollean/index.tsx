@@ -8,7 +8,7 @@ type TProps = {
 const PublishSelecStoneBollean = ({ name, handleBoolean }: TProps) => {
 
 	return (
-		<div>
+		<div className={'flex dir-col add_product_input'}>
 			<label>{name.toUpperCase()}</label>
 			<select name={name} onChange={handleBoolean}>
 				<option disabled selected>{name}</option>

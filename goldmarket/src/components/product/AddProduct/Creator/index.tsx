@@ -7,12 +7,12 @@ interface IProps {
 const Creator: React.FC<IProps> = ({ data, handleChangeData }) => {
 
 	return(
-		<div>
+		<div className={'flex dir-col add_product_input align-center'}>
 			{
 				data.map((elem: any) => {
 					const key = Object.keys(elem).join();
               
-					return <div key={elem.key}>
+					return <div key={elem.key} className={'flex dir-col'}>
 						<label> {key.toUpperCase()} </label>
 						<select name={key} onChange={handleChangeData}>
 							<option selected disabled>{key}</option>

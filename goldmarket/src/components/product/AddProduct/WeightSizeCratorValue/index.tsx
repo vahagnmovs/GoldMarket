@@ -34,11 +34,11 @@ const WeightSizeCratorValue = ({ listData, name, handleWeight }: TProps) => {
 
 
 	return (
-		<div>
+		<div className={'flex dir-col add_product_input '}>
 			<span style={{cursor: 'pointer'}} onClick={handleFlag}> {name.toUpperCase()} </span>
 			{flag || listData.map((item, index) => {
 				return (
-					<div key={index} className="checkbox-container">
+					<div key={index} className="checkbox-container flex dir-col ">
 						<label>
 							<input
 								type="checkbox"
