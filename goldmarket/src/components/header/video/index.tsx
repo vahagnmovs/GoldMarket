@@ -1,14 +1,13 @@
 import React from 'react';
-import  video from 'src/style/img/video.png';
+import video from 'src/style/img/video.png';
 import 'src/style/components/_banner.scss';
 
-
-function Video() {
+const Video = () => {
 	return (
-		<div className={'video'}>
-			<img src={video}/>
-		</div>
+	  <video muted autoPlay loop controls width="100%">
+		<source src="/viddeo/videoo.mp4" type="video/mp4"/>
+	  </video>
 	);
-}
-
-export default Video;
+  };
+  
+  export default Video;
