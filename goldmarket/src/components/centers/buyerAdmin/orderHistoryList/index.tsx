@@ -2,7 +2,7 @@ import React from 'react';
 import Header from 'src/components/header/header';
 import Dashboard from '../dashboard';
 import OrderHistory from '../orderHistory';
-import './style.css';
+
 // FIXME: hanel datan erb irakan datan unenanq
 const data = [{
 	id: Math.random(),
@@ -35,7 +35,7 @@ const OrderHistoryList = () => {
 		<div className='container'>
 			<div className='OrderHistoryList'>
 				<h3>Order history</h3>
-				<table className='table'>
+				<table className='table-price1'>
 					<thead>
 						<tr>
 							<th>ORDER DATE & TIME</th>

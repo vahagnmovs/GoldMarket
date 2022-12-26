@@ -7,7 +7,7 @@ type TModalInput = {
 }
 const ModalInput = ({title, inputValue, name, handleOnCange }: TModalInput) => {
    return (
-      <div>
+      <div className={'flex dir-col input_title_text'}>
          <label>{title}</label>
          <input type="text" value={inputValue} name={name} onChange={handleOnCange} />
       </div>

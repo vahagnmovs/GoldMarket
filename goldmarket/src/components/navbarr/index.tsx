@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import SearchCategory from './openingNavbar';
 import Search from './search';
 
@@ -10,15 +10,15 @@ function Navbar() {
 			<div className={'container-top products_manu flex justify-between align-center'}>
 				<nav className={'navbar flex justify-between align-center'}>
 					<ul className={'navbar_ul flex justify-between align-center'}>
-						<li className={'flex justify-between align-center'}>
+						<div className={'flex justify-between align-center'}>
 							<SearchCategory title={'GOLD JEWELRY'} />
-						</li>
-						<li className={'flex justify-between align-center'}>
+						</div>
+						<div className={'flex justify-between align-center'}>
 							<SearchCategory title={'SILVER JEWELRY'} />
-						</li>
-						<li className={'flex justify-between align-center'}>
+						</div>
+						<div className={'flex justify-between align-center'}>
 							<SearchCategory title={'WATCHES'} />
-						</li>
+						</div>
 						<li className={'flex'}>
 							<div>STORES</div>
 						</li>

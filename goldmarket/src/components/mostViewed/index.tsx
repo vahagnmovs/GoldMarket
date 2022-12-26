@@ -1,4 +1,4 @@
-import React, {createRef, RefObject, useRef} from 'react';
+ import React, {createRef, RefObject, useRef} from 'react';
 import Slider from 'react-slick';
 import {products} from 'src/data/products';
 import {Link} from "react-router-dom";

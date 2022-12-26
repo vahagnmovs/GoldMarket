@@ -24,7 +24,7 @@ const CategoryList = ({ data }: TCategoryListProps) => {
 					}{...item} />)
 				}
 			</div>
-			<div className="flex justify-center  ">
+			<div className="flex justify-center">
 				<button className="show_more_btn" onClick={handleNavigate}><span>SHOW MORE</span></button>
 			</div>
 		</div>

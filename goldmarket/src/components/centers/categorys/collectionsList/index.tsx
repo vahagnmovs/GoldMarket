@@ -6,11 +6,10 @@ import Header from 'src/components/header/header';
 import DrawCategoryOrCollection from 'src/components/centers/categorys/drawCategoryOrCollection';
 
 const CollectionsList = () => {
-	return (
-        
+	return (<>
+		<Header />
+		<Navbar />
 		<div className={'shou_Collections'}>
-			<Header />
-			<Navbar />
 			<div className={'product_show_more'}>
 				<div className={'Collections'}>
 					<h3>Collections</h3>
@@ -19,11 +18,14 @@ const CollectionsList = () => {
 					{
 						Collections.map(item => <DrawCategoryOrCollection key={item.id} {...item} />)
 					}
-                    
+
 				</div>
 			</div>
-			<Footer />
 		</div>
+		<Footer />
+	</>
+
+
 	);
 };
 
