@@ -8,6 +8,8 @@ interface ProductImageSliceProps {
 }
 
 const ProductImageSlice = ({images}:ProductImageSliceProps ) => {
+	
+	
 	const [imageIndex, setImageIndex] = useState(0);
 	const nextImage = () => {
 		if(imageIndex === images.length - 1) {
@@ -29,7 +31,7 @@ const ProductImageSlice = ({images}:ProductImageSliceProps ) => {
 	return (
 		<div className={'product_smole_carousel'}>
 			<div className={'product_smole_carousel_top_photo'}>
-				{/* <img  src={images[imageIndex]} alt=""/> */}
+				<img  src={images[imageIndex].src} alt=""/>
 			</div>
 			<div className={'product_smole_carousel_slider flex align-center'} >
 

@@ -54,9 +54,7 @@ const MostViewed = ({title}:TMostViewed) => {
 			}
 		]
 	};
-	console.log(products);
 	
-
 	return (
 		<div className={'most'}>
 			<div className={'most_Viewed container'}>
