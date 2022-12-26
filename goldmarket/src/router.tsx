@@ -16,6 +16,7 @@ import DashboardList from './components/centers/buyerAdmin/dashboardList';
 import OrderInfoList from './components/centers/buyerAdmin/orderInfoList';
 import ProductPage from "src/pages/products";
 import SettingsList from './components/centers/buyerAdmin/settingsList';
+import SignUp from "./components/signUp";
 
 const router = createBrowserRouter([{
 	path: '/',
@@ -65,6 +66,9 @@ const router = createBrowserRouter([{
 }, {
 	path: '/product/:id/editproduct',
 	element: <EditProduct />
+},{
+	path: '/signUp',
+	element: <SignUp />
 }
 ]);
 
