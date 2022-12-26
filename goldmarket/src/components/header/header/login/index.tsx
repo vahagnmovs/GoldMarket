@@ -46,6 +46,7 @@ const Login = ({toggleIsLogInUser, handelSeller}: TLoginProps) => {
 						return sellers.find((seller: any) => seller.sellerID === user.uid)
 					})
 					.then(docSnap => {
+						console.log(docSnap,";;;;;asjdhabx")
 						if (docSnap.firstName) {
 							ls('seller', docSnap)
 							toggleIsLogInUser()

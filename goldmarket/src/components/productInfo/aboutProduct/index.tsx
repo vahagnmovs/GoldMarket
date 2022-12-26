@@ -16,6 +16,8 @@ interface AboutPageProps {
 
 const AboutPage = ({productInformation}: AboutPageProps) => {
 	const {name, images, size, weight} = productInformation;
+	console.log(images, "bfndmievrbhenw");
+	
 	return (
 		<div className={'about-page'} >
 			<div className={'left_page_title'}>
