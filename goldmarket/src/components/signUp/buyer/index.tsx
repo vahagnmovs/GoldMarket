@@ -10,7 +10,7 @@ import {useNavigate} from "react-router-dom";
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
 
 const BuyerSignUp = () => {
-
+	const ls = require("local-storage")
 	const navigate = useNavigate()
 
 	const register = () => {
@@ -73,6 +73,7 @@ const BuyerSignUp = () => {
 		}),
 		onSubmit: () => {
 			register();
+			ls("buyer",formik.values)
 			navigate('/')
 		}
 	});

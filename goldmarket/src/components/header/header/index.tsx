@@ -59,7 +59,7 @@ const Header = () => {
 	const [currencyMenuOpen, setCurrencyMenuOpen] = useState(false);
 
 	const [isLogInUser, setIsLogInUser] = useState(false)
-	const [seller, setSeller] = useState("seller")
+	const [seller, setSeller] = useState("buyer")
 	const ls = require('local-storage')
 
 	const handelSeller = (user: string) => {
@@ -73,6 +73,9 @@ const Header = () => {
 
 	useEffect(() => {
 		if(ls.get('buyer')) {
+			setIsLogInUser(!isLogInUser)
+		}
+		if(ls.get('seller')) {
 			setIsLogInUser(!isLogInUser)
 		}
 	}, [])
