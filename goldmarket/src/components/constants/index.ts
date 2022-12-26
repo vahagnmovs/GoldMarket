@@ -43,42 +43,6 @@ type TInitialState = {
 	images: TImagesElements[], 
 }
 
-export const product = [
-	{   
-		id: Math.random(),
-		type: 'ENGAGEMENT RINGS',
-		name: 'AQUAMARINE AND 1/4 CT.TW.DIMOND RING IN 10K ROZE GOLD2',
-		color: 'yellow',
-		code: '11847LL',
-		price: '1500$',
-		weight: '3.13',
-		metal: 'GOLD',
-		fineness: '585',
-		publish: 'IS AVAILABLE',
-		origin: 'IMPORTANT',
-		forWhom: 'MEN',
-		viewed: 105,
-		description: 'text',
-		photo: 'https://images.ctfassets.net/ydv6sq0kb5bw/6DdVeAxmaUa6oPotOKPcfI/d4ed432882c00cd38e32681f278c254b/tacky_accessories_thick_chain.jpg?fit=fill&q=75&fm=webp&w=3840&h=3840',
-	},
-	{   
-		id: Math.random(),
-		type: 'ENGAGEMENT RINGS',
-		name: 'AQUAMARINE AND 1/4 CT.TW.DIMOND RING IN 10K ROZE GOLD2',
-		color: 'yellow',
-		code: '11847LL',
-		price: '1500$',
-		weight: '3.13',
-		metal: 'GOLD',
-		fineness: '585',
-		publish: 'IS AVAILABLE',
-		origin: 'IMPORTANT',
-		forWhom: 'MEN',
-		viewed: 105,
-		description: 'text',
-		photo: 'https://images.ctfassets.net/ydv6sq0kb5bw/6DdVeAxmaUa6oPotOKPcfI/d4ed432882c00cd38e32681f278c254b/tacky_accessories_thick_chain.jpg?fit=fill&q=75&fm=webp&w=3840&h=3840',
-	}
-];
 
 export const filters = {
 
@@ -124,7 +88,7 @@ export const initialState: TInitialState = {
 	type: '',
 	fineness: '',
 	bestSales: '',
-	color: ['yellow', 'white', 'red', 'rose gold'] ,
+	color: ['yellow', 'white', 'red', 'rose gold'],
 	publish: false,
 	stone: false,
 	newProduct: false,

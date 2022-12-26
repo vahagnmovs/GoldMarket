@@ -1,3 +1,6 @@
+import randomID from "src/hooks/uuid";
+ 
+
 export type PriceTypes = {
    oldPrice: number | string,
    price: number | string,
@@ -37,17 +40,15 @@ export type ProductsTypes = {
    diamond: DiamondTypes,
    images: ImagesType[],
    collection: string,
-   newProduct: boolean,
    bestSales: number
 };
 
 
 export const products: ProductsTypes[] = [
   {
-     //FIXME: if you want test slider cheng productID "55"
      productID: '1',
      name: 'Graziella ring',
-     sellerID: `${Math.random()}`,
+     sellerID: randomID(),
      color: 'yellow',
      discount: 20,
      metal: 'GOLD',
@@ -77,15 +78,13 @@ export const products: ProductsTypes[] = [
         { id: Math.random(), src: '/dataimages/productimages/PRODUCTS-diamond/ring1/1.jpg' },
         { id: Math.random(), src: '/dataimages/productimages/PRODUCTS-diamond/ring1/1.jpg' },
      ],
-     newProduct: true,
      bestSales: 10,
   },
    {
-     //FIXME: if you want test slider cheng productID "55"
      productID: `2`,
      name: 'Graziella ring',
      description: 'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum',
-     sellerID: `${Math.random()}`,
+     sellerID: randomID(),
      color: 'YELLOW',
      discount: 20,
      metal: 'GOLD',
@@ -114,7 +113,6 @@ export const products: ProductsTypes[] = [
         { id: Math.random(), src: '/dataimages/productimages/PRODUCTS-diamond/ring1/1.jpg' },
         { id: Math.random(), src: '/dataimages/productimages/PRODUCTS-diamond/ring1/1.jpg' },
      ],
-     newProduct: true,
      bestSales: 10,
   }
 ];
