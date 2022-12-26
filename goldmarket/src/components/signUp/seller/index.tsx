@@ -6,11 +6,14 @@ import {createUserWithEmailAndPassword, getAuth} from 'firebase/auth';
 import {addDoc, collection} from "firebase/firestore";
 import {db} from 'src/firebase'
 import {useNavigate} from "react-router-dom";
+import ls from "local-storage";
 const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$');
 
 const SellerSignUp = () => {
 	const ls = require("local-storage")
 	const navigate = useNavigate()
+	const ls = require('local-storage')
+
 	const register = () => {
 		// Create a new user with email and password using firebase
 		const auth = getAuth();
@@ -79,6 +82,7 @@ const SellerSignUp = () => {
 			register()
 			ls("seller", formik.values)
 			navigate('/')
+			ls('seller', formik.values)
 		}
 	});
 

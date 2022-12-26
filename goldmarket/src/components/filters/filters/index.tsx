@@ -109,7 +109,10 @@ const Filters = ({handleFilters}: THandleFilters) => {
     return (
         <div className={'banner_products'}>
             <Header/>
-            <img src={banner_product}/>
+            <div className={'filtre_img'}>
+                <img src={banner_product}/>
+            </div>
+
             <div className='container'>
                 <div className={'top_products_page'}>
                     <div className={'clear_filters flex justify-between align-center'}>

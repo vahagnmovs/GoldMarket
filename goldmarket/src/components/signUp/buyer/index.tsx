@@ -11,7 +11,7 @@ const passwordRegex = new RegExp('^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])
 
 const BuyerSignUp = () => {
 	const ls = require("local-storage")
-	const navigate = useNavigate()
+  const navigate = useNavigate()
 
 	const register = () => {
 		// Create a new user with email and password using firebase
